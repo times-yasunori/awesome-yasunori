@@ -56,6 +56,16 @@ yasunoriの皆さん、今日くらいはyasunoriは休んで明日に備えま�
 
 memo: [yasunori0418](https://github.com/yasunori0418) は不参加
 
+### 覚悟して来てる人 (2024-09-17 Tue)
+
+vim-jp #times-yasunori by kyoh86
+
+```markdown
+あなた…『覚悟して来てる人』………ですよね。OSを「yasunori」しようとするって事は逆に「yasunori」されるかもしれないという危険を、常に『覚悟して来ている人』ってわけですよね…
+```
+
+Inspired by [あなた…『覚悟して来てる人』…ですよね - pixiv大百科](https://dic.pixiv.net/a/%E3%81%82%E3%81%AA%E3%81%9F%E2%80%A6%E3%80%8E%E8%A6%9A%E6%82%9F%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%A6%E3%82%8B%E4%BA%BA%E3%80%8F%E2%80%A6%E3%81%A7%E3%81%99%E3%82%88%E3%81%AD)
+
 ### yasunori meetup #1 アジェンダ (2024-09-05 Thu)
 
 vim-jp #times-yasunori by tomoya
