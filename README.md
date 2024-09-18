@@ -2,6 +2,11 @@
 
 A curated list of awesome yasunori, the post about [yasunori0418](https://github.com/yasunori0418). Inspired by [mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
 
+> [!CAUTION]
+> You([takeokunn](https://github.com/takeokunn)) started this story!!
+>
+> お前([takeokunn](https://github.com/takeokunn))が始めた物語だろ！！
+
 ## Contributing
 
 Please take a quick gander at the [contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
