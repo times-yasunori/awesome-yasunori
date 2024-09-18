@@ -4,7 +4,8 @@ A curated list of awesome yasunori, the post about [yasunori0418](https://github
 
 ## Contributing
 
-Please take a quick gander at the [contribution guidelines](https://github.com/mattn/awesome-sonomasakada/blob/master/CONTRIBUTING.md) first. Thanks to all [contributors](https://github.com/mattn/awesome-sonomasakada/graphs/contributors); you rock!
+Please take a quick gander at the [contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
+Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
 
