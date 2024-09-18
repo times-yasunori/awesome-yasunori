@@ -6,6 +6,8 @@ A curated list of awesome yasunori, the post about [yasunori0418](https://github
 > You([takeokunn](https://github.com/takeokunn)) started this story!!
 >
 > お前([takeokunn](https://github.com/takeokunn))が始めた物語だろ！！
+> 
+> by [yasunori0418(原義)](https://github.com/yasunori0418)
 
 ## Contributing
 
