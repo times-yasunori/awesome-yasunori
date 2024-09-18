@@ -49,3 +49,48 @@ yasunoriの皆さん、今日くらいはyasunoriは休んで明日に備えま�
 ```
 
 memo: [yasunori0418](https://github.com/yasunori0418) は不参加
+
+### yasunori meetup #1 アジェンダ (2024-09-05 Thu)
+
+vim-jp #times-yasunori by tomoya
+
+```markdown
+yasunori meetup #1 アジェンダ
+乾杯の挨拶
+@yasunori
+
+ご歓談
+キーノート: おもしろ近況報告
+@takeokunn
+
+ご歓談
+LT1: おもしろ近況報告
+@yasunori
+
+LT2: おもしろ近況報告
+@conao3
+
+LT3: そこで…
+@natsukium
+
+クロージングセッション:
+@kuu
+ （思念体）
+解散、そして2次会へ
+```
+
+### yasunori meetup #2 アジェンダ (2024-09-18 Wed)
+
+vim-jp #times-yasunori by tomoya
+
+```markdown
+yasunori meetup #2 アジェンダ
+
+1. 乾杯の挨拶 yasunori (take)
+2. キーノート: おもしろNix近況報告 yasunori (natsukium)
+3. yasunori (take) と yasunori (natsukium)  の義兄弟の契り（見届け人 tomoya）
+4. conao3 による yasunori (原義) の最新情報共有
+5. クロージングセッション: @kuu（思念体）
+
+解散、そして2次会へ
+```
