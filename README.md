@@ -35,3 +35,17 @@ vim-jp #times-yasunori by takeokunn
 ```
 
 Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
+
+### yasunori meetup #2 本番 (2024-09-18 Wed)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+いよいよ明日がyasunori meetup #2本番ですよ！
+
+むっちゃドキドキしてきた…。
+
+yasunoriの皆さん、今日くらいはyasunoriは休んで明日に備えますよね？
+```
+
+memo: [yasunori0418](https://github.com/yasunori0418) は不参加
