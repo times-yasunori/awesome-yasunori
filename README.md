@@ -8,6 +8,15 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### 険しい設定 (2024-09-18 Wed)
+
+vim-jp #times-yasunori by kyoh86
+
+```markdown
+オレが知りてーのは楽なyasunoriじゃねえ
+険しい設定の歩き方だ
+```
+
 ### yasunori は俺の夢だから (2024-09-18 Wed)
 
 vim-jp #times-yasunori by tomoya
