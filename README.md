@@ -8,6 +8,14 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### yasunori は俺の夢だから (2024-09-18 Wed)
+
+vim-jp #times-yasunori by tomoya
+
+```markdown
+たけてぃ「yasunori は俺の夢だから」
+```
+
 ### 犠牲になったのだ (2024-09-18 Wed)
 
 vim-jp #times-yasunori by takeokunn
