@@ -9,7 +9,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 ## Contents
 
-### yasunoriの母 (2024-09-18 Wed)
+### yasunoriの母 (2024-06-25 Tue)
 
 vim-jp radioお便り by takeokunn
 
