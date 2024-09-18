@@ -8,7 +8,6 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
-
 ### yasunoriの母 (2024-06-25 Tue)
 
 vim-jp radioお便り by takeokunn
@@ -22,4 +21,15 @@ yasunoriがソフトウェアエンジニアを志してから様子がおかし
 「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。
 
 tomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。
+```
+
+### オレは高校生シェル芸人 kuu 新一 (2024-08-21 Wed)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+オレは高校生シェル芸人 kuu 新一。
+幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
+端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
+俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
 ```
