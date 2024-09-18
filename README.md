@@ -33,3 +33,5 @@ vim-jp #times-yasunori by takeokunn
 端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
 俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
 ```
+
+Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
