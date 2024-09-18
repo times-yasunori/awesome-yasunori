@@ -87,26 +87,17 @@ vim-jp #times-yasunori by tomoya
 
 ```markdown
 yasunori meetup #1 アジェンダ
-乾杯の挨拶
-@yasunori
+乾杯の挨拶 @yasunori
 
 ご歓談
-キーノート: おもしろ近況報告
-@takeokunn
+キーノート: おもしろ近況報告 @takeokunn
 
 ご歓談
-LT1: おもしろ近況報告
-@yasunori
+LT1: おもしろ近況報告 @yasunori
+LT2: おもしろ近況報告 @conao3
+LT3: そこで… @natsukium
 
-LT2: おもしろ近況報告
-@conao3
-
-LT3: そこで…
-@natsukium
-
-クロージングセッション:
-@kuu
- （思念体）
+クロージングセッション: @kuu （思念体）
 解散、そして2次会へ
 ```
 
