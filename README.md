@@ -8,6 +8,16 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### 犠牲になったのだ (2024-09-18 Wed)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+yasunoriはyasunoriになったのだ。そのyasunoriにyasunoriはなった…「yasunoriのyasunori」にな。
+```
+
+Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+
 ### yasunori meetup #2 アジェンダ (2024-09-18 Wed)
 
 vim-jp #times-yasunori by tomoya
