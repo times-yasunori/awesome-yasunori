@@ -3,9 +3,9 @@
 A curated list of awesome yasunori, the post about [yasunori0418](https://github.com/yasunori0418). Inspired by [mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
 
 > [!CAUTION]
-> It's a story YOU([takeokunn](https://github.com/takeokunn)) started!!
+> It's a story YOU([takeokunn](https://github.com/takeokunn)) started by use ME([yasunori0418](https://github.com/yasunori0418))!!
 >
-> お前([takeokunn](https://github.com/takeokunn))で始めた物語だろ！！
+> お前([takeokunn](https://github.com/takeokunn))が俺([yasunori0418](https://github.com/yasunori0418))で始めた物語だろ！！
 > 
 > by [yasunori0418(原義)](https://github.com/yasunori0418)
 
