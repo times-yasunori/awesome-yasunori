@@ -8,6 +8,14 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### VimConfチケット購入1番乗り (2024-09-23 Mon)
+
+vim-jp #times-yasunori by ryoppippi
+
+```markdown
+y: 「チケット何番ですか？僕のと比べてソートしてみましょうよwwww 僕そーとー　最初ですよwww」
+```
+
 ### 険しい設定 (2024-09-18 Wed)
 
 vim-jp #times-yasunori by kyoh86
