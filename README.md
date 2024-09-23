@@ -6,7 +6,7 @@ A curated list of awesome yasunori, the post about [yasunori0418](https://github
 > It's a story YOU([takeokunn](https://github.com/takeokunn)) started by use ME([yasunori0418](https://github.com/yasunori0418))!!
 >
 > お前([takeokunn](https://github.com/takeokunn))が俺([yasunori0418](https://github.com/yasunori0418))で始めた物語だろ！！
-> 
+>
 > by [yasunori0418(原義)](https://github.com/yasunori0418)
 
 ## Contributing
@@ -15,6 +15,14 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### あぐらをかいたyasunori (2024-09-23 Mon)
+
+vim-jp #times-yasunori by tomoya
+
+```markdown
+あぐらをかいたyasunori「キミ？vim-jpの新顔？ 俺？俺の名前は yasunori 。vim-jpの頂点にたつ男さ。まぁ、緊張しなくていいから、俺のことは気軽にyasunoriって呼んでくれ。」
+```
+
 ### VimConfチケット購入1番乗り (2024-09-23 Mon)
 
 vim-jp #times-yasunori by ryoppippi
