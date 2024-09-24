@@ -23,6 +23,13 @@ vim-jp #times-yasunori by kuu
 (awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
 ```
 
+- memo
+  - vim-jpには複数のyasunoriがいる
+    - 憤怒のyasunori → takeokunn
+    - 怠惰のyasunori → kuu
+    - 色欲のyasunori → comamoca
+    - yasunori → yasunori
+
 ### 大いなるyasunoriには大いなる責任が伴う (2024-09-24 Tue)
 
 vim-jp #times-yasunori by kyoh86
