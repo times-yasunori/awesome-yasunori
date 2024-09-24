@@ -15,7 +15,8 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
-### ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I (2024-08-26 Fri)
+### キラ・yaunori ()
+### ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I (2024-08-23 Fri)
 
 vim-jp #times-yasunori by lambdalisue
 
