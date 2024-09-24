@@ -15,6 +15,18 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### PyConJP should be yasuno-reborn (2024-09-24 Tue)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+pyconjp-should-be-yasuno-reborn
+
+PyCon JP理事会のメンバーをyasunoriして再出発する、あるいはPyCon JPは一度yasunoriするべき
+```
+
+Inspired by [PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoya.dev/posts/pyconjp-should-be-reborn/)
+
 ### あぐらをかいたyasunori (2024-09-23 Mon)
 
 vim-jp #times-yasunori by tomoya
