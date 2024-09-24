@@ -15,6 +15,15 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### 大いなるyasunoriには大いなる責任が伴う
+
+vim-jp #times-yasunori by kyoh86
+
+```markdown
+どうしてもこうしてもあるかい。yasunoriはそこにある。
+yasunori is the one. May the yasunori be with you. With great yasunori comes great responsibility.
+```
+
 ### キラ・yaunori (2024-08-23 Fri)
 
 vim-jp #times-yasunori by rkarsnk
