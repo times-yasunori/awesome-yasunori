@@ -15,6 +15,19 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### timesが壊れちゃった (2024-09-24 Tue)
+
+twitter by yasunori
+
+https://x.com/YKirin0418/status/1838530406267920895
+
+```markdown
+ここ数か月のことなんだけど、某-jpで作ってた自分のtimesが壊れちゃった…
+```
+
+- memo
+  - vim-jp #times-yasunori が連日流速No.1で様々な話題が繰り広げられている
+
 ### 実質的にyasunoriがowner (2024-09-24 Tue)
 
 vim-jp #times-yasunori by kuu
