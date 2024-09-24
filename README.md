@@ -15,7 +15,16 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
-### キラ・yaunori ()
+### キラ・yaunori (2024-08-23 Fri)
+
+vim-jp #times-yasunori by rkarsnk
+
+```markdown
+キラ・yaunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」
+マリュー「まだ，終わってないのよ」
+キラ・yasuori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」
+```
+
 ### ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I (2024-08-23 Fri)
 
 vim-jp #times-yasunori by lambdalisue
