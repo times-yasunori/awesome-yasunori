@@ -23,7 +23,7 @@ vim-jp #times-yasunori by kuu
 (awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
 ```
 
-### 大いなるyasunoriには大いなる責任が伴う
+### 大いなるyasunoriには大いなる責任が伴う (2024-09-24 Tue)
 
 vim-jp #times-yasunori by kyoh86
 
