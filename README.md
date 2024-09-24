@@ -15,6 +15,14 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### 実質的にyasunoriがowner (2024-09-24 Tue)
+
+vim-jp #times-yasunori by kuu
+
+```markdown
+(awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
+```
+
 ### 大いなるyasunoriには大いなる責任が伴う
 
 vim-jp #times-yasunori by kyoh86
