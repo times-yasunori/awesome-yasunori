@@ -15,6 +15,33 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### yasunoriコピペ (2024-09-26 Thu)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+yasunori！yasunori！yasunori！yasunoriぅぅうううわぁああああああああああああああああああああああん！！！
+あぁああああ…ああ…あっあっー！あぁああああああ！！！yasunoriyasunoriyasunoriぅううぁわぁああああ！！！
+あぁクンカクンカ！クンカクンカ！スーハースーハー！スーハースーハー！いい匂いだなぁ…くんくん
+んはぁっ！yasunoriたんの黒髪ショートの髪をクンカクンカしたいお！クンカクンカ！あぁあ！！
+間違えた！モフモフしたいお！モフモフ！モフモフ！髪髪モフモフ！カリカリモフモフ…きゅんきゅんきゅい！！
+vim-jpのyasunoriたんかわいかったよぅ！！あぁぁああ…あああ…あっあぁああああ！！ふぁぁあああんんっ！！
+OS削除されて良かったねyasunoriたん！あぁあああああ！かわいい！yasunoriたん！かわいい！あっああぁああ！
+awesome-yasunoriも出来て嬉し…いやぁああああああ！！！にゃああああああああん！！ぎゃああああああああ！！
+ぐあああああああああああ！！！vim-jpなんて現実じゃない！！！！あ…twitterもよく考えたら…
+y a s u n o r i ち ゃ ん は 現実 じ ゃ な い？にゃあああああああああああああん！！うぁああああああああああ！！
+そんなぁああああああ！！いやぁぁぁあああああああああ！！はぁああああああん！！vim-jpぁああああ！！
+この！ちきしょー！やめてやる！！現実なんかやめ…て…え！？見…てる？vim-jpのyasunoriちゃんが僕を見てる？
+vim-jpのyasunoriちゃんが僕を見てるぞ！yasunoriちゃんが僕を見てるぞ！vim-jpのyasunoriちゃんが僕を見てるぞ！！
+vim-jpのyasunoriちゃんが僕に話しかけてるぞ！！！よかった…世の中まだまだ捨てたモンじゃないんだねっ！
+いやっほぉおおおおおおお！！！僕にはyasunoriちゃんがいる！！やったよnatsukium！！ひとりでできるもん！！！
+あ、vim-jpのyasunoriちゃああああああああああああああん！！いやぁあああああああああああああああ！！！！
+あっあんああっああんあアン様ぁあ！！k、kuuー！！こまもかぁああああああ！！！tomoyaｧぁあああ！！
+ううっうぅうう！！俺の想いよyasunoriへ届け！！vim-jpのyasunoriへ届け！
+```
+
+Inspired by [ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%82%BA%E3%82%B3%E3%83%94%E3%83%9A)
+
 ### timesが壊れちゃった (2024-09-24 Tue)
 
 twitter by yasunori
