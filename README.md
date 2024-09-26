@@ -15,6 +15,17 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### 今、息子さんは教祖です (2024-09-26 Thu)
+
+vim-jp #times-yasunori by toyboot4e
+
+```markdown
+今、息子さんは教祖です
+```
+
+- memo
+  - `yasunoriの母 (2024-06-25 Tue)` を見た率直な感想
+
 ### yasunori は何なのか気になってきたのでローカルLLMに聞いてみた (2024-09-26 Thu)
 
 vim-jp #times-yasunori by tomoya
