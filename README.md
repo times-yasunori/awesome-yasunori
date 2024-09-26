@@ -15,6 +15,23 @@ Please take a quick gander at the [contribution guidelines](https://github.com/t
 Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Contents
+### yasunori は何なのか気になってきたのでローカルLLMに聞いてみた (2024-09-26 Thu)
+
+vim-jp #times-yasunori by tomoya
+
+```markdown
+問い
+vim-jpで人気のyasunoriについての説明文を考えてください。
+yasunoriは人であり、概念であり、複数存在しており、何かを消すという意味をもっています。
+
+回答
+yasunori は Vim-jp コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除
+のアイデアを表しています。このユニークな個人は1人ではなく、さまざまな個人の集合体であり、各人がスキ
+ルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成していま
+す。Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
+しており、不要な要素を排除または削除する可能性を表しています。
+```
+
 ### yasunoriコピペ (2024-09-26 Thu)
 
 vim-jp #times-yasunori by takeokunn
