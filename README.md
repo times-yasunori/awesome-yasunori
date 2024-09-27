@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
 | 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
 | 2024-09-28 Sat | yasunori0418      | vim-jp #times-yasunori | You should be yasunori                                       |
 | 2024-09-27 Fri | kyoh86            | vim-jp #times-yasunori | 走れyasunori                                                 |
@@ -43,6 +44,17 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### YOL (2024-08-30 Sat)
+
+vim-jp #times-comamoca by comamoca
+
+```markdown
+NixでYOL(yasunority of life)を上げていきたい
+```
+
+- memo
+  - yasunority, yasunorize, yasunorization, yasunoable, yasunorizer, yasunorianなど様々な活用がある
+
 ### OS削除 はじまりの大地 (2024-09-28 Sat)
 
 vim-jp #times-yasunori by takeokunn
