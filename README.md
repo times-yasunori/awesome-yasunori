@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
 | 2024-09-28 Sat | yasunori0418      | vim-jp #times-yasunori | You should be yasunori                                       |
 | 2024-09-27 Fri | kyoh86            | vim-jp #times-yasunori | 走れyasunori                                                 |
 | 2024-09-26 Thu | toyboot4e         | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
@@ -42,6 +43,26 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### OS削除 はじまりの大地 (2024-09-28 Sat)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+2024-03-03 vim-jpオフにて
+
+yasunori「いざって時のために、インストールメディアはいつも持ち歩いてるんですよね〜」
+takeokunn「えっ、そしたらそのPCのArch消してインストールしなおせる？！」
+yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
+takeokunn「は？まじか」
+yasunori0418「うん、大丈夫」
+```
+
+- memo
+  - yasunoriがOS削除キャラになった発端
+  - カラオケのWi-Fiが弱すぎたが2時間くらいで復旧していた
+  - 該当ツイート
+    - https://x.com/takeokunn/status/1764152964535754792
+
 ### You should be yasunori (2024-09-28 Sat)
 
 vim-jp #times-yasunori by yasunori
