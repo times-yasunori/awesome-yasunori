@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-09-27 Fri | kyoh86            | vim-jp #times-yasunori | 走れyasunori                                                 |
 | 2024-09-26 Thu | toyboot4e         | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
 | 2024-09-26 Thu | tomoya            | vim-jp #times-yasunori | yasunori は何なのか気になってきたのでローカルLLMに聞いてみた |
 | 2024-09-26 Thu | takeokunn         | vim-jp #times-yasunori | yasunoriコピペ                                               |
@@ -40,6 +41,14 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### 走れyasunori (2024-09-27 Fri)
+
+vim-jp #times-yasunori by kyoh86
+
+```markdown
+yasunoriは激怒した。必ず、かの邪智暴虐のOSを除かなければならぬと決意した。yasunoriにはGUI設定がわからぬ。yasunoriは、村の牧人である。Windowsを消し、テキストエディタと遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。
+```
+
 ### 今、息子さんは教祖です (2024-09-26 Thu)
 
 vim-jp #times-yasunori by toyboot4e
