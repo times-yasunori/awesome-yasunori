@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-09-28 Sat | yasunori0418      | vim-jp #times-yasunori | You should be yasunori                                       |
 | 2024-09-27 Fri | kyoh86            | vim-jp #times-yasunori | 走れyasunori                                                 |
 | 2024-09-26 Thu | toyboot4e         | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
 | 2024-09-26 Thu | tomoya            | vim-jp #times-yasunori | yasunori は何なのか気になってきたのでローカルLLMに聞いてみた |
@@ -41,6 +42,25 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### You should be yasunori (2024-09-28 Sat)
+
+vim-jp #times-yasunori by yasunori
+
+```markdown
+花火で派手になっているパフェみたいなのを店員さんが持って来ながら
+
+yasunori「えっえっえっ!?」
+店員さん「yasunoriさん？」
+yasunori「えっ…はい、なんでしょう」
+店員さん「You should be yasunori!!」(めっちゃ発音が良い)
+yasunori「……you should be yasunori?????」
+```
+
+- memo
+  - yasunori meetup #1 回想
+  - シュラスココースのオプションでデザートをつけた際にプレートに書かれた文字
+  - 外国人店員でやたら発音が良かった
+
 ### 走れyasunori (2024-09-27 Fri)
 
 vim-jp #times-yasunori by kyoh86
