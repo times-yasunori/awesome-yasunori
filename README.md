@@ -44,7 +44,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
-### YOL (2024-08-30 Sat)
+### YOL (2024-08-30 Fri)
 
 vim-jp #times-comamoca by comamoca
 
