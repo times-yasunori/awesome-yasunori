@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-09-28 Sat | ryoppippi         | vim-jp #times-yasunori | YST                                                          |
 | 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
 | 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
 | 2024-09-28 Sat | yasunori0418      | vim-jp #times-yasunori | You should be yasunori                                       |
@@ -44,7 +45,18 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
-### YOL (2024-08-30 Fri)
+### YST (2024-09-28 Sat)
+
+vim-jp #times-yasunori by ryoppippi
+
+```markdown
+YST: yasunori study time (yasunoriがJST 22:00 ~ 24:00 にLeetCodeに取り組む時間)
+```
+
+- memo
+  - 2024-09-28 Sat 時点、yasunoriはLeetCodeをやらなければならない
+
+### YOL (2024-08-30 Sat)
 
 vim-jp #times-comamoca by comamoca
 
