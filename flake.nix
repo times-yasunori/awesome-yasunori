@@ -29,18 +29,7 @@
         }:
         let
           stdenv = pkgs.stdenv;
-
-          yasunori = stdenv.mkDerivation {
-            pname = "executable";
-            version = "0.0.1";
-            src = ./.;
-
-            buildPhase = ''
-              mkdir $out
-            '';
-
-            installPhase = '''';
-          };
+          yasunori = pkgs.emptyDirectory;
         in
         rec {
           treefmt = {
