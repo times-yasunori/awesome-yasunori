@@ -399,12 +399,13 @@ LT3: そこで… @natsukium
 クロージングセッション: @kuu （思念体）
 解散、そして2次会へ
 """
+meta = ""
 
 [[yasunori]]
 title = "オレは高校生シェル芸人 kuu 新一"
 date = "2024-08-21"
-senpan = "vim-jp #times-yasunori"
-author = "takeokunn"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
 content = """
 オレは高校生シェル芸人 kuu 新一。
 幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
@@ -418,8 +419,8 @@ Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536
 [[yasunori]]
 title = "yasunoriの母"
 date = "2024-06-25"
-senpan = "vim-jp radioお便り"
-author = "takeokunn"
+at = "vim-jp radioお便り"
+senpan = "takeokunn"
 content = """
 tomoyaさん、ありすえさんこんにちは。
 はじめまして、yasunoriの母です。
