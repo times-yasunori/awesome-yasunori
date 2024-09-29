@@ -18,7 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
-| 2024-09-27 Fri | takeokunn         | vim-jp #times-yasunori | brain-yasu\**ri                                              |
+| 2024-09-29 Sun | takeokunn         | vim-jp #times-yasunori | brain-yasu\**ri                                              |
 | 2024-09-28 Sat | ryoppippi         | vim-jp #times-yasunori | YST                                                          |
 | 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
 | 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
