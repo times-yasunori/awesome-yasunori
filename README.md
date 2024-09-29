@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan            | place                  | title                                                        |
 |----------------|-------------------|------------------------|--------------------------------------------------------------|
+| 2024-09-27 Fri | takeokunn         | vim-jp #times-yasunori | brain-yasu\**ri                                              |
 | 2024-09-28 Sat | ryoppippi         | vim-jp #times-yasunori | YST                                                          |
 | 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
 | 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
@@ -45,6 +46,28 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### YST (2024-09-28 Sat)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+lang-yasunori作るとしたら brain-yasu**ri 作りたい
+
+言語仕様
+1. `y` ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。
+2. `a` ポインタをデクリメントする。C言語の「ptr--;」に相当。
+3. `s` ポインタが指す値をインクリメントする。C言語の「(*ptr)++;」に相当。
+4. `u` ポインタが指す値をデクリメントする。C言語の「(*ptr)--;」に相当。
+5. `n` ポインタが指す値を出力に書き出す。C言語の「putchar(*ptr);」に相当。
+6. `o` 入力から1バイト読み込んで、ポインタが指す先に代入する。C言語の「*ptr=getchar();」に相当。
+7. `r` ポインタが指す値が0なら、対応する `i` の直後にジャンプする。C言語の「while(*ptr){」に相当。
+8. `i` ポインタが指す値が0でないなら、対応する `r` （の直後）にジャンプする。C言語の「}」に相当。
+```
+
+- memo
+  - [conao3によるC言語での実装](https://github.com/conao3/c-yasunori-lang)がある
+    - `make yasunoriするためだけにCで書いたといっても過言ではない` とのこと
+
 ### YST (2024-09-28 Sat)
 
 vim-jp #times-yasunori by ryoppippi
