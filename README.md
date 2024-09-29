@@ -46,7 +46,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
-### YST (2024-09-28 Sat)
+### brain-yasu**ri (2024-09-29 Sun)
 
 vim-jp #times-yasunori by takeokunn
 
