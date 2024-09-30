@@ -5,5 +5,4 @@
 
 ## Reporting issues
 
-Please open an issue if you find anything that could be improved or have
-suggestions for making the list a more valuable tweet.
+Please open an issue if you find anything that could be improved or have suggestions for making the list a more valuable tweet.
