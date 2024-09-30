@@ -1,10 +1,14 @@
 # yasunori APIs
 
-```txt
-npm install
-npm run dev
+## Development
+
+```sh
+pnpm install
+pnpm run dev
 ```
 
-```txt
-npm run deploy
+## Deployment
+
+```sh
+pnpm run deploy
 ```
