@@ -134,7 +134,12 @@ yasunori「……you should be yasunori?????」
 vim-jp #times-yasunori by kyoh86
 
 ```markdown
-yasunoriは激怒した。必ず、かの邪智暴虐のOSを除かなければならぬと決意した。yasunoriにはGUI設定がわからぬ。yasunoriは、村の牧人である。Windowsを消し、テキストエディタと遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。
+yasunoriは激怒した。
+必ず、かの邪智暴虐のOSを除かなければならぬと決意した。
+yasunoriにはGUI設定がわからぬ。
+yasunoriは、村の牧人である。
+Windowsを消し、テキストエディタと遊んで暮して来た。
+けれども邪悪に対しては、人一倍に敏感であった。
 ```
 
 ### 今、息子さんは教祖です (2024-09-26 Thu)
@@ -314,13 +319,18 @@ vim-jp #times-yasunori by tomoya
 vim-jp #times-yasunori by takeokunn
 
 ```markdown
-yasunoriはyasunoriになったのだ。そのyasunoriにyasunoriはなった…「yasunoriのyasunori」にな。
+yasunoriはyasunoriになったのだ。
+そのyasunoriにyasunoriはなった…
+「yasunoriのyasunori」にな。
 ```
 
 vim-jp #times-yasunori by kyoh86
 
 ```markdown
-yasunoriは犠牲になったのだ。古くから続く因縁…その犠牲にな。そもそもは #times-yasunori が生まれたときからある大きな問題だ。それが yasunori の生き様を決めた
+yasunoriは犠牲になったのだ。
+古くから続く因縁…その犠牲にな。
+そもそもは #times-yasunori が生まれたときからある大きな問題だ。
+それが yasunori の生き様を決めた
 ```
 
 Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
