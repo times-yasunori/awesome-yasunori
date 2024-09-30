@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev",
-    "deploy": "pnpm run build && wrangler pages deploy"
+    "deploy": "pnpm run build && wrangler pages deploy",
+    "lint": "pnpm biome lint .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "hono": "^4.6.3",
