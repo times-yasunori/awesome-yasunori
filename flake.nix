@@ -1,6 +1,5 @@
 {
   description = "A curated list of awesome yasunori";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     treefmt-nix.url = "github:numtide/treefmt-nix";
