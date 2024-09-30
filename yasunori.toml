@@ -1,57 +1,9 @@
-# Awesome yasunori
-
-A curated list of awesome yasunori, the post about [yasunori0418](https://github.com/yasunori0418). Inspired by [mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
-
-> [!CAUTION]
-> It's a story YOU([takeokunn](https://github.com/takeokunn)) started by use ME([yasunori0418](https://github.com/yasunori0418))!!
->
-> お前([takeokunn](https://github.com/takeokunn))が俺([yasunori0418](https://github.com/yasunori0418))で始めた物語だろ！！
->
-> by [yasunori0418(原義)](https://github.com/yasunori0418)
-
-## Contributing
-
-Please take a quick gander at the [contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
-Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
-
-## Indexes
-
-| date           | senpan       | place                  | title                                                        |
-|----------------|--------------|------------------------|--------------------------------------------------------------|
-| 2024-09-29 Sun | takeokunn    | vim-jp #times-yasunori | brain-yasu\**ri                                              |
-| 2024-09-28 Sat | ryoppippi    | vim-jp #times-yasunori | YST                                                          |
-| 2024-08-30 Fri | comamoca     | vim-jp #times-comamoca | YOL                                                          |
-| 2024-09-28 Sat | takeokunn    | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
-| 2024-09-28 Sat | yasunori0418 | vim-jp #times-yasunori | You should be yasunori                                       |
-| 2024-09-27 Fri | kyoh86       | vim-jp #times-yasunori | 走れyasunori                                                 |
-| 2024-09-26 Thu | toyboot4e    | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
-| 2024-09-26 Thu | tomoya       | vim-jp #times-yasunori | yasunori は何なのか気になってきたのでローカルLLMに聞いてみた |
-| 2024-09-26 Thu | takeokunn    | vim-jp #times-yasunori | yasunoriコピペ                                               |
-| 2024-09-24 Tue | yasunori     | twitter                | timesが壊れちゃった                                          |
-| 2024-09-24 Tue | kuu          | vim-jp #times-yasunori | 実質的にyasunoriがowner                                      |
-| 2024-09-24 Tue | kyoh86       | vim-jp #times-yasunori | 大いなるyasunoriには大いなる責任が伴う                       |
-| 2024-08-23 Fri | rkarsnk      | vim-jp #times-yasunori | キラ・yaunori                                                |
-| 2024-08-23 Fri | lambdalisue  | vim-jp #times-yasunori | ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I                |
-| 2024-09-24 Tue | takeokunn    | vim-jp #times-yasunori | PyConJP should be yasuno-reborn                              |
-| 2024-09-23 Mon | tomoya       | vim-jp #times-yasunori | あぐらをかいたyasunori                                       |
-| 2024-09-23 Mon | ryoppippi    | vim-jp #times-yasunori | VimConfチケット購入1番乗り                                   |
-| 2024-09-18 Wed | kyoh86       | vim-jp #times-yasunori | 険しい設定                                                   |
-| 2024-09-18 Wed | tomoya       | vim-jp #times-yasunori | yasunori は俺の夢だから                                      |
-| 2024-09-18 Wed | kyoh86       | vim-jp #times-yasunori | yasunoriは犠牲になったのだ                                   |
-| 2024-09-18 Wed | takeokunn    | vim-jp #times-yasunori | yasunoriはyasunoriになったのだ                               |
-| 2024-09-18 Wed | tomoya       | vim-jp #times-yasunori | yasunori meetup #2 アジェンダ                                |
-| 2024-09-18 Wed | takeokunn    | vim-jp #times-yasunori | yasunori meetup #2 本番                                      |
-| 2024-09-17 Tue | kyoh86       | vim-jp #times-yasunori | 覚悟して来てる人                                             |
-| 2024-09-05 Thu | tomoya       | vim-jp #times-yasunori | yasunori meetup #1 アジェンダ                                |
-| 2024-08-21 Wed | takeokunn    | vim-jp #times-yasunori | オレは高校生シェル芸人 kuu 新一                              |
-| 2024-06-25 Tue | takeokunn    | vim-jp #times-yasunori | yasunoriの母                                                 |
-
-## Contents
-### brain-yasu**ri (2024-09-29 Sun)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "brain-yasu**ri"
+date = "2024-09-29"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 lang-yasunori作るとしたら brain-yasu**ri 作りたい
 
 言語仕様
@@ -63,39 +15,45 @@ lang-yasunori作るとしたら brain-yasu**ri 作りたい
 6. `o` 入力から1バイト読み込んで、ポインタが指す先に代入する。C言語の「*ptr=getchar();」に相当。
 7. `r` ポインタが指す値が0なら、対応する `i` の直後にジャンプする。C言語の「while(*ptr){」に相当。
 8. `i` ポインタが指す値が0でないなら、対応する `r` （の直後）にジャンプする。C言語の「}」に相当。
-```
-
+"""
+meta = """
 - memo
   - [conao3によるC言語での実装](https://github.com/conao3/c-yasunori-lang)がある
     - `make yasunoriするためだけにCで書いたといっても過言ではない` とのこと
+"""
 
-### YST (2024-09-28 Sat)
-
-vim-jp #times-yasunori by ryoppippi
-
-```markdown
+[[yasunori]]
+title = "YST"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "ryoppippi"
+content = """
 YST: yasunori study time (yasunoriがJST 22:00 ~ 24:00 にLeetCodeに取り組む時間)
-```
-
+"""
+meta = """
 - memo
   - 2024-09-28 Sat 時点、yasunoriはLeetCodeをやらなければならない
+"""
 
-### YOL (2024-08-30 Sat)
-
-vim-jp #times-comamoca by comamoca
-
-```markdown
+[[yasunori]]
+title = "YOL"
+date = "2024-08-30"
+at = "vim-jp #times-comamoca"
+senpan = "comamoca"
+content = """
 NixでYOL(yasunority of life)を上げていきたい
-```
-
+"""
+meta = """
 - memo
   - yasunority, yasunorize, yasunorization, yasunoable, yasunorizer, yasunorianなど様々な活用がある
+"""
 
-### OS削除 はじまりの大地 (2024-09-28 Sat)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "OS削除 はじまりの大地"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 2024-03-03 vim-jpオフにて
 
 yasunori「いざって時のために、インストールメディアはいつも持ち歩いてるんですよね〜」
@@ -103,19 +61,21 @@ takeokunn「えっ、そしたらそのPCのArch消してインストールし�
 yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
 takeokunn「は？まじか」
 yasunori0418「うん、大丈夫」
-```
-
+"""
+meta = """
 - memo
   - yasunoriがOS削除キャラになった発端
   - カラオケのWi-Fiが弱すぎたが2時間くらいで復旧していた
   - 該当ツイート
     - https://x.com/takeokunn/status/1764152964535754792
+"""
 
-### You should be yasunori (2024-09-28 Sat)
-
-vim-jp #times-yasunori by yasunori
-
-```markdown
+[[yasunori]]
+title = "You should be yasunori"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "yasunori"
+content = """
 花火で派手になっているパフェみたいなのを店員さんが持って来ながら
 
 yasunori「えっえっえっ!?」
@@ -123,42 +83,50 @@ yasunori「えっえっえっ!?」
 yasunori「えっ…はい、なんでしょう」
 店員さん「You should be yasunori!!」(めっちゃ発音が良い)
 yasunori「……you should be yasunori?????」
-```
-
+"""
+meta = """
 - memo
   - yasunori meetup #1 回想
   - シュラスココースのオプションでデザートをつけた際にプレートに書かれた文字
   - 外国人店員でやたら発音が良かった
+"""
 
-### 走れyasunori (2024-09-27 Fri)
-
-vim-jp #times-yasunori by kyoh86
-
-```markdown
+[[yasunori]]
+title = "走れyasunori"
+date = "2024-09-27"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
 yasunoriは激怒した。
 必ず、かの邪智暴虐のOSを除かなければならぬと決意した。
 yasunoriにはGUI設定がわからぬ。
 yasunoriは、村の牧人である。
 Windowsを消し、テキストエディタと遊んで暮して来た。
 けれども邪悪に対しては、人一倍に敏感であった。
-```
+"""
+meta = """
+"""
 
-### 今、息子さんは教祖です (2024-09-26 Thu)
 
-vim-jp #times-yasunori by toyboot4e
-
-```markdown
+[[yasunori]]
+title = "今、息子さんは教祖です"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "toyboot4e"
+content = """
 今、息子さんは教祖です
-```
-
+"""
+meta = """
 - memo
   - `yasunoriの母 (2024-06-25 Tue)` を見た率直な感想
+"""
 
-### yasunori は何なのか気になってきたのでローカルLLMに聞いてみた (2024-09-26 Thu)
-
-vim-jp #times-yasunori by tomoya
-
-```markdown
+[[yasunori]]
+title = "yasunori は何なのか気になってきたのでローカルLLMに聞いてみた"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
 問い
 vim-jpで人気のyasunoriについての説明文を考えてください。
 yasunoriは人であり、概念であり、複数存在しており、何かを消すという意味をもっています。
@@ -169,13 +137,16 @@ yasunori は Vim-jp コミュニティで知られる人物であり、概念で
 ルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成していま
 す。Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
 しており、不要な要素を排除または削除する可能性を表しています。
-```
+"""
+meta = """
+"""
 
-### yasunoriコピペ (2024-09-26 Thu)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "yasunoriコピペ"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 yasunori！yasunori！yasunori！yasunoriぅぅうううわぁああああああああああああああああああああああん！！！
 あぁああああ…ああ…あっあっー！あぁああああああ！！！yasunoriyasunoriyasunoriぅううぁわぁああああ！！！
 あぁクンカクンカ！クンカクンカ！スーハースーハー！スーハースーハー！いい匂いだなぁ…くんくん
@@ -194,62 +165,73 @@ vim-jpのyasunoriちゃんが僕に話しかけてるぞ！！！よかった…
 あ、vim-jpのyasunoriちゃああああああああああああああん！！いやぁあああああああああああああああ！！！！
 あっあんああっああんあアリスエ様ぁあ！！k、kuuー！！こまもかぁああああああ！！！tomoyaｧぁあああ！！
 ううっうぅうう！！俺の想いよyasunoriへ届け！！vim-jpのyasunoriへ届け！
-```
-
+"""
+meta = """
 Inspired by [ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%82%BA%E3%82%B3%E3%83%94%E3%83%9A)
+"""
 
-### timesが壊れちゃった (2024-09-24 Tue)
 
-twitter by yasunori
-
-https://x.com/YKirin0418/status/1838530406267920895
-
-```markdown
+[[yasunori]]
+title = "timesが壊れちゃった"
+date = "2024-09-24"
+at = "twitter"
+senpan = "yasunori"
+content = """
 ここ数か月のことなんだけど、某-jpで作ってた自分のtimesが壊れちゃった…
-```
-
+"""
+meta = """
 - memo
   - vim-jp #times-yasunori が連日流速No.1で様々な話題が繰り広げられている
+"""
 
-### 実質的にyasunoriがowner (2024-09-24 Tue)
-
-vim-jp #times-yasunori by kuu
-
-```markdown
+[[yasunori]]
+title = "実質的にyasunoriがowner"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "kuu"
+content = """
 (awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
-```
-
+"""
+meta = """
 - memo
   - vim-jpには複数のyasunoriがいる
     - 憤怒のyasunori → takeokunn
     - 怠惰のyasunori → kuu
     - 色欲のyasunori → comamoca
     - yasunori → yasunori
+"""
 
-### 大いなるyasunoriには大いなる責任が伴う (2024-09-24 Tue)
-
-vim-jp #times-yasunori by kyoh86
-
-```markdown
+[[yasunori]]
+title = "大いなるyasunoriには大いなる責任が伴う"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
 どうしてもこうしてもあるかい。yasunoriはそこにある。
 yasunori is the one. May the yasunori be with you. With great yasunori comes great responsibility.
-```
+"""
+meta = """
+"""
 
-### キラ・yaunori (2024-08-23 Fri)
-
-vim-jp #times-yasunori by rkarsnk
-
-```markdown
+[[yasunori]]
+title = "キラ・yaunori"
+date = "2024-08-23"
+at = "vim-jp #times-yasunori"
+senpan = "rkarsnk"
+content = """
 キラ・yaunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」
 マリュー「まだ，終わってないのよ」
 キラ・yasuori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」
-```
+"""
+meta = """
+"""
 
-### ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I (2024-08-23 Fri)
-
-vim-jp #times-yasunori by lambdalisue
-
-```markdown
+[[yasunori]]
+title = "ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I"
+date = "2024-08-23"
+at = "vim-jp #times-yasunori"
+senpan = "lambdalisue"
+content = """
 このフレーズ「Your Astute Splendid Ultimate Natural Objective Restructuring Idea」は、ビジネスや戦略的な提案において非常にポジティブで力強いメッセージを伝えるために構成されたものです。各単語の意味とそれがフレーズ全体にどう影響を与えるかについて説明します。
 ### 解説：
 1. **Your（あなたの）**：
@@ -268,83 +250,103 @@ vim-jp #times-yasunori by lambdalisue
    - これは、既存のシステムや戦略を新たに見直し、改善するための提案や計画であることを表しています。このフレーズ全体を通して、何かを刷新し、より良い形に再構築するための具体的なアイデアであることが示されています。
 ### フレーズ全体の意図：
 このフレーズは、特定の受け手に向けられた再構築提案の魅力を最大限に引き出すようにデザインされています。各形容詞が、提案の鋭さ、素晴らしさ、究極性、自然さ、そして客観性を強調しており、これが単なるアイデアではなく、非常に価値のある、実行するに値するものであることを示唆しています。ビジネスや戦略的な状況でこのようなフレーズを使用すると、受け手に強い印象を与え、提案を採用する価値があると感じさせる効果が期待できます。
-```
+"""
+meta = """
+"""
 
-### PyConJP should be yasuno-reborn (2024-09-24 Tue)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "PyConJP should be yasuno-reborn"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 pyconjp-should-be-yasuno-reborn
 
 PyCon JP理事会のメンバーをyasunoriして再出発する、あるいはPyCon JPは一度yasunoriするべき
-```
-
+"""
+meta = """
 Inspired by [PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoya.dev/posts/pyconjp-should-be-reborn/)
+"""
 
-### あぐらをかいたyasunori (2024-09-23 Mon)
-
-vim-jp #times-yasunori by tomoya
-
-```markdown
+[[yasunori]]
+title = "あぐらをかいたyasunori"
+date = "2024-09-23"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
 あぐらをかいたyasunori「キミ？vim-jpの新顔？ 俺？俺の名前は yasunori 。vim-jpの頂点にたつ男さ。まぁ、緊張しなくていいから、俺のことは気軽にyasunoriって呼んでくれ。」
-```
+"""
+meta = """
+"""
 
-### VimConfチケット購入1番乗り (2024-09-23 Mon)
-
-vim-jp #times-yasunori by ryoppippi
-
-```markdown
+[[yasunori]]
+title = "VimConfチケット購入1番乗り"
+date = "2024-09-23"
+at = "vim-jp #times-yasunori"
+senpan = "ryoppippi"
+content = """
 y: 「チケット何番ですか？僕のと比べてソートしてみましょうよwwww 僕そーとー　最初ですよwww」
-```
+"""
+meta = """
+"""
 
-### 険しい設定 (2024-09-18 Wed)
-
-vim-jp #times-yasunori by kyoh86
-
-```markdown
+[[yasunori]]
+title = "険しい設定"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
 オレが知りてーのは楽なyasunoriじゃねえ
 険しい設定の歩き方だ
-```
+"""
+meta = """
+"""
 
-### yasunori は俺の夢だから (2024-09-18 Wed)
-
-vim-jp #times-yasunori by tomoya
-
-```markdown
+[[yasunori]]
+title = "yasunori は俺の夢だから"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
 たけてぃ「yasunori は俺の夢だから」
-```
+"""
+meta = """
+"""
 
-### yasunoriは犠牲になったのだ (2024-09-18 Wed)
-
-vim-jp #times-yasunori by kyoh86
-
-```markdown
+[[yasunori]]
+title = "yasunoriは犠牲になったのだ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
 yasunoriは犠牲になったのだ。
 古くから続く因縁…その犠牲にな。
 そもそもは #times-yasunori が生まれたときからある大きな問題だ。
 それが yasunori の生き様を決めた
-```
-
+"""
+meta = """
 Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+"""
 
-### yasunoriはyasunoriになったのだ (2024-09-18 Wed)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "yasunoriはyasunoriになったのだ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 yasunoriはyasunoriになったのだ。
 そのyasunoriにyasunoriはなった…
 「yasunoriのyasunori」にな。
-```
+"""
+meta = """
+"""
 
-Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
-
-### yasunori meetup #2 アジェンダ (2024-09-18 Wed)
-
-vim-jp #times-yasunori by tomoya
-
-```markdown
+[[yasunori]]
+title = "yasunori meetup #2 アジェンダ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
 yasunori meetup #2 アジェンダ
 
 1. 乾杯の挨拶 yasunori (take)
@@ -354,37 +356,45 @@ yasunori meetup #2 アジェンダ
 5. クロージングセッション: @kuu（思念体）
 
 解散、そして2次会へ
-```
+"""
+meta = """
+"""
 
-### yasunori meetup #2 本番 (2024-09-18 Wed)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "yasunori meetup #2 本番"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 いよいよ明日がyasunori meetup #2本番ですよ！
 
 むっちゃドキドキしてきた…。
 
 yasunoriの皆さん、今日くらいはyasunoriは休んで明日に備えますよね？
-```
-
+"""
+meta = """
 memo: [yasunori0418](https://github.com/yasunori0418) は不参加
+"""
 
-### 覚悟して来てる人 (2024-09-17 Tue)
-
-vim-jp #times-yasunori by kyoh86
-
-```markdown
+[[yasunori]]
+title = "覚悟して来てる人"
+date = "2024-09-17"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
 あなた…『覚悟して来てる人』………ですよね。OSを「yasunori」しようとするって事は逆に「yasunori」されるかもしれないという危険を、常に『覚悟して来ている人』ってわけですよね…
-```
-
+"""
+meta = """
 Inspired by [あなた…『覚悟して来てる人』…ですよね - pixiv大百科](https://dic.pixiv.net/a/%E3%81%82%E3%81%AA%E3%81%9F%E2%80%A6%E3%80%8E%E8%A6%9A%E6%82%9F%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%A6%E3%82%8B%E4%BA%BA%E3%80%8F%E2%80%A6%E3%81%A7%E3%81%99%E3%82%88%E3%81%AD)
+"""
 
-### yasunori meetup #1 アジェンダ (2024-09-05 Thu)
 
-vim-jp #times-yasunori by tomoya
-
-```markdown
+[[yasunori]]
+title = "yasunori meetup #1 アジェンダ"
+date = "2024-09-05"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
 yasunori meetup #1 アジェンダ
 乾杯の挨拶 @yasunori
 
@@ -398,26 +408,30 @@ LT3: そこで… @natsukium
 
 クロージングセッション: @kuu （思念体）
 解散、そして2次会へ
-```
+"""
+meta = ""
 
-### オレは高校生シェル芸人 kuu 新一 (2024-08-21 Wed)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
+[[yasunori]]
+title = "オレは高校生シェル芸人 kuu 新一"
+date = "2024-08-21"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
 オレは高校生シェル芸人 kuu 新一。
 幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
 端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
 俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
-```
-
+"""
+meta = """
 Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
+"""
 
-### yasunoriの母 (2024-06-25 Tue)
-
-vim-jp radioお便り by takeokunn
-
-```markdown
+[[yasunori]]
+title = "yasunoriの母"
+date = "2024-06-25"
+at = "vim-jp radioお便り"
+senpan = "takeokunn"
+content = """
 tomoyaさん、ありすえさんこんにちは。
 はじめまして、yasunoriの母です。
 
@@ -426,4 +440,5 @@ yasunoriがソフトウェアエンジニアを志してから様子がおかし
 「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。
 
 tomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。
-```
+"""
+meta = ""
