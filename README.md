@@ -18,6 +18,7 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 | date           | senpan       | place                  | title                                                        |
 |----------------|--------------|------------------------|--------------------------------------------------------------|
+| 2024-09-30 Mon | kuu          | vim-jp #times-yasunori | yasunoriしないなんて勿体無さ                                 |
 | 2024-09-29 Sun | takeokunn    | vim-jp #times-yasunori | brain-yasu\**ri                                              |
 | 2024-09-28 Sat | ryoppippi    | vim-jp #times-yasunori | YST                                                          |
 | 2024-08-30 Fri | comamoca     | vim-jp #times-comamoca | YOL                                                          |
@@ -47,6 +48,14 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 | 2024-06-25 Tue | takeokunn    | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
+### yasunoriしないなんて勿体無さ (2024-09-30 Mon)
+
+vim-jp #times-yasunori by kuu
+
+```markdown
+折角パソカタして生きてるのにyasunoriしないなんて勿体無さすぎ
+```
+
 ### brain-yasu**ri (2024-09-29 Sun)
 
 vim-jp #times-yasunori by takeokunn
