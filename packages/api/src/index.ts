@@ -9,12 +9,25 @@ app.use("*", poweredBy());
 app.use("*", prettyJSON());
 app.use("*", cors());
 
+const parsedAwesomeYasunori = getParsedAwesomeYasunori();
 
 app.get("/", (c) => {
   return c.json({
     message:
       "Here is yasunori APIs. <https://github.com/takeokunn/awesome-yasunori/packages/api>",
   });
+});
+
+app.get("/awesome", async (c) => {
+  if (!parsedAwesomeYasunori.success) {
+    return c.json(
+      {
+        errors: parsedAwesomeYasunori.issues,
+      },
+      400,
+    );
+  }
+  return c.json(parsedAwesomeYasunori?.output.yasunori);
 });
 
 export default app;
