@@ -78,7 +78,7 @@ lang-yasunori作るとしたら brain-yasu**ri 作りたい
   - [conao3によるC言語での実装](https://github.com/conao3/c-yasunori-lang)がある
     - `make yasunoriするためだけにCで書いたといっても過言ではない` とのこと
 
-### YST (2024-09-28 Sat)
+### YST (2024-09-28 Mon)
 
 vim-jp #times-yasunori by ryoppippi
 
