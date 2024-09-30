@@ -1,6 +1,3 @@
-import toml from "toml";
-import { resolve } from "node:path";
-import { readFileSync } from "node:fs";
 import {
   object,
   string,
@@ -10,6 +7,7 @@ import {
   optional,
   safeParse,
 } from "valibot";
+import awesomeYasunoriJson from "./awesome-yasunori.json";
 
 const awesomeYasunoriEntrySchema = object({
   title: string(),
@@ -25,8 +23,5 @@ const awesomeYasunoriSchema = object({
 });
 
 export function getParsedAwesomeYasunori() {
-  const yasunoriTomlPath = resolve("../../yasunori.toml");
-  const yasunoriToml = readFileSync(yasunoriTomlPath, { encoding: "utf8" });
-  const parsedYasunoriToml = toml.parse(yasunoriToml);
-  return safeParse(awesomeYasunoriSchema, parsedYasunoriToml);
+  return safeParse(awesomeYasunoriSchema, awesomeYasunoriJson);
 }
