@@ -1,12 +1,9 @@
 # Awesome yasunori
 
-A curated list of awesome yasunori, the post about
-[yasunori0418](https://github.com/yasunori0418). Inspired by
-[mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
+A curated list of awesome yasunori, the post about [yasunori0418](https://github.com/yasunori0418). Inspired by [mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
 
 > [!CAUTION]
-> It's a story YOU([takeokunn](https://github.com/takeokunn)) started by use
-> ME([yasunori0418](https://github.com/yasunori0418))!!
+> It's a story YOU([takeokunn](https://github.com/takeokunn)) started by use ME([yasunori0418](https://github.com/yasunori0418))!!
 >
 > お前([takeokunn](https://github.com/takeokunn))が俺([yasunori0418](https://github.com/yasunori0418))で始めた物語だろ！！
 >
@@ -14,16 +11,13 @@ A curated list of awesome yasunori, the post about
 
 ## Contributing
 
-Please take a quick gander at the
-[contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md)
-first. Thanks to all
-[contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors);
-you rock!
+Please take a quick gander at the [contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
+Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
 
 ## Indexes
 
 | date           | senpan            | place                  | title                                                        |
-| -------------- | ----------------- | ---------------------- | ------------------------------------------------------------ |
+|----------------|-------------------|------------------------|--------------------------------------------------------------|
 | 2024-09-29 Sun | takeokunn         | vim-jp #times-yasunori | brain-yasu\**ri                                              |
 | 2024-09-28 Sat | ryoppippi         | vim-jp #times-yasunori | YST                                                          |
 | 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
@@ -52,7 +46,6 @@ you rock!
 | 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
-
 ### brain-yasu**ri (2024-09-29 Sun)
 
 vim-jp #times-yasunori by takeokunn
@@ -61,19 +54,14 @@ vim-jp #times-yasunori by takeokunn
 lang-yasunori作るとしたら brain-yasu**ri 作りたい
 
 言語仕様
-
-1. `y`
-   ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。
+1. `y` ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。
 2. `a` ポインタをデクリメントする。C言語の「ptr--;」に相当。
 3. `s` ポインタが指す値をインクリメントする。C言語の「(*ptr)++;」に相当。
 4. `u` ポインタが指す値をデクリメントする。C言語の「(*ptr)--;」に相当。
 5. `n` ポインタが指す値を出力に書き出す。C言語の「putchar(*ptr);」に相当。
-6. `o`
-   入力から1バイト読み込んで、ポインタが指す先に代入する。C言語の「*ptr=getchar();」に相当。
-7. `r` ポインタが指す値が0なら、対応する `i`
-   の直後にジャンプする。C言語の「while(*ptr){」に相当。
-8. `i` ポインタが指す値が0でないなら、対応する `r`
-   （の直後）にジャンプする。C言語の「}」に相当。
+6. `o` 入力から1バイト読み込んで、ポインタが指す先に代入する。C言語の「*ptr=getchar();」に相当。
+7. `r` ポインタが指す値が0なら、対応する `i` の直後にジャンプする。C言語の「while(*ptr){」に相当。
+8. `i` ポインタが指す値が0でないなら、対応する `r` （の直後）にジャンプする。C言語の「}」に相当。
 ```
 
 - memo
@@ -100,8 +88,7 @@ NixでYOL(yasunority of life)を上げていきたい
 ```
 
 - memo
-  - yasunority, yasunorize, yasunorization, yasunoable, yasunorizer,
-    yasunorianなど様々な活用がある
+  - yasunority, yasunorize, yasunorization, yasunoable, yasunorizer, yasunorianなど様々な活用がある
 
 ### OS削除 はじまりの大地 (2024-09-28 Sat)
 
@@ -113,7 +100,8 @@ vim-jp #times-yasunori by takeokunn
 yasunori「いざって時のために、インストールメディアはいつも持ち歩いてるんですよね〜」
 takeokunn「えっ、そしたらそのPCのArch消してインストールしなおせる？！」
 yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
-takeokunn「は？まじか」 yasunori0418「うん、大丈夫」
+takeokunn「は？まじか」
+yasunori0418「うん、大丈夫」
 ```
 
 - memo
@@ -129,9 +117,11 @@ vim-jp #times-yasunori by yasunori
 ```markdown
 花火で派手になっているパフェみたいなのを店員さんが持って来ながら
 
-yasunori「えっえっえっ!?」 店員さん「yasunoriさん？」
-yasunori「えっ…はい、なんでしょう」 店員さん「You should be
-yasunori!!」(めっちゃ発音が良い) yasunori「……you should be yasunori?????」
+yasunori「えっえっえっ!?」
+店員さん「yasunoriさん？」
+yasunori「えっ…はい、なんでしょう」
+店員さん「You should be yasunori!!」(めっちゃ発音が良い)
+yasunori「……you should be yasunori?????」
 ```
 
 - memo
@@ -163,15 +153,15 @@ vim-jp #times-yasunori by toyboot4e
 vim-jp #times-yasunori by tomoya
 
 ```markdown
-問い vim-jpで人気のyasunoriについての説明文を考えてください。
+問い
+vim-jpで人気のyasunoriについての説明文を考えてください。
 yasunoriは人であり、概念であり、複数存在しており、何かを消すという意味をもっています。
 
-回答 yasunori は Vim-jp
-コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除
+回答
+yasunori は Vim-jp コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除
 のアイデアを表しています。このユニークな個人は1人ではなく、さまざまな個人の集合体であり、各人がスキ
 ルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成していま
-す。Vim-jp における Yasunori
-の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
+す。Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
 しており、不要な要素を排除または削除する可能性を表しています。
 ```
 
@@ -189,8 +179,7 @@ vim-jpのyasunoriたんかわいかったよぅ！！あぁぁああ…あああ
 OS削除されて良かったねyasunoriたん！あぁあああああ！かわいい！yasunoriたん！かわいい！あっああぁああ！
 awesome-yasunoriも出来て嬉し…いやぁああああああ！！！にゃああああああああん！！ぎゃああああああああ！！
 ぐあああああああああああ！！！vim-jpなんて現実じゃない！！！！あ…twitterもよく考えたら…
-y a s u n o r i ち ゃ ん は 現実 じ ゃ な
-い？にゃあああああああああああああん！！うぁああああああああああ！！
+y a s u n o r i ち ゃ ん は 現実 じ ゃ な い？にゃあああああああああああああん！！うぁああああああああああ！！
 そんなぁああああああ！！いやぁぁぁあああああああああ！！はぁああああああん！！vim-jpぁああああ！！
 この！ちきしょー！やめてやる！！現実なんかやめ…て…え！？見…てる？vim-jpのyasunoriちゃんが僕を見てる？
 vim-jpのyasunoriちゃんが僕を見てるぞ！yasunoriちゃんが僕を見てるぞ！vim-jpのyasunoriちゃんが僕を見てるぞ！！
@@ -201,8 +190,7 @@ vim-jpのyasunoriちゃんが僕に話しかけてるぞ！！！よかった…
 ううっうぅうう！！俺の想いよyasunoriへ届け！！vim-jpのyasunoriへ届け！
 ```
 
-Inspired by
-[ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%82%BA%E3%82%B3%E3%83%94%E3%83%9A)
+Inspired by [ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%82%BA%E3%82%B3%E3%83%94%E3%83%9A)
 
 ### timesが壊れちゃった (2024-09-24 Tue)
 
@@ -222,8 +210,7 @@ https://x.com/YKirin0418/status/1838530406267920895
 vim-jp #times-yasunori by kuu
 
 ```markdown
-(awesome-yasunoriは)
-憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
+(awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
 ```
 
 - memo
@@ -238,8 +225,8 @@ vim-jp #times-yasunori by kuu
 vim-jp #times-yasunori by kyoh86
 
 ```markdown
-どうしてもこうしてもあるかい。yasunoriはそこにある。 yasunori is the one. May
-the yasunori be with you. With great yasunori comes great responsibility.
+どうしてもこうしてもあるかい。yasunoriはそこにある。
+yasunori is the one. May the yasunori be with you. With great yasunori comes great responsibility.
 ```
 
 ### キラ・yaunori (2024-08-23 Fri)
@@ -257,11 +244,8 @@ vim-jp #times-yasunori by rkarsnk
 vim-jp #times-yasunori by lambdalisue
 
 ```markdown
-このフレーズ「Your Astute Splendid Ultimate Natural Objective Restructuring
-Idea」は、ビジネスや戦略的な提案において非常にポジティブで力強いメッセージを伝えるために構成されたものです。各単語の意味とそれがフレーズ全体にどう影響を与えるかについて説明します。
-
+このフレーズ「Your Astute Splendid Ultimate Natural Objective Restructuring Idea」は、ビジネスや戦略的な提案において非常にポジティブで力強いメッセージを伝えるために構成されたものです。各単語の意味とそれがフレーズ全体にどう影響を与えるかについて説明します。
 ### 解説：
-
 1. **Your（あなたの）**：
    - このフレーズの冒頭に位置することで、この提案やアイデアが特定の個人または組織に向けられていることを示しています。受け手にとって、個人的なつながりや関心を感じさせる役割を果たします。
 2. **Astute（鋭い、抜け目のない）**：
@@ -276,9 +260,7 @@ Idea」は、ビジネスや戦略的な提案において非常にポジティ�
    - この形容詞は、提案が偏りなく、公正で論理的なものであることを示しています。感情や主観に左右されず、事実に基づいたアプローチであることを強調します。
 7. **Restructuring Idea（再構築のアイデア）**：
    - これは、既存のシステムや戦略を新たに見直し、改善するための提案や計画であることを表しています。このフレーズ全体を通して、何かを刷新し、より良い形に再構築するための具体的なアイデアであることが示されています。
-
 ### フレーズ全体の意図：
-
 このフレーズは、特定の受け手に向けられた再構築提案の魅力を最大限に引き出すようにデザインされています。各形容詞が、提案の鋭さ、素晴らしさ、究極性、自然さ、そして客観性を強調しており、これが単なるアイデアではなく、非常に価値のある、実行するに値するものであることを示唆しています。ビジネスや戦略的な状況でこのようなフレーズを使用すると、受け手に強い印象を与え、提案を採用する価値があると感じさせる効果が期待できます。
 ```
 
@@ -289,20 +271,17 @@ vim-jp #times-yasunori by takeokunn
 ```markdown
 pyconjp-should-be-yasuno-reborn
 
-PyCon JP理事会のメンバーをyasunoriして再出発する、あるいはPyCon
-JPは一度yasunoriするべき
+PyCon JP理事会のメンバーをyasunoriして再出発する、あるいはPyCon JPは一度yasunoriするべき
 ```
 
-Inspired by
-[PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoya.dev/posts/pyconjp-should-be-reborn/)
+Inspired by [PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoya.dev/posts/pyconjp-should-be-reborn/)
 
 ### あぐらをかいたyasunori (2024-09-23 Mon)
 
 vim-jp #times-yasunori by tomoya
 
 ```markdown
-あぐらをかいたyasunori「キミ？vim-jpの新顔？ 俺？俺の名前は yasunori
-。vim-jpの頂点にたつ男さ。まぁ、緊張しなくていいから、俺のことは気軽にyasunoriって呼んでくれ。」
+あぐらをかいたyasunori「キミ？vim-jpの新顔？ 俺？俺の名前は yasunori 。vim-jpの頂点にたつ男さ。まぁ、緊張しなくていいから、俺のことは気軽にyasunoriって呼んでくれ。」
 ```
 
 ### VimConfチケット購入1番乗り (2024-09-23 Mon)
@@ -310,8 +289,7 @@ vim-jp #times-yasunori by tomoya
 vim-jp #times-yasunori by ryoppippi
 
 ```markdown
-y: 「チケット何番ですか？僕のと比べてソートしてみましょうよwwww
-僕そーとー　最初ですよwww」
+y: 「チケット何番ですか？僕のと比べてソートしてみましょうよwwww 僕そーとー　最初ですよwww」
 ```
 
 ### 険しい設定 (2024-09-18 Wed)
@@ -319,7 +297,8 @@ y: 「チケット何番ですか？僕のと比べてソートしてみまし�
 vim-jp #times-yasunori by kyoh86
 
 ```markdown
-オレが知りてーのは楽なyasunoriじゃねえ 険しい設定の歩き方だ
+オレが知りてーのは楽なyasunoriじゃねえ
+険しい設定の歩き方だ
 ```
 
 ### yasunori は俺の夢だから (2024-09-18 Wed)
@@ -341,13 +320,10 @@ yasunoriはyasunoriになったのだ。そのyasunoriにyasunoriはなった…
 vim-jp #times-yasunori by kyoh86
 
 ```markdown
-yasunoriは犠牲になったのだ。古くから続く因縁…その犠牲にな。そもそもは
-#times-yasunori が生まれたときからある大きな問題だ。それが yasunori
-の生き様を決めた
+yasunoriは犠牲になったのだ。古くから続く因縁…その犠牲にな。そもそもは #times-yasunori が生まれたときからある大きな問題だ。それが yasunori の生き様を決めた
 ```
 
-Inspired by
-[犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
 
 ### yasunori meetup #2 アジェンダ (2024-09-18 Wed)
 
@@ -358,7 +334,7 @@ yasunori meetup #2 アジェンダ
 
 1. 乾杯の挨拶 yasunori (take)
 2. キーノート: おもしろNix近況報告 yasunori (natsukium)
-3. yasunori (take) と yasunori (natsukium) の義兄弟の契り（見届け人 tomoya）
+3. yasunori (take) と yasunori (natsukium)  の義兄弟の契り（見届け人 tomoya）
 4. conao3 による yasunori (原義) の最新情報共有
 5. クロージングセッション: @kuu（思念体）
 
@@ -387,22 +363,26 @@ vim-jp #times-yasunori by kyoh86
 あなた…『覚悟して来てる人』………ですよね。OSを「yasunori」しようとするって事は逆に「yasunori」されるかもしれないという危険を、常に『覚悟して来ている人』ってわけですよね…
 ```
 
-Inspired by
-[あなた…『覚悟して来てる人』…ですよね - pixiv大百科](https://dic.pixiv.net/a/%E3%81%82%E3%81%AA%E3%81%9F%E2%80%A6%E3%80%8E%E8%A6%9A%E6%82%9F%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%A6%E3%82%8B%E4%BA%BA%E3%80%8F%E2%80%A6%E3%81%A7%E3%81%99%E3%82%88%E3%81%AD)
+Inspired by [あなた…『覚悟して来てる人』…ですよね - pixiv大百科](https://dic.pixiv.net/a/%E3%81%82%E3%81%AA%E3%81%9F%E2%80%A6%E3%80%8E%E8%A6%9A%E6%82%9F%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%A6%E3%82%8B%E4%BA%BA%E3%80%8F%E2%80%A6%E3%81%A7%E3%81%99%E3%82%88%E3%81%AD)
 
 ### yasunori meetup #1 アジェンダ (2024-09-05 Thu)
 
 vim-jp #times-yasunori by tomoya
 
 ```markdown
-yasunori meetup #1 アジェンダ 乾杯の挨拶 @yasunori
+yasunori meetup #1 アジェンダ
+乾杯の挨拶 @yasunori
 
-ご歓談 キーノート: おもしろ近況報告 @takeokunn
+ご歓談
+キーノート: おもしろ近況報告 @takeokunn
 
-ご歓談 LT1: おもしろ近況報告 @yasunori LT2: おもしろ近況報告 @conao3 LT3:
-そこで… @natsukium
+ご歓談
+LT1: おもしろ近況報告 @yasunori
+LT2: おもしろ近況報告 @conao3
+LT3: そこで… @natsukium
 
-クロージングセッション: @kuu （思念体） 解散、そして2次会へ
+クロージングセッション: @kuu （思念体）
+解散、そして2次会へ
 ```
 
 ### オレは高校生シェル芸人 kuu 新一 (2024-08-21 Wed)
@@ -410,22 +390,21 @@ yasunori meetup #1 アジェンダ 乾杯の挨拶 @yasunori
 vim-jp #times-yasunori by takeokunn
 
 ```markdown
-オレは高校生シェル芸人 kuu 新一。 幼馴染で同級生の take
-利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
-端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero
-オプションに気づかなかった。 俺はその男に archiso を飲まされ、目が覚めたら・・・
-OS が yasunori されてしまった!
+オレは高校生シェル芸人 kuu 新一。
+幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
+端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
+俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
 ```
 
-Inspired by
-[sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
+Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
 
 ### yasunoriの母 (2024-06-25 Tue)
 
 vim-jp radioお便り by takeokunn
 
 ```markdown
-tomoyaさん、ありすえさんこんにちは。 はじめまして、yasunoriの母です。
+tomoyaさん、ありすえさんこんにちは。
+はじめまして、yasunoriの母です。
 
 yasunoriがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。
 家ですれ違う時「Vim....Vim....」という独り言をずっと唱えていたり、部屋からは「設定させていただきありがとうございます!!」という大声が聞こえてきたり、
