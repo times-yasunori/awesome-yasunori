@@ -2,6 +2,7 @@
   "name": "yasunori-apis",
   "type": "module",
   "scripts": {
+    "generate:json": "touch ./src/awesome-yasunori.json && node ./script/generate-awesome-yasunori-json.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev",
