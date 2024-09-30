@@ -16,34 +16,35 @@ Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graph
 
 ## Indexes
 
-| date           | senpan            | place                  | title                                                        |
-|----------------|-------------------|------------------------|--------------------------------------------------------------|
-| 2024-09-29 Sun | takeokunn         | vim-jp #times-yasunori | brain-yasu\**ri                                              |
-| 2024-09-28 Sat | ryoppippi         | vim-jp #times-yasunori | YST                                                          |
-| 2024-08-30 Fri | comamoca          | vim-jp #times-comamoca | YOL                                                          |
-| 2024-09-28 Sat | takeokunn         | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
-| 2024-09-28 Sat | yasunori0418      | vim-jp #times-yasunori | You should be yasunori                                       |
-| 2024-09-27 Fri | kyoh86            | vim-jp #times-yasunori | 走れyasunori                                                 |
-| 2024-09-26 Thu | toyboot4e         | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
-| 2024-09-26 Thu | tomoya            | vim-jp #times-yasunori | yasunori は何なのか気になってきたのでローカルLLMに聞いてみた |
-| 2024-09-26 Thu | takeokunn         | vim-jp #times-yasunori | yasunoriコピペ                                               |
-| 2024-09-24 Tue | yasunori          | twitter                | timesが壊れちゃった                                          |
-| 2024-09-24 Tue | kuu               | vim-jp #times-yasunori | 実質的にyasunoriがowner                                      |
-| 2024-09-24 Tue | kyoh86            | vim-jp #times-yasunori | 大いなるyasunoriには大いなる責任が伴う                       |
-| 2024-08-23 Fri | rkarsnk           | vim-jp #times-yasunori | キラ・yaunori                                                |
-| 2024-08-23 Fri | lambdalisue       | vim-jp #times-yasunori | ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I                |
-| 2024-09-24 Tue | takeokunn         | vim-jp #times-yasunori | PyConJP should be yasuno-reborn                              |
-| 2024-09-23 Mon | tomoya            | vim-jp #times-yasunori | あぐらをかいたyasunori                                       |
-| 2024-09-23 Mon | ryoppippi         | vim-jp #times-yasunori | VimConfチケット購入1番乗り                                   |
-| 2024-09-18 Wed | kyoh86            | vim-jp #times-yasunori | 険しい設定                                                   |
-| 2024-09-18 Wed | tomoya            | vim-jp #times-yasunori | yasunori は俺の夢だから                                      |
-| 2024-09-18 Wed | takeokunn, kyoh86 | vim-jp #times-yasunori | 犠牲になったのだ                                             |
-| 2024-09-18 Wed | tomoya            | vim-jp #times-yasunori | yasunori meetup #2 アジェンダ                                |
-| 2024-09-18 Wed | takeokunn         | vim-jp #times-yasunori | yasunori meetup #2 本番                                      |
-| 2024-09-17 Tue | kyoh86            | vim-jp #times-yasunori | 覚悟して来てる人                                             |
-| 2024-09-05 Thu | tomoya            | vim-jp #times-yasunori | yasunori meetup #1 アジェンダ                                |
-| 2024-08-21 Wed | takeokunn         | vim-jp #times-yasunori | オレは高校生シェル芸人 kuu 新一                              |
-| 2024-06-25 Tue | takeokunn         | vim-jp #times-yasunori | yasunoriの母                                                 |
+| date           | senpan       | place                  | title                                                        |
+|----------------|--------------|------------------------|--------------------------------------------------------------|
+| 2024-09-29 Sun | takeokunn    | vim-jp #times-yasunori | brain-yasu\**ri                                              |
+| 2024-09-28 Sat | ryoppippi    | vim-jp #times-yasunori | YST                                                          |
+| 2024-08-30 Fri | comamoca     | vim-jp #times-comamoca | YOL                                                          |
+| 2024-09-28 Sat | takeokunn    | vim-jp #times-yasunori | OS削除 はじまりの大地                                        |
+| 2024-09-28 Sat | yasunori0418 | vim-jp #times-yasunori | You should be yasunori                                       |
+| 2024-09-27 Fri | kyoh86       | vim-jp #times-yasunori | 走れyasunori                                                 |
+| 2024-09-26 Thu | toyboot4e    | vim-jp #times-yasunori | 今、息子さんは教祖です                                       |
+| 2024-09-26 Thu | tomoya       | vim-jp #times-yasunori | yasunori は何なのか気になってきたのでローカルLLMに聞いてみた |
+| 2024-09-26 Thu | takeokunn    | vim-jp #times-yasunori | yasunoriコピペ                                               |
+| 2024-09-24 Tue | yasunori     | twitter                | timesが壊れちゃった                                          |
+| 2024-09-24 Tue | kuu          | vim-jp #times-yasunori | 実質的にyasunoriがowner                                      |
+| 2024-09-24 Tue | kyoh86       | vim-jp #times-yasunori | 大いなるyasunoriには大いなる責任が伴う                       |
+| 2024-08-23 Fri | rkarsnk      | vim-jp #times-yasunori | キラ・yaunori                                                |
+| 2024-08-23 Fri | lambdalisue  | vim-jp #times-yasunori | ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I                |
+| 2024-09-24 Tue | takeokunn    | vim-jp #times-yasunori | PyConJP should be yasuno-reborn                              |
+| 2024-09-23 Mon | tomoya       | vim-jp #times-yasunori | あぐらをかいたyasunori                                       |
+| 2024-09-23 Mon | ryoppippi    | vim-jp #times-yasunori | VimConfチケット購入1番乗り                                   |
+| 2024-09-18 Wed | kyoh86       | vim-jp #times-yasunori | 険しい設定                                                   |
+| 2024-09-18 Wed | tomoya       | vim-jp #times-yasunori | yasunori は俺の夢だから                                      |
+| 2024-09-18 Wed | kyoh86       | vim-jp #times-yasunori | yasunoriは犠牲になったのだ                                   |
+| 2024-09-18 Wed | takeokunn    | vim-jp #times-yasunori | yasunoriはyasunoriになったのだ                               |
+| 2024-09-18 Wed | tomoya       | vim-jp #times-yasunori | yasunori meetup #2 アジェンダ                                |
+| 2024-09-18 Wed | takeokunn    | vim-jp #times-yasunori | yasunori meetup #2 本番                                      |
+| 2024-09-17 Tue | kyoh86       | vim-jp #times-yasunori | 覚悟して来てる人                                             |
+| 2024-09-05 Thu | tomoya       | vim-jp #times-yasunori | yasunori meetup #1 アジェンダ                                |
+| 2024-08-21 Wed | takeokunn    | vim-jp #times-yasunori | オレは高校生シェル芸人 kuu 新一                              |
+| 2024-06-25 Tue | takeokunn    | vim-jp #times-yasunori | yasunoriの母                                                 |
 
 ## Contents
 ### brain-yasu**ri (2024-09-29 Sun)
@@ -314,15 +315,7 @@ vim-jp #times-yasunori by tomoya
 たけてぃ「yasunori は俺の夢だから」
 ```
 
-### 犠牲になったのだ (2024-09-18 Wed)
-
-vim-jp #times-yasunori by takeokunn
-
-```markdown
-yasunoriはyasunoriになったのだ。
-そのyasunoriにyasunoriはなった…
-「yasunoriのyasunori」にな。
-```
+### yasunoriは犠牲になったのだ (2024-09-18 Wed)
 
 vim-jp #times-yasunori by kyoh86
 
@@ -331,6 +324,18 @@ yasunoriは犠牲になったのだ。
 古くから続く因縁…その犠牲にな。
 そもそもは #times-yasunori が生まれたときからある大きな問題だ。
 それが yasunori の生き様を決めた
+```
+
+Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+
+### yasunoriはyasunoriになったのだ (2024-09-18 Wed)
+
+vim-jp #times-yasunori by takeokunn
+
+```markdown
+yasunoriはyasunoriになったのだ。
+そのyasunoriにyasunoriはなった…
+「yasunoriのyasunori」にな。
 ```
 
 Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
