@@ -37,7 +37,7 @@
           packages.default = pkgs.stdenv.mkDerivation {
             name = "readme";
 
-            src = lib.cleanSource ./.;
+            src = nixpkgs.lib.cleanSource ./.;
 
             buildInputs = [readmegen.packages.default];
 
