@@ -6,6 +6,10 @@
     "strict": true,
     "skipLibCheck": true,
     "lib": ["ESNext"],
-    "types": ["@cloudflare/workers-types/2023-07-01", "vite/client"]
+    "types": [
+      "@cloudflare/workers-types/2023-07-01",
+      "vite/client",
+      "vitest/globals"
+    ]
   }
 }
