@@ -23,3 +23,28 @@ jobs:
         uses: cachix/install-nix-action@v29
       - name: flake check
         run: nix flake check
+  deploy-readme: # ファイル分割したほうがいいかも
+    name: Deploy README.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: prepare nix
+        uses: cachix/install-nix-action@v29
+      - name: generate readme
+        run: |
+          nix build .#readme
+      - name: config git
+        run: |
+          git config --local user.name "Github Actions"
+          git config --local user.email "actions@github.com"
+      - name: Copy readme
+        run: cp -f ./result/README.md ./README.md
+      - name: commit file
+        run: |
+          git add .
+          git commit -m "chore: update readme"
+      - name: push commit
+        run: |
+          git pull
+          git push
