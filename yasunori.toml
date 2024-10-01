@@ -1,4 +1,5 @@
 [[yasunori]]
+id = 28
 title = "yasunoriしないなんて勿体無さ"
 date = "2024-09-30"
 at = "vim-jp #times-yasunori"
@@ -8,6 +9,7 @@ content = """
 """
 
 [[yasunori]]
+id = 27
 title = "brain-yasu**ri"
 date = "2024-09-29"
 at = "vim-jp #times-yasunori"
@@ -32,6 +34,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 26
 title = "YST"
 date = "2024-09-28"
 at = "vim-jp #times-yasunori"
@@ -45,6 +48,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 25
 title = "YOL"
 date = "2024-08-30"
 at = "vim-jp #times-comamoca"
@@ -58,6 +62,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 24
 title = "OS削除 はじまりの大地"
 date = "2024-09-28"
 at = "vim-jp #times-yasunori"
@@ -80,6 +85,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 23
 title = "You should be yasunori"
 date = "2024-09-28"
 at = "vim-jp #times-yasunori"
@@ -101,6 +107,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 22
 title = "走れyasunori"
 date = "2024-09-27"
 at = "vim-jp #times-yasunori"
@@ -118,6 +125,7 @@ meta = """
 
 
 [[yasunori]]
+id = 21
 title = "今、息子さんは教祖です"
 date = "2024-09-26"
 at = "vim-jp #times-yasunori"
@@ -131,6 +139,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 20
 title = "yasunori は何なのか気になってきたのでローカルLLMに聞いてみた"
 date = "2024-09-26"
 at = "vim-jp #times-yasunori"
@@ -151,6 +160,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 19
 title = "yasunoriコピペ"
 date = "2024-09-26"
 at = "vim-jp #times-yasunori"
@@ -181,6 +191,7 @@ Inspired by [ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%8
 
 
 [[yasunori]]
+id = 18
 title = "timesが壊れちゃった"
 date = "2024-09-24"
 at = "twitter"
@@ -195,6 +206,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 17
 title = "実質的にyasunoriがowner"
 date = "2024-09-24"
 at = "vim-jp #times-yasunori"
@@ -212,6 +224,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 16
 title = "大いなるyasunoriには大いなる責任が伴う"
 date = "2024-09-24"
 at = "vim-jp #times-yasunori"
@@ -224,6 +237,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 15
 title = "キラ・yaunori"
 date = "2024-08-23"
 at = "vim-jp #times-yasunori"
@@ -237,6 +251,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 14
 title = "ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I"
 date = "2024-08-23"
 at = "vim-jp #times-yasunori"
@@ -265,6 +280,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 13
 title = "PyConJP should be yasuno-reborn"
 date = "2024-09-24"
 at = "vim-jp #times-yasunori"
@@ -279,6 +295,7 @@ Inspired by [PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoy
 """
 
 [[yasunori]]
+id = 12
 title = "あぐらをかいたyasunori"
 date = "2024-09-23"
 at = "vim-jp #times-yasunori"
@@ -290,6 +307,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 11
 title = "VimConfチケット購入1番乗り"
 date = "2024-09-23"
 at = "vim-jp #times-yasunori"
@@ -301,6 +319,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 10
 title = "険しい設定"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -313,6 +332,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 9
 title = "yasunori は俺の夢だから"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -324,6 +344,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 8
 title = "yasunoriは犠牲になったのだ"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -339,6 +360,7 @@ Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/
 """
 
 [[yasunori]]
+id = 7
 title = "yasunoriはyasunoriになったのだ"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -353,6 +375,7 @@ Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/
 """
 
 [[yasunori]]
+id = 6
 title = "yasunori meetup #2 アジェンダ"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -372,6 +395,7 @@ meta = """
 """
 
 [[yasunori]]
+id = 5
 title = "yasunori meetup #2 本番"
 date = "2024-09-18"
 at = "vim-jp #times-yasunori"
@@ -388,6 +412,7 @@ memo: [yasunori0418](https://github.com/yasunori0418) は不参加
 """
 
 [[yasunori]]
+id = 4
 title = "覚悟して来てる人"
 date = "2024-09-17"
 at = "vim-jp #times-yasunori"
@@ -401,6 +426,7 @@ Inspired by [あなた…『覚悟して来てる人』…ですよね - pixiv�
 
 
 [[yasunori]]
+id = 3
 title = "yasunori meetup #1 アジェンダ"
 date = "2024-09-05"
 at = "vim-jp #times-yasunori"
@@ -423,6 +449,7 @@ LT3: そこで… @natsukium
 meta = ""
 
 [[yasunori]]
+id = 2
 title = "オレは高校生シェル芸人 kuu 新一"
 date = "2024-08-21"
 at = "vim-jp #times-yasunori"
@@ -438,6 +465,7 @@ Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536
 """
 
 [[yasunori]]
+id = 1
 title = "yasunoriの母"
 date = "2024-06-25"
 at = "vim-jp radioお便り"
