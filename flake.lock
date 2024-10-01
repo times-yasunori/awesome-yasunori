@@ -103,11 +103,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1727756312,
-        "narHash": "sha256-XBogRPmWPj4I2ITBOp1Vm/ORlT3FmrAXFXU7+rnSJH0=",
+        "lastModified": 1727781437,
+        "narHash": "sha256-GNs/xbv1yjSJX76c+n10s6/0/MxBg5mpCd6bF+hg5NU=",
         "owner": "satler-git",
         "repo": "awesome-yasunori-readmegen",
-        "rev": "eadf003634d9819ced751ed2026c093801cb7dc0",
+        "rev": "2c7561aa57d56fa7cd837bbbf74eac7b367f3699",
         "type": "github"
       },
       "original": {
