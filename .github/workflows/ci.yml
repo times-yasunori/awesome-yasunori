@@ -31,6 +31,7 @@ jobs:
         uses: actions/checkout@v4
       - name: prepare nix
         uses: cachix/install-nix-action@v29
+      - uses: DeterminateSystems/magic-nix-cache-action@a76a83091cd8728db8c37312dbdd0eeb1177a6c0
       - name: generate readme
         run: |
           nix build .#readme
