@@ -22,8 +22,8 @@
       systems = import systems;
 
       perSystem =
-        { pkgs, ... }:
-        {
+        { pkgs, system, ... }:
+        rec {
           treefmt = {
             projectRootFile = "flake.nix";
             programs = {
@@ -34,19 +34,22 @@
 
           devShells.default = pkgs.mkShell { packages = with pkgs; [ nil ]; };
 
-          packages.default = pkgs.stdenv.mkDerivation {
+          packages.default = packages.readme;
+
+          packages.readme = pkgs.stdenv.mkDerivation {
             name = "readme";
 
             src = nixpkgs.lib.cleanSource ./.;
 
-            buildInputs = [readmegen.packages.default];
+            buildInputs = [ readmegen.packages."${system}".default ];
 
             buildPhase = ''
-              ${readmegen.packages.default}/bin/readmegen yasunori.toml > README.md
+              ${readmegen.packages."${system}".default}/bin/readmegen yasunori.toml > README.md
             '';
 
             installPhase = ''
-              cp ./README.md $out/
+              mkdir $out/
+              cp ./README.md $out/README.md
             '';
           };
         };
