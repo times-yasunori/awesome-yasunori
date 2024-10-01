@@ -16,7 +16,7 @@ importers:
         version: 3.0.0
       valibot:
         specifier: ^0.42.1
-        version: 0.42.1
+        version: 0.42.1(typescript@5.6.2)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.2
@@ -33,6 +33,9 @@ importers:
       jsonfile:
         specifier: ^6.1.0
         version: 6.1.0
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
       vite:
         specifier: ^5.2.12
         version: 5.4.8(@types/node@22.7.4)
@@ -907,6 +910,11 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
@@ -1721,6 +1729,8 @@ snapshots:
 
   tslib@2.7.0: {}
 
+  typescript@5.6.2: {}
+
   ufo@1.5.4: {}
 
   undici-types@6.19.8: {}
@@ -1738,7 +1748,9 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  valibot@0.42.1: {}
+  valibot@0.42.1(typescript@5.6.2):
+    optionalDependencies:
+      typescript: 5.6.2
 
   vite-node@2.1.1(@types/node@22.7.4):
     dependencies:
