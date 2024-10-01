@@ -23,7 +23,7 @@ jobs:
         uses: cachix/install-nix-action@v29
       - name: flake check
         run: nix flake check
-  deploy-readme: # ファイル分割したほうがいいかも
+  deploy-readme:
     name: Deploy README.md
     runs-on: ubuntu-latest
     steps:
