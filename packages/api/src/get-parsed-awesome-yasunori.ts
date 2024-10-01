@@ -1,27 +1,20 @@
-import {
-  object,
-  string,
-  pipe,
-  isoDate,
-  array,
-  optional,
-  safeParse,
-} from "valibot";
+import * as v from "valibot";
 import awesomeYasunoriJson from "./awesome-yasunori.json";
 
-const awesomeYasunoriEntrySchema = object({
-  title: string(),
-  date: pipe(string(), isoDate()),
-  at: string(),
-  senpan: string(),
-  content: string(),
-  meta: optional(string()),
+const awesomeYasunoriEntrySchema = v.object({
+  id: v.number(),
+  title: v.string(),
+  date: v.pipe(v.string(), v.isoDate()),
+  at: v.string(),
+  senpan: v.string(),
+  content: v.string(),
+  meta: v.optional(v.string()),
 });
 
-const awesomeYasunoriSchema = object({
-  yasunori: array(awesomeYasunoriEntrySchema),
+const awesomeYasunoriSchema = v.object({
+  yasunori: v.array(awesomeYasunoriEntrySchema),
 });
 
 export function getParsedAwesomeYasunori() {
-  return safeParse(awesomeYasunoriSchema, awesomeYasunoriJson);
+  return v.safeParse(awesomeYasunoriSchema, awesomeYasunoriJson);
 }

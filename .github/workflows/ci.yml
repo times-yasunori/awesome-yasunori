@@ -23,3 +23,19 @@ jobs:
         uses: cachix/install-nix-action@v29
       - name: flake check
         run: nix flake check
+  api-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9 # package.jsonにpackageManagerをつけてもサブディレクトリのせいか、これがないとエラーになる
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Setup test
+        run: pnpm run generate:json
+      - name: Test
+        run: pnpm test
