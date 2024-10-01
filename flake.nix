@@ -7,23 +7,32 @@
     systems.url = "github:nix-systems/default";
   };
 
-  outputs = inputs@{ self, systems, nixpkgs, treefmt-nix, flake-parts, }:
+  outputs =
+    inputs@{
+      self,
+      systems,
+      nixpkgs,
+      treefmt-nix,
+      flake-parts,
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [ treefmt-nix.flakeModule ];
       systems = import systems;
 
-      perSystem = { pkgs, ... }: {
-        treefmt = {
-          projectRootFile = "flake.nix";
-          programs = {
-            nixfmt.enable = true;
-            taplo.enable = true;
+      perSystem =
+        { pkgs, ... }:
+        {
+          treefmt = {
+            projectRootFile = "flake.nix";
+            programs = {
+              nixfmt.enable = true;
+              taplo.enable = true;
+            };
           };
+
+          devShells.default = pkgs.mkShell { packages = with pkgs; [ nil ]; };
+
+          packages.default = pkgs.emptyDirectory;
         };
-
-        devShells.default = pkgs.mkShell { packages = with pkgs; [ nil ]; };
-
-        packages.default = pkgs.emptyDirectory;
-      };
     };
 }
