@@ -1,0 +1,455 @@
+[[yasunori]]
+title = "yasunoriしないなんて勿体無さ"
+date = "2024-09-30"
+at = "vim-jp #times-yasunori"
+senpan = "kuu"
+content = """
+折角パソカタして生きてるのにyasunoriしないなんて勿体無さすぎ
+"""
+
+[[yasunori]]
+title = "brain-yasu**ri"
+date = "2024-09-29"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+lang-yasunori作るとしたら brain-yasu**ri 作りたい
+
+言語仕様
+1. `y` ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。
+2. `a` ポインタをデクリメントする。C言語の「ptr--;」に相当。
+3. `s` ポインタが指す値をインクリメントする。C言語の「(*ptr)++;」に相当。
+4. `u` ポインタが指す値をデクリメントする。C言語の「(*ptr)--;」に相当。
+5. `n` ポインタが指す値を出力に書き出す。C言語の「putchar(*ptr);」に相当。
+6. `o` 入力から1バイト読み込んで、ポインタが指す先に代入する。C言語の「*ptr=getchar();」に相当。
+7. `r` ポインタが指す値が0なら、対応する `i` の直後にジャンプする。C言語の「while(*ptr){」に相当。
+8. `i` ポインタが指す値が0でないなら、対応する `r` （の直後）にジャンプする。C言語の「}」に相当。
+"""
+meta = """
+- memo
+  - [conao3によるC言語での実装](https://github.com/conao3/c-yasunori-lang)がある
+    - `make yasunoriするためだけにCで書いたといっても過言ではない` とのこと
+"""
+
+[[yasunori]]
+title = "YST"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "ryoppippi"
+content = """
+YST: yasunori study time (yasunoriがJST 22:00 ~ 24:00 にLeetCodeに取り組む時間)
+"""
+meta = """
+- memo
+  - 2024-09-28 Sat 時点、yasunoriはLeetCodeをやらなければならない
+"""
+
+[[yasunori]]
+title = "YOL"
+date = "2024-08-30"
+at = "vim-jp #times-comamoca"
+senpan = "comamoca"
+content = """
+NixでYOL(yasunority of life)を上げていきたい
+"""
+meta = """
+- memo
+  - yasunority, yasunorize, yasunorization, yasunoable, yasunorizer, yasunorianなど様々な活用がある
+"""
+
+[[yasunori]]
+title = "OS削除 はじまりの大地"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+2024-03-03 vim-jpオフにて
+
+yasunori「いざって時のために、インストールメディアはいつも持ち歩いてるんですよね〜」
+takeokunn「えっ、そしたらそのPCのArch消してインストールしなおせる？！」
+yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
+takeokunn「は？まじか」
+yasunori0418「うん、大丈夫」
+"""
+meta = """
+- memo
+  - yasunoriがOS削除キャラになった発端
+  - カラオケのWi-Fiが弱すぎたが2時間くらいで復旧していた
+  - 該当ツイート
+    - https://x.com/takeokunn/status/1764152964535754792
+"""
+
+[[yasunori]]
+title = "You should be yasunori"
+date = "2024-09-28"
+at = "vim-jp #times-yasunori"
+senpan = "yasunori"
+content = """
+花火で派手になっているパフェみたいなのを店員さんが持って来ながら
+
+yasunori「えっえっえっ!?」
+店員さん「yasunoriさん？」
+yasunori「えっ…はい、なんでしょう」
+店員さん「You should be yasunori!!」(めっちゃ発音が良い)
+yasunori「……you should be yasunori?????」
+"""
+meta = """
+- memo
+  - yasunori meetup #1 回想
+  - シュラスココースのオプションでデザートをつけた際にプレートに書かれた文字
+  - 外国人店員でやたら発音が良かった
+"""
+
+[[yasunori]]
+title = "走れyasunori"
+date = "2024-09-27"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+yasunoriは激怒した。
+必ず、かの邪智暴虐のOSを除かなければならぬと決意した。
+yasunoriにはGUI設定がわからぬ。
+yasunoriは、村の牧人である。
+Windowsを消し、テキストエディタと遊んで暮して来た。
+けれども邪悪に対しては、人一倍に敏感であった。
+"""
+meta = """
+"""
+
+
+[[yasunori]]
+title = "今、息子さんは教祖です"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "toyboot4e"
+content = """
+今、息子さんは教祖です
+"""
+meta = """
+- memo
+  - `yasunoriの母 (2024-06-25 Tue)` を見た率直な感想
+"""
+
+[[yasunori]]
+title = "yasunori は何なのか気になってきたのでローカルLLMに聞いてみた"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+問い
+vim-jpで人気のyasunoriについての説明文を考えてください。
+yasunoriは人であり、概念であり、複数存在しており、何かを消すという意味をもっています。
+
+回答
+yasunori は Vim-jp コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除
+のアイデアを表しています。このユニークな個人は1人ではなく、さまざまな個人の集合体であり、各人がスキ
+ルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成していま
+す。Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
+しており、不要な要素を排除または削除する可能性を表しています。
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "yasunoriコピペ"
+date = "2024-09-26"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunori！yasunori！yasunori！yasunoriぅぅうううわぁああああああああああああああああああああああん！！！
+あぁああああ…ああ…あっあっー！あぁああああああ！！！yasunoriyasunoriyasunoriぅううぁわぁああああ！！！
+あぁクンカクンカ！クンカクンカ！スーハースーハー！スーハースーハー！いい匂いだなぁ…くんくん
+んはぁっ！yasunoriたんの黒髪ショートの髪をクンカクンカしたいお！クンカクンカ！あぁあ！！
+間違えた！モフモフしたいお！モフモフ！モフモフ！髪髪モフモフ！カリカリモフモフ…きゅんきゅんきゅい！！
+vim-jpのyasunoriたんかわいかったよぅ！！あぁぁああ…あああ…あっあぁああああ！！ふぁぁあああんんっ！！
+OS削除されて良かったねyasunoriたん！あぁあああああ！かわいい！yasunoriたん！かわいい！あっああぁああ！
+awesome-yasunoriも出来て嬉し…いやぁああああああ！！！にゃああああああああん！！ぎゃああああああああ！！
+ぐあああああああああああ！！！vim-jpなんて現実じゃない！！！！あ…twitterもよく考えたら…
+y a s u n o r i ち ゃ ん は 現実 じ ゃ な い？にゃあああああああああああああん！！うぁああああああああああ！！
+そんなぁああああああ！！いやぁぁぁあああああああああ！！はぁああああああん！！vim-jpぁああああ！！
+この！ちきしょー！やめてやる！！現実なんかやめ…て…え！？見…てる？vim-jpのyasunoriちゃんが僕を見てる？
+vim-jpのyasunoriちゃんが僕を見てるぞ！yasunoriちゃんが僕を見てるぞ！vim-jpのyasunoriちゃんが僕を見てるぞ！！
+vim-jpのyasunoriちゃんが僕に話しかけてるぞ！！！よかった…世の中まだまだ捨てたモンじゃないんだねっ！
+いやっほぉおおおおおおお！！！僕にはyasunoriちゃんがいる！！やったよnatsukium！！ひとりでできるもん！！！
+あ、vim-jpのyasunoriちゃああああああああああああああん！！いやぁあああああああああああああああ！！！！
+あっあんああっああんあアリスエ様ぁあ！！k、kuuー！！こまもかぁああああああ！！！tomoyaｧぁあああ！！
+ううっうぅうう！！俺の想いよyasunoriへ届け！！vim-jpのyasunoriへ届け！
+"""
+meta = """
+Inspired by [ルイズコピペ](https://dic.pixiv.net/a/%E3%83%AB%E3%82%A4%E3%82%BA%E3%82%B3%E3%83%94%E3%83%9A)
+"""
+
+
+[[yasunori]]
+title = "timesが壊れちゃった"
+date = "2024-09-24"
+at = "twitter"
+senpan = "yasunori"
+content = """
+ここ数か月のことなんだけど、某-jpで作ってた自分のtimesが壊れちゃった…
+"""
+meta = """
+- memo
+  - vim-jp #times-yasunori が連日流速No.1で様々な話題が繰り広げられている
+  - https://x.com/YKirin0418/status/1838530406267920895
+"""
+
+[[yasunori]]
+title = "実質的にyasunoriがowner"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "kuu"
+content = """
+(awesome-yasunoriは) 憤怒のyasunoriがownerだから実質的にyasunoriがownerと言っても過言ではないのでは？
+"""
+meta = """
+- memo
+  - vim-jpには複数のyasunoriがいる
+    - 憤怒のyasunori → takeokunn
+    - 怠惰のyasunori → kuu
+    - 色欲のyasunori → comamoca
+    - yasunori → yasunori
+"""
+
+[[yasunori]]
+title = "大いなるyasunoriには大いなる責任が伴う"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+どうしてもこうしてもあるかい。yasunoriはそこにある。
+yasunori is the one. May the yasunori be with you. With great yasunori comes great responsibility.
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "キラ・yaunori"
+date = "2024-08-23"
+at = "vim-jp #times-yasunori"
+senpan = "rkarsnk"
+content = """
+キラ・yaunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」
+マリュー「まだ，終わってないのよ」
+キラ・yasuori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "ChatGPT 4o さんもベタ褒めする Y.A.S.U.N.O.R.I"
+date = "2024-08-23"
+at = "vim-jp #times-yasunori"
+senpan = "lambdalisue"
+content = """
+このフレーズ「Your Astute Splendid Ultimate Natural Objective Restructuring Idea」は、ビジネスや戦略的な提案において非常にポジティブで力強いメッセージを伝えるために構成されたものです。各単語の意味とそれがフレーズ全体にどう影響を与えるかについて説明します。
+### 解説：
+1. **Your（あなたの）**：
+   - このフレーズの冒頭に位置することで、この提案やアイデアが特定の個人または組織に向けられていることを示しています。受け手にとって、個人的なつながりや関心を感じさせる役割を果たします。
+2. **Astute（鋭い、抜け目のない）**：
+   - この形容詞は、提案が非常に頭の切れる、または知恵深いものであることを強調します。アイデアが賢明で、しっかりとした判断に基づいていることを暗示しており、ビジネスや戦略的な文脈で強い印象を与えます。
+3. **Splendid（素晴らしい）**：
+   - 「Splendid」は、提案の品質や結果が素晴らしいものであることを示しています。この言葉は、提案が高い価値や優れた特徴を持っていると感じさせる役割を果たします。
+4. **Ultimate（究極の）**：
+   - この形容詞は、提案が最も優れた、または完全なものであることを強調します。「Ultimate」は、これ以上改善の余地がない、最高峰の提案であることを暗示しています。
+5. **Natural（自然な）**：
+   - 「Natural」は、提案が無理のない、直感的で自然なものであることを示しています。これは、提案が受け入れやすく、調和のとれたものであることを強調します。
+6. **Objective（客観的な）**：
+   - この形容詞は、提案が偏りなく、公正で論理的なものであることを示しています。感情や主観に左右されず、事実に基づいたアプローチであることを強調します。
+7. **Restructuring Idea（再構築のアイデア）**：
+   - これは、既存のシステムや戦略を新たに見直し、改善するための提案や計画であることを表しています。このフレーズ全体を通して、何かを刷新し、より良い形に再構築するための具体的なアイデアであることが示されています。
+### フレーズ全体の意図：
+このフレーズは、特定の受け手に向けられた再構築提案の魅力を最大限に引き出すようにデザインされています。各形容詞が、提案の鋭さ、素晴らしさ、究極性、自然さ、そして客観性を強調しており、これが単なるアイデアではなく、非常に価値のある、実行するに値するものであることを示唆しています。ビジネスや戦略的な状況でこのようなフレーズを使用すると、受け手に強い印象を与え、提案を採用する価値があると感じさせる効果が期待できます。
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "PyConJP should be yasuno-reborn"
+date = "2024-09-24"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+pyconjp-should-be-yasuno-reborn
+
+PyCon JP理事会のメンバーをyasunoriして再出発する、あるいはPyCon JPは一度yasunoriするべき
+"""
+meta = """
+Inspired by [PyCon JPはいますぐ生まれ変わるべき](https://blog.tomoya.dev/posts/pyconjp-should-be-reborn/)
+"""
+
+[[yasunori]]
+title = "あぐらをかいたyasunori"
+date = "2024-09-23"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+あぐらをかいたyasunori「キミ？vim-jpの新顔？ 俺？俺の名前は yasunori 。vim-jpの頂点にたつ男さ。まぁ、緊張しなくていいから、俺のことは気軽にyasunoriって呼んでくれ。」
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "VimConfチケット購入1番乗り"
+date = "2024-09-23"
+at = "vim-jp #times-yasunori"
+senpan = "ryoppippi"
+content = """
+y: 「チケット何番ですか？僕のと比べてソートしてみましょうよwwww 僕そーとー　最初ですよwww」
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "険しい設定"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+オレが知りてーのは楽なyasunoriじゃねえ
+険しい設定の歩き方だ
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "yasunori は俺の夢だから"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+たけてぃ「yasunori は俺の夢だから」
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "yasunoriは犠牲になったのだ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+yasunoriは犠牲になったのだ。
+古くから続く因縁…その犠牲にな。
+そもそもは #times-yasunori が生まれたときからある大きな問題だ。
+それが yasunori の生き様を決めた
+"""
+meta = """
+Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+"""
+
+[[yasunori]]
+title = "yasunoriはyasunoriになったのだ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunoriはyasunoriになったのだ。
+そのyasunoriにyasunoriはなった…
+「yasunoriのyasunori」にな。
+"""
+meta = """
+Inspired by [犠牲になったのだ - pixiv大百科](https://dic.pixiv.net/a/%E7%8A%A0%E7%89%B2%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A0)
+"""
+
+[[yasunori]]
+title = "yasunori meetup #2 アジェンダ"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori meetup #2 アジェンダ
+
+1. 乾杯の挨拶 yasunori (take)
+2. キーノート: おもしろNix近況報告 yasunori (natsukium)
+3. yasunori (take) と yasunori (natsukium)  の義兄弟の契り（見届け人 tomoya）
+4. conao3 による yasunori (原義) の最新情報共有
+5. クロージングセッション: @kuu（思念体）
+
+解散、そして2次会へ
+"""
+meta = """
+"""
+
+[[yasunori]]
+title = "yasunori meetup #2 本番"
+date = "2024-09-18"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+いよいよ明日がyasunori meetup #2本番ですよ！
+
+むっちゃドキドキしてきた…。
+
+yasunoriの皆さん、今日くらいはyasunoriは休んで明日に備えますよね？
+"""
+meta = """
+memo: [yasunori0418](https://github.com/yasunori0418) は不参加
+"""
+
+[[yasunori]]
+title = "覚悟して来てる人"
+date = "2024-09-17"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+あなた…『覚悟して来てる人』………ですよね。OSを「yasunori」しようとするって事は逆に「yasunori」されるかもしれないという危険を、常に『覚悟して来ている人』ってわけですよね…
+"""
+meta = """
+Inspired by [あなた…『覚悟して来てる人』…ですよね - pixiv大百科](https://dic.pixiv.net/a/%E3%81%82%E3%81%AA%E3%81%9F%E2%80%A6%E3%80%8E%E8%A6%9A%E6%82%9F%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%A6%E3%82%8B%E4%BA%BA%E3%80%8F%E2%80%A6%E3%81%A7%E3%81%99%E3%82%88%E3%81%AD)
+"""
+
+
+[[yasunori]]
+title = "yasunori meetup #1 アジェンダ"
+date = "2024-09-05"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori meetup #1 アジェンダ
+乾杯の挨拶 @yasunori
+
+ご歓談
+キーノート: おもしろ近況報告 @takeokunn
+
+ご歓談
+LT1: おもしろ近況報告 @yasunori
+LT2: おもしろ近況報告 @conao3
+LT3: そこで… @natsukium
+
+クロージングセッション: @kuu （思念体）
+解散、そして2次会へ
+"""
+meta = ""
+
+[[yasunori]]
+title = "オレは高校生シェル芸人 kuu 新一"
+date = "2024-08-21"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+オレは高校生シェル芸人 kuu 新一。
+幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
+端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
+俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
+"""
+meta = """
+Inspired by [sudo新一](https://gist.github.com/greymd/7291d1d54587ad6ed401d536e1995b2c).
+"""
+
+[[yasunori]]
+title = "yasunoriの母"
+date = "2024-06-25"
+at = "vim-jp radioお便り"
+senpan = "takeokunn"
+content = """
+tomoyaさん、ありすえさんこんにちは。
+はじめまして、yasunoriの母です。
+
+yasunoriがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。
+家ですれ違う時「Vim....Vim....」という独り言をずっと唱えていたり、部屋からは「設定させていただきありがとうございます!!」という大声が聞こえてきたり、
+「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。
+
+tomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。
+"""
+meta = ""
