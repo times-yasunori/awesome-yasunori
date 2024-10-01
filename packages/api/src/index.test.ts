@@ -24,7 +24,7 @@ describe("Test GET /awesome", () => {
 
   test("Should return entries response", async () => {
     const res = await app.request("http://localhost/awesome");
-    const parsed = await res.json();
+    const parsed = await res.json<Array<unknown>>();
     expect(parsed.at(-1)).toStrictEqual({
       id: 1,
       at: "vim-jp radioお便り",
