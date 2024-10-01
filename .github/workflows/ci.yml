@@ -35,7 +35,7 @@ jobs:
           version: 9 # package.jsonにpackageManagerをつけてもサブディレクトリのせいか、これがないとエラーになる
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Setup test
+      - name: Setup
         run: pnpm run generate:json
       - name: Test
         run: pnpm test
@@ -51,7 +51,7 @@ jobs:
           version: 9 # package.jsonにpackageManagerをつけてもサブディレクトリのせいか、これがないとエラーになる
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Setup typecheck
+      - name: Setup
         run: pnpm run generate:json
       - name: Typecheck
         run: pnpm run typecheck
