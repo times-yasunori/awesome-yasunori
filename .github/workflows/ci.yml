@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run actionlint
+        shell: bash
+        run: |
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
+  nix-flake:
+    name: Nix Flake Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: prepare nix
+        uses: cachix/install-nix-action@v29
+      - name: flake check
+        run: nix flake check
