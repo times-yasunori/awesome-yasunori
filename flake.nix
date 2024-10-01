@@ -5,6 +5,7 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
     systems.url = "github:nix-systems/default";
+    readmegen.url = "github:satler-git/awesome-yasunori-readmegen";
   };
 
   outputs =
@@ -14,6 +15,7 @@
       nixpkgs,
       treefmt-nix,
       flake-parts,
+      readmegen,
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [ treefmt-nix.flakeModule ];
@@ -32,7 +34,21 @@
 
           devShells.default = pkgs.mkShell { packages = with pkgs; [ nil ]; };
 
-          packages.default = pkgs.emptyDirectory;
+          packages.default = pkgs.stdenv.mkDerivation {
+            name = "readme";
+
+            src = lib.cleanSource ./.;
+
+            buildInputs = [readmegen.packages.default];
+
+            buildPhase = ''
+              ${readmegen.packages.default}/bin/readmegen yasunori.toml > README.md
+            '';
+
+            installPhase = ''
+              cp ./README.md $out/
+            '';
+          };
         };
     };
 }
