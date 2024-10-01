@@ -2,6 +2,7 @@ import * as v from "valibot";
 import awesomeYasunoriJson from "./awesome-yasunori.json";
 
 const awesomeYasunoriEntrySchema = v.object({
+  id: v.number(),
   title: v.string(),
   date: v.pipe(v.string(), v.isoDate()),
   at: v.string(),
