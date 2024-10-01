@@ -39,3 +39,23 @@ jobs:
         run: pnpm run generate:json
       - name: Test
         run: pnpm test
+  api-lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9 # package.jsonにpackageManagerをつけてもサブディレクトリのせいか、これがないとエラーになる
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Setup typecheck
+        run: pnpm run generate:json
+      - name: Typecheck
+        run: pnpm run typecheck
+      - name: Lint
+        run: pnpm run lint
+      - name: Format
+        run: pnpm biome format
