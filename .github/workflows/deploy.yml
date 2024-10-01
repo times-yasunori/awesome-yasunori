@@ -1,10 +1,27 @@
 name: Deploy
 
-on: [push]
+# デプロイ条件
+# 1. main にコミットが追加され、かつ、対象のファイルに変更があるとき
+# 2. PRのドラフトが解除され、かつ、対象のファイルに変更があるとき
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'yasunori.toml'
+      - 'packages/api/**'
+  pull_request:
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'yasunori.toml'
+      - 'packages/api/**'
+    types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
   deploy-api:
     name: Deploy API
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     defaults:
       run:
