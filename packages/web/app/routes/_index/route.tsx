@@ -1,10 +1,23 @@
-import { Stack, Title, Card, Paper, Badge, Group } from "@mantine/core";
+import {
+  Stack,
+  Title,
+  Card,
+  Paper,
+  Badge,
+  Group,
+  CopyButton,
+  ActionIcon,
+  rem,
+} from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import { indexLoader, type IndexLoader } from "./loader";
+
+import IconCheckBoxOutline from "~icons/material-symbols/check-rounded";
+import IconCopyOutline from "~icons/material-symbols/content-copy-outline-rounded";
 
 export const loader = indexLoader;
 export const meta: MetaFunction = () => {
@@ -38,7 +51,27 @@ export default function Index() {
               <Badge color="cyan">{d.date}</Badge>
             </Group>
           </Stack>
-          <Paper p="md">
+          <Paper p="md" style={{ position: "relative" }}>
+            <div style={{ position: "absolute", right: "0.5rem" }}>
+              <CopyButton value={d.content}>
+                {({ copied, copy }) => (
+                  <ActionIcon
+                    variant="default"
+                    style={{
+                      width: rem(32),
+                      height: rem(32),
+                    }}
+                    onClick={copy}
+                  >
+                    {copied ? (
+                      <IconCheckBoxOutline color="#000" />
+                    ) : (
+                      <IconCopyOutline color="#000" />
+                    )}
+                  </ActionIcon>
+                )}
+              </CopyButton>
+            </div>
             <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
               {d.content}
             </Markdown>

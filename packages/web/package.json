@@ -32,10 +32,14 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@cloudflare/workers-types": "^4.20240925.0",
+    "@iconify-json/material-symbols": "^1.2.2",
     "@remix-run/dev": "^2.12.1",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "typescript": "^5.6.2",
+    "unplugin-icons": "^0.19.3",
     "vite": "^5.2.12",
     "vite-tsconfig-paths": "^5.0.1",
     "wrangler": "^3.79.0"
