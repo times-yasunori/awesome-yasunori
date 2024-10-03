@@ -1,0 +1,41 @@
+{
+  "name": "awesome-yasunori-web",
+  "description": "The awesome yasunori web site.",
+  "sideEffects": false,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "pnpm biome lint .",
+    "preview": "vite preview",
+    "deploy": "pnpm run build && wrangler pages deploy",
+    "typecheck": "tsc",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "@mantine/core": "^7.13.1",
+    "@mantine/hooks": "^7.13.1",
+    "@remix-run/node": "^2.12.1",
+    "@remix-run/react": "^2.12.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "swr": "^2.2.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "@remix-run/dev": "^2.12.1",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.6.2",
+    "vite": "^5.2.12",
+    "vite-tsconfig-paths": "^5.0.1",
+    "wrangler": "^3.79.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
