@@ -26,7 +26,7 @@ export const loader = (async () => {
 
   const sortedAwesomeYasunori = sortOn(awesomeYasunori, "-date");
   for (const yasunori of sortedAwesomeYasunori) {
-    const link = `${domain}#${yasunori.id}`;
+    const link = `${domain}/#${yasunori.id}`;
     feed.addItem({
       link,
       date: new Date(yasunori.date),
