@@ -15,6 +15,9 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import { indexLoader, type IndexLoader } from "./loader";
 
+import IconCheckBoxOutline from "~icons/material-symbols/check-box-outline";
+import IconCopyOutline from "~icons/material-symbols/content-copy-outline";
+
 export const loader = indexLoader;
 export const meta: MetaFunction = () => {
   return [
@@ -61,16 +64,9 @@ export default function Index() {
                     onClick={copy}
                   >
                     {copied ? (
-                      <img
-                        color="#000"
-                        src="https://api.iconify.design/material-symbols:check-box.svg?color=%230d0d0c"
-                        alt="check"
-                      />
+                      <IconCheckBoxOutline color="#000" />
                     ) : (
-                      <img
-                        src="https://api.iconify.design/material-symbols:content-copy-outline.svg?color=%230d0d0c"
-                        alt="copy"
-                      />
+                      <IconCopyOutline color="#000" />
                     )}
                   </Button>
                 )}

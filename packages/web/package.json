@@ -32,6 +32,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@cloudflare/workers-types": "^4.20240925.0",
+    "@iconify-json/material-symbols": "^1.2.2",
     "@remix-run/dev": "^2.12.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
