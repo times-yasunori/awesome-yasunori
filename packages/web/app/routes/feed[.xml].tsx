@@ -18,7 +18,7 @@ export const loader = (async () => {
     id: domain,
     link: domain,
     language: "ja",
-    copyright: "Nirunari Yasunori Sukinishiro License 2024",
+    copyright: "vim-jp#times-yasunori all rights reserved",
     feedLinks: {
       rss: `${domain}/rss.xml`,
     },
