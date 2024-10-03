@@ -1,7 +1,7 @@
 import { Hono } from "hono";
-import { prettyJSON } from "hono/pretty-json";
 import { cors } from "hono/cors";
 import { poweredBy } from "hono/powered-by";
+import { prettyJSON } from "hono/pretty-json";
 import { getParsedAwesomeYasunori } from "./get-parsed-awesome-yasunori";
 
 const app = new Hono();

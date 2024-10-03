@@ -1,20 +1,20 @@
 import {
+  ActionIcon,
+  Badge,
+  Card,
+  CopyButton,
+  Group,
+  Paper,
   Stack,
   Title,
-  Card,
-  Paper,
-  Badge,
-  Group,
-  CopyButton,
-  ActionIcon,
   rem,
 } from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
-import { indexLoader, type IndexLoader } from "./loader";
+import remarkGfm from "remark-gfm";
+import { type IndexLoader, indexLoader } from "./loader";
 
 import IconCheckBoxOutline from "~icons/material-symbols/check-rounded";
 import IconCopyOutline from "~icons/material-symbols/content-copy-outline-rounded";

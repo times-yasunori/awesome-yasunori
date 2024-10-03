@@ -1,4 +1,18 @@
 import {
+  ActionIcon,
+  AppShell,
+  Burger,
+  ColorSchemeScript,
+  Group,
+  MantineProvider,
+  NavLink,
+  ScrollArea,
+  Text,
+  Title,
+  em,
+  rem,
+} from "@mantine/core";
+import {
   Links,
   Meta,
   Outlet,
@@ -7,20 +21,6 @@ import {
   useNavigate,
   useRouteLoaderData,
 } from "@remix-run/react";
-import {
-  MantineProvider,
-  ColorSchemeScript,
-  AppShell,
-  Burger,
-  NavLink,
-  ScrollArea,
-  Title,
-  Text,
-  Group,
-  ActionIcon,
-  rem,
-  em,
-} from "@mantine/core";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 import IconRSS from "~icons/material-symbols/rss-feed-rounded";
