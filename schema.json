@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON schema for Awesome yasunori",
+  "type": "object",
+  "properties": {
+    "yasunori": {
+      "type": "array",
+      "description": "A top level key of awesome yasunori TOML.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "The unique key to an awesome yasunori entry."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of awesome yasunori entry."
+          },
+          "date": {
+            "type": "string",
+            "description": "Published date of awesome yasunori entry. format is ISO date."
+          },
+          "at": {
+            "type": "string",
+            "description": "Where is say the awesome yasunori entry?"
+          },
+          "senpan": {
+            "type": "string",
+            "description": "Who is say the awesome yasunori entry?"
+          },
+          "content": {
+            "type": "string",
+            "description": "The main content of awesome yasunori entry."
+          },
+          "meta": {
+            "type": "string",
+            "description": "The meta content of awesome yasunori entry."
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "date",
+          "at",
+          "senpan",
+          "content"
+        ]
+      }
+    }
+  },
+  "required": ["yasunori"]
+}

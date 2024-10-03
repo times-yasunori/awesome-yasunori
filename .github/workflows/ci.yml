@@ -23,6 +23,30 @@ jobs:
         uses: cachix/install-nix-action@v29
       - name: flake check
         run: nix flake check
+  lint-yasunori-toml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          mkdir -p "${HOME}"/bin
+          echo "PATH=${HOME}/bin:${PATH}" >> "${GITHUB_ENV}"
+          curl \
+             --show-error \
+             --silent \
+             --location \
+             --fail \
+             --retry 3 \
+             --connect-timeout 5 \
+             --max-time 60 \
+             --output "${HOME}/bin/yj" \
+             "https://github.com/sclevine/yj/releases/download/v5.1.0/yj-linux-amd64"
+           chmod +x "${HOME}"/bin/yj
+           npm install -g ajv-cli
+      - run: yj -tj < yasunori.toml > yasunori.json
+      - run: npx ajv validate -s schema.json -d yasunori.json
   api-test:
     runs-on: ubuntu-latest
     defaults:
