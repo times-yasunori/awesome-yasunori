@@ -17,11 +17,13 @@ import {
   Title,
   Text,
   Group,
+  ActionIcon,
   rem,
   em,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
+import IconRSS from "~icons/material-symbols/rss-feed-rounded";
 import type { IndexLoader } from "./routes/_index/loader";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -61,6 +63,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Title order={1} size="h3">
                   Awesome Yasunori Web
                 </Title>
+                <ActionIcon
+                  component="a"
+                  aria-label="rss feed"
+                  href="/feed.xml"
+                  target="_blank"
+                  variant="transparent"
+                  size="sm"
+                  color="--mantine-color-white"
+                  style={{
+                    marginLeft: "auto",
+                    marginRight: rem(4),
+                  }}
+                >
+                  <IconRSS />
+                </ActionIcon>
               </Group>
             </AppShell.Header>
             <AppShell.Navbar p="md">
