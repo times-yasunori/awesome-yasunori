@@ -1,12 +1,12 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { Feed } from "feed";
 import sortOn from "sort-on";
-import { useAwesomeYasunori } from "~/hooks/use-awsome-yasunori";
+import { fetchAwesomeYasunori } from "~/shared/fetch-awsome-yasunori";
 
 const domain = "https://awesome.yasunori.dev";
 
 export const loader = (async () => {
-  const awsomeYasunori = await useAwesomeYasunori();
+  const awsomeYasunori = await fetchAwesomeYasunori();
 
   if (!awsomeYasunori) {
     throw new Response(null, { status: 404 });

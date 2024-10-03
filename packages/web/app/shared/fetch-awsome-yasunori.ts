@@ -1,4 +1,4 @@
-export async function useAwesomeYasunori() {
+export async function fetchAwesomeYasunori() {
   const res = await fetch("https://api.yasunori.dev/awesome");
   if (res.ok) {
     const json =

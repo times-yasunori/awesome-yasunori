@@ -1,8 +1,8 @@
 import type { LoaderFunction } from "@remix-run/node";
-import { useAwesomeYasunori } from "~/hooks/use-awsome-yasunori";
+import { fetchAwesomeYasunori } from "~/shared/fetch-awsome-yasunori";
 
 export const indexLoader = (async () => {
-  return await useAwesomeYasunori();
+  return await fetchAwesomeYasunori();
 }) satisfies LoaderFunction;
 
 export type IndexLoader = typeof indexLoader;
