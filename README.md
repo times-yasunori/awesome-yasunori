@@ -111,7 +111,7 @@ yasunori「いざって時のために、インストールメディアはいつ
 takeokunn「えっ、そしたらそのPCのArch消してインストールしなおせる？！」
 yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
 takeokunn「は？まじか」
-yasunori0418「うん、大丈夫」
+yasunori「うん、大丈夫」
 ```
 
 - memo
