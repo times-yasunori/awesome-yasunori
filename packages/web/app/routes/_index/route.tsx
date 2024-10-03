@@ -6,7 +6,7 @@ import {
   Badge,
   Group,
   CopyButton,
-  Button,
+  ActionIcon,
 } from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
@@ -54,7 +54,7 @@ export default function Index() {
             <div style={{ position: "absolute", right: "0.5rem" }}>
               <CopyButton value={d.content}>
                 {({ copied, copy }) => (
-                  <Button
+                  <ActionIcon
                     size="xs"
                     style={{
                       cursor: "pointer",
@@ -68,7 +68,7 @@ export default function Index() {
                     ) : (
                       <IconCopyOutline color="#000" />
                     )}
-                  </Button>
+                  </ActionIcon>
                 )}
               </CopyButton>
             </div>
