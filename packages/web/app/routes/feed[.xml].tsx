@@ -8,6 +8,10 @@ const domain = "https://awesome.yasunori.dev";
 export const loader = (async () => {
   const awsomeYasunori = await useAwesomeYasunori();
 
+  if (!awsomeYasunori) {
+    throw new Response(null, { status: 404 });
+  }
+
   const feed = new Feed({
     title: "Awesome Yasunori",
     description: "Awesome Yasunori",
@@ -20,16 +24,14 @@ export const loader = (async () => {
     },
   });
 
-  if (awsomeYasunori) {
-    const sortedAwsomeYasunori = sortOn(awsomeYasunori, "-date");
-    for (const yasunori of sortedAwsomeYasunori) {
-      feed.addItem({
-        link: `${domain}#${yasunori.id}`,
-        date: new Date(yasunori.date),
-        title: yasunori.title,
-        description: yasunori.content,
-      });
-    }
+  const sortedAwsomeYasunori = sortOn(awsomeYasunori, "-date");
+  for (const yasunori of sortedAwsomeYasunori) {
+    feed.addItem({
+      link: `${domain}#${yasunori.id}`,
+      date: new Date(yasunori.date),
+      title: yasunori.title,
+      description: yasunori.content,
+    });
   }
 
   return new Response(feed.rss2(), {
