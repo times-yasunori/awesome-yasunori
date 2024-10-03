@@ -1,5 +1,5 @@
 {
-  "name": "awesome-yasunori-web",
+  "name": "@awesome-yasunori/web",
   "description": "The awesome yasunori web site.",
   "sideEffects": false,
   "license": "MIT",
@@ -8,11 +8,11 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "pnpm biome lint .",
     "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
     "typecheck": "tsc",
     "typegen": "wrangler types",
+    "lint": "pnpm biome lint . && pnpm biome format .",
     "format": "biome format --write ."
   },
   "dependencies": {
@@ -45,8 +45,5 @@
     "vite": "^5.2.12",
     "vite-tsconfig-paths": "^5.0.1",
     "wrangler": "^3.79.0"
-  },
-  "engines": {
-    "node": ">=20.0.0"
   }
 }
