@@ -31,4 +31,4 @@ const route = app
   });
 
 export default app;
-export type ApiType = typeof route;
+export type AppType = typeof route;
