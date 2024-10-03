@@ -19,7 +19,6 @@
           },
           "date": {
             "type": "string",
-            "format": "date",
             "description": "Published date of awesome yasunori entry. format is ISO date."
           },
           "at": {
