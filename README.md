@@ -1,4 +1,7 @@
-# Awesome yasunori
+# Awesome Yasunori
+
+- Web https://awesome.yasunori.dev
+- APIs https://api.yasunori.dev
 
 - Web https://awesome.yasunori.dev
 - APIs https://api.yasunori.dev
@@ -14,8 +17,8 @@ A curated list of awesome yasunori, the post about [yasunori0418](https://github
 
 ## Contributing
 
-Please take a quick gander at the [contribution guidelines](https://github.com/takeokunn/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
-Thanks to all [contributors](https://github.com/takeokunn/awesome-yasunori/graphs/contributors); you rock!
+Please take a quick gander at the [contribution guidelines](https://github.com/times-yasunori/awesome-yasunori/blob/master/CONTRIBUTING.md) first.
+Thanks to all [contributors](https://github.com/times-yasunori/awesome-yasunori/graphs/contributors); you rock!
 
 ## How to add Awesome Yasunori
 
