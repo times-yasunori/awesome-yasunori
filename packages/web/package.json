@@ -10,6 +10,7 @@
     "dev": "remix vite:dev",
     "lint": "pnpm biome lint .",
     "preview": "vite preview",
+    "deploy": "pnpm run build && wrangler pages deploy",
     "typecheck": "tsc",
     "format": "biome format --write ."
   },
