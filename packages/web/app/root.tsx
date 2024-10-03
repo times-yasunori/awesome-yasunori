@@ -19,13 +19,14 @@ import {
   rem,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
-import { useDisclosure, useHeadroom } from "@mantine/hooks";
+import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 import { useAwesomeYasunori } from "./hooks/use-awesome-yasunori";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { data } = useAwesomeYasunori();
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const pinned = useHeadroom({ fixedAt: 120 });
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
   return (
     <html lang="ja">
@@ -65,7 +66,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {data?.map((d) => (
                   <NavLink
                     key={d.id}
-                    onClick={() => navigate(`#${d.id}`, { replace: true })}
+                    onClick={() => {
+                      navigate(`#${d.id}`, { replace: true });
+                      // モバイルのときは移動後にサイドバーを閉じる
+                      if (isMobile) {
+                        close();
+                      }
+                    }}
                     label={
                       <Group gap="xs">
                         <Text>{`${d.title}`}</Text>
