@@ -2,7 +2,13 @@
   "name": "awesome-yasunori",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "start": "pnpm -r start",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
   },
   "packageManager": "pnpm@9.11.0"
 }
