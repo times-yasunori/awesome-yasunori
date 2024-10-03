@@ -5,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
   useNavigate,
+  useRouteLoaderData,
 } from "@remix-run/react";
 import {
   MantineProvider,
@@ -21,10 +22,10 @@ import {
 } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
-import { useAwesomeYasunori } from "./hooks/use-awesome-yasunori";
+import type { IndexLoader } from "./routes/_index/loader";
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { data } = useAwesomeYasunori();
+  const data = useRouteLoaderData<IndexLoader>("routes/_index");
   const isMobile = useMediaQuery(`(max-width: ${em(767)})`);
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();

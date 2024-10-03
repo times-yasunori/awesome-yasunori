@@ -1,9 +1,12 @@
 import { Stack, Title, Card, Paper, Badge, Group } from "@mantine/core";
-import { useAwesomeYasunori } from "../hooks/use-awesome-yasunori";
 import type { MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
+import { indexLoader, type IndexLoader } from "./loader";
 
+export const loader = indexLoader;
 export const meta: MetaFunction = () => {
   return [
     { title: "Awesome yasunori web" },
@@ -12,7 +15,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const { data } = useAwesomeYasunori();
+  const data = useLoaderData<IndexLoader>();
   return (
     <Stack gap="lg">
       {data?.map((d) => (
@@ -36,7 +39,9 @@ export default function Index() {
             </Group>
           </Stack>
           <Paper p="md">
-            <Markdown remarkPlugins={[remarkGfm]}>{d.content}</Markdown>
+            <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
+              {d.content}
+            </Markdown>
           </Paper>
         </Card>
       ))}

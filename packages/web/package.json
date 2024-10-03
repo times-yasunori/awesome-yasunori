@@ -9,24 +9,29 @@
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "pnpm biome lint .",
-    "preview": "vite preview",
+    "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
     "typecheck": "tsc",
+    "typegen": "wrangler types",
     "format": "biome format --write ."
   },
   "dependencies": {
     "@mantine/core": "^7.13.1",
     "@mantine/hooks": "^7.13.1",
+    "@remix-run/cloudflare": "^2.12.1",
+    "@remix-run/cloudflare-pages": "^2.12.1",
     "@remix-run/node": "^2.12.1",
     "@remix-run/react": "^2.12.1",
+    "isbot": "^5.1.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
-    "remark-gfm": "^4.0.0",
-    "swr": "^2.2.5"
+    "remark-breaks": "^4.0.0",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
+    "@cloudflare/workers-types": "^4.20240925.0",
     "@remix-run/dev": "^2.12.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
