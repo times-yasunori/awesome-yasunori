@@ -1,4 +1,13 @@
-import { Stack, Title, Card, Paper, Badge, Group } from "@mantine/core";
+import {
+  Stack,
+  Title,
+  Card,
+  Paper,
+  Badge,
+  Group,
+  CopyButton,
+  Button,
+} from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
@@ -38,7 +47,35 @@ export default function Index() {
               <Badge color="cyan">{d.date}</Badge>
             </Group>
           </Stack>
-          <Paper p="md">
+          <Paper p="md" style={{ position: "relative" }}>
+            <div style={{ position: "absolute", right: "0.5rem" }}>
+              <CopyButton value={d.content}>
+                {({ copied, copy }) => (
+                  <Button
+                    size="xs"
+                    style={{
+                      cursor: "pointer",
+                      opacity: 0.3,
+                    }}
+                    color="#fff"
+                    onClick={copy}
+                  >
+                    {copied ? (
+                      <img
+                        color="#000"
+                        src="https://api.iconify.design/material-symbols:check-box.svg?color=%230d0d0c"
+                        alt="check"
+                      />
+                    ) : (
+                      <img
+                        src="https://api.iconify.design/material-symbols:content-copy-outline.svg?color=%230d0d0c"
+                        alt="copy"
+                      />
+                    )}
+                  </Button>
+                )}
+              </CopyButton>
+            </div>
             <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
               {d.content}
             </Markdown>
