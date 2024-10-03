@@ -14,7 +14,7 @@ const parsedAwesomeYasunori = getParsedAwesomeYasunori();
 app.get("/", (c) => {
   return c.json({
     message:
-      "Here is yasunori APIs. <https://github.com/takeokunn/awesome-yasunori/packages/api>",
+      "Here is Yasunori APIs. <https://github.com/times-yasunori/awesome-yasunori/packages/api>",
   });
 });
 
