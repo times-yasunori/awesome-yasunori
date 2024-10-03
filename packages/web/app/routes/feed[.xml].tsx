@@ -1,14 +1,14 @@
 import type { LoaderFunction } from "@remix-run/node";
 import { Feed } from "feed";
 import sortOn from "sort-on";
-import { fetchAwesomeYasunori } from "~/shared/fetch-awsome-yasunori";
+import { fetchAwesomeYasunori } from "~/shared/fetch-awesome-yasunori";
 
 const domain = "https://awesome.yasunori.dev";
 
 export const loader = (async () => {
-  const awsomeYasunori = await fetchAwesomeYasunori();
+  const awesomeYasunori = await fetchAwesomeYasunori();
 
-  if (!awsomeYasunori) {
+  if (!awesomeYasunori) {
     throw new Response(null, { status: 404 });
   }
 
@@ -24,8 +24,8 @@ export const loader = (async () => {
     },
   });
 
-  const sortedAwsomeYasunori = sortOn(awsomeYasunori, "-date");
-  for (const yasunori of sortedAwsomeYasunori) {
+  const sortedAwesomeYasunori = sortOn(awesomeYasunori, "-date");
+  for (const yasunori of sortedAwesomeYasunori) {
     feed.addItem({
       link: `${domain}#${yasunori.id}`,
       date: new Date(yasunori.date),
