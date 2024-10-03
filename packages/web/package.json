@@ -2,7 +2,6 @@
   "name": "@awesome-yasunori/web",
   "description": "The awesome yasunori web site.",
   "sideEffects": false,
-  "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@9.11.0",
   "scripts": {
