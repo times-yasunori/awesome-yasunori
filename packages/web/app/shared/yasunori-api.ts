@@ -1,4 +1,4 @@
 import { hc } from "hono/client";
-import type { AppType } from "@awesome-yasunori/api/src/index.js";
+import type { ApiType } from "@awesome-yasunori/api/src/index.js";
 
-export const yasunoriAPIClient = hc<AppType>("https://api.yasunori.dev");
+export const yasunoriAPIClient = hc<ApiType>("https://api.yasunori.dev");
