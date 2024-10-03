@@ -52,22 +52,11 @@ export default function Index() {
             </Group>
           </Stack>
           <Paper p="md" style={{ position: "relative" }}>
-            <div style={{ position: "absolute", right: "0.5rem" }}>
+            <div style={{ position: "absolute", top: rem(6), right: rem(6) }}>
               <CopyButton value={d.content}>
                 {({ copied, copy }) => (
-                  <ActionIcon
-                    variant="default"
-                    style={{
-                      width: rem(32),
-                      height: rem(32),
-                    }}
-                    onClick={copy}
-                  >
-                    {copied ? (
-                      <IconCheckBoxOutline color="#000" />
-                    ) : (
-                      <IconCopyOutline color="#000" />
-                    )}
+                  <ActionIcon variant="subtle" color="dark" onClick={copy}>
+                    {copied ? <IconCheckBoxOutline /> : <IconCopyOutline />}
                   </ActionIcon>
                 )}
               </CopyButton>
