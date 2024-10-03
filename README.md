@@ -41,3 +41,7 @@ It's being developed in [packages/api](./packages/api).
 This is a website that allows you to elegantly appreciate "Awesome Yasunori" by utilizing the APIs of Yasunori.
 
 It's being developed in [packages/web](./packages/web).
+
+### [Awesome Yasunori JSON Schema](./schema.json)
+
+This is the sole JSON Schema exclusively for Awesome Yasunori in the world.
