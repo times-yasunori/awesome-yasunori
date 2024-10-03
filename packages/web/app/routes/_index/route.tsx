@@ -3,6 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
 import { indexLoader, type IndexLoader } from "./loader";
 
 export const loader = indexLoader;
@@ -38,7 +39,9 @@ export default function Index() {
             </Group>
           </Stack>
           <Paper p="md">
-            <Markdown remarkPlugins={[remarkGfm]}>{d.content}</Markdown>
+            <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
+              {d.content}
+            </Markdown>
           </Paper>
         </Card>
       ))}
