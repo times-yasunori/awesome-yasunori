@@ -5,7 +5,7 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r dev",
     "start": "pnpm -r start",
-    "lint": "pnpm biome lint . && pnpm biome format .",
+    "lint": "biome check .",
     "format": "biome format --write .",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
