@@ -7,6 +7,7 @@ import {
   Group,
   CopyButton,
   ActionIcon,
+  rem,
 } from "@mantine/core";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
@@ -55,12 +56,11 @@ export default function Index() {
               <CopyButton value={d.content}>
                 {({ copied, copy }) => (
                   <ActionIcon
-                    size="xs"
+                    variant="default"
                     style={{
-                      cursor: "pointer",
-                      opacity: 0.3,
+                      width: rem(32),
+                      height: rem(32),
                     }}
-                    color="#fff"
                     onClick={copy}
                   >
                     {copied ? (
