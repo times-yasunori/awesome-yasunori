@@ -76,5 +76,3 @@ jobs:
         run: pnpm run typecheck
       - name: Lint
         run: pnpm run lint
-      - name: Format
-        run: pnpm biome format

@@ -13,7 +13,7 @@
     "deploy": "pnpm run generate:json && pnpm run build && wrangler pages deploy",
     "test": "vitest",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "pnpm biome lint .",
+    "lint": "pnpm biome lint . && pnpm biome format .",
     "format": "biome format --write .",
     "prepare": "pnpm run generate:json"
   },

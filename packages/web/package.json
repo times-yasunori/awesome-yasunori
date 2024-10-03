@@ -8,11 +8,11 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "pnpm biome lint .",
     "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
     "typecheck": "tsc",
     "typegen": "wrangler types",
+    "lint": "pnpm biome lint . && pnpm biome format .",
     "format": "biome format --write ."
   },
   "dependencies": {
