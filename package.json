@@ -5,10 +5,13 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r dev",
     "start": "pnpm -r start",
-    "lint": "pnpm -r lint",
-    "format": "pnpm -r format",
+    "lint": "pnpm biome lint . && pnpm biome format .",
+    "format": "biome format --write .",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
   },
-  "packageManager": "pnpm@9.11.0"
+  "packageManager": "pnpm@9.11.0",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2"
+  }
 }
