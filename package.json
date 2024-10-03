@@ -6,7 +6,7 @@
     "dev": "pnpm -r dev",
     "start": "pnpm -r start",
     "lint": "biome check .",
-    "format": "biome format --write .",
+    "format": "biome check --write .",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
   },
