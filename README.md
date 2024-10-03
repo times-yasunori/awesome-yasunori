@@ -3,9 +3,6 @@
 - Web https://awesome.yasunori.dev
 - APIs https://api.yasunori.dev
 
-- Web https://awesome.yasunori.dev
-- APIs https://api.yasunori.dev
-
 A curated list of awesome yasunori, the post about [yasunori0418](https://github.com/yasunori0418). Inspired by [mattn/awesome-sonomasakada](https://github.com/mattn/awesome-sonomasakada).
 
 > [!CAUTION]
