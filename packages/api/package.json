@@ -14,7 +14,8 @@
     "test": "vitest",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "pnpm biome lint .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "prepare": "pnpm run generate:json"
   },
   "dependencies": {
     "hono": "^4.6.3",
