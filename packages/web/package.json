@@ -3,6 +3,7 @@
   "description": "The awesome yasunori web site.",
   "sideEffects": false,
   "type": "module",
+  "private": true,
   "packageManager": "pnpm@9.11.0",
   "scripts": {
     "build": "remix vite:build",

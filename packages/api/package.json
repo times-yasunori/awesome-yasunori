@@ -3,6 +3,7 @@
   "description": "The Yasunori APIs are web APIs that utilize a curated list related to yasunori0418.",
   "repository": "https://github.com/takeokunn/awesome-yasunori.git",
   "type": "module",
+  "private": true,
   "packageManager": "pnpm@9.11.0",
   "scripts": {
     "generate:json": "touch ./src/awesome-yasunori.json && node ./script/generate-awesome-yasunori-json.js",
