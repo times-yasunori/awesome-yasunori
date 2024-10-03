@@ -1,7 +1,7 @@
-import { yasunoriAPIClient } from "./yasunori-api";
+import { yasunoriApiClient } from "./yasunori-api";
 
 export async function fetchAwesomeYasunori() {
-  const res = await yasunoriAPIClient.awesome.$get();
+  const res = await yasunoriApiClient.awesome.$get();
   if (!res.ok) {
     return null;
   }
