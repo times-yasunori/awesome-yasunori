@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigate,
 } from "@remix-run/react";
 import {
   MantineProvider,
@@ -25,6 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { data } = useAwesomeYasunori();
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle }] = useDisclosure();
+  const navigate = useNavigate();
   return (
     <html lang="ja">
       <head>
@@ -63,7 +65,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 {data?.map((d) => (
                   <NavLink
                     key={d.id}
-                    href={`#${d.id}`}
+                    onClick={() => navigate(`#${d.id}`, { replace: true })}
                     label={
                       <Group gap="xs">
                         <Text>{`${d.title}`}</Text>
