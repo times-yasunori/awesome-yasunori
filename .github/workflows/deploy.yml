@@ -11,11 +11,13 @@ on:
       - '.github/workflows/deploy.yml'
       - 'yasunori.toml'
       - 'packages/api/**'
+      - 'packages/web/**'
   pull_request:
     paths:
       - '.github/workflows/deploy.yml'
       - 'yasunori.toml'
       - 'packages/api/**'
+      - 'packages/web/**'
     types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:

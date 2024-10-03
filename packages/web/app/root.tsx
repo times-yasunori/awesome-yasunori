@@ -17,6 +17,7 @@ import {
   Text,
   Group,
   rem,
+  em,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
@@ -24,7 +25,7 @@ import { useAwesomeYasunori } from "./hooks/use-awesome-yasunori";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { data } = useAwesomeYasunori();
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery(`(max-width: ${em(767)})`);
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
