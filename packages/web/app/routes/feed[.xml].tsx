@@ -26,11 +26,13 @@ export const loader = (async () => {
 
   const sortedAwesomeYasunori = sortOn(awesomeYasunori, "-date");
   for (const yasunori of sortedAwesomeYasunori) {
+    const link = `${domain}#${yasunori.id}`;
     feed.addItem({
-      link: `${domain}#${yasunori.id}`,
+      link,
       date: new Date(yasunori.date),
       title: yasunori.title,
-      description: yasunori.content,
+      description: `<a href="${link}">${yasunori.title}</a>`,
+      content: yasunori.content,
     });
   }
 
