@@ -15,8 +15,8 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import { indexLoader, type IndexLoader } from "./loader";
 
-import IconCheckBoxOutline from "~icons/material-symbols/check-box-outline";
-import IconCopyOutline from "~icons/material-symbols/content-copy-outline";
+import IconCheckBoxOutline from "~icons/material-symbols/check-rounded";
+import IconCopyOutline from "~icons/material-symbols/content-copy-outline-rounded";
 
 export const loader = indexLoader;
 export const meta: MetaFunction = () => {
