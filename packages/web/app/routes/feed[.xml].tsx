@@ -1,9 +1,9 @@
-import { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/node";
 import { Feed } from "feed";
 import sortOn from "sort-on";
 import { useAwesomeYasunori } from "~/hooks/use-awsome-yasunori";
 
-const domain = `https://awesome.yasunori.dev`;
+const domain = "https://awesome.yasunori.dev";
 
 export const loader = (async () => {
   const awsomeYasunori = await useAwesomeYasunori();
@@ -14,7 +14,7 @@ export const loader = (async () => {
     id: domain,
     link: domain,
     language: "ja",
-    copyright: `Nirunari Yasunori Sukinishiro License 2024`,
+    copyright: "Nirunari Yasunori Sukinishiro License 2024",
     feedLinks: {
       rss: `${domain}/rss.xml`,
     },
