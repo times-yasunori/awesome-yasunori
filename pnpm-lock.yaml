@@ -50,6 +50,9 @@ importers:
 
   packages/web:
     dependencies:
+      '@awesome-yasunori/api':
+        specifier: workspace:*
+        version: link:../api
       '@mantine/core':
         specifier: ^7.13.1
         version: 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -68,6 +71,9 @@ importers:
       '@remix-run/react':
         specifier: ^2.12.1
         version: 2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
+      hono:
+        specifier: ^4.6.3
+        version: 4.6.3
       isbot:
         specifier: ^5.1.17
         version: 5.1.17
@@ -4742,7 +4748,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.25.7(@babel/core@7.25.7)
       '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
       '@vanilla-extract/css': 1.16.0
-      esbuild: 0.17.6
+      esbuild: 0.17.19
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
