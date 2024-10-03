@@ -38,14 +38,7 @@
             "description": "The meta content of awesome yasunori entry."
           }
         },
-        "required": [
-          "id",
-          "title",
-          "date",
-          "at",
-          "senpan",
-          "content"
-        ]
+        "required": ["id", "title", "date", "at", "senpan", "content"]
       }
     }
   },
