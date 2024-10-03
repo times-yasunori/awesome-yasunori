@@ -1,33 +1,44 @@
-# Awesome ysunori web
+# Awesome Yasunori web
 
-This website is built using [Remix SPA Mode](https://remix.run/docs/en/main/guides/spa-mode). The component library used is Mantine.
+This is a website that allows you to elegantly appreciate "Awesome Yasunori" by utilizing the APIs of Yasunori.
 
 https://awesome.yasunori.dev
 
 ## Development
 
-You can develop your SPA app just like you would a normal Remix app, via:
+Run the dev server:
 
-```shellscript
+```sh
 npm run dev
 ```
 
-## Production
+To run Wrangler:
 
-When you are ready to build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
+```sh
+npm run build
+npm run start
+```
 
-```shellscript
+## Typegen
+
+Generate types for your Cloudflare bindings in `wrangler.toml`:
+
+```sh
+npm run typegen
+```
+
+You will need to rerun typegen whenever you make changes to `wrangler.toml`.
+
+## Deployment
+
+First, build your app for production:
+
+```sh
 npm run build
 ```
 
-### Preview
+Then, deploy your app to Cloudflare Pages:
 
-You can preview the build locally with [vite preview](https://vitejs.dev/guide/cli#vite-preview) to serve all routes via the single `index.html` file:
-
-```shellscript
-npm run preview
+```sh
+npm run deploy
 ```
-
-> [!IMPORTANT]
->
-> `vite preview` is not designed for use as a production server
