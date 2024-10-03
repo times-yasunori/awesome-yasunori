@@ -1,10 +1,11 @@
-name: ci
+name: Check
 
 on:
   push:
 
 jobs:
-  actionlint:
+  lint-github-actions:
+    name: Lint GitHub Actions
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +24,8 @@ jobs:
         uses: cachix/install-nix-action@v29
       - name: flake check
         run: nix flake check
-  lint-yasunori-toml:
+  lint-awesome-yasunori:
+    name: Lint Awesome Yasunori
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +49,8 @@ jobs:
            npm install -g ajv-cli
       - run: yj -tj < yasunori.toml > yasunori.json
       - run: npx ajv validate -s schema.json -d yasunori.json
-  api-test:
+  test-api:
+    name: Test API
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -63,7 +66,8 @@ jobs:
         run: pnpm run generate:json
       - name: Test
         run: pnpm test
-  api-lint:
+  lint-api:
+    name: Lint API
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -83,7 +87,8 @@ jobs:
         run: pnpm run lint
       - name: Format
         run: pnpm biome format
-  web-lint:
+  lint-web:
+    name: Lint Web
     runs-on: ubuntu-latest
     defaults:
       run:
