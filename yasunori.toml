@@ -1,4 +1,47 @@
 [[yasunori]]
+id = 31
+title = "まじかよyasunori最(高|低)だな構文"
+date = "2024-10-04"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+(任意の発言に対して) まじかよyasunori最(高|低)だな
+"""
+meta = """
+- memo
+  - yasunoriは関係がない
+"""
+
+[[yasunori]]
+id = 30
+title = "yasunoriのくだらないダジャレ"
+date = "2024-10-02"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunori「sortはそーとー重いんで」
+yasunori「型ってかたいな」
+"""
+meta = """
+- memo
+  - discordで発言したleetcodeを解いている時に発言した内容
+"""
+
+[[yasunori]]
+id = 29
+title = "yasunoriは勉強になる"
+date = "2024-10-03"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori のおかげで JSON Schema を初めて作ったし、yasunori は勉強になる
+"""
+meta = """
+- memo
+  - awesome-yasunori repoをオモチャにして各々技術検証をしている
+"""
+
+[[yasunori]]
 id = 28
 title = "yasunoriしないなんて勿体無さ"
 date = "2024-09-30"
