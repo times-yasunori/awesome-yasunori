@@ -80,7 +80,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     size="h2"
                     style={{ fontFamily: "'Yellowtail', cursive" }}
                   >
-                    Awesome Yasunori Web
+                    Awesome Yasunori
                   </Title>
                 </Group>
                 <ActionIcon
