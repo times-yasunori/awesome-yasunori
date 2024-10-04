@@ -12,6 +12,7 @@ import {
   em,
   rem,
 } from "@mantine/core";
+import type { LinksFunction } from "@remix-run/cloudflare";
 import {
   Links,
   Meta,
@@ -25,6 +26,19 @@ import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 import IconRSS from "~icons/material-symbols/rss-feed-rounded";
 import type { IndexLoader } from "./routes/_index/loader";
+
+export const links: LinksFunction = () => [
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Yellowtail&display=swap",
+  },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
@@ -53,16 +67,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
             padding="md"
           >
             <AppShell.Header p="md">
-              <Group align="center">
-                <Burger
-                  opened={opened}
-                  onClick={toggle}
-                  hiddenFrom="sm"
-                  size="sm"
-                />
-                <Title order={1} size="h3">
-                  Awesome Yasunori Web
-                </Title>
+              <Group align="center" justify="space-between">
+                <Group gap="sm">
+                  <Burger
+                    opened={opened}
+                    onClick={toggle}
+                    hiddenFrom="sm"
+                    size="sm"
+                  />
+                  <Title
+                    order={1}
+                    size="h2"
+                    style={{ fontFamily: "'Yellowtail', cursive" }}
+                  >
+                    Awesome Yasunori
+                  </Title>
+                </Group>
                 <ActionIcon
                   component="a"
                   aria-label="rss feed"
@@ -71,10 +91,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   variant="transparent"
                   size="sm"
                   color="--mantine-color-white"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: rem(4),
-                  }}
                 >
                   <IconRSS />
                 </ActionIcon>
