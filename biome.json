@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["dist", "awesome-yasunori.json"]
+    "ignore": ["build", "dist", "awesome-yasunori.json"]
   },
   "formatter": {
     "enabled": true,
@@ -21,7 +21,10 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
     }
   }
 }

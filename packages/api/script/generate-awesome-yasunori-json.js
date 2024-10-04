@@ -1,7 +1,7 @@
-import toml from "toml";
-import { resolve } from "node:path";
 import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import jsonfile from "jsonfile";
+import toml from "toml";
 
 const yasunoriTomlPath = resolve("../../yasunori.toml");
 const yasunoriToml = readFileSync(yasunoriTomlPath, { encoding: "utf8" });

@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 1.9.2
+        version: 1.9.2
 
   packages/api:
     dependencies:
@@ -20,9 +24,6 @@ importers:
         specifier: ^0.42.1
         version: 0.42.1(typescript@5.6.2)
     devDependencies:
-      '@biomejs/biome':
-        specifier: 1.9.2
-        version: 1.9.2
       '@cloudflare/workers-types':
         specifier: ^4.20240529.0
         version: 4.20240925.0
@@ -93,9 +94,6 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
     devDependencies:
-      '@biomejs/biome':
-        specifier: 1.9.2
-        version: 1.9.2
       '@cloudflare/workers-types':
         specifier: ^4.20240925.0
         version: 4.20240925.0
