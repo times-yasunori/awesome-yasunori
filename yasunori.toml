@@ -20,6 +20,7 @@ at = "vim-jp #times-yasunori"
 senpan = "takeokunn"
 content = """
 yasunori「sortはそーとー重いんで」
+
 yasunori「型ってかたいな」
 """
 meta = """
@@ -61,6 +62,7 @@ content = """
 lang-yasunori作るとしたら brain-yasu**ri 作りたい
 
 言語仕様
+
 1. `y` ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。
 2. `a` ポインタをデクリメントする。C言語の「ptr--;」に相当。
 3. `s` ポインタが指す値をインクリメントする。C言語の「(*ptr)++;」に相当。
@@ -114,9 +116,13 @@ content = """
 2024-03-03 vim-jpオフにて
 
 yasunori「いざって時のために、インストールメディアはいつも持ち歩いてるんですよね〜」
+
 takeokunn「えっ、そしたらそのPCのArch消してインストールしなおせる？！」
+
 yasunori「あー、多分できるな……あ、消しても問題無いや。じゃ、消すか」
+
 takeokunn「は？まじか」
+
 yasunori「うん、大丈夫」
 """
 meta = """
@@ -137,9 +143,13 @@ content = """
 花火で派手になっているパフェみたいなのを店員さんが持って来ながら
 
 yasunori「えっえっえっ!?」
+
 店員さん「yasunoriさん？」
+
 yasunori「えっ…はい、なんでしょう」
+
 店員さん「You should be yasunori!!」(めっちゃ発音が良い)
+
 yasunori「……you should be yasunori?????」
 """
 meta = """
@@ -157,10 +167,15 @@ at = "vim-jp #times-yasunori"
 senpan = "kyoh86"
 content = """
 yasunoriは激怒した。
+
 必ず、かの邪智暴虐のOSを除かなければならぬと決意した。
+
 yasunoriにはGUI設定がわからぬ。
+
 yasunoriは、村の牧人である。
+
 Windowsを消し、テキストエディタと遊んで暮して来た。
+
 けれども邪悪に対しては、人一倍に敏感であった。
 """
 meta = """
@@ -189,15 +204,18 @@ at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
 問い
+
 vim-jpで人気のyasunoriについての説明文を考えてください。
+
 yasunoriは人であり、概念であり、複数存在しており、何かを消すという意味をもっています。
 
 回答
-yasunori は Vim-jp コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除
-のアイデアを表しています。このユニークな個人は1人ではなく、さまざまな個人の集合体であり、各人がスキ
-ルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成していま
-す。Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴
-しており、不要な要素を排除または削除する可能性を表しています。
+
+yasunori は Vim-jp コミュニティで知られる人物であり、概念です。彼は多元性を具現化し、消去または削除のアイデアを表しています。
+
+このユニークな個人は1人ではなく、さまざまな個人の集合体であり、各人がスキルや専門知識を貢献して、コミュニティ内のユーザー向けにより包括的で効率的なツールセットを作成しています。
+
+Vim-jp における Yasunori の存在はコラボレーションと複数の頭脳が集まったときの集団的な強さを象徴しており、不要な要素を排除または削除する可能性を表しています。
 """
 meta = """
 """
@@ -274,6 +292,7 @@ at = "vim-jp #times-yasunori"
 senpan = "kyoh86"
 content = """
 どうしてもこうしてもあるかい。yasunoriはそこにある。
+
 yasunori is the one. May the yasunori be with you. With great yasunori comes great responsibility.
 """
 meta = """
@@ -287,7 +306,9 @@ at = "vim-jp #times-yasunori"
 senpan = "rkarsnk"
 content = """
 キラ・yaunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」
+
 マリュー「まだ，終わってないのよ」
+
 キラ・yasuori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」
 """
 meta = """
@@ -301,7 +322,9 @@ at = "vim-jp #times-yasunori"
 senpan = "lambdalisue"
 content = """
 このフレーズ「Your Astute Splendid Ultimate Natural Objective Restructuring Idea」は、ビジネスや戦略的な提案において非常にポジティブで力強いメッセージを伝えるために構成されたものです。各単語の意味とそれがフレーズ全体にどう影響を与えるかについて説明します。
+
 ### 解説：
+
 1. **Your（あなたの）**：
    - このフレーズの冒頭に位置することで、この提案やアイデアが特定の個人または組織に向けられていることを示しています。受け手にとって、個人的なつながりや関心を感じさせる役割を果たします。
 2. **Astute（鋭い、抜け目のない）**：
@@ -316,8 +339,14 @@ content = """
    - この形容詞は、提案が偏りなく、公正で論理的なものであることを示しています。感情や主観に左右されず、事実に基づいたアプローチであることを強調します。
 7. **Restructuring Idea（再構築のアイデア）**：
    - これは、既存のシステムや戦略を新たに見直し、改善するための提案や計画であることを表しています。このフレーズ全体を通して、何かを刷新し、より良い形に再構築するための具体的なアイデアであることが示されています。
+
 ### フレーズ全体の意図：
-このフレーズは、特定の受け手に向けられた再構築提案の魅力を最大限に引き出すようにデザインされています。各形容詞が、提案の鋭さ、素晴らしさ、究極性、自然さ、そして客観性を強調しており、これが単なるアイデアではなく、非常に価値のある、実行するに値するものであることを示唆しています。ビジネスや戦略的な状況でこのようなフレーズを使用すると、受け手に強い印象を与え、提案を採用する価値があると感じさせる効果が期待できます。
+
+このフレーズは、特定の受け手に向けられた再構築提案の魅力を最大限に引き出すようにデザインされています。
+
+各形容詞が、提案の鋭さ、素晴らしさ、究極性、自然さ、そして客観性を強調しており、これが単なるアイデアではなく、非常に価値のある、実行するに値するものであることを示唆しています。
+
+ビジネスや戦略的な状況でこのようなフレーズを使用すると、受け手に強い印象を与え、提案を採用する価値があると感じさせる効果が期待できます。
 """
 meta = """
 """
@@ -369,6 +398,7 @@ at = "vim-jp #times-yasunori"
 senpan = "kyoh86"
 content = """
 オレが知りてーのは楽なyasunoriじゃねえ
+
 険しい設定の歩き方だ
 """
 meta = """
@@ -394,8 +424,11 @@ at = "vim-jp #times-yasunori"
 senpan = "kyoh86"
 content = """
 yasunoriは犠牲になったのだ。
+
 古くから続く因縁…その犠牲にな。
+
 そもそもは #times-yasunori が生まれたときからある大きな問題だ。
+
 それが yasunori の生き様を決めた
 """
 meta = """
@@ -410,7 +443,9 @@ at = "vim-jp #times-yasunori"
 senpan = "takeokunn"
 content = """
 yasunoriはyasunoriになったのだ。
+
 そのyasunoriにyasunoriはなった…
+
 「yasunoriのyasunori」にな。
 """
 meta = """
@@ -476,17 +511,23 @@ at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
 yasunori meetup #1 アジェンダ
+
 乾杯の挨拶 @yasunori
 
 ご歓談
+
 キーノート: おもしろ近況報告 @takeokunn
 
 ご歓談
+
 LT1: おもしろ近況報告 @yasunori
+
 LT2: おもしろ近況報告 @conao3
+
 LT3: そこで… @natsukium
 
 クロージングセッション: @kuu （思念体）
+
 解散、そして2次会へ
 """
 meta = ""
@@ -499,8 +540,11 @@ at = "vim-jp #times-yasunori"
 senpan = "takeokunn"
 content = """
 オレは高校生シェル芸人 kuu 新一。
+
 幼馴染で同級生の take 利蘭と遊園地に遊びに行って、黒ずくめの男の怪しげな yasunori の現場を目撃した。
+
 端末をみるのに夢中になっていた俺は、背後から近づいてきたもう１人の if=/dev/zero オプションに気づかなかった。
+
 俺はその男に archiso を飲まされ、目が覚めたら・・・ OS が yasunori されてしまった!
 """
 meta = """
@@ -515,6 +559,7 @@ at = "vim-jp radioお便り"
 senpan = "takeokunn"
 content = """
 tomoyaさん、ありすえさんこんにちは。
+
 はじめまして、yasunoriの母です。
 
 yasunoriがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。
