@@ -39,6 +39,14 @@ describe("Test GET /awesome", () => {
 });
 
 describe("Test GET /awesome/random", () => {
+  beforeEach(() => {
+    vi.mock("random-item", () => {
+      return {
+        default: vi.fn((array: unknown[]) => array.at(-1)),
+      };
+    });
+  });
+
   test("Should return 200 response", async () => {
     const res = await app.request("http://localhost/awesome/random");
     expect(res.status).toBe(200);
@@ -46,8 +54,9 @@ describe("Test GET /awesome/random", () => {
 
   test("Should return entries response", async () => {
     const res = await app.request("http://localhost/awesome/random");
-    const parsed = await res.json<Array<unknown>>();
-    expect(parsed.at(-1)).toStrictEqual({
+    const parsed = await res.json<unknown>();
+    console.log(parsed);
+    expect(parsed).toStrictEqual({
       id: 1,
       at: "vim-jp radioお便り",
       content:
