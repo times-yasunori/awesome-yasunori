@@ -25,7 +25,7 @@ import {
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 import IconRSS from "~icons/material-symbols/rss-feed-rounded";
-import IconGitHubLogo from "~icons/ph/github-logo";
+import IconGitHubLogo from "~icons/tabler/brand-github";
 import type { IndexLoader } from "./routes/_index/loader";
 
 export const links: LinksFunction = () => [
