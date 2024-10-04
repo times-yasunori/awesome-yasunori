@@ -24,8 +24,8 @@ import {
 } from "@remix-run/react";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
-import IconRSS from "~icons/material-symbols/rss-feed-rounded";
 import IconGitHubLogo from "~icons/tabler/brand-github";
+import IconRSS from "~icons/tabler/rss";
 import type { IndexLoader } from "./routes/_index/loader";
 
 export const links: LinksFunction = () => [
