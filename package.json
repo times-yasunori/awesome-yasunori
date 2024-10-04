@@ -2,6 +2,7 @@
   "name": "awesome-yasunori",
   "private": true,
   "scripts": {
+    "prepare": "husky",
     "build": "pnpm -r build",
     "dev": "pnpm -r dev",
     "start": "pnpm -r start",
@@ -12,6 +13,11 @@
   },
   "packageManager": "pnpm@9.11.0",
   "devDependencies": {
-    "@biomejs/biome": "1.9.2"
+    "@biomejs/biome": "1.9.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css}": "biome check --write"
   }
 }
