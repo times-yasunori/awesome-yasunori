@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/cloudflare";
 import { Feed } from "feed";
 import sortOn from "sort-on";
 import { fetchAwesomeYasunori } from "~/shared/fetch-awesome-yasunori";

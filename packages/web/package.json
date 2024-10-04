@@ -18,7 +18,6 @@
     "@mantine/hooks": "^7.13.1",
     "@remix-run/cloudflare": "^2.12.1",
     "@remix-run/cloudflare-pages": "^2.12.1",
-    "@remix-run/node": "^2.12.1",
     "@remix-run/react": "^2.12.1",
     "@awesome-yasunori/api": "workspace:*",
     "hono": "^4.6.3",

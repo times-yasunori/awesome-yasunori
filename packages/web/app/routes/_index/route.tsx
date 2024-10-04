@@ -11,7 +11,7 @@ import {
   Title,
   rem,
 } from "@mantine/core";
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
