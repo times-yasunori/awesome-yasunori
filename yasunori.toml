@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 31
+title = "まじかよyasunori最(高|低)だな構文"
+date = "2024-10-04"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+(任意の発言に対して) まじかよyasunori最(高|低)だな
+"""
+meta = """
+- memo
+  - yasunoriは関係がない
+"""
+
+[[yasunori]]
 id = 30
 title = "yasunoriのくだらないダジャレ"
 date = "2024-10-02"
