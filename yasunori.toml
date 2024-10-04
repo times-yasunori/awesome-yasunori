@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 29
+title = "yasunoriは勉強になる"
+date = "2024-10-03"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori のおかげで JSON Schema を初めて作ったし、yasunori は勉強になる
+"""
+meta = """
+- memo
+  - awesome-yasunori repoをオモチャにして各々技術検証をしている
+"""
+
+[[yasunori]]
 id = 28
 title = "yasunoriしないなんて勿体無さ"
 date = "2024-09-30"
