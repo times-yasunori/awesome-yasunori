@@ -46,7 +46,7 @@ export function AwesomeYasunoriCard({
         </Title>
       </Card.Section>
       <Card.Section>
-        <Paper p="md" style={{ position: "relative" }}>
+        <Paper p="md" style={{ position: "relative" }} radius={0}>
           <div style={{ position: "absolute", top: rem(6), right: rem(6) }}>
             <CopyButton value={content}>
               {({ copied, copy }) => (
