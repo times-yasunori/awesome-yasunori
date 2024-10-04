@@ -9,7 +9,7 @@ content = """
 """
 meta = """
 - memo
-  - yasunoriは関係がない
+  - 任意の発言はyasunoriとは関係がない
 """
 
 [[yasunori]]
