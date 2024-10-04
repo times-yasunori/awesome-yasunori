@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 30
+title = "yasunoriのくだらないダジャレ"
+date = "2024-10-02"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunori「sortはそーとー重いんで」
+yasunori「型ってかたいな」
+"""
+meta = """
+- memo
+  - discordで発言したleetcodeを解いている時に発言した内容
+"""
+
+[[yasunori]]
 id = 29
 title = "yasunoriは勉強になる"
 date = "2024-10-03"
