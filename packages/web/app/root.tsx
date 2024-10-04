@@ -76,7 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 />
                 <Title
                   order={1}
-                  size="h3"
+                  size="h2"
                   style={{ fontFamily: "'Yellowtail', cursive" }}
                 >
                   Awesome Yasunori Web
