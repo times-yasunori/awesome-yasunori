@@ -25,6 +25,7 @@ import {
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
 import IconRSS from "~icons/material-symbols/rss-feed-rounded";
+import IconGitHubLogo from "~icons/tabler/brand-github";
 import type { IndexLoader } from "./routes/_index/loader";
 
 export const links: LinksFunction = () => [
@@ -83,17 +84,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     Awesome Yasunori
                   </Title>
                 </Group>
-                <ActionIcon
-                  component="a"
-                  aria-label="rss feed"
-                  href="/feed.xml"
-                  target="_blank"
-                  variant="transparent"
-                  size="sm"
-                  color="--mantine-color-white"
-                >
-                  <IconRSS />
-                </ActionIcon>
+                <Group gap={rem(8)}>
+                  <ActionIcon
+                    component="a"
+                    aria-label="rss feed"
+                    href="/feed.xml"
+                    target="_blank"
+                    variant="transparent"
+                    size="sm"
+                    color="--mantine-color-white"
+                  >
+                    <IconRSS />
+                  </ActionIcon>
+                  <ActionIcon
+                    component="a"
+                    aria-label="GitHub Repository"
+                    href="https://github.com/times-yasunori/awesome-yasunori"
+                    target="_blank"
+                    variant="transparent"
+                    size="sm"
+                    color="--mantine-color-white"
+                  >
+                    <IconGitHubLogo />
+                  </ActionIcon>
+                </Group>
               </Group>
             </AppShell.Header>
             <AppShell.Navbar p="md">

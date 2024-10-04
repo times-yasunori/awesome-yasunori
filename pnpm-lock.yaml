@@ -28,7 +28,7 @@ importers:
         version: 3.0.0
       valibot:
         specifier: ^0.42.1
-        version: 1.0.0-beta.0(typescript@5.6.2)
+        version: 0.42.1(typescript@5.6.2)
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20240529.0
@@ -38,7 +38,7 @@ importers:
         version: 1.1.0(hono@4.6.3)
       '@hono/vite-dev-server':
         specifier: ^0.15.1
-        version: 0.16.0(hono@4.6.3)(miniflare@3.20240925.0)(wrangler@3.80.0(@cloudflare/workers-types@4.20240925.0))
+        version: 0.15.2(hono@4.6.3)(miniflare@3.20240925.0)(wrangler@3.80.0(@cloudflare/workers-types@4.20240925.0))
       jsonfile:
         specifier: ^6.1.0
         version: 6.1.0
@@ -103,6 +103,9 @@ importers:
       '@iconify-json/material-symbols':
         specifier: ^1.2.2
         version: 1.2.2
+      '@iconify-json/tabler':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@remix-run/dev':
         specifier: ^2.12.1
         version: 2.12.1(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@22.7.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.4))(wrangler@3.80.0(@cloudflare/workers-types@4.20240925.0))
@@ -848,8 +851,8 @@ packages:
     peerDependencies:
       hono: '*'
 
-  '@hono/vite-dev-server@0.16.0':
-    resolution: {integrity: sha512-zGPaYY7DyDr33id677fUuaPiV2qQJoPrxv+nrcLc7g8M9PkcvlV8kO2XRkrwZT64rUSBxyWOuGN3vEIFiH9l0w==}
+  '@hono/vite-dev-server@0.15.2':
+    resolution: {integrity: sha512-mGnXHze5Qh9jAEayREBlA1ExM+QTpC+peramm/kXIEhaDWUfpfZvAe4mJyDNIdXXn/B1wy9m8TgWhzN1mgPaqQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -863,6 +866,9 @@ packages:
 
   '@iconify-json/material-symbols@1.2.2':
     resolution: {integrity: sha512-IDVSCt44kaiKIT9C32t/KLOCk7wR7HbLTsVDHdT477dYyp13gsmH6ovd1zN+Ir3x/FPW07e17HJt6BVn0hw7/g==}
+
+  '@iconify-json/tabler@1.2.4':
+    resolution: {integrity: sha512-8sUrdJQpNaX3ZfJ5Po4hhA6n+JougMZeRg3AFvh5OuAvhZ8hEAOzPHuY8OB96x6cZCqY/j5idsbZWqKDinxRbQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3621,8 +3627,8 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
-  valibot@1.0.0-beta.0:
-    resolution: {integrity: sha512-Q/oine+NPMXdIy3vwluw0vidHLk0mTPUQBRHc+EHZXnEWF3KzLx1YLsVHPVrgHaMGRfV58P9eGOgxJvi0a059w==}
+  valibot@0.42.1:
+    resolution: {integrity: sha512-3keXV29Ar5b//Hqi4MbSdV7lfVp6zuYLZuA9V1PvQUsXqogr+u5lvLPLk3A4f74VUXDnf/JfWMN6sB+koJ/FFw==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -4386,7 +4392,7 @@ snapshots:
     dependencies:
       hono: 4.6.3
 
-  '@hono/vite-dev-server@0.16.0(hono@4.6.3)(miniflare@3.20240925.0)(wrangler@3.80.0(@cloudflare/workers-types@4.20240925.0))':
+  '@hono/vite-dev-server@0.15.2(hono@4.6.3)(miniflare@3.20240925.0)(wrangler@3.80.0(@cloudflare/workers-types@4.20240925.0))':
     dependencies:
       '@hono/node-server': 1.13.1(hono@4.6.3)
       hono: 4.6.3
@@ -4396,6 +4402,10 @@ snapshots:
       wrangler: 3.80.0(@cloudflare/workers-types@4.20240925.0)
 
   '@iconify-json/material-symbols@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/tabler@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -4887,7 +4897,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.25.7(@babel/core@7.25.7)
       '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
       '@vanilla-extract/css': 1.16.0
-      esbuild: 0.17.6
+      esbuild: 0.17.19
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
@@ -7807,7 +7817,7 @@ snapshots:
       kleur: 4.1.5
       sade: 1.8.1
 
-  valibot@1.0.0-beta.0(typescript@5.6.2):
+  valibot@0.42.1(typescript@5.6.2):
     optionalDependencies:
       typescript: 5.6.2
 

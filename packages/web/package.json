@@ -31,6 +31,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240925.0",
     "@iconify-json/material-symbols": "^1.2.2",
+    "@iconify-json/tabler": "^1.2.4",
     "@remix-run/dev": "^2.12.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
