@@ -1,6 +1,7 @@
 import {
   ActionIcon,
   Avatar,
+  Button,
   Card,
   type CardProps,
   CopyButton,
@@ -13,6 +14,7 @@ import {
   rem,
 } from "@mantine/core";
 import type { SerializeFrom } from "@remix-run/cloudflare";
+import { useNavigate } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
@@ -28,6 +30,7 @@ export function AwesomeYasunoriCard({
   entry: { id, title, date, at, senpan, content, meta },
   ...cardProps
 }: Props) {
+  const navigate = useNavigate();
   return (
     <Card
       id={`${id}`}
@@ -40,9 +43,15 @@ export function AwesomeYasunoriCard({
       <Card.Section p="md" component={Stack}>
         <Title order={2} size="h2">
           {title}{" "}
-          <Text c="dimmed" size="lg" span>
-            #{id}
-          </Text>
+          <Button
+            variant="transparent"
+            size="xs"
+            onClick={() => navigate(`/entries/${id}`)}
+          >
+            <Text c="dimmed" size="lg" span>
+              #{id}
+            </Text>
+          </Button>
         </Title>
       </Card.Section>
       <Card.Section>
