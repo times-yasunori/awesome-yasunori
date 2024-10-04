@@ -29,3 +29,5 @@ export const route = app
     }
     return c.json(randomItem(parsedAwesomeYasunori?.output.yasunori));
   });
+
+export { app };
