@@ -67,20 +67,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
             padding="md"
           >
             <AppShell.Header p="md">
-              <Group align="center">
-                <Burger
-                  opened={opened}
-                  onClick={toggle}
-                  hiddenFrom="sm"
-                  size="sm"
-                />
-                <Title
-                  order={1}
-                  size="h2"
-                  style={{ fontFamily: "'Yellowtail', cursive" }}
-                >
-                  Awesome Yasunori Web
-                </Title>
+              <Group align="center" justify="space-between">
+                <Group gap="sm">
+                  <Burger
+                    opened={opened}
+                    onClick={toggle}
+                    hiddenFrom="sm"
+                    size="sm"
+                  />
+                  <Title
+                    order={1}
+                    size="h2"
+                    style={{ fontFamily: "'Yellowtail', cursive" }}
+                  >
+                    Awesome Yasunori Web
+                  </Title>
+                </Group>
                 <ActionIcon
                   component="a"
                   aria-label="rss feed"
@@ -89,10 +91,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   variant="transparent"
                   size="sm"
                   color="--mantine-color-white"
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: rem(4),
-                  }}
                 >
                   <IconRSS />
                 </ActionIcon>
