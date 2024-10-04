@@ -3,6 +3,7 @@ import {
   Avatar,
   Card,
   CopyButton,
+  Divider,
   Group,
   Paper,
   Stack,
@@ -64,6 +65,18 @@ export default function Index() {
               </Markdown>
             </Paper>
           </Card.Section>
+          {d.meta && (
+            <>
+              <Card.Section px="md">
+                <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
+                  {d.meta}
+                </Markdown>
+              </Card.Section>
+              <Card.Section>
+                <Divider />
+              </Card.Section>
+            </>
+          )}
           <Card.Section p="md">
             <Group gap="sm" align="center">
               <Avatar
