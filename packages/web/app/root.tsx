@@ -43,7 +43,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
-  const isShowNavbar = !!data;
+  const isIndexView = !!data;
   const isMobile = useMediaQuery(`(max-width: ${em(767)})`);
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
@@ -60,9 +60,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <MantineProvider forceColorScheme="dark">
           <AppShell
-            header={{ height: 60, collapsed: !pinned }}
+            header={
+              isIndexView ? { height: 60, collapsed: !pinned } : undefined
+            }
             navbar={
-              isShowNavbar
+              isIndexView
                 ? {
                     width: 300,
                     breakpoint: "sm",
@@ -72,76 +74,84 @@ export function Layout({ children }: { children: React.ReactNode }) {
             }
             padding="md"
           >
-            <AppShell.Header p="md">
-              <Group align="center" justify="space-between">
-                <Group gap="sm">
-                  <Burger
-                    opened={opened}
-                    onClick={toggle}
-                    hiddenFrom="sm"
-                    size="sm"
-                  />
-                  <Title
-                    order={1}
-                    size="h2"
-                    style={{ fontFamily: "'Yellowtail', cursive" }}
-                  >
-                    Awesome Yasunori
-                  </Title>
-                </Group>
-                <Group gap={rem(8)}>
-                  <ActionIcon
-                    component="a"
-                    aria-label="rss feed"
-                    href="/feed.xml"
-                    target="_blank"
-                    variant="transparent"
-                    size="sm"
-                    color="--mantine-color-white"
-                  >
-                    <IconRSS />
-                  </ActionIcon>
-                  <ActionIcon
-                    component="a"
-                    aria-label="GitHub Repository"
-                    href="https://github.com/times-yasunori/awesome-yasunori"
-                    target="_blank"
-                    variant="transparent"
-                    size="sm"
-                    color="--mantine-color-white"
-                  >
-                    <IconGitHubLogo />
-                  </ActionIcon>
-                </Group>
-              </Group>
-            </AppShell.Header>
-            {isShowNavbar && (
-              <AppShell.Navbar p="md">
-                <AppShell.Section grow component={ScrollArea}>
-                  {data?.map((d) => (
-                    <NavLink
-                      key={d.id}
-                      onClick={() => {
-                        navigate(`#${d.id}`, { replace: true });
-                        // モバイルのときは移動後にサイドバーを閉じる
-                        if (isMobile) {
-                          close();
+            {isIndexView && (
+              <>
+                <AppShell.Header p="md">
+                  <Group align="center" justify="space-between">
+                    <Group gap="sm">
+                      <Burger
+                        opened={opened}
+                        onClick={toggle}
+                        hiddenFrom="sm"
+                        size="sm"
+                      />
+                      <Title
+                        order={1}
+                        size="h2"
+                        style={{ fontFamily: "'Yellowtail', cursive" }}
+                      >
+                        Awesome Yasunori
+                      </Title>
+                    </Group>
+                    <Group gap={rem(8)}>
+                      <ActionIcon
+                        component="a"
+                        aria-label="rss feed"
+                        href="/feed.xml"
+                        target="_blank"
+                        variant="transparent"
+                        size="sm"
+                        color="--mantine-color-white"
+                      >
+                        <IconRSS />
+                      </ActionIcon>
+                      <ActionIcon
+                        component="a"
+                        aria-label="GitHub Repository"
+                        href="https://github.com/times-yasunori/awesome-yasunori"
+                        target="_blank"
+                        variant="transparent"
+                        size="sm"
+                        color="--mantine-color-white"
+                      >
+                        <IconGitHubLogo />
+                      </ActionIcon>
+                    </Group>
+                  </Group>
+                </AppShell.Header>
+                <AppShell.Navbar p="md">
+                  <AppShell.Section grow component={ScrollArea}>
+                    {data?.map((d) => (
+                      <NavLink
+                        key={d.id}
+                        onClick={() => {
+                          navigate(`#${d.id}`, { replace: true });
+                          // モバイルのときは移動後にサイドバーを閉じる
+                          if (isMobile) {
+                            close();
+                          }
+                        }}
+                        label={
+                          <Group gap="xs">
+                            <Text>{`${d.title}`}</Text>
+                            <Text size="xs" c="dimmed">
+                              {`#${d.id}`}
+                            </Text>
+                          </Group>
                         }
-                      }}
-                      label={
-                        <Group gap="xs">
-                          <Text>{`${d.title}`}</Text>
-                          <Text size="xs" c="dimmed">
-                            {`#${d.id}`}
-                          </Text>
-                        </Group>
-                      }
-                    />
-                  ))}
-                </AppShell.Section>
-              </AppShell.Navbar>
+                      />
+                    ))}
+                  </AppShell.Section>
+                </AppShell.Navbar>
+              </>
             )}
-            <AppShell.Main pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
+            <AppShell.Main
+              pt={
+                isIndexView
+                  ? `calc(${rem(60)} + var(--mantine-spacing-md))`
+                  : undefined
+              }
+            >
               {children}
             </AppShell.Main>
           </AppShell>

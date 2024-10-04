@@ -9,7 +9,7 @@ export default function Entry() {
   const entry = useLoaderData<EntryLoader>();
   const navigate = useNavigate();
   return (
-    <Flex justify="center" align="center" mih="calc(100vh - 60px - 32px)">
+    <Flex justify="center" align="center" mih={`calc(100vh - ${rem(32)})`}>
       <Stack>
         <AwesomeYasunoriCard entry={entry} maw={rem(800)} />
         <Group justify="end">
