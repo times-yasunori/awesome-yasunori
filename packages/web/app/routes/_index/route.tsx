@@ -16,8 +16,8 @@ import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
-import IconCheckBoxOutline from "~icons/material-symbols/check-rounded";
-import IconCopyOutline from "~icons/material-symbols/content-copy-outline-rounded";
+import IconCopy from "~icons/tabler/copy";
+import IconrCopyCheckFilled from "~icons/tabler/copy-check-filled";
 import { type IndexLoader, indexLoader } from "./loader";
 
 export const loader = indexLoader;
@@ -55,7 +55,7 @@ export default function Index() {
                 <CopyButton value={d.content}>
                   {({ copied, copy }) => (
                     <ActionIcon variant="subtle" color="dark" onClick={copy}>
-                      {copied ? <IconCheckBoxOutline /> : <IconCopyOutline />}
+                      {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
                     </ActionIcon>
                   )}
                 </CopyButton>
