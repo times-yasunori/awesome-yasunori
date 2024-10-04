@@ -57,7 +57,9 @@ export function AwesomeYasunoriCard({
       <Card.Section>
         <Paper p="md" style={{ position: "relative" }} radius={0}>
           <div style={{ position: "absolute", top: rem(6), right: rem(6) }}>
-            <CopyButton value={content}>
+            <CopyButton
+              value={`${content}\nhttps://awesome.yasunori.dev/entries/${id}`}
+            >
               {({ copied, copy }) => (
                 <ActionIcon variant="subtle" color="dark" onClick={copy}>
                   {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
