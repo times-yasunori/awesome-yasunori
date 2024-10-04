@@ -2,12 +2,12 @@ import app from "./index";
 
 describe("Test GET /", () => {
   test("Should return 200 response", async () => {
-    const res = await app.request("http://localhost/");
+    const res = await app.request("/");
     expect(res.status).toBe(200);
   });
 
   test("Should return message response", async () => {
-    const res = await app.request("http://localhost/");
+    const res = await app.request("/");
     const parsed = await res.json();
     expect(parsed).toStrictEqual({
       message:
