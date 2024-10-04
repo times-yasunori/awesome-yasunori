@@ -1,11 +1,13 @@
 import {
   ActionIcon,
-  Badge,
+  Avatar,
   Card,
   CopyButton,
+  Divider,
   Group,
   Paper,
   Stack,
+  Text,
   Title,
   rem,
 } from "@mantine/core";
@@ -14,10 +16,9 @@ import { useLoaderData } from "@remix-run/react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
-import { type IndexLoader, indexLoader } from "./loader";
-
 import IconCheckBoxOutline from "~icons/material-symbols/check-rounded";
 import IconCopyOutline from "~icons/material-symbols/content-copy-outline-rounded";
+import { type IndexLoader, indexLoader } from "./loader";
 
 export const loader = indexLoader;
 export const meta: MetaFunction = () => {
@@ -40,31 +41,56 @@ export default function Index() {
           radius="md"
           withBorder
         >
-          <Stack mb="lg">
+          <Card.Section p="md" component={Stack}>
             <Title order={2} size="h2">
-              {d.title}
+              {d.title}{" "}
+              <Text c="dimmed" size="lg" span>
+                #{d.id}
+              </Text>
             </Title>
-            <Group gap="xs">
-              <Badge color="pink">#{d.id}</Badge>
-              <Badge color="blue">{d.senpan}</Badge>
-              <Badge color="green">{d.at}</Badge>
-              <Badge color="cyan">{d.date}</Badge>
+          </Card.Section>
+          <Card.Section>
+            <Paper p="md" style={{ position: "relative" }}>
+              <div style={{ position: "absolute", top: rem(6), right: rem(6) }}>
+                <CopyButton value={d.content}>
+                  {({ copied, copy }) => (
+                    <ActionIcon variant="subtle" color="dark" onClick={copy}>
+                      {copied ? <IconCheckBoxOutline /> : <IconCopyOutline />}
+                    </ActionIcon>
+                  )}
+                </CopyButton>
+              </div>
+              <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
+                {d.content}
+              </Markdown>
+            </Paper>
+          </Card.Section>
+          {d.meta && (
+            <>
+              <Card.Section px="md">
+                <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
+                  {d.meta}
+                </Markdown>
+              </Card.Section>
+              <Card.Section>
+                <Divider />
+              </Card.Section>
+            </>
+          )}
+          <Card.Section p="md">
+            <Group gap="sm" align="center">
+              <Avatar
+                src={`https://avatars.githubusercontent.com/${d.senpan}`}
+                radius="sm"
+              />
+              <Stack gap="0">
+                <Text fw={600}>{d.senpan}</Text>
+                <Text size="sm" c="dimmed">
+                  {d.date} at {d.at}
+                </Text>
+              </Stack>
             </Group>
-          </Stack>
-          <Paper p="md" style={{ position: "relative" }}>
-            <div style={{ position: "absolute", top: rem(6), right: rem(6) }}>
-              <CopyButton value={d.content}>
-                {({ copied, copy }) => (
-                  <ActionIcon variant="subtle" color="dark" onClick={copy}>
-                    {copied ? <IconCheckBoxOutline /> : <IconCopyOutline />}
-                  </ActionIcon>
-                )}
-              </CopyButton>
-            </div>
-            <Markdown remarkPlugins={[remarkBreaks, remarkGfm]}>
-              {d.content}
-            </Markdown>
-          </Paper>
+          </Card.Section>
         </Card>
       ))}
     </Stack>
