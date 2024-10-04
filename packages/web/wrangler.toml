@@ -1,4 +1,4 @@
-name = "awesome-yasunori-web"
+name = "awesome-yasunori"
 compatibility_date = "2024-09-30"
 pages_build_output_dir = "./build/client"
 compatibility_flags = ["nodejs_compat"]
