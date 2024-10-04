@@ -3,7 +3,7 @@ import { cors } from "hono/cors";
 import { poweredBy } from "hono/powered-by";
 import { prettyJSON } from "hono/pretty-json";
 
-import { route as awesomeRoute } from "./routes/awesome.js";
+import { route as awesomeRoute } from "./routes/awesome";
 
 const app = new Hono();
 app.use("*", poweredBy());
