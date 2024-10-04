@@ -15,3 +15,10 @@ describe("Test GET /", () => {
     });
   });
 });
+
+describe("Test GET /awesome", () => {
+  test("Should return 200 response", async () => {
+    const res = await app.request("/awesome");
+    expect(res.status).toBe(200);
+  });
+});
