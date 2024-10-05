@@ -64,6 +64,19 @@ jobs:
         run: pnpm run generate:json
       - name: Test
         run: pnpm test
+  test-web:
+    name: Test Web
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Test
+        run: pnpm test
   lint-api-and-web:
     name: Lint API & Web
     runs-on: ubuntu-latest
