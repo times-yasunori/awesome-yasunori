@@ -29,7 +29,7 @@ const route = app
         400,
       );
     }
-    return c.json(parsedAwesomeYasunori?.output.yasunori);
+    return c.json(parsedAwesomeYasunori.output.yasunori);
   })
   .get("/awesome/random", async (c) => {
     if (!parsedAwesomeYasunori.success) {
@@ -40,7 +40,7 @@ const route = app
         400,
       );
     }
-    return c.json(randomItem(parsedAwesomeYasunori?.output.yasunori));
+    return c.json(randomItem(parsedAwesomeYasunori.output.yasunori));
   })
   .get("/awesome/:id", async (c) => {
     const parsedParams = getParsedRequestParams(c.req.param());
