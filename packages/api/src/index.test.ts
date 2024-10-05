@@ -55,7 +55,6 @@ describe("Test GET /awesome/random", () => {
   test("Should return entries response", async () => {
     const res = await app.request("/awesome/random");
     const parsed = await res.json<unknown>();
-    console.log(parsed);
     expect(parsed).toStrictEqual({
       id: 1,
       at: "vim-jp radioお便り",
