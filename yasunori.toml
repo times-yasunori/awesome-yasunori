@@ -1,4 +1,21 @@
 [[yasunori]]
+id = 37
+title = "yasunori草子"
+date = "2024-09-06"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+春は、yasunori。
+夏は、yasunori。
+秋は、yasunori。
+冬は、yasunori。
+"""
+meta = """
+- memo
+  - everyday yasunori
+"""
+
+[[yasunori]]
 id = 36
 title = "Go yasunori"
 date = "2024-09-06"
