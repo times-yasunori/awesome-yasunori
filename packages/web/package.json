@@ -14,12 +14,12 @@
     "typegen": "wrangler types"
   },
   "dependencies": {
+    "@awesome-yasunori/api": "workspace:*",
     "@mantine/core": "^7.13.1",
     "@mantine/hooks": "^7.13.1",
     "@remix-run/cloudflare": "^2.12.1",
     "@remix-run/cloudflare-pages": "^2.12.1",
     "@remix-run/react": "^2.12.1",
-    "@awesome-yasunori/api": "workspace:*",
     "hono": "^4.6.3",
     "isbot": "^5.1.17",
     "react": "^18.2.0",
@@ -37,11 +37,13 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "feed": "^4.2.2",
+    "msw": "^2.4.9",
     "sort-on": "^6.1.0",
     "typescript": "^5.6.2",
     "unplugin-icons": "^0.19.3",
     "vite": "^5.2.12",
     "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.1.1",
     "wrangler": "^3.79.0"
   }
 }
