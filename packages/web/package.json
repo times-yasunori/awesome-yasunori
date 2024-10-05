@@ -10,6 +10,7 @@
     "dev": "remix vite:dev",
     "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
+    "test": "vitest",
     "typecheck": "tsc",
     "typegen": "wrangler types"
   },
