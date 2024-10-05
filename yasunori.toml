@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 36
+title = "Go yasunori"
+date = "2024-09-06"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+Go yasunori~
+"""
+meta = """
+- memo
+  - awesome-yasunoriはみんなのオモチャなのでガンガンmergeしていこう
+"""
+
+[[yasunori]]
 id = 35
 title = "Don't think"
 date = "2024-09-06"
