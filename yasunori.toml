@@ -1,15 +1,17 @@
 [[yasunori]]
 id = 31
-title = "まじかよyasunori最(高|低)だな構文"
+title = "まじやす構文"
 date = "2024-10-04"
 at = "vim-jp #times-yasunori"
 senpan = "takeokunn"
 content = """
-(任意の発言に対して) まじかよyasunori最(高|低)だな
+(任意の発言に対して) まじかよyasunori最(高|低|大|中|小|終兵器|終形態)だな
 """
 meta = """
 - memo
-  - yasunoriは関係がない
+  - 本旨に関してyasunoriは大体の場合関係がない
+  - vim-jp で !まじやす と発言するとslack responseで出てくる
+  - 随時追加修正される可能性がある
 """
 
 [[yasunori]]
