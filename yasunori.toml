@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 33
+title = "奥のyasunori"
+date = "2024-10-05"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunoriを
+あつめてはやし
+最上川
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 32
 title = "実を言うと、OSはもうだめです。"
 date = "2024-10-05"
