@@ -1,0 +1,9 @@
+name = "awesome-yasunori-image-generator"
+compatibility_date = "2024-05-01"
+pages_build_output_dir = "dist"
+compatibility_flags = ["nodejs_compat"]
+
+[dev]
+ip = "localhost"
+port = 5185
+local_protocol = "http"
