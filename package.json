@@ -4,12 +4,20 @@
   "scripts": {
     "prepare": "husky",
     "build": "pnpm -r build",
+    "build:api": "pnpm --filter \"@awesome-yasunori/api\" build",
+    "build:web": "pnpm --filter \"@awesome-yasunori/web\" build",
     "dev": "pnpm -r dev",
+    "dev:api": "pnpm --filter \"@awesome-yasunori/api\" dev",
+    "dev:web": "pnpm --filter \"@awesome-yasunori/web\" dev",
     "start": "pnpm -r start",
     "lint": "biome check .",
     "format": "biome check --write .",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "test:api": "pnpm --filter \"@awesome-yasunori/api\" test",
+    "test:web": "pnpm --filter \"@awesome-yasunori/web\" test",
+    "typecheck": "pnpm -r typecheck",
+    "typecheck:api": "pnpm --filter \"@awesome-yasunori/api\" typecheck",
+    "typecheck:web": "pnpm --filter \"@awesome-yasunori/web\" typecheck"
   },
   "packageManager": "pnpm@9.11.0",
   "devDependencies": {
