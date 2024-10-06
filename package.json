@@ -16,7 +16,11 @@
     "test:web": "pnpm --filter \"@awesome-yasunori/web\" test",
     "typecheck": "pnpm -r typecheck",
     "typecheck:api": "pnpm --filter \"@awesome-yasunori/api\" typecheck",
-    "typecheck:web": "pnpm --filter \"@awesome-yasunori/web\" typecheck"
+    "typecheck:web": "pnpm --filter \"@awesome-yasunori/web\" typecheck",
+    "serve": "$1",
+    "deploy": "pnpm -r deploy",
+    "deploy:api": "pnpm --filter \"@awesome-yasunori/api\" deploy",
+    "deploy:web": "pnpm --filter \"@awesome-yasunori/web\" deploy"
   },
   "packageManager": "pnpm@9.11.0",
   "devDependencies": {
