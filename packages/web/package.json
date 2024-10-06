@@ -7,7 +7,7 @@
   "packageManager": "pnpm@9.11.0",
   "scripts": {
     "build": "remix vite:build",
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev --port 5184",
     "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
     "test": "vitest",
@@ -30,7 +30,7 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240925.0",
+    "@cloudflare/workers-types": "^4.20241004.0",
     "@iconify-json/tabler": "^1.2.4",
     "@remix-run/dev": "^2.12.1",
     "@svgr/core": "^8.1.0",
