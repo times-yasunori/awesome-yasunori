@@ -9,7 +9,6 @@
     "dev": "pnpm -r dev",
     "dev:api": "pnpm --filter \"@awesome-yasunori/api\" dev",
     "dev:web": "pnpm --filter \"@awesome-yasunori/web\" dev",
-    "start": "pnpm -r start",
     "lint": "biome check .",
     "format": "biome check --write .",
     "test": "pnpm -r test",
