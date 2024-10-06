@@ -7,7 +7,7 @@
   "packageManager": "pnpm@9.11.0",
   "scripts": {
     "build": "remix vite:build",
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev --port 5184",
     "start": "wrangler pages dev ./build/client",
     "deploy": "pnpm run build && wrangler pages deploy",
     "test": "vitest",
