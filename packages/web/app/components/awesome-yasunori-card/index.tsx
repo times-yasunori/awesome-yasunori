@@ -65,9 +65,15 @@ export function AwesomeYasunoriCard({
               value={`${content}\nhttps://awesome.yasunori.dev/entries/${id}`}
             >
               {({ copied, copy }) => (
-                <ActionIcon variant="subtle" color="dark" onClick={copy}>
-                  {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
-                </ActionIcon>
+                <Tooltip
+                  label={copied ? "Copied!" : "Copy awesome yasunori"}
+                  withArrow
+                  position="left"
+                >
+                  <ActionIcon variant="subtle" color="dark" onClick={copy}>
+                    {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
+                  </ActionIcon>
+                </Tooltip>
               )}
             </CopyButton>
           </div>
