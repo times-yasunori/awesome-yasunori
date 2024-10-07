@@ -11,6 +11,7 @@ import {
   Stack,
   Text,
   Title,
+  Tooltip,
   rem,
 } from "@mantine/core";
 import type { SerializeFrom } from "@remix-run/cloudflare";
@@ -20,6 +21,8 @@ import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import IconCopy from "~icons/tabler/copy";
 import IconrCopyCheckFilled from "~icons/tabler/copy-check-filled";
+import IconShare from "~icons/tabler/share";
+import { useIsMobile } from "../../hooks/use-is-mobile";
 import type { IndexLoader } from "../../routes/_index/loader";
 
 interface Props extends CardProps {
@@ -30,6 +33,7 @@ export function AwesomeYasunoriCard({
   entry: { id, title, date, at, senpan, content, meta },
   ...cardProps
 }: Props) {
+  const isMobile = useIsMobile();
   const navigate = useNavigate();
   return (
     <Card
@@ -61,9 +65,15 @@ export function AwesomeYasunoriCard({
               value={`${content}\nhttps://awesome.yasunori.dev/entries/${id}`}
             >
               {({ copied, copy }) => (
-                <ActionIcon variant="subtle" color="dark" onClick={copy}>
-                  {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
-                </ActionIcon>
+                <Tooltip
+                  label={copied ? "Copied!" : "Copy awesome yasunori"}
+                  withArrow
+                  position="left"
+                >
+                  <ActionIcon variant="subtle" color="dark" onClick={copy}>
+                    {copied ? <IconrCopyCheckFilled /> : <IconCopy />}
+                  </ActionIcon>
+                </Tooltip>
               )}
             </CopyButton>
           </div>
@@ -85,19 +95,52 @@ export function AwesomeYasunoriCard({
         </>
       )}
       <Card.Section p="md">
-        <Group gap="sm" align="center">
-          <Avatar
-            src={`https://avatars.githubusercontent.com/${senpan}`}
-            radius="sm"
-          />
-          <Stack gap="0">
-            <Text fw={600}>{senpan}</Text>
-            <Text size="sm" c="dimmed">
-              {date} at {at}
-            </Text>
-          </Stack>
+        <Group align="center" justify="space-between">
+          <Group gap="sm" align="center">
+            <Avatar
+              src={`https://avatars.githubusercontent.com/${senpan}`}
+              radius="sm"
+            />
+            <Stack gap="0">
+              <Text fw={600}>{senpan}</Text>
+              <Text size="sm" c="dimmed">
+                {date} at {at}
+              </Text>
+            </Stack>
+          </Group>
+          {!isMobile && <FooterActionIcons id={id} />}
         </Group>
       </Card.Section>
+      {isMobile && (
+        <>
+          <Card.Section>
+            <Divider />
+          </Card.Section>
+          <Card.Section py="sm" px="md">
+            <FooterActionIcons id={id} />
+          </Card.Section>
+        </>
+      )}
     </Card>
+  );
+}
+
+function FooterActionIcons({ id }: Pick<Pick<Props, "entry">["entry"], "id">) {
+  return (
+    <Group gap="sm" align="center" justify="flex-end">
+      <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
+        {({ copied, copy }) => (
+          <Tooltip
+            label={copied ? "Copied" : "Copy share link"}
+            withArrow
+            position="left"
+          >
+            <ActionIcon variant="subtle" onClick={copy}>
+              <IconShare />
+            </ActionIcon>
+          </Tooltip>
+        )}
+      </CopyButton>
+    </Group>
   );
 }

@@ -9,7 +9,6 @@ import {
   ScrollArea,
   Text,
   Title,
-  em,
   rem,
 } from "@mantine/core";
 import type { LinksFunction } from "@remix-run/cloudflare";
@@ -23,9 +22,10 @@ import {
   useRouteLoaderData,
 } from "@remix-run/react";
 import "@mantine/core/styles.css";
-import { useDisclosure, useHeadroom, useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useHeadroom } from "@mantine/hooks";
 import IconGitHubLogo from "~icons/tabler/brand-github";
 import IconRSS from "~icons/tabler/rss";
+import { useIsMobile } from "./hooks/use-is-mobile";
 import type { IndexLoader } from "./routes/_index/loader";
 
 export const links: LinksFunction = () => [
@@ -44,7 +44,7 @@ export const links: LinksFunction = () => [
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
   const isIndexView = !!data;
-  const isMobile = useMediaQuery(`(max-width: ${em(767)})`);
+  const isMobile = useIsMobile();
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
