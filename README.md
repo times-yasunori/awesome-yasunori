@@ -42,3 +42,7 @@ It's being developed in [packages/web](./packages/web).
 ### [Awesome Yasunori JSON Schema](./schema.json)
 
 This is the sole JSON Schema exclusively for Awesome Yasunori in the world.
+
+### [Awesome Yasunori Image Generator](https://image.yasunori.dev/ogp?id=1)
+
+This is an application that generates images from Awesome Yasunori.

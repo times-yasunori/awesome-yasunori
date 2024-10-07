@@ -10,6 +10,7 @@ export const meta: MetaFunction<EntryLoader> = ({ data, location }) => {
   const title = data?.title ?? "Awesome Yasunori";
   const description = data?.content ?? "Awesome Yasurunori Content";
   const url = `https://awesome.yasunori.dev${location.pathname}`;
+  const ogImageUrl = `https://image.yasunori.dev/ogp?id=${data?.id}`;
   const date = data?.date
     ? new Date(data.date).toISOString()
     : new Date().toISOString();
@@ -25,8 +26,11 @@ export const meta: MetaFunction<EntryLoader> = ({ data, location }) => {
     { property: "article:section", content: "posts" },
     { property: "article:published_time", content: date },
     { property: "article:modified_time", content: date },
-    // TODO
-    // { property: 'og:image', content: "url" },
+    { property: "og:image", content: ogImageUrl },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: ogImageUrl },
   ];
 };
 

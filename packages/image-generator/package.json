@@ -1,0 +1,27 @@
+{
+  "name": "@awesome-yasunori/image-generator",
+  "description": "The awesome yasunori image generator.",
+  "sideEffects": false,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.11.0",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "wrangler pages dev",
+    "build": "pnpm run clean && wrangler pages functions build --outdir=dist",
+    "deploy": "npm run build && wrangler pages deploy"
+  },
+  "dependencies": {
+    "@awesome-yasunori/api": "workspace:*",
+    "@cloudflare/pages-plugin-vercel-og": "^0.1.2",
+    "@cloudflare/workers-types": "^4.20241004.0",
+    "hono": "^4.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2",
+    "wrangler": "^3.80.0"
+  }
+}
