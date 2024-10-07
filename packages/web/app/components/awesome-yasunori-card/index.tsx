@@ -104,22 +104,28 @@ export function AwesomeYasunoriCard({
         <Divider />
       </Card.Section>
       <Card.Section py="sm" px="md">
-        <Group gap="sm" align="center" justify="flex-end">
-          <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
-            {({ copied, copy }) => (
-              <Tooltip
-                label={copied ? "Copied share link!" : "Copy share link"}
-                withArrow
-                position="left"
-              >
-                <ActionIcon variant="subtle" onClick={copy}>
-                  <IconShare />
-                </ActionIcon>
-              </Tooltip>
-            )}
-          </CopyButton>
-        </Group>
+        <FooterActionIcons id={id} />
       </Card.Section>
     </Card>
+  );
+}
+
+function FooterActionIcons({ id }: Pick<Pick<Props, "entry">["entry"], "id">) {
+  return (
+    <Group gap="sm" align="center" justify="flex-end">
+      <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
+        {({ copied, copy }) => (
+          <Tooltip
+            label={copied ? "Copied share link!" : "Copy share link"}
+            withArrow
+            position="left"
+          >
+            <ActionIcon variant="subtle" onClick={copy}>
+              <IconShare />
+            </ActionIcon>
+          </Tooltip>
+        )}
+      </CopyButton>
+    </Group>
   );
 }
