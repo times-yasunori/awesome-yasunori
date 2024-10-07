@@ -131,7 +131,7 @@ function FooterActionIcons({ id }: Pick<Pick<Props, "entry">["entry"], "id">) {
       <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
         {({ copied, copy }) => (
           <Tooltip
-            label={copied ? "Copied share link!" : "Copy share link"}
+            label={copied ? "Copied" : "Copy share link"}
             withArrow
             position="left"
           >
