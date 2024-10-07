@@ -11,6 +11,7 @@ import {
   Stack,
   Text,
   Title,
+  Tooltip,
   rem,
 } from "@mantine/core";
 import type { SerializeFrom } from "@remix-run/cloudflare";
@@ -20,6 +21,7 @@ import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import IconCopy from "~icons/tabler/copy";
 import IconrCopyCheckFilled from "~icons/tabler/copy-check-filled";
+import IconShare from "~icons/tabler/share";
 import type { IndexLoader } from "../../routes/_index/loader";
 
 interface Props extends CardProps {
@@ -96,6 +98,26 @@ export function AwesomeYasunoriCard({
               {date} at {at}
             </Text>
           </Stack>
+        </Group>
+      </Card.Section>
+      <Card.Section>
+        <Divider />
+      </Card.Section>
+      <Card.Section py="sm" px="md">
+        <Group gap="sm" align="center" justify="flex-end">
+          <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
+            {({ copied, copy }) => (
+              <Tooltip
+                label={copied ? "Copied share link!" : "Copy share link"}
+                withArrow
+                position="left"
+              >
+                <ActionIcon variant="subtle" onClick={copy}>
+                  <IconShare />
+                </ActionIcon>
+              </Tooltip>
+            )}
+          </CopyButton>
         </Group>
       </Card.Section>
     </Card>
