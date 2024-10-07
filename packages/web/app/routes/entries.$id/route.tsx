@@ -27,6 +27,10 @@ export const meta: MetaFunction<EntryLoader> = ({ data, location }) => {
     { property: "article:published_time", content: date },
     { property: "article:modified_time", content: date },
     { property: "og:image", content: ogImageUrl },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: ogImageUrl },
   ];
 };
 
