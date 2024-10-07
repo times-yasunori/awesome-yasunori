@@ -22,6 +22,7 @@ import remarkGfm from "remark-gfm";
 import IconCopy from "~icons/tabler/copy";
 import IconrCopyCheckFilled from "~icons/tabler/copy-check-filled";
 import IconShare from "~icons/tabler/share";
+import { useIsMobile } from "../../hooks/use-is-mobile";
 import type { IndexLoader } from "../../routes/_index/loader";
 
 interface Props extends CardProps {
@@ -32,6 +33,7 @@ export function AwesomeYasunoriCard({
   entry: { id, title, date, at, senpan, content, meta },
   ...cardProps
 }: Props) {
+  const isMobile = useIsMobile();
   const navigate = useNavigate();
   return (
     <Card
@@ -87,25 +89,32 @@ export function AwesomeYasunoriCard({
         </>
       )}
       <Card.Section p="md">
-        <Group gap="sm" align="center">
-          <Avatar
-            src={`https://avatars.githubusercontent.com/${senpan}`}
-            radius="sm"
-          />
-          <Stack gap="0">
-            <Text fw={600}>{senpan}</Text>
-            <Text size="sm" c="dimmed">
-              {date} at {at}
-            </Text>
-          </Stack>
+        <Group align="center" justify="space-between">
+          <Group gap="sm" align="center">
+            <Avatar
+              src={`https://avatars.githubusercontent.com/${senpan}`}
+              radius="sm"
+            />
+            <Stack gap="0">
+              <Text fw={600}>{senpan}</Text>
+              <Text size="sm" c="dimmed">
+                {date} at {at}
+              </Text>
+            </Stack>
+          </Group>
+          {!isMobile && <FooterActionIcons id={id} />}
         </Group>
       </Card.Section>
-      <Card.Section>
-        <Divider />
-      </Card.Section>
-      <Card.Section py="sm" px="md">
-        <FooterActionIcons id={id} />
-      </Card.Section>
+      {isMobile && (
+        <>
+          <Card.Section>
+            <Divider />
+          </Card.Section>
+          <Card.Section py="sm" px="md">
+            <FooterActionIcons id={id} />
+          </Card.Section>
+        </>
+      )}
     </Card>
   );
 }
