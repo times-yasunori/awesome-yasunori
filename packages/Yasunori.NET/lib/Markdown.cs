@@ -41,11 +41,8 @@ public class Markdown
         sb.AppendLine();
         foreach (var p in y.Content.Trim().Split("\n\n"))
         {
-            foreach (var line in p.Split('\n'))
-            {
-                sb.AppendLine($"{line}  ");
-            }
-            sb.AppendLine();
+            sb.AppendLine(string.Join("  \n", p.Split('\n')))
+              .AppendLine();
         }
         return sb.ToString();
     }
