@@ -7,6 +7,13 @@
     systems.url = "github:nix-systems/default";
   };
 
+  nixConfig = {
+    extra-substituters = [ "https://times-yasunori.cachix.org" ];
+    extra-trusted-public-keys = [
+      "times-yasunori.cachix.org-1:lPvJdWv48wRCargHe6ux2tTmaTBGK4uXdYVCpSHLx/A="
+    ];
+  };
+
   outputs =
     inputs@{
       self,
