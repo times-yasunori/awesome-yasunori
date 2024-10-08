@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yasunori.Net", "lib\Yasunor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yasunori", "cli\Yasunori.csproj", "{D9975762-EEEC-461D-BF39-53D37D7A2DC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{78D8904A-4EF4-4538-8541-480A6ACC21D5}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +46,17 @@ Global
 		{D9975762-EEEC-461D-BF39-53D37D7A2DC3}.Release|x64.Build.0 = Release|Any CPU
 		{D9975762-EEEC-461D-BF39-53D37D7A2DC3}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9975762-EEEC-461D-BF39-53D37D7A2DC3}.Release|x86.Build.0 = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|x64.Build.0 = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|x64.ActiveCfg = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|x64.Build.0 = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{78D8904A-4EF4-4538-8541-480A6ACC21D5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
