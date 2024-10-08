@@ -1,0 +1,3 @@
+{:lib com.github.times_yasunori.awesome_yasunori/yasunori
+ :version "0.1.{{git/commit-count}}"
+ :main yasunori.core}
