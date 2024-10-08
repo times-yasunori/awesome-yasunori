@@ -1,5 +1,9 @@
 { self, ... }:
 {
+  imports = [
+    ./shells
+  ];
+
   flake = {
     overlays = import ./overlays.nix;
   };
