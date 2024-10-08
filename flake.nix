@@ -16,7 +16,10 @@
       flake-parts,
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ treefmt-nix.flakeModule ];
+      imports = [
+        treefmt-nix.flakeModule
+        ./nix
+      ];
       systems = import systems;
 
       perSystem =
@@ -29,8 +32,6 @@
               taplo.enable = true;
             };
           };
-
-          devShells.default = pkgs.mkShell { packages = with pkgs; [ nil ]; };
 
           packages.default = pkgs.emptyDirectory;
         };
