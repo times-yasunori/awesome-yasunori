@@ -11,7 +11,7 @@ clean:
 	rm -rf target
 
 .PHONY: build
-build: clean
+build:
 	clj -T:build uberjar
 
 .PHONY: build.native
