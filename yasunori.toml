@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 38
+title = "モダンフロントエンド実験場としてのawesome-yasunori"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+モダンな実践的コードが欲しいか？ 欲しけりゃくれてやる！
+探せ！すべてのコードをawesome yasunoriに置いてきた！
+"""
+meta = """
+- memo
+  - 2024-10-09時点で一番モダンなフロントエンド技術スタックをawesome-yasunoriでは採用している
+"""
+
+[[yasunori]]
 id = 37
 title = "yasunori草子"
 date = "2024-10-05"
