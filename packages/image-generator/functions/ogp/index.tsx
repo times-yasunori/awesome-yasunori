@@ -139,6 +139,8 @@ export const onRequest: PagesFunction = async (context) => {
     },
   );
 
+  response.headers.append("Cache-Control", `s-maxage=${60 * 60 * 24}`);
+
   /** save cache */
   context.waitUntil(cache.put(cacheKey, response.clone()));
 
