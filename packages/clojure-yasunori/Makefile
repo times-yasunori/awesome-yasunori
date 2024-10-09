@@ -4,7 +4,7 @@ TARGET := yasunori
 
 .PHONY: test
 test:
-	clj -M:test
+	clojure -M:test
 
 .PHONY: clean
 clean:
@@ -12,7 +12,7 @@ clean:
 
 .PHONY: build
 build:
-	clj -T:build uberjar
+	clojure -T:build uberjar
 
 .PHONY: build.native
 build.native: target/${TARGET}
