@@ -147,5 +147,7 @@ jobs:
           restore-keys: cljdeps-
       - name: Build
         run: make build
+      - name: Build native
+        run: make build.native
       - name: Test
         run: make test
