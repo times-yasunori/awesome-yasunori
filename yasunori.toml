@@ -1,4 +1,16 @@
 [[yasunori]]
+id = 39
+title = "LGTY"
+date = "2024-10-09"
+at = "awesome-yasunori"
+senpan = "tomoya"
+content = """
+Looks Good To Yaunori
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 38
 title = "モダンフロントエンド実験場としてのawesome-yasunori"
 date = "2024-10-09"
