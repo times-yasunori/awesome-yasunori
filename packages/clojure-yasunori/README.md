@@ -114,11 +114,12 @@ sys 	0m0.317s
 $ time java -jar target/yasunori-standalone.jar 1
 real	0m1.621s
 user	0m2.474s
-sys	0m0.190s
+sys 	0m0.190s
 ``
 
 3. Native build powered by GraalVM (x17.7 faster)
 ```bash
+$ time ./target/yasunori 1
 real	0m0.181s
 user	0m0.030s
 sys 	0m0.022s
