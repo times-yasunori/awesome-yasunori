@@ -1,10 +1,10 @@
 import type { ApiRoute } from "@awesome-yasunori/api/src/index.js";
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
-import type { PagesFunction } from "@cloudflare/workers-types";
 import type {
   CacheStorage as CFCacheStorage,
   Request as CFRequest,
   Response as CFResponse,
+  PagesFunction,
 } from "@cloudflare/workers-types";
 import { hc } from "hono/client";
 import React from "react";
