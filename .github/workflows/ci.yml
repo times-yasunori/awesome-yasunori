@@ -137,7 +137,7 @@ jobs:
       - uses: DeLaGuardo/setup-clojure@12.5
         with:
           cli: 1.11.4.1474
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.m2/repository
