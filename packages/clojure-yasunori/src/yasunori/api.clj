@@ -2,12 +2,16 @@
   (:require
    [schema.core :as s]
    [clojure.data.json :as json]
+   [babashka.http-client :as http]
    [yasunori.schema :as y.schema]))
 
 (s/defn ^:private fetch-yasunori :- s/Any
   ([] (fetch-yasunori ""))
   ([path :- s/Str]
-   (-> (slurp (format "https://api.yasunori.dev/%s" path))
+   (-> (http/get (format "https://api.yasunori.dev/%s" path))
+       (#(if (= 200 (:status %))
+           (:body %)
+           (throw (ex-info "Failed HTTP fetch" %))))
        (json/read-str :key-fn keyword))))
 
 (s/defn fetch-random :- y.schema/YasunoriObj

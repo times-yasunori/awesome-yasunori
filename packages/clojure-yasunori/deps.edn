@@ -3,6 +3,7 @@
   org.clojure/data.json {:mvn/version "2.5.0"}
   prismatic/schema {:mvn/version "1.4.1"}
   clj-commons/clj-yaml {:mvn/version "1.0.28"}
+  org.babashka/http-client {:mvn/version "0.3.11"}
   com.github.clj-easy/graal-build-time {:mvn/version "1.0.5"}}
 
  :aliases
