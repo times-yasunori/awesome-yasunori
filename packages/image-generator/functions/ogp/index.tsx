@@ -1,11 +1,34 @@
 import type { ApiRoute } from "@awesome-yasunori/api/src/index.js";
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
-import type { PagesFunction } from "@cloudflare/workers-types";
+import type {
+  CacheStorage as CFCacheStorage,
+  Request as CFRequest,
+  Response as CFResponse,
+  PagesFunction,
+} from "@cloudflare/workers-types";
 import { hc } from "hono/client";
 import React from "react";
 
 export const onRequest: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
+
+  /** get cache storage */
+  const cache = (caches as unknown as CFCacheStorage).default;
+
+  /** cache key */
+  const cacheKey = new Request(
+    url.toString(),
+    context.request as unknown as Request,
+  ) as unknown as CFRequest;
+
+  /** get cache */
+  const cacheRes = await cache.match(cacheKey);
+
+  /** return cache if exists */
+  if (cacheRes) {
+    return cacheRes;
+  }
+
   const yasunoriApiClient = hc<ApiRoute>("https://api.yasunori.dev");
   const id = url.searchParams.get("id");
   const res = id
@@ -15,7 +38,7 @@ export const onRequest: PagesFunction = async (context) => {
     return new Response("not found", { status: 404 });
   }
   const { title, content, senpan, date, at } = await res.json();
-  return new ImageResponse(
+  const response: CFResponse = new ImageResponse(
     <div
       style={{
         height: "100%",
@@ -115,4 +138,9 @@ export const onRequest: PagesFunction = async (context) => {
       height: 630,
     },
   );
+
+  /** save cache */
+  context.waitUntil(cache.put(cacheKey, response.clone()));
+
+  return response;
 };
