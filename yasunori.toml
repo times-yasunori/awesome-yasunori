@@ -1,4 +1,17 @@
 [[yasunori]]
+id = 42
+title = "[yasunori文学] ヤスノリの伝記"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+グスコーブドリは、イーハトーヴの大きな森のなかに生まれました。
+おとうさんは、yasunoriという名高いVimmerで、どんな大きなプラグインでも、まるで赤ん坊を寝かしつけるようにわけなく切ってしまう人でした。
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 41
 title = "[yasunori文学] yasunoriの愛したvimrc"
 date = "2024-10-09"
