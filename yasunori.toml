@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 49
+title = "ねぇ、今から消えるよ"
+date = "2024-10-10"
+at = "vim-jp #times-yasunori"
+senpan = "natsukium"
+content = """
+ねぇ、今から消えるよ
+"""
+meta = """
+短すぎるので補足: 「天気の子」より天野陽菜のセリフ「ねぇ、今から晴れるよ」が元ネタ
+yasunoriが祈ると100%の確率でOSが消える
+"""
+
+[[yasunori]]
 id = 48
 title = "秒速5GB"
 date = "2024-10-10"
