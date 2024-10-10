@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 45
+title = "今話題のyasunoriについて徹底解説"
+date = "2024-10-10"
+at = "vim-jp #times-yasunori"
+senpan = "reyalka"
+content = """
+近頃#times-yasunori でよく見かけるyasunoriという言葉。元ネタを知らずにyasunoriを使っていることも多いのではないでしょうか。せっかくなのでyasunoriについて徹底的に調べてきました！
+yasunoriはニーチェの有名な格言「yasunoriは死んだ！ ……かもしれないし、死んでないかもしれない。正直、まじでわからん。」の通り、かなり有名であることがわかります。
+また、「yasunori活」「yasunori文学」のようにyasunoriには様々な使い方がありますね・・・！
+調べた結果yasunoriとはよくわかりませんでしたが、いかがでしたか？これからのyasunoriの活躍に期待ですね！
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 44
 title = "yasunoriは死んだ！"
 date = "2024-10-09"
