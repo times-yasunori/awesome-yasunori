@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 44
+title = "yasunoriは死んだ！"
+date = "2024-10-09"
+at = "日々、とんは語る。"
+senpan = "ともや"
+content = """
+ニーチェ「yasunoriは死んだ！ ……かもしれないし、死んでないかもしれない。正直、まじでわからん。」
+"""
+meta = """
+- memo
+  - [あなたの知らない Yasunori](https://blog.tomoya.dev/posts/you-dont-know-yasunori-1/)
+"""
+
+[[yasunori]]
 id = 43
 title = "[yasunori文学] ヤスーノリに花束を"
 date = "2024-10-09"
