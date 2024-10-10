@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 41
+title = "[yasunori文学] yasunoriの愛したvimrc"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+彼のことを、私と息子は博士と呼んだ。
+そして博士は息子を、yasunoriと呼んだ。
+息子のvimの設定が、yasunoriのように難解だったからだ。
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 40
 title = "AIに生成されたyasunori"
 date = "2024-10-09"
