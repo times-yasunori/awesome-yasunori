@@ -33,6 +33,7 @@ export const loader = (async () => {
       title: yasunori.title,
       description: `<a href="${link}">${yasunori.title}</a>`,
       content: yasunori.content,
+      image: `https://image.yasunori.dev/ogp?id=${yasunori.id}`,
     });
   }
 
