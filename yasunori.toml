@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 48
+title = "秒速5GB"
+date = "2024-10-10"
+at = "vim-jp #times-yasunori"
+senpan = "natsukium"
+content = """
+ねぇ、秒速5GBなんだって
+え、なに？
+OSの消えるスピード。秒速5GB
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 47
 title = "おまえは今まで発言したyasunoriの回数をおぼえているのか?"
 date = "2024-10-10"
