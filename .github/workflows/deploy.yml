@@ -12,12 +12,14 @@ on:
       - 'yasunori.toml'
       - 'packages/api/**'
       - 'packages/web/**'
+      - 'packages/image-generator/**'
   pull_request:
     paths:
       - '.github/workflows/deploy.yml'
       - 'yasunori.toml'
       - 'packages/api/**'
       - 'packages/web/**'
+      - 'packages/image-generator/**'
     types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
