@@ -1,4 +1,59 @@
 [[yasunori]]
+id = 44
+title = "yasunoriは死んだ！"
+date = "2024-10-09"
+at = "日々、とんは語る。"
+senpan = "tomoya"
+content = """
+ニーチェ「yasunoriは死んだ！ ……かもしれないし、死んでないかもしれない。正直、まじでわからん。」
+"""
+meta = """
+- memo
+  - [あなたの知らない Yasunori](https://blog.tomoya.dev/posts/you-dont-know-yasunori-1/)
+"""
+
+[[yasunori]]
+id = 43
+title = "[yasunori文学] ヤスーノリに花束を"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+こみっとほおこく1
+yasunoriせんせいは、ぼくがかんがえたマップやおもいだしたコマンドや、それからぼくのテキストエディタできにいらないことは、ぜんぶせっていしておきなさいといった。
+なぜだかわからないけれども、それは大せつなことでそれでびむを使えるかどうかわかるのだそうです。
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 42
+title = "[yasunori文学] ヤスノリの伝記"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+グスコーブドリは、イーハトーヴの大きな森のなかに生まれました。
+おとうさんは、yasunoriという名高いVimmerで、どんな大きなプラグインでも、まるで赤ん坊を寝かしつけるようにわけなく切ってしまう人でした。
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 41
+title = "[yasunori文学] yasunoriの愛したvimrc"
+date = "2024-10-09"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+彼のことを、私と息子は博士と呼んだ。
+そして博士は息子を、yasunoriと呼んだ。
+息子のvimの設定が、yasunoriのように難解だったからだ。
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 40
 title = "AIに生成されたyasunori"
 date = "2024-10-09"
