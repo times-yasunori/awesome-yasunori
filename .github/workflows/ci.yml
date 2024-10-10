@@ -107,3 +107,18 @@ jobs:
         run: pnpm run typecheck
       - name: Lint
         run: pnpm run lint
+  test-YasunoriDotNET:
+    name: Build & Test Yasunori.NET
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore packages/Yasunori.NET
+      - name: Build
+        run: dotnet build --no-restore packages/Yasunori.NET
+      - name: Test
+        run: dotnet test --no-build --verbosity normal packages/Yasunori.NET
