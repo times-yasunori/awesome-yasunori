@@ -2,7 +2,11 @@
   perSystem =
     { pkgs, ... }:
     {
-      packages = {
+      packages = rec {
+        default = yasunori-cli;
+        yasunori-cli = pkgs.callPackage ./yasunori-cli {
+          awesome-yasunori = ../..;
+        };
         yasunori-net = pkgs.callPackage ./yasunori-net { };
       };
     };

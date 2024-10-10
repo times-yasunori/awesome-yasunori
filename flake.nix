@@ -39,8 +39,6 @@
               taplo.enable = true;
             };
           };
-
-          packages.default = pkgs.emptyDirectory;
         };
     };
 }
