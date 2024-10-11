@@ -1,13 +1,9 @@
 import type { ApiRoute } from "@awesome-yasunori/api/src/index.js";
-import type {
-  CacheStorage as CFCacheStorage,
-  Request as CFRequest,
-  PagesFunction,
-} from "@cloudflare/workers-types";
+import type { PagesFunction } from "@cloudflare/workers-types";
 import { hc } from "hono/client";
+import { API_BASE_URL } from "../env";
 import { OgpResponse } from "./OgpResponse";
-
-const API_BASE_URL = "https://api.yasunori.dev";
+import { ogpCache } from "./ogpCache";
 
 export const onRequest: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
@@ -21,34 +17,20 @@ export const onRequest: PagesFunction = async (context) => {
   }
   const yasunoriJson = await res.json();
 
-  // キャッシュはこのアプリケーションへのリクエストURLで判定するのではなく、
-  // APIからのレスポンスのデータを元に判定を行う必要がある。
-  // 理由は、/awesome/random からのレスポンスがランダムであるため、
-  // リクエストURLをそのままキャッシュキーにしてしまうと、キャッシュが残っているかぎり、
-  // レスポンスが固定されてしまい、ランダム表示されないためです。
+  const { cacheRes, cachePut } = await ogpCache({
+    id: yasunoriJson.id,
+    context,
+  });
 
-  /** get cache storage */
-  const cache = (caches as unknown as CFCacheStorage).default;
-
-  /** cache key
-   * APIのリソースURLをキーとして利用することでランダムであっても正しいエントリーの画像が取得される */
-  const cacheKey = new Request(
-    `${API_BASE_URL}/awesome/${yasunoriJson.id}`,
-    context.request as unknown as Request,
-  ) as unknown as CFRequest;
-
-  /** get cache */
-  const cacheRes = await cache.match(cacheKey);
-
-  /** return cache if exists */
+  // キャッシュがあればキャッシュを返す
   if (cacheRes) {
     return cacheRes;
   }
 
   const response = OgpResponse(yasunoriJson);
 
-  /** save cache */
-  context.waitUntil(cache.put(cacheKey, response.clone()));
+  // キャッシュに保存する
+  context.waitUntil(cachePut(response));
 
   return response;
 };
