@@ -46,3 +46,10 @@ This is the sole JSON Schema exclusively for Awesome Yasunori in the world.
 ### [Awesome Yasunori Image Generator](https://image.yasunori.dev/ogp?id=1)
 
 This is an application that generates images from Awesome Yasunori.
+
+### Yasunori.NET
+
+Client software for console output using Yasunori APIs.
+Yasunori list output, ID individual specification output, and OGP image output (Sixel support terminal required) are available.
+
+It's being developed in [packages/Yasunori.NET](./packages/Yasunori.NET).

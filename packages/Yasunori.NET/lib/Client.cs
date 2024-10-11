@@ -38,8 +38,22 @@ public sealed class Client
         return yasunori;
     }
 
-    private static HttpClient HttpClient = new HttpClient()
+    private static Lazy<HttpClient> _client = new(() => new HttpClient() { BaseAddress = new Uri(BASE_URL) });
+    private static HttpClient HttpClient => _client.Value;
+
+    public const string OGP_URL = "https://image.yasunori.dev";
+    public const string OGP_PATH = "/ogp";
+
+    public static async Task<Stream> GetOGP()
     {
-        BaseAddress = new Uri(BASE_URL)
-    };
+        return await ImgClinet.GetStreamAsync(OGP_PATH);
+    }
+
+    public static async Task<Stream> GetOGP(uint id)
+    {
+        return await ImgClinet.GetStreamAsync($"{OGP_PATH}?id={id}");
+    }
+
+    private static Lazy<HttpClient> _imgClient = new(() => new HttpClient() { BaseAddress = new Uri(OGP_URL) });
+    private static HttpClient ImgClinet => _imgClient.Value;
 }
