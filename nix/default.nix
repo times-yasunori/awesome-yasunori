@@ -21,9 +21,6 @@
     in
     {
       _module.args.pkgs = pkgs;
-      packages = rec {
-        default = yasunori-cli;
-        yasunori-cli = pkgs.callPackage ./packages/yasunori-cli { };
-      };
+      packages = import ./packages { inherit pkgs; };
     };
 }
