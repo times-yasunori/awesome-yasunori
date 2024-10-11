@@ -9,15 +9,33 @@ import type {
 import { hc } from "hono/client";
 import React from "react";
 
+const API_BASE_URL = "https://api.yasunori.dev";
+
 export const onRequest: PagesFunction = async (context) => {
   const url = new URL(context.request.url);
+  const yasunoriApiClient = hc<ApiRoute>(API_BASE_URL);
+  const idParams = url.searchParams.get("id");
+  const res = idParams
+    ? await yasunoriApiClient.awesome[":id"].$get({ param: { id: idParams } })
+    : await yasunoriApiClient.awesome.random.$get();
+  if (!res.ok) {
+    return new Response("not found", { status: 404 });
+  }
+  const { title, content, senpan, date, at, id } = await res.json();
+
+  // キャッシュはこのアプリケーションへのリクエストURLで判定するのではなく、
+  // APIからのレスポンスのデータを元に判定を行う必要がある。
+  // 理由は、/awesome/random からのレスポンスがランダムであるため、
+  // リクエストURLをそのままキャッシュキーにしてしまうと、キャッシュが残っているかぎり、
+  // レスポンスが固定されてしまい、ランダム表示されないためです。
 
   /** get cache storage */
   const cache = (caches as unknown as CFCacheStorage).default;
 
-  /** cache key */
+  /** cache key
+   * APIのリソースURLをキーとして利用することでランダムであっても正しいエントリーの画像が取得される */
   const cacheKey = new Request(
-    url.toString(),
+    `${API_BASE_URL}/awesome/${id}`,
     context.request as unknown as Request,
   ) as unknown as CFRequest;
 
@@ -29,15 +47,6 @@ export const onRequest: PagesFunction = async (context) => {
     return cacheRes;
   }
 
-  const yasunoriApiClient = hc<ApiRoute>("https://api.yasunori.dev");
-  const id = url.searchParams.get("id");
-  const res = id
-    ? await yasunoriApiClient.awesome[":id"].$get({ param: { id } })
-    : await yasunoriApiClient.awesome.random.$get();
-  if (!res.ok) {
-    return new Response("not found", { status: 404 });
-  }
-  const { title, content, senpan, date, at } = await res.json();
   const response: CFResponse = new ImageResponse(
     <div
       style={{
@@ -68,7 +77,7 @@ export const onRequest: PagesFunction = async (context) => {
         >
           {title}
         </div>
-        {id !== null && (
+        {idParams !== null && (
           <div
             style={{
               display: "flex",
@@ -76,7 +85,7 @@ export const onRequest: PagesFunction = async (context) => {
               fontSize: 36,
             }}
           >
-            #{id}
+            #{idParams}
           </div>
         )}
       </div>
