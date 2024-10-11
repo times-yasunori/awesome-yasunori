@@ -93,15 +93,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         Awesome Yasunori
                       </Title>
                     </Group>
-                    <Group gap={rem(8)}>
+                    <Group>
                       <ActionIcon
                         component="a"
                         aria-label="rss feed"
                         href="/feed.xml"
                         target="_blank"
                         variant="transparent"
-                        size="sm"
-                        color="--mantine-color-white"
+                        color="gray"
                       >
                         <IconRSS />
                       </ActionIcon>
@@ -111,8 +110,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         href="https://github.com/times-yasunori/awesome-yasunori"
                         target="_blank"
                         variant="transparent"
-                        size="sm"
-                        color="--mantine-color-white"
+                        color="gray"
                       >
                         <IconGitHubLogo />
                       </ActionIcon>
