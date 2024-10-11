@@ -38,8 +38,6 @@ public sealed class Client
         return yasunori;
     }
 
-    private static HttpClient HttpClient = new HttpClient()
-    {
-        BaseAddress = new Uri(BASE_URL)
-    };
+    private static Lazy<HttpClient> _client = new(() => new HttpClient() { BaseAddress = new Uri(BASE_URL) });
+    private static HttpClient HttpClient => _client.Value;
 }
