@@ -100,7 +100,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         href="/feed.xml"
                         target="_blank"
                         variant="transparent"
-                        size="sm"
                         color="--mantine-color-white"
                       >
                         <IconRSS />
@@ -111,7 +110,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         href="https://github.com/times-yasunori/awesome-yasunori"
                         target="_blank"
                         variant="transparent"
-                        size="sm"
                         color="--mantine-color-white"
                       >
                         <IconGitHubLogo />
