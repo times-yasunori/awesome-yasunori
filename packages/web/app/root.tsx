@@ -93,7 +93,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         Awesome Yasunori
                       </Title>
                     </Group>
-                    <Group gap={rem(8)}>
+                    <Group>
                       <ActionIcon
                         component="a"
                         aria-label="rss feed"
