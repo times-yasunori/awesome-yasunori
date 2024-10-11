@@ -23,21 +23,46 @@ class Program
                 var ids = options.IdList.ToArray();
                 if (ids.Length == 0)
                 {
-                    var task = Client.GetRandom();
-                    task.Wait();
-                    Console.WriteLine(Markdown.RenderAsVT100(task.Result));
+                    if (options.ShowAsImage)
+                    {
+                        var task = Client.GetOGP();
+                        task.Wait();
+                        Console.WriteLine(Sixel.Encode(task.Result));
+                    }
+                    else
+                    {
+                        var task = Client.GetRandom();
+                        task.Wait();
+                        Console.WriteLine(Markdown.RenderAsVT100(task.Result));
+                    }
                     return;
                 }
 
-                var tasks = new List<Task<YasunoriData>>();
-                foreach (var id in ids)
+                if (options.ShowAsImage)
                 {
-                    tasks.Add(Client.GetById(id));
+                    var tasks = new List<Task<Stream>>();
+                    foreach (var id in ids)
+                    {
+                        tasks.Add(Client.GetOGP(id));
+                    }
+                    Task.WaitAll(tasks.ToArray());
+                    foreach (var task in tasks)
+                    {
+                        Console.WriteLine(Sixel.Encode(task.Result));
+                    }
                 }
-                Task.WaitAll(tasks.ToArray());
-                foreach (var task in tasks)
+                else
                 {
-                    Console.WriteLine(Markdown.RenderAsVT100(task.Result));
+                    var tasks = new List<Task<YasunoriData>>();
+                    foreach (var id in ids)
+                    {
+                        tasks.Add(Client.GetById(id));
+                    }
+                    Task.WaitAll(tasks.ToArray());
+                    foreach (var task in tasks)
+                    {
+                        Console.WriteLine(Markdown.RenderAsVT100(task.Result));
+                    }
                 }
             });
     }
@@ -47,6 +72,9 @@ class Options
 {
     [Option('l', "list", Required = false, HelpText = "Show Yasunori list")]
     public bool ShowList { get; set; }
+
+    [Option('i', "image", Required = false, HelpText = "Show OGP Image (Required Sixel supported terminal)")]
+    public bool ShowAsImage { get; set; }
 
     [Value(0, MetaName = "id")]
     public IEnumerable<uint> IdList { get; set; } = [];
