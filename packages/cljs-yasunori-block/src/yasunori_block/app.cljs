@@ -14,6 +14,9 @@
   [:div
    [:p "Seconds Elapsed: " seconds-elapsed "s"]])
 
+(defn h [arg]
+  (/ arg 2))
+
 (defn Title []
   (println "title")
   [:h1 "cljs-yasunori-block"])
@@ -115,6 +118,27 @@
                   (if (and (< plx cx) (< cx prx))
                     (swap! state update-in [:ball :dy] -)
                     (end-game))))
+
+              ;; ブロックとの衝突
+              (let [{:keys [:dx :dy] :as ball} (:ball @state)
+                    ;; FIXME: 面倒なのでボールが一旦動いたとして、その中心座標がブロックの内部にあるか検査することにする
+                    ;;      : ボールがある程度速い場合、当たり判定なしにすり抜けることがある
+                    ;;      : ボールがある程度大きい場合、半径を無視していることに気付く可能性がある
+                    {:keys [:cx :cy]} (-> ball
+                                          (update :cx + dx)
+                                          (update :cy + dy))
+                    before-blocks-cnt (count (:blocks @state))]
+                (swap! state update :blocks
+                       #(->> %
+                             (filter
+                              (complement
+                               (fn [{bcx :cx bcy :cy bwidth :width bheight :height}]
+                                 (and (< (- bcx (h bwidth)) cx) (< cx (+ bcx (h bwidth)))
+                                      (< (- bcy (h bheight)) cy) (< cy (+ bcy (h bheight)))))))))
+
+                ;; ボールが減っている場合、dyを符号反転
+                (when-not (= before-blocks-cnt (count (:blocks @state)))
+                  (swap! state update-in [:ball :dy] -)))
 
               ;; ボールを動かす
               (swap! state update :ball #(-> %
