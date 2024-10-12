@@ -12,4 +12,5 @@ make dev
 
 ```bash
 make yasunori
+python -m http.server -d dist/public
 ```
