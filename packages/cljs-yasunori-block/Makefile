@@ -2,4 +2,4 @@ all:
 
 .PHONY: dev
 dev:
-	clj -M -m figwheel.main --build dev --repl
+	clojure -M -m figwheel.main --build dev --repl
