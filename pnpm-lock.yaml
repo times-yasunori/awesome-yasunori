@@ -31,7 +31,7 @@ importers:
         version: 3.0.0
       valibot:
         specifier: 1.0.0-beta.0
-        version: 1.0.0-beta.0(typescript@5.6.2)
+        version: 1.0.0-beta.0(typescript@5.6.3)
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20241004.0
@@ -46,14 +46,14 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
+        specifier: ^5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.2.12
         version: 5.4.8(@types/node@22.7.5)
       vitest:
         specifier: ^2.1.1
-        version: 2.1.2(@types/node@22.7.5)(msw@2.4.10(typescript@5.6.2))
+        version: 2.1.2(@types/node@22.7.5)(msw@2.4.10(typescript@5.6.3))
       wrangler:
         specifier: ^3.57.2
         version: 3.80.0(@cloudflare/workers-types@4.20241004.0)
@@ -83,8 +83,8 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
+        specifier: ^5.6.3
+        version: 5.6.3
       wrangler:
         specifier: ^3.80.0
         version: 3.80.0(@cloudflare/workers-types@4.20241004.0)
@@ -102,13 +102,13 @@ importers:
         version: 7.13.2(react@18.3.1)
       '@remix-run/cloudflare':
         specifier: ^2.13.1
-        version: 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.2)
+        version: 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.3)
       '@remix-run/cloudflare-pages':
         specifier: ^2.13.1
-        version: 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.2)
+        version: 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.3)
       '@remix-run/react':
         specifier: ^2.13.1
-        version: 2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
+        version: 2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
       hono:
         specifier: ^4.6.3
         version: 4.6.3
@@ -139,13 +139,13 @@ importers:
         version: 1.2.4
       '@remix-run/dev':
         specifier: ^2.13.1
-        version: 2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@22.7.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))
+        version: 2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/node@22.7.5)(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))
       '@svgr/core':
         specifier: ^8.1.0
-        version: 8.1.0(typescript@5.6.2)
+        version: 8.1.0(typescript@5.6.3)
       '@svgr/plugin-jsx':
         specifier: ^8.1.0
-        version: 8.1.0(@svgr/core@8.1.0(typescript@5.6.2))
+        version: 8.1.0(@svgr/core@8.1.0(typescript@5.6.3))
       '@types/react':
         specifier: ^18.2.20
         version: 18.3.11
@@ -157,25 +157,25 @@ importers:
         version: 4.2.2
       msw:
         specifier: ^2.4.9
-        version: 2.4.9(typescript@5.6.2)
+        version: 2.4.9(typescript@5.6.3)
       sort-on:
         specifier: ^6.1.0
         version: 6.1.0
       typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
+        specifier: ^5.6.3
+        version: 5.6.3
       unplugin-icons:
         specifier: ^0.19.3
-        version: 0.19.3(@svgr/core@8.1.0(typescript@5.6.2))
+        version: 0.19.3(@svgr/core@8.1.0(typescript@5.6.3))
       vite:
         specifier: ^5.2.12
         version: 5.4.8(@types/node@22.7.5)
       vite-tsconfig-paths:
         specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5))
+        version: 5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5))
       vitest:
         specifier: ^2.1.1
-        version: 2.1.2(@types/node@22.7.5)(msw@2.4.9(typescript@5.6.2))
+        version: 2.1.2(@types/node@22.7.5)(msw@2.4.9(typescript@5.6.3))
       wrangler:
         specifier: ^3.79.0
         version: 3.80.0(@cloudflare/workers-types@4.20241004.0)
@@ -3721,8 +3721,8 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typescript@5.6.2:
-    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
+  typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -4951,22 +4951,22 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@remix-run/cloudflare-pages@2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.2)':
+  '@remix-run/cloudflare-pages@2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.3)':
     dependencies:
       '@cloudflare/workers-types': 4.20241004.0
-      '@remix-run/cloudflare': 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.2)
+      '@remix-run/cloudflare': 2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.3)
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
-  '@remix-run/cloudflare@2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.2)':
+  '@remix-run/cloudflare@2.13.1(@cloudflare/workers-types@4.20241004.0)(typescript@5.6.3)':
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
       '@cloudflare/workers-types': 4.20241004.0
-      '@remix-run/server-runtime': 2.13.1(typescript@5.6.2)
+      '@remix-run/server-runtime': 2.13.1(typescript@5.6.3)
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
-  '@remix-run/dev@2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@22.7.5)(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))':
+  '@remix-run/dev@2.13.1(@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/node@22.7.5)(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))':
     dependencies:
       '@babel/core': 7.25.8
       '@babel/generator': 7.25.7
@@ -4978,10 +4978,10 @@ snapshots:
       '@babel/types': 7.25.8
       '@mdx-js/mdx': 2.3.0
       '@npmcli/package-json': 4.0.1
-      '@remix-run/node': 2.13.1(typescript@5.6.2)
-      '@remix-run/react': 2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
+      '@remix-run/node': 2.13.1(typescript@5.6.3)
+      '@remix-run/react': 2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
       '@remix-run/router': 1.20.0
-      '@remix-run/server-runtime': 2.13.1(typescript@5.6.2)
+      '@remix-run/server-runtime': 2.13.1(typescript@5.6.3)
       '@types/mdx': 2.0.13
       '@vanilla-extract/integration': 6.5.0(@types/node@22.7.5)
       arg: 5.0.2
@@ -5023,7 +5023,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       ws: 7.5.10
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
       vite: 5.4.8(@types/node@22.7.5)
       wrangler: 3.80.0(@cloudflare/workers-types@4.20241004.0)
     transitivePeerDependencies:
@@ -5042,9 +5042,9 @@ snapshots:
       - ts-node
       - utf-8-validate
 
-  '@remix-run/node@2.13.1(typescript@5.6.2)':
+  '@remix-run/node@2.13.1(typescript@5.6.3)':
     dependencies:
-      '@remix-run/server-runtime': 2.13.1(typescript@5.6.2)
+      '@remix-run/server-runtime': 2.13.1(typescript@5.6.3)
       '@remix-run/web-fetch': 4.4.2
       '@web3-storage/multipart-parser': 1.0.0
       cookie-signature: 1.2.1
@@ -5052,23 +5052,23 @@ snapshots:
       stream-slice: 0.1.2
       undici: 6.20.0
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
-  '@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)':
+  '@remix-run/react@2.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)':
     dependencies:
       '@remix-run/router': 1.20.0
-      '@remix-run/server-runtime': 2.13.1(typescript@5.6.2)
+      '@remix-run/server-runtime': 2.13.1(typescript@5.6.3)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-router: 6.27.0(react@18.3.1)
       react-router-dom: 6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       turbo-stream: 2.4.0
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   '@remix-run/router@1.20.0': {}
 
-  '@remix-run/server-runtime@2.13.1(typescript@5.6.2)':
+  '@remix-run/server-runtime@2.13.1(typescript@5.6.3)':
     dependencies:
       '@remix-run/router': 1.20.0
       '@types/cookie': 0.6.0
@@ -5078,7 +5078,7 @@ snapshots:
       source-map: 0.7.4
       turbo-stream: 2.4.0
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   '@remix-run/web-blob@3.1.0':
     dependencies:
@@ -5200,12 +5200,12 @@ snapshots:
       '@svgr/babel-plugin-transform-react-native-svg': 8.1.0(@babel/core@7.25.7)
       '@svgr/babel-plugin-transform-svg-component': 8.0.0(@babel/core@7.25.7)
 
-  '@svgr/core@8.1.0(typescript@5.6.2)':
+  '@svgr/core@8.1.0(typescript@5.6.3)':
     dependencies:
       '@babel/core': 7.25.7
       '@svgr/babel-preset': 8.1.0(@babel/core@7.25.7)
       camelcase: 6.3.0
-      cosmiconfig: 8.3.6(typescript@5.6.2)
+      cosmiconfig: 8.3.6(typescript@5.6.3)
       snake-case: 3.0.4
     transitivePeerDependencies:
       - supports-color
@@ -5216,11 +5216,11 @@ snapshots:
       '@babel/types': 7.25.7
       entities: 4.5.0
 
-  '@svgr/plugin-jsx@8.1.0(@svgr/core@8.1.0(typescript@5.6.2))':
+  '@svgr/plugin-jsx@8.1.0(@svgr/core@8.1.0(typescript@5.6.3))':
     dependencies:
       '@babel/core': 7.25.7
       '@svgr/babel-preset': 8.1.0(@babel/core@7.25.7)
-      '@svgr/core': 8.1.0(typescript@5.6.2)
+      '@svgr/core': 8.1.0(typescript@5.6.3)
       '@svgr/hast-util-to-babel-ast': 8.0.0
       svg-parser: 2.0.4
     transitivePeerDependencies:
@@ -5360,22 +5360,22 @@ snapshots:
       chai: 5.1.1
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.2(@vitest/spy@2.1.2)(msw@2.4.10(typescript@5.6.2))(vite@5.4.8(@types/node@22.7.5))':
+  '@vitest/mocker@2.1.2(@vitest/spy@2.1.2)(msw@2.4.10(typescript@5.6.3))(vite@5.4.8(@types/node@22.7.5))':
     dependencies:
       '@vitest/spy': 2.1.2
       estree-walker: 3.0.3
       magic-string: 0.30.11
     optionalDependencies:
-      msw: 2.4.10(typescript@5.6.2)
+      msw: 2.4.10(typescript@5.6.3)
       vite: 5.4.8(@types/node@22.7.5)
 
-  '@vitest/mocker@2.1.2(@vitest/spy@2.1.2)(msw@2.4.9(typescript@5.6.2))(vite@5.4.8(@types/node@22.7.5))':
+  '@vitest/mocker@2.1.2(@vitest/spy@2.1.2)(msw@2.4.9(typescript@5.6.3))(vite@5.4.8(@types/node@22.7.5))':
     dependencies:
       '@vitest/spy': 2.1.2
       estree-walker: 3.0.3
       magic-string: 0.30.11
     optionalDependencies:
-      msw: 2.4.9(typescript@5.6.2)
+      msw: 2.4.9(typescript@5.6.3)
       vite: 5.4.8(@types/node@22.7.5)
 
   '@vitest/pretty-format@2.1.2':
@@ -5699,14 +5699,14 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig@8.3.6(typescript@5.6.2):
+  cosmiconfig@8.3.6(typescript@5.6.3):
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   cross-spawn@7.0.3:
     dependencies:
@@ -7312,7 +7312,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.4.10(typescript@5.6.2):
+  msw@2.4.10(typescript@5.6.3):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
@@ -7332,10 +7332,10 @@ snapshots:
       type-fest: 4.26.1
       yargs: 17.7.2
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
     optional: true
 
-  msw@2.4.9(typescript@5.6.2):
+  msw@2.4.9(typescript@5.6.3):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
@@ -7355,7 +7355,7 @@ snapshots:
       type-fest: 4.26.1
       yargs: 17.7.2
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   mustache@4.2.0: {}
 
@@ -8213,9 +8213,9 @@ snapshots:
 
   trough@2.2.0: {}
 
-  tsconfck@3.1.3(typescript@5.6.2):
+  tsconfck@3.1.3(typescript@5.6.3):
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   tsconfig-paths@4.2.0:
     dependencies:
@@ -8236,7 +8236,7 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript@5.6.2: {}
+  typescript@5.6.3: {}
 
   ufo@1.5.4: {}
 
@@ -8346,7 +8346,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-icons@0.19.3(@svgr/core@8.1.0(typescript@5.6.2)):
+  unplugin-icons@0.19.3(@svgr/core@8.1.0(typescript@5.6.3)):
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@antfu/utils': 0.7.10
@@ -8356,7 +8356,7 @@ snapshots:
       local-pkg: 0.5.0
       unplugin: 1.14.1
     optionalDependencies:
-      '@svgr/core': 8.1.0(typescript@5.6.2)
+      '@svgr/core': 8.1.0(typescript@5.6.3)
     transitivePeerDependencies:
       - supports-color
       - webpack-sources
@@ -8428,9 +8428,9 @@ snapshots:
       kleur: 4.1.5
       sade: 1.8.1
 
-  valibot@1.0.0-beta.0(typescript@5.6.2):
+  valibot@1.0.0-beta.0(typescript@5.6.3):
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.6.3
 
   validate-npm-package-license@3.0.4:
     dependencies:
@@ -8498,11 +8498,11 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.0.1(typescript@5.6.2)(vite@5.4.8(@types/node@22.7.5)):
+  vite-tsconfig-paths@5.0.1(typescript@5.6.3)(vite@5.4.8(@types/node@22.7.5)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
-      tsconfck: 3.1.3(typescript@5.6.2)
+      tsconfck: 3.1.3(typescript@5.6.3)
     optionalDependencies:
       vite: 5.4.8(@types/node@22.7.5)
     transitivePeerDependencies:
@@ -8518,10 +8518,10 @@ snapshots:
       '@types/node': 22.7.5
       fsevents: 2.3.3
 
-  vitest@2.1.2(@types/node@22.7.5)(msw@2.4.10(typescript@5.6.2)):
+  vitest@2.1.2(@types/node@22.7.5)(msw@2.4.10(typescript@5.6.3)):
     dependencies:
       '@vitest/expect': 2.1.2
-      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(msw@2.4.10(typescript@5.6.2))(vite@5.4.8(@types/node@22.7.5))
+      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(msw@2.4.10(typescript@5.6.3))(vite@5.4.8(@types/node@22.7.5))
       '@vitest/pretty-format': 2.1.2
       '@vitest/runner': 2.1.2
       '@vitest/snapshot': 2.1.2
@@ -8552,10 +8552,10 @@ snapshots:
       - supports-color
       - terser
 
-  vitest@2.1.2(@types/node@22.7.5)(msw@2.4.9(typescript@5.6.2)):
+  vitest@2.1.2(@types/node@22.7.5)(msw@2.4.9(typescript@5.6.3)):
     dependencies:
       '@vitest/expect': 2.1.2
-      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(msw@2.4.9(typescript@5.6.2))(vite@5.4.8(@types/node@22.7.5))
+      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(msw@2.4.9(typescript@5.6.3))(vite@5.4.8(@types/node@22.7.5))
       '@vitest/pretty-format': 2.1.2
       '@vitest/runner': 2.1.2
       '@vitest/snapshot': 2.1.2
