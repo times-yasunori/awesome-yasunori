@@ -6,8 +6,9 @@ dev:
 
 .PHONY: yasunori
 yasunori:
-	clojure -A:fig -M -m figwheel.main --optimizations advanced --output-to docs/js/compiled.js --build-once dev
+	clojure -A:fig -M -m figwheel.main --optimizations advanced --output-to dist/public/js/compiled.js --build-once dev
+	rsync -av resources/ dist
 
 .PHONY: clean
 clean:
-	rm -rf target
+	rm -rf target dist

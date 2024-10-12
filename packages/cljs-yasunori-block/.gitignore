@@ -2,4 +2,4 @@
 /target
 /.nrepl-port
 /cljs-yasunori-block.iml
-/docs
+/dist
