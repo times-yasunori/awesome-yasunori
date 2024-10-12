@@ -53,3 +53,5 @@ Client software for console output using Yasunori APIs.
 Yasunori list output, ID individual specification output, and OGP image output (Sixel support terminal required) are available.
 
 It's being developed in [packages/Yasunori.NET](./packages/Yasunori.NET).
+
+If you use Nix package manager, try `nix run github:times-yasunori/awersome-yasunori#yasunori-net`!
