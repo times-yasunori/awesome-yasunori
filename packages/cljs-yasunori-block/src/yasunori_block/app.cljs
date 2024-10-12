@@ -140,6 +140,11 @@
                 (when-not (= before-blocks-cnt (count (:blocks @state)))
                   (swap! state update-in [:ball :dy] -)))
 
+              ;; 終了判定
+              (when (= 0 (count (:blocks @state)))
+                (js/alert "Congratulations! :tada:")
+                (end-game))
+
               ;; ボールを動かす
               (swap! state update :ball #(-> %
                                              (update :cx + (:dx %))
