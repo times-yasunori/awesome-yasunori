@@ -26,7 +26,7 @@
   {:ball {:cx (h width) :cy height :radius 5 :dx -4 :dy -5}
    :paddle {:cx (h width) :cy height :width 200 :height 20}
    :speed-multiplier 1.2
-   :speed-max 10
+   :speed-max 15
    :blocks (let [blpadding 60          ; block-left-padding
                  btpadding 100         ; block-top-padding
                  bwidth 10
