@@ -53,7 +53,9 @@ This is the sole JSON Schema exclusively for Awesome Yasunori in the world.
 
 This is an application that generates images from Awesome Yasunori.
 
-### Yasunori.NET
+It's being developed in [packages/image-generator](./packages/image-generator).
+
+### [Yasunori.NET](./packages/Yasunori.NET)
 
 ![](./images/yasunori-dotnet.png)
 
