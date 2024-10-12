@@ -2,4 +2,4 @@
 
 (defn app []
   [:div
-   [:h1 "hello"]])
+   [:h1 "cljs-yasunori-block"]])
