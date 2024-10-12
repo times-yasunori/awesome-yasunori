@@ -107,9 +107,9 @@
               ;; 下の壁との衝突
               ;;  - パドル: dyを符号反転
               ;;  - それ以外: ゲームオーバー
-              (let [{:keys [:speed-max :speed-multiplier]} @state
-                    {:keys [:cx :cy :radius :dx :dy]} (:ball @state)
-                    {pcx :cx pwidth :width} (:paddle @state)]
+              (let [{:keys [:speed-max :speed-multiplier :ball :paddle]} @state
+                    {:keys [:cx :cy :radius :dx :dy]} ball
+                    {pcx :cx pwidth :width} paddle]
                 (when (< height (+ cy dy radius))
                   (if (and (< (- pcx (h pwidth)) cx) (< cx (+ pcx (h pwidth))))
                     (swap! state update :ball
