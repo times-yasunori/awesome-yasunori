@@ -1,5 +1,6 @@
 (ns yasunori-block.app
   (:require
+   [cljs.math :as math]
    [reagent.core :as reagent]))
 
 (def yasunori
@@ -24,6 +25,8 @@
 (defn initial-state [width height]
   {:ball {:cx (/ width 2) :cy height :radius 5 :dx -4 :dy -5}
    :paddle {:cx (/ width 2) :cy height :width 200 :height 20}
+   :speed-multiplier 1.2
+   :speed-max 10
    :blocks (let [blpadding 60          ; block-left-padding
                  btpadding 100         ; block-top-padding
                  bwidth 10
@@ -108,7 +111,8 @@
               ;; 下の壁との衝突
               ;;  - パドル: dyを符号反転
               ;;  - それ以外: ゲームオーバー
-              (let [{:keys [:cx :cy :radius :dy]} (:ball @state)
+              (let [{:keys [:speed-max :speed-multiplier]} @state
+                    {:keys [:cx :cy :radius :dx :dy]} (:ball @state)
                     {pcx :cx pwidth :width} (:paddle @state)
                     phw (/ pwidth 2) ; paddle-harf-width
                     plx (- pcx phw)  ; paddle-left-x
@@ -116,7 +120,15 @@
                     ]
                 (when (< height (+ cy dy radius))
                   (if (and (< plx cx) (< cx prx))
-                    (swap! state update-in [:ball :dy] -)
+                    (swap! state update :ball
+                           #(let [relative-pos (/ (- cx pcx) (h width))
+                                  reflect-rad (* relative-pos (/ js/Math.PI 4))
+                                  speed (min speed-max
+                                             (* (math/sqrt (+ (* dx dx) (* dy dy)))
+                                                speed-multiplier))]
+                              (-> %
+                                  (assoc :dx (* (math/sin reflect-rad) speed))
+                                  (assoc :dy (- (* (math/cos reflect-rad) speed))))))
                     (end-game))))
 
               ;; ブロックとの衝突
