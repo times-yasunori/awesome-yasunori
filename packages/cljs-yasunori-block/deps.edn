@@ -2,7 +2,7 @@
         org.clojure/clojurescript {:mvn/version "1.11.4"}
         cljsjs/react {:mvn/version "17.0.2-0"}
         cljsjs/react-dom {:mvn/version "17.0.2-0"}
-        reagent/reagent {:mvn/version "1.1.1" }}
+        reagent/reagent {:mvn/version "1.1.1"}}
  :paths ["src" "resources"]
  :aliases {:fig {:extra-deps
                  {com.bhauman/figwheel-main {:mvn/version "0.2.18"}
