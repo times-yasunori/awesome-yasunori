@@ -29,7 +29,7 @@ describe("entryLoader", () => {
 
   test("returns 404 if APIs return 400 error", async () => {
     mockServer.use(
-      http.get("https://api.yasunori.dev/awesome", () => {
+      http.get("https://api.yasunori.dev/awesome/1", () => {
         return new HttpResponse(null, {
           status: 400,
         });
