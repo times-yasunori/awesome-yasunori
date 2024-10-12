@@ -2,6 +2,14 @@
   (:require
    [reagent.core :as reagent]))
 
+(def yasunori
+  ["xxxx    xxxx  xxx       xxxxxxxx xx    xx  xxx   xxx   xxxxxx   xxxxxxx    xx"
+   " xxxx  xxxx  xxxxx     xxxxxxxxxxxxx  xxxx xxxx  xxx  xxxxxxxx  xxx  xxx  xxxx"
+   "  xxxxxxxx  xxx xxx   xxxxxxx   xxxx  xxxx xxxxxxxxx xxxx  xxxx xxx  xxx  xxxx"
+   "   xxxxxx  xxx   xxx     xxxxx  xxxx  xxxx xxxxxxxxx xxxx  xxxx xxxxxxx   xxxx"
+   "    xxxx  xxxxxxxxxxx   xxxxxxx xxxxxxxxxx xxx  xxxx xxxxxxxxxx xxx  xxx  xxxx"
+   "    xxxx xxxx     xxxx xxxxxxx   xxxxxxxx  xxx   xxx  xxxxxxxx  xxx  xxxx xxxx"])
+
 (defn Timer [{:keys [:seconds-elapsed]}]
   [:div
    [:p "Seconds Elapsed: " seconds-elapsed "s"]])
@@ -13,7 +21,26 @@
 (defn initial-state [width height]
   {:ball {:cx (/ width 2) :cy height :radius 5 :dx -4 :dy -5}
    :paddle {:cx (/ width 2) :cy height :width 200 :height 20}
-   :blocks []})
+   :blocks (let [blpadding 60          ; block-left-padding
+                 btpadding 100         ; block-top-padding
+                 bwidth 10
+                 bwidth-gap 1
+                 bheight 10
+                 bheight-gap 1]
+             (->> yasunori
+                 (map-indexed
+                  (fn [iinx ielm]
+                    (map-indexed
+                     (fn [jinx jelm]
+                       (when (= \x jelm)
+                         {:cx (+ blpadding
+                                 (* (+ bwidth bwidth-gap) jinx))
+                          :cy (+ btpadding
+                                 (* (+ bheight bheight-gap) iinx))
+                          :width bwidth
+                          :height bheight}))
+                     ielm)))
+                 flatten))})
 
 (defn Main []
   (println "main")
@@ -49,6 +76,12 @@
                 (set! (.-fillStyle ctx) "#0095DD")
                 (draw-centered-rect ctx paddle)))
 
+            (draw-blocks [ctx]
+              (let [{:keys [:blocks]} @state]
+                (set! (.-fillStyle ctx) "0095DD")
+                (doseq [elm blocks]
+                  (draw-centered-rect ctx elm))))
+
             (draw-1 [ctx]
               ;; 初期化
               (. ctx clearRect 0 0 width height)
@@ -56,6 +89,7 @@
               ;; 現在の状態を描く
               (draw-paddle ctx)
               (draw-ball ctx)
+              (draw-blocks ctx)
 
               ;; 左右の壁との衝突 -> dxを符号反転
               (let [{:keys [:cx :radius :dx]} (:ball @state)]
