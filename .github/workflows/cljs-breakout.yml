@@ -1,0 +1,49 @@
+name: Cljs Breakout
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/cljs-breakout.yml'
+      - 'packages/cljs-yasunori-block/**'
+  pull_request:
+    paths:
+      - '.github/workflows/cljs-breakout.yml'
+      - 'packages/cljs-yasunori-block/**'
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  deploy-cljs-breakout:
+    name: Deploy Cljs Breakout
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/cljs-yasunori-block
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'graalvm'
+          java-version: '22'
+      - uses: DeLaGuardo/setup-clojure@12.5
+        with:
+          cli: 1.11.4.1474
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gitlibs
+            ~/.deps.clj
+          key: cljdeps-${{ hashFiles('deps.edn') }}
+          restore-keys: cljdeps-
+      - name: Build
+        run: make yasunori
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          workingDirectory: packages/cljs-yasunori-block # working-directoryを付けていても必要
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy
