@@ -1,2 +1,5 @@
-.cpcache
-target
+/.cpcache
+/target
+/.nrepl-port
+/cljs-yasunori-block.iml
+/docs
