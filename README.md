@@ -60,6 +60,7 @@ It's being developed in [packages/image-generator](./packages/image-generator).
 ![](./images/yasunori-dotnet.png)
 
 Client software for console output using Yasunori APIs.
+
 Yasunori list output, ID individual specification output, and OGP image output (Sixel support terminal required) are available.
 
 It's being developed in [packages/Yasunori.NET](./packages/Yasunori.NET).
