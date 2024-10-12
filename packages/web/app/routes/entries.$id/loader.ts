@@ -7,7 +7,7 @@ export const entryLoader = (async ({ params }) => {
     throw new Response(null, { status: 404 });
   }
 
-  const entry = await fetchAwesomeYasunoriEntry(params.id as string);
+  const entry = await fetchAwesomeYasunoriEntry(id.toString());
   if (!entry) {
     throw new Response(null, { status: 404 });
   }
