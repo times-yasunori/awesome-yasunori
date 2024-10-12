@@ -96,6 +96,10 @@
                 (swap! ticks inc)
                 (reagent.core/next-tick draw)))
 
+            (on-mouse-move [e]
+              (when @is-running
+                (swap! state update-in [:paddle :cx] (constantly (.-clientX e)))))
+
             (start-game []
               (reset! is-running true)
               (reset! seconds-timeout-id
@@ -122,7 +126,8 @@
                     :height height
                     :style {:width (str width "px")
                             :height (str height "x")
-                            :border "1px solid black"}}]]
+                            :border "1px solid black"}
+                    :on-mouse-move on-mouse-move}]]
          [:div {:style {:text-align "center"}}
           [:button {:on-click #(if (not @is-running)
                                  (start-game)
