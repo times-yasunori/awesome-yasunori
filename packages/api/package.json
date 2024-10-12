@@ -16,7 +16,7 @@
     "prepare": "pnpm run generate:json"
   },
   "dependencies": {
-    "hono": "^4.6.3",
+    "hono": "^4.6.4",
     "random-item": "^4.0.1",
     "toml": "^3.0.0",
     "valibot": "1.0.0-beta.0"

@@ -15,7 +15,7 @@
     "@awesome-yasunori/api": "workspace:*",
     "@cloudflare/pages-plugin-vercel-og": "^0.1.2",
     "@cloudflare/workers-types": "^4.20241011.0",
-    "hono": "^4.6.3",
+    "hono": "^4.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
