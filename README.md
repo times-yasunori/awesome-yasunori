@@ -74,3 +74,13 @@ If you use Nix package manager, try `nix run github:times-yasunori/awersome-yasu
 clojure-yasunori is a CLI command written in Clojure that utilizes Yasunori APIs.
 
 It's being developed in [packages/clojure-yasunori](./packages/clojure-yasunori).
+
+### [cljs-yasunori-block](https://cljs-breakout.yasunori.dev)
+
+![](./images/cljs-breakout-yasunori-dev.png)
+
+cljs-yasunori-block is a block breaking game written in ClojureScript. You can play it here.
+
+https://cljs-breakout.yasunori.dev
+
+It's being developed in [packages/cljs-yasunori-block](./packages/cljs-yasunori-block).
