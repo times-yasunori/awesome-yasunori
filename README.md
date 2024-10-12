@@ -65,3 +65,11 @@ Yasunori list output, ID individual specification output, and OGP image output (
 It's being developed in [packages/Yasunori.NET](./packages/Yasunori.NET).
 
 If you use Nix package manager, try `nix run github:times-yasunori/awersome-yasunori#yasunori-net`!
+
+### [clojure-yasunori](./packages/clojure-yasunori)
+
+![](./images/clojure-yasunori.png)
+
+clojure-yasunori is a CLI command written in Clojure that utilizes Yasunori APIs.
+
+It's being developed in [packages/clojure-yasunori](./packages/clojure-yasunori).
