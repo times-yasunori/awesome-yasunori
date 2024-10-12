@@ -30,13 +30,13 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241004.0",
+    "@cloudflare/workers-types": "^4.20241011.0",
     "@iconify-json/tabler": "^1.2.4",
     "@remix-run/dev": "^2.13.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
+    "@types/react-dom": "^18.3.1",
     "feed": "^4.2.2",
     "msw": "^2.4.9",
     "sort-on": "^6.1.0",
