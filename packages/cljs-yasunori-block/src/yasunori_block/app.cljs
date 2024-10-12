@@ -23,8 +23,8 @@
   [:h1 "cljs-yasunori-block"])
 
 (defn initial-state [width height]
-  {:ball {:cx (/ width 2) :cy height :radius 5 :dx -4 :dy -5}
-   :paddle {:cx (/ width 2) :cy height :width 200 :height 20}
+  {:ball {:cx (h width) :cy height :radius 5 :dx -4 :dy -5}
+   :paddle {:cx (h width) :cy height :width 200 :height 20}
    :speed-multiplier 1.2
    :speed-max 10
    :blocks (let [blpadding 60          ; block-left-padding
@@ -62,9 +62,7 @@
               (= 0 (mod @ticks 50)))
 
             (draw-centered-rect [ctx {:keys [:cx :cy :width :height]}]
-              (let [hw (/ width 2)
-                    hh (/ height 2)]
-                (. ctx fillRect (- cx hw) (- cy hh) width height)))
+               (. ctx fillRect (- cx (h width)) (- cy (h height)) width height))
 
             (draw-centered-circle [ctx {:keys [:cx :cy :radius]}]
               (. ctx beginPath)
@@ -113,13 +111,9 @@
               ;;  - それ以外: ゲームオーバー
               (let [{:keys [:speed-max :speed-multiplier]} @state
                     {:keys [:cx :cy :radius :dx :dy]} (:ball @state)
-                    {pcx :cx pwidth :width} (:paddle @state)
-                    phw (/ pwidth 2) ; paddle-harf-width
-                    plx (- pcx phw)  ; paddle-left-x
-                    prx (+ pcx phw)  ; paddle-right-x
-                    ]
+                    {pcx :cx pwidth :width} (:paddle @state)]
                 (when (< height (+ cy dy radius))
-                  (if (and (< plx cx) (< cx prx))
+                  (if (and (< (- pcx (h pwidth)) cx) (< cx (+ pcx (h pwidth))))
                     (swap! state update :ball
                            #(let [relative-pos (/ (- cx pcx) (h width))
                                   reflect-rad (* relative-pos (/ js/Math.PI 4))
