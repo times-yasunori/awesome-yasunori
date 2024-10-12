@@ -11,16 +11,13 @@ jobs:
       clojure-yasunori: ${{ steps.filter.outputs.clojure-yasunori }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: filter
+        uses: dorny/paths-filter@v3
         id: filter
-        run: |
-          #!/usr/bin/env bash
-          set -euxo pipefail -o posix
-          if git diff origin/main --name-only | grep ^packages/clojure-yasunori/
-          then echo clojure-yasunori=1 >> "${GITHUB_OUTPUT}"
-          fi
+        with:
+          filters: |
+            clojure-yasunori:
+              - 'packages/clojure-yasunori/**'
   lint-github-actions:
     name: Lint GitHub Actions
     runs-on: ubuntu-latest
