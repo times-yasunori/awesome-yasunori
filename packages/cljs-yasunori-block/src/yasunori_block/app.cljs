@@ -19,7 +19,6 @@
   (/ arg 2))
 
 (defn Title []
-  (println "title")
   [:h1 "cljs-yasunori-block"])
 
 (defn initial-state [width height]
@@ -49,7 +48,6 @@
                  flatten))})
 
 (defn Main []
-  (println "main")
   (let [canvas (atom nil)
         width 1000
         height 500
