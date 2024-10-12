@@ -6,7 +6,7 @@
 (enable-console-print!)
 
 (defn run []
-  (rdom/render [y.app/app] (js/document.getElementById "app")))
+  (rdom/render [y.app/App] (js/document.getElementById "app")))
 
 (run)
 
