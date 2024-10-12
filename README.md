@@ -84,3 +84,7 @@ cljs-yasunori-block is a block breaking game written in ClojureScript. You can p
 https://cljs-breakout.yasunori.dev
 
 It's being developed in [packages/cljs-yasunori-block](./packages/cljs-yasunori-block).
+
+## License
+
+MIT
