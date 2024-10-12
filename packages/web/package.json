@@ -18,10 +18,10 @@
     "@awesome-yasunori/api": "workspace:*",
     "@mantine/core": "^7.13.1",
     "@mantine/hooks": "^7.13.1",
-    "@remix-run/cloudflare": "^2.12.1",
-    "@remix-run/cloudflare-pages": "^2.12.1",
-    "@remix-run/react": "^2.12.1",
-    "hono": "^4.6.3",
+    "@remix-run/cloudflare": "^2.13.1",
+    "@remix-run/cloudflare-pages": "^2.13.1",
+    "@remix-run/react": "^2.13.1",
+    "hono": "^4.6.4",
     "isbot": "^5.1.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,21 +30,21 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241004.0",
-    "@iconify-json/tabler": "^1.2.4",
-    "@remix-run/dev": "^2.12.1",
+    "@cloudflare/workers-types": "^4.20241011.0",
+    "@iconify-json/tabler": "^1.2.5",
+    "@remix-run/dev": "^2.13.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
+    "@types/react-dom": "^18.3.1",
     "feed": "^4.2.2",
-    "msw": "^2.4.9",
+    "msw": "^2.4.10",
     "sort-on": "^6.1.0",
-    "typescript": "^5.6.2",
+    "typescript": "^5.6.3",
     "unplugin-icons": "^0.19.3",
     "vite": "^5.2.12",
     "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.1.1",
-    "wrangler": "^3.79.0"
+    "wrangler": "^3.80.4"
   }
 }
