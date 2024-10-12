@@ -116,7 +116,7 @@
                   (if (and (< (- pcx (h pwidth)) cx) (< cx (+ pcx (h pwidth))))
                     (swap! state update :ball
                            #(let [relative-pos (/ (- cx pcx) (h width))
-                                  reflect-rad (* relative-pos (/ js/Math.PI 4))
+                                  reflect-rad (* relative-pos (/ math/PI 4))
                                   speed (min speed-max
                                              (* (math/sqrt (+ (* dx dx) (* dy dy)))
                                                 speed-multiplier))]
