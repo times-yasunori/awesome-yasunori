@@ -70,17 +70,17 @@
 
             (draw-ball [ctx]
               (let [{:keys [:ball]} @state]
-                (set! (.-fillStyle ctx) "0095DD")
+                (set! (. ctx -fillStyle) "0095DD")
                 (draw-centered-circle ctx ball)))
 
             (draw-paddle [ctx]
               (let [{:keys [:paddle]} @state]
-                (set! (.-fillStyle ctx) "#0095DD")
+                (set! (. ctx -fillStyle) "#0095DD")
                 (draw-centered-rect ctx paddle)))
 
             (draw-blocks [ctx]
               (let [{:keys [:blocks]} @state]
-                (set! (.-fillStyle ctx) "0095DD")
+                (set! (. ctx -fillStyle) "0095DD")
                 (doseq [elm blocks]
                   (draw-centered-rect ctx elm))))
 
@@ -165,7 +165,7 @@
 
             (on-mouse-move [e]
               (when @is-running
-                (swap! state update-in [:paddle :cx] (constantly (.-clientX e)))))
+                (swap! state update-in [:paddle :cx] (constantly (. e -clientX)))))
 
             (start-game []
               (reset! is-running true)
