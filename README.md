@@ -23,7 +23,7 @@ To add "awesome yasunori", simply add a new entry in [yasunori.toml](./yasunori.
 
 Anyone can join freely, so please feel free to create a Pull-request.
 
-## Products
+## Awesome Yasunori Products
 
 Awesome Yasunori has cool products that is exceptionally great.
 
