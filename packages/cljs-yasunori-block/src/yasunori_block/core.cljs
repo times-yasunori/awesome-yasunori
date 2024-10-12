@@ -5,10 +5,10 @@
 
 (enable-console-print!)
 
-(defn mount-app-element []
+(defn run []
   (rdom/render [y.app/app] (js/document.getElementById "app")))
 
-(mount-app-element)
+(run)
 
 (defn ^:after-load on-reload []
-  (mount-app-element))
+  (run))
