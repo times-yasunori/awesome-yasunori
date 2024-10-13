@@ -73,8 +73,8 @@ public class Sixel
             var rgb = colorPalette[i];
             var (r, g, b) = (rgb.R * 100 / 0xFF, rgb.G * 100 / 0xFF, rgb.B * 100 / 0xFF);
             // DECGCI (#): Graphics Color Introducer
-            sb.Append($"#{i+1};2;{r:d};{g:d};{b:d}");
-            DebugPrint($"#{i+1};2;", ConsoleColor.Red);
+            sb.Append($"#{i};2;{r:d};{g:d};{b:d}");
+            DebugPrint($"#{i};2;", ConsoleColor.Red);
             DebugPrint($"{r:d};{g:d};{b:d}", ConsoleColor.Green);
         }
         DebugPrint("End Palette", ConsoleColor.DarkGray, true);
@@ -114,8 +114,8 @@ public class Sixel
                     DebugPrint($"CR");
                 }
 
-                sb.Append($"#{n+1}");
-                DebugPrint($"#{n+1}", ConsoleColor.Red, false);
+                sb.Append($"#{n}");
+                DebugPrint($"#{n}", ConsoleColor.Red, false);
                 var cnt = 0;
                 for (var x = 0; x < width; x++)
                 {
