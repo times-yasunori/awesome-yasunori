@@ -34,15 +34,19 @@ public class Sixel
     /// Encode Image stream to Sixel string
     /// </summary>
     /// <param name="stream">Image Stream</param>
+    /// <param name="scale">Image Stream</param>
     /// <returns>Sxiel string</returns>
-    public static string Encode(Stream stream)
+    public static string Encode(Stream stream, double scale = 1)
     {
         var img = Image.Load<Rgb24>(stream);
-        // 減色処理
         img.Mutate(x => {
-            var size = x.GetCurrentSize();
-            x.Resize(size.Width / 2, size.Height / 2)
-             .Quantize(KnownQuantizers.Octree);
+            if (scale != 1)
+            {
+                var size = x.GetCurrentSize();
+                x.Resize((int)(size.Width * scale), (int)(size.Height * scale));
+            }
+            // 減色処理
+            x.Quantize(KnownQuantizers.Octree);
         });
         var width = img.Width;
         var height = img.Height;
