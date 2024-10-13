@@ -101,18 +101,20 @@ public class Sixel
                     buffer[width * idx + x] |= (byte)(1 << p);
                 }
             }
+            bool first = true;
             for (var n = 0; n < MAX_PALLETE_LENGTH; n++)
             {
                 if (!cset[n]) continue;
 
                 DebugPrint($"[n={n}]", ConsoleColor.DarkGray);
                 cset[n] = false;
-                if (ch0 == specialChCr)
+                if (ch0 == specialChCr && !first)
                 {
                     // DECGCR ($): Graphics Carriage Return
                     sb.Append('$');
                     DebugPrint($"CR");
                 }
+                first = false;
 
                 sb.Append($"#{n}");
                 DebugPrint($"#{n}", ConsoleColor.Red, false);
