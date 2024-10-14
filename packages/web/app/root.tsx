@@ -25,6 +25,7 @@ import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
 import IconGitHubLogo from "~icons/tabler/brand-github";
 import IconRSS from "~icons/tabler/rss";
+import { YasunoriSpotlight } from "./components/yasunori-spotlight";
 import { useIsMobile } from "./hooks/use-is-mobile";
 import type { IndexLoader } from "./routes/_index/loader";
 
@@ -98,6 +99,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       </Title>
                     </Group>
                     <Group>
+                      <YasunoriSpotlight />
                       <ActionIcon
                         component="a"
                         aria-label="rss feed"
