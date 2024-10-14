@@ -18,6 +18,7 @@
     "@awesome-yasunori/api": "workspace:*",
     "@mantine/core": "^7.13.1",
     "@mantine/hooks": "^7.13.1",
+    "@mantine/spotlight": "^7.13.2",
     "@remix-run/cloudflare": "^2.13.1",
     "@remix-run/cloudflare-pages": "^2.13.1",
     "@remix-run/react": "^2.13.1",
