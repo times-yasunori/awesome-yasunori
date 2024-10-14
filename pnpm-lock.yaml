@@ -100,6 +100,9 @@ importers:
       '@mantine/hooks':
         specifier: ^7.13.1
         version: 7.13.2(react@18.3.1)
+      '@mantine/spotlight':
+        specifier: ^7.13.2
+        version: 7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@remix-run/cloudflare':
         specifier: ^2.13.1
         version: 2.13.1(@cloudflare/workers-types@4.20241011.0)(typescript@5.6.3)
@@ -992,6 +995,19 @@ packages:
 
   '@mantine/hooks@7.13.2':
     resolution: {integrity: sha512-NKfGl2sKZw6zF//AfAFJrVDftjg7DKCn0h8rwJBIZCKi9axhwlV0Mvlqe2dep8QuM7O/uLLJSymSKIv1gaxIJg==}
+    peerDependencies:
+      react: ^18.2.0
+
+  '@mantine/spotlight@7.13.2':
+    resolution: {integrity: sha512-n8MapJHAJOCjrny4Yiy/SwAZOsa27X/JCGZ4rNwugvduliTa0WLT1KxjSg6Ne7Ys5iu4BlE5KEL6t3/LYDMI6g==}
+    peerDependencies:
+      '@mantine/core': 7.13.2
+      '@mantine/hooks': 7.13.2
+      react: ^18.2.0
+      react-dom: ^18.2.0
+
+  '@mantine/store@7.13.2':
+    resolution: {integrity: sha512-JcBGOqRynYiRWzw1rYdmViB/lfeYSec2EXVdSt4eJv+RPICsjjuqrIc3sNzfqJEGxcN4hGSlaeBriSh05K+vNQ==}
     peerDependencies:
       react: ^18.2.0
 
@@ -4804,6 +4820,18 @@ snapshots:
     dependencies:
       react: 18.3.1
 
+  '@mantine/spotlight@7.13.2(@mantine/core@7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@mantine/hooks@7.13.2(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@mantine/core': 7.13.2(@mantine/hooks@7.13.2(react@18.3.1))(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@mantine/hooks': 7.13.2(react@18.3.1)
+      '@mantine/store': 7.13.2(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@mantine/store@7.13.2(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
   '@mdx-js/mdx@2.3.0':
     dependencies:
       '@types/estree-jsx': 1.0.5
@@ -5255,7 +5283,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.25.7(@babel/core@7.25.8)
       '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
       '@vanilla-extract/css': 1.16.0
-      esbuild: 0.17.6
+      esbuild: 0.17.19
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
