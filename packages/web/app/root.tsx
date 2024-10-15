@@ -47,6 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
   const matches = useMatches();
   const isEntry = !!matches.find(({ id }) => id === "routes/entries.$id");
+  const isStats = !!matches.find(({ id }) => id === "routes/stats");
   const isMobile = useIsMobile();
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
@@ -125,11 +126,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </AppShell.Header>
                 <AppShell.Navbar p="md">
                   <AppShell.Section grow component={ScrollArea}>
-                    {data?.map((d) => (
+                    {isStats ? (
                       <NavLink
-                        key={d.id}
                         onClick={() => {
-                          navigate(`#${d.id}`, { replace: true });
+                          navigate("#monthly-posts", { replace: true });
                           // モバイルのときは移動後にサイドバーを閉じる
                           if (isMobile) {
                             close();
@@ -137,14 +137,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         }}
                         label={
                           <Group gap="xs">
-                            <Text>{`${d.title}`}</Text>
-                            <Text size="xs" c="dimmed">
-                              {`#${d.id}`}
-                            </Text>
+                            <Text>Monthly Posts</Text>
                           </Group>
                         }
                       />
-                    ))}
+                    ) : (
+                      data?.map((d) => (
+                        <NavLink
+                          key={d.id}
+                          onClick={() => {
+                            navigate(`#${d.id}`, { replace: true });
+                            // モバイルのときは移動後にサイドバーを閉じる
+                            if (isMobile) {
+                              close();
+                            }
+                          }}
+                          label={
+                            <Group gap="xs">
+                              <Text>{`${d.title}`}</Text>
+                              <Text size="xs" c="dimmed">
+                                {`#${d.id}`}
+                              </Text>
+                            </Group>
+                          }
+                        />
+                      ))
+                    )}
                   </AppShell.Section>
                 </AppShell.Navbar>
               </>
