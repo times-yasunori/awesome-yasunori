@@ -34,15 +34,19 @@ public class Sixel
     /// Encode Image stream to Sixel string
     /// </summary>
     /// <param name="stream">Image Stream</param>
+    /// <param name="scale">Image Stream</param>
     /// <returns>Sxiel string</returns>
-    public static string Encode(Stream stream)
+    public static string Encode(Stream stream, double scale = 1)
     {
-        var img = Image.Load<Rgb24>(stream);
-        // 減色処理
+        using var img = Image.Load<Rgb24>(stream);
         img.Mutate(x => {
-            var size = x.GetCurrentSize();
-            x.Resize(size.Width / 2, size.Height / 2)
-             .Quantize(KnownQuantizers.Octree);
+            if (scale != 1)
+            {
+                var size = x.GetCurrentSize();
+                x.Resize((int)(size.Width * scale), (int)(size.Height * scale));
+            }
+            // 減色処理
+            x.Quantize(KnownQuantizers.Octree);
         });
         var width = img.Width;
         var height = img.Height;
@@ -65,7 +69,7 @@ public class Sixel
         sb.Append(SixelStart);
         // DECSIXEL Introducer(\033P0;0;8q) + DECGRA ("1;1): Set Raster Attributes
         sb.Append(new char[] { ESC, 'P', ';', '0', ';', '8', 'q', '"', '1', ';', '1' });
-        sb.Append($"{width};{height}");
+        sb.Append($";{width};{height}");
 
         DebugPrint($"Pallete Start Length={colorPalette.Length}", lf: true);
         for (var i = 0; i < colorPalette.Length; i++)
@@ -73,8 +77,8 @@ public class Sixel
             var rgb = colorPalette[i];
             var (r, g, b) = (rgb.R * 100 / 0xFF, rgb.G * 100 / 0xFF, rgb.B * 100 / 0xFF);
             // DECGCI (#): Graphics Color Introducer
-            sb.Append($"#{i+1};2;{r:d};{g:d};{b:d}");
-            DebugPrint($"#{i+1};2;", ConsoleColor.Red);
+            sb.Append($"#{i};2;{r:d};{g:d};{b:d}");
+            DebugPrint($"#{i};2;", ConsoleColor.Red);
             DebugPrint($"{r:d};{g:d};{b:d}", ConsoleColor.Green);
         }
         DebugPrint("End Palette", ConsoleColor.DarkGray, true);
@@ -101,21 +105,23 @@ public class Sixel
                     buffer[width * idx + x] |= (byte)(1 << p);
                 }
             }
+            bool first = true;
             for (var n = 0; n < MAX_PALLETE_LENGTH; n++)
             {
                 if (!cset[n]) continue;
 
                 DebugPrint($"[n={n}]", ConsoleColor.DarkGray);
                 cset[n] = false;
-                if (ch0 == specialChCr)
+                if (ch0 == specialChCr && !first)
                 {
                     // DECGCR ($): Graphics Carriage Return
                     sb.Append('$');
                     DebugPrint($"CR");
                 }
+                first = false;
 
-                sb.Append($"#{n+1}");
-                DebugPrint($"#{n+1}", ConsoleColor.Red, false);
+                sb.Append($"#{n}");
+                DebugPrint($"#{n}", ConsoleColor.Red, false);
                 var cnt = 0;
                 for (var x = 0; x < width; x++)
                 {

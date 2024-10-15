@@ -27,7 +27,7 @@ class Program
                     {
                         var task = Client.GetOGP();
                         task.Wait();
-                        Console.WriteLine(Sixel.Encode(task.Result));
+                        Console.WriteLine(Sixel.Encode(task.Result, 0.5));
                     }
                     else
                     {
@@ -48,7 +48,7 @@ class Program
                     Task.WaitAll(tasks.ToArray());
                     foreach (var task in tasks)
                     {
-                        Console.WriteLine(Sixel.Encode(task.Result));
+                        Console.WriteLine(Sixel.Encode(task.Result, 0.5));
                     }
                 }
                 else
