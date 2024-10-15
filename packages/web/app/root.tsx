@@ -2,6 +2,7 @@ import {
   ActionIcon,
   AppShell,
   Burger,
+  Button,
   ColorSchemeScript,
   Group,
   MantineProvider,
@@ -9,6 +10,7 @@ import {
   ScrollArea,
   Text,
   Title,
+  em,
   rem,
 } from "@mantine/core";
 import type { LinksFunction } from "@remix-run/cloudflare";
@@ -39,7 +41,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Yellowtail&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Tiny5&display=swap",
   },
 ];
 
@@ -84,20 +86,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <>
                 <AppShell.Header p="md">
                   <Group align="center" justify="space-between">
-                    <Group gap="sm">
+                    <Group gap="xs">
                       <Burger
                         opened={opened}
                         onClick={toggle}
                         hiddenFrom="sm"
                         size="sm"
                       />
-                      <Title
+                      <Button
+                        variant="transparent"
+                        color="gray"
+                        component={Title}
                         order={1}
-                        size="h2"
-                        style={{ fontFamily: "'Yellowtail', cursive" }}
+                        size="compact-sm"
+                        onClick={() => navigate("/")}
+                        style={{
+                          fontFamily: "'Tiny5', sans-serif",
+                          fontSize: isMobile ? em(20) : em(30),
+                          fontWeight: 400,
+                        }}
                       >
                         Awesome Yasunori
-                      </Title>
+                      </Button>
                     </Group>
                     <Group gap="sm">
                       <YasunoriSpotlight />
