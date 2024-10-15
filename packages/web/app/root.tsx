@@ -27,6 +27,7 @@ import {
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
 import IconGitHubLogo from "~icons/tabler/brand-github";
+import IconGraph from "~icons/tabler/graph";
 import IconRSS from "~icons/tabler/rss";
 import { YasunoriSpotlight } from "./components/yasunori-spotlight";
 import { useIsMobile } from "./hooks/use-is-mobile";
@@ -111,6 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     </Group>
                     <Group gap="sm">
                       <YasunoriSpotlight />
+                      <IconGraph onClick={() => navigate("/stats")} />
                       <ActionIcon
                         component="a"
                         aria-label="rss feed"
