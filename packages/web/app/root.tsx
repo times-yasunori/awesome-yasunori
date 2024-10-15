@@ -18,6 +18,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
   useNavigate,
   useRouteLoaderData,
 } from "@remix-run/react";
@@ -44,7 +45,8 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
-  const isIndexView = !!data;
+  const matches = useMatches();
+  const isEntry = !!matches.find(({ id }) => id === "routes/entries.$id");
   const isMobile = useIsMobile();
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
@@ -65,11 +67,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <MantineProvider forceColorScheme="dark">
           <AppShell
-            header={
-              isIndexView ? { height: 60, collapsed: !pinned } : undefined
-            }
+            header={!isEntry ? { height: 60, collapsed: !pinned } : undefined}
             navbar={
-              isIndexView
+              !isEntry
                 ? {
                     width: 300,
                     breakpoint: "sm",
@@ -79,7 +79,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             }
             padding="md"
           >
-            {isIndexView && (
+            {!isEntry && (
               <>
                 <AppShell.Header p="md">
                   <Group align="center" justify="space-between">
@@ -151,7 +151,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             )}
             <AppShell.Main
               pt={
-                isIndexView
+                !isEntry
                   ? `calc(${rem(60)} + var(--mantine-spacing-md))`
                   : undefined
               }
