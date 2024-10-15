@@ -99,7 +99,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         Awesome Yasunori
                       </Title>
                     </Group>
-                    <Group>
+                    <Group gap="sm">
                       <YasunoriSpotlight />
                       <ActionIcon
                         component="a"
