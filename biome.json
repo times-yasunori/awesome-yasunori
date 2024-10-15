@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["build", "dist", "awesome-yasunori.json", ".wrangler"]
+    "ignore": [
+      "build",
+      "dist",
+      "awesome-yasunori.json",
+      ".wrangler",
+      "cljs-yasunori-block"
+    ]
   },
   "formatter": {
     "enabled": true,
