@@ -38,7 +38,7 @@ public class Sixel
     /// <returns>Sxiel string</returns>
     public static string Encode(Stream stream, double scale = 1)
     {
-        var img = Image.Load<Rgb24>(stream);
+        using var img = Image.Load<Rgb24>(stream);
         img.Mutate(x => {
             if (scale != 1)
             {
