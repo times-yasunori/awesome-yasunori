@@ -1,5 +1,24 @@
 import { http, HttpResponse } from "msw";
 
+export const awesomeIdHandlers = [
+  http.get("https://api.yasunori.dev/awesome/1", () => {
+    const response = {
+      at: "vim-jp radioお便り",
+      content:
+        "tomoyaさん、ありすえさんこんにちは。\nはじめまして、yasunoriの母です。\n\nyasunoriがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。\n家ですれ違う時「Vim....Vim....」という独り言をずっと唱えていたり、部屋からは「設定させていただきありがとうございます!!」という大声が聞こえてきたり、\n「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。\n\ntomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。\n",
+      date: "2024-06-25",
+      id: 1,
+      meta: "",
+      senpan: "takeokunn",
+      title: "yasunoriの母",
+    };
+    return HttpResponse.json(response);
+  }),
+  http.get("https://api.yasunori.dev/awesome/0", () => {
+    return HttpResponse.json(null, { status: 404 });
+  }),
+];
+
 export const awesomeHandler = http.get(
   "https://api.yasunori.dev/awesome",
   () => {

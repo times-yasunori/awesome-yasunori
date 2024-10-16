@@ -16,19 +16,19 @@
     "prepare": "pnpm run generate:json"
   },
   "dependencies": {
-    "hono": "^4.6.3",
+    "hono": "^4.6.4",
     "random-item": "^4.0.1",
     "toml": "^3.0.0",
     "valibot": "1.0.0-beta.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241004.0",
+    "@cloudflare/workers-types": "^4.20241011.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.16.0",
     "jsonfile": "^6.1.0",
-    "typescript": "^5.6.2",
+    "typescript": "^5.6.3",
     "vite": "^5.2.12",
     "vitest": "^2.1.1",
-    "wrangler": "^3.57.2"
+    "wrangler": "^3.80.4"
   }
 }

@@ -1,7 +1,7 @@
 import { setupServer } from "msw/node";
-import { awesomeHandler } from "./handlers";
+import { awesomeHandler, awesomeIdHandlers } from "./handlers";
 
-const handlers = [awesomeHandler];
+const handlers = [awesomeHandler, ...awesomeIdHandlers];
 
 const server = setupServer(...handlers);
 

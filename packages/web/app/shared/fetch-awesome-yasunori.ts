@@ -5,5 +5,5 @@ export async function fetchAwesomeYasunori() {
   if (!res.ok) {
     return null;
   }
-  return await res.json();
+  return res.json();
 }
