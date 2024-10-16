@@ -1,4 +1,16 @@
 [[yasunori]]
+id = 59
+title = "Anyone can be yasunori about anything."
+date = "2024-10-15"
+at = "vim-jp #times-kuuote"
+senpan = "tomoya"
+content = """
+Anyone can be yasunori about anything.
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 58
 title = "ちょうどyasunoriをyasunoriしたい気分"
 date = "2024-10-15"
