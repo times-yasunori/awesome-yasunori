@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 54
+title = "yasunoriの原木理論"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "kuuote"
+content = """
+yasunoriになればtypoに気付けるし、戦闘力が求められる現代においてyasunoriになるのは有効
+"""
+meta = """
+- memo
+  - [生ハムの原木](https://dic.nicovideo.jp/a/%E7%94%9F%E3%83%8F%E3%83%A0%E3%81%AE%E5%8E%9F%E6%9C%A8)
+"""
+
+[[yasunori]]
 id = 53
 title = "さようなら、yasunori(1)"
 date = "2024-10-16"
