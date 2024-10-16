@@ -1,4 +1,16 @@
 [[yasunori]]
+id = 56
+title = "共通言語としてのyasunori"
+date = "2024-10-16"
+at = "vim-jp #times-kuuote"
+senpan = "yasunori0418"
+content = """
+まー人の名前を動詞やら形容詞に使うのが一般的になってしまったコミュニティで、共通言語の範囲を定義する方が難易度高い
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 55
 title = "さようなら、yasunori(2)"
 date = "2024-10-16"
