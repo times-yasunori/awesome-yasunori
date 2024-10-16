@@ -1,8 +1,20 @@
 [[yasunori]]
+id = 60
+title = "yasunoriは現代病の一つ"
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori に依存しすぎないのは大事。yasunori 依存症は若者を悩ませる現代病のひとつ。
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 59
 title = "Anyone can be yasunori about anything."
 date = "2024-10-15"
-at = "vim-jp #times-kuuote"
+at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
 Anyone can be yasunori about anything.
