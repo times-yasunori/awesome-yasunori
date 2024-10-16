@@ -31,6 +31,7 @@ import IconGraph from "~icons/tabler/graph";
 import { YasunoriSpotlight } from "./components/yasunori-spotlight";
 import { useIsMobile } from "./hooks/use-is-mobile";
 import type { IndexLoader } from "./routes/_index/loader";
+import { statsContents } from "./routes/stats/route";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -127,43 +128,44 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </AppShell.Header>
                 <AppShell.Navbar p="md">
                   <AppShell.Section grow component={ScrollArea}>
-                    {isStats ? (
-                      <NavLink
-                        onClick={() => {
-                          navigate("#monthly-posts", { replace: true });
-                          // モバイルのときは移動後にサイドバーを閉じる
-                          if (isMobile) {
-                            close();
-                          }
-                        }}
-                        label={
-                          <Group gap="xs">
-                            <Text>Monthly Posts</Text>
-                          </Group>
-                        }
-                      />
-                    ) : (
-                      data?.map((d) => (
-                        <NavLink
-                          key={d.id}
-                          onClick={() => {
-                            navigate(`#${d.id}`, { replace: true });
-                            // モバイルのときは移動後にサイドバーを閉じる
-                            if (isMobile) {
-                              close();
+                    {isStats
+                      ? statsContents.map(({ id, title }) => (
+                          <NavLink
+                            key={id}
+                            onClick={() => {
+                              navigate(`#${id}`, { replace: true });
+                              // モバイルのときは移動後にサイドバーを閉じる
+                              if (isMobile) {
+                                close();
+                              }
+                            }}
+                            label={
+                              <Group gap="xs">
+                                <Text>{title}</Text>
+                              </Group>
                             }
-                          }}
-                          label={
-                            <Group gap="xs">
-                              <Text>{`${d.title}`}</Text>
-                              <Text size="xs" c="dimmed">
-                                {`#${d.id}`}
-                              </Text>
-                            </Group>
-                          }
-                        />
-                      ))
-                    )}
+                          />
+                        ))
+                      : data?.map((d) => (
+                          <NavLink
+                            key={d.id}
+                            onClick={() => {
+                              navigate(`#${d.id}`, { replace: true });
+                              // モバイルのときは移動後にサイドバーを閉じる
+                              if (isMobile) {
+                                close();
+                              }
+                            }}
+                            label={
+                              <Group gap="xs">
+                                <Text>{`${d.title}`}</Text>
+                                <Text size="xs" c="dimmed">
+                                  {`#${d.id}`}
+                                </Text>
+                              </Group>
+                            }
+                          />
+                        ))}
                   </AppShell.Section>
                 </AppShell.Navbar>
               </>
