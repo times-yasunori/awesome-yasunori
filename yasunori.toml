@@ -1,4 +1,17 @@
 [[yasunori]]
+id = 57
+title = "Yasunoriを貫く心"
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "haruki7049"
+content = """
+自分で自分のYasunoriを貫くか
+どんな人でもyasunoriすることは出来るからね
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 56
 title = "共通言語としてのyasunori"
 date = "2024-10-16"
