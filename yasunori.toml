@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 53
+title = "さようなら、yasunori(1)"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+見たろ、yasunori。ddしたんだよ。ぼくひとりで。もう安心してarchできるだろ、yasunori。
+"""
+meta = """
+- memo
+  - [さようなら、ドラえもん](https://dic.pixiv.net/a/%E3%81%95%E3%82%88%E3%81%86%E3%81%AA%E3%82%89%E3%80%81%E3%83%89%E3%83%A9%E3%81%88%E3%82%82%E3%82%93)
+"""
+
+[[yasunori]]
 id = 52
 title = "特技はyasunori"
 date = "2024-10-13"
