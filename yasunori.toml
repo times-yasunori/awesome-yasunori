@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 62
+title = "yasunoriはいつだってcool"
+date = "2024-10-17"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori はいつだって cool
+"""
+meta = """
+- memo
+  - https://awesome.yasunori.dev/stats 完成時の発言
+"""
+
+[[yasunori]]
 id = 61
 title = "awesome-yasunoriを支えるのに使われた可哀想な技術"
 date = "2024-10-16"
