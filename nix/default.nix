@@ -14,14 +14,10 @@
       system,
       ...
     }:
-    let
-      pkgs = import self.inputs.nixpkgs {
+    {
+      _module.args.pkgs = import self.inputs.nixpkgs {
         inherit system;
         overlays = [ self.overlays.toolchain ];
       };
-    in
-    {
-      _module.args.pkgs = pkgs;
-      packages = import ./packages { inherit pkgs; };
     };
 }
