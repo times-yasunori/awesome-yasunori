@@ -1,5 +1,6 @@
 import { BarChart, LineChart } from "@mantine/charts";
 import { Stack, Text, Title } from "@mantine/core";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import type { IndexLoader } from "../_index/loader";
 export { indexLoader as loader } from "../_index/loader";
@@ -16,6 +17,24 @@ export const statsContents = [
     title: "Senpan Ranking",
   },
 ] as const;
+
+export const meta: MetaFunction = () => {
+  const title = "Awesome Yasurnori Stats";
+  const description = "Here are the statistics of Awesome Yasunori.";
+  const url = "https://awesome.yasunori.dev/stats";
+  return [
+    { title },
+    { name: "description", content: description },
+    { property: "og:url", content: url },
+    { property: "og:site_name", content: title },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:locale", content: "ja" },
+    { property: "og:type", content: "website" },
+    // TODO
+    // { property: 'og:image', content: "url" },
+  ];
+};
 
 export default function Stats() {
   const source = useLoaderData<IndexLoader>();
