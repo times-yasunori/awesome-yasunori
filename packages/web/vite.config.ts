@@ -6,10 +6,13 @@ import {
 import Icons from "unplugin-icons/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { getLoadContext } from "./load-context";
 
 export default defineConfig({
   plugins: [
-    remixCloudflareDevProxy(),
+    remixCloudflareDevProxy({
+      getLoadContext,
+    }),
     Icons({
       compiler: "jsx",
       jsx: "react",
