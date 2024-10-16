@@ -95,12 +95,12 @@ export const awesomeHandler = http.get(
       {
         at: "vim-jp #times-yasunori",
         content:
-          "キラ・yaunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」\nマリュー「まだ，終わってないのよ」\nキラ・yasuori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」\n",
+          "キラ・yasunori「無茶苦茶だ！こんなOSでこれだけの機体を動かそうなんて！」\nマリュー「まだ，終わってないのよ」\nキラ・yasunori「そんなこともあろうかとここに，NixOSのインストーラが入ったUSBメモリーが」\n",
         date: "2024-08-23",
         id: 15,
         meta: "",
         senpan: "rkarsnk",
-        title: "キラ・yaunori",
+        title: "キラ・yasunori",
       },
       {
         at: "vim-jp #times-yasunori",
