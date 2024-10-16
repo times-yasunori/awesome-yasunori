@@ -1,7 +1,22 @@
 [[yasunori]]
+id = 61
+title = "awesome-yasunoriを支えるのに使われた可哀想な技術"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+誰が生めと頼んだ! 誰が造ってくれと願った…!!
+"""
+meta = """
+- memo
+  - Inspired by [ミュウツーの逆襲](https://dic.pixiv.net/a/%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%84%E3%83%BC%E3%81%AE%E9%80%86%E8%A5%B2)
+  - awesome-yasunori様々なプログラミング言語や技術スタックではみんなのオモチャになっている
+"""
+
+[[yasunori]]
 id = 60
 title = "yasunoriは現代病の一つ"
-date = "2024-10-15"
+date = "2024-10-16"
 at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
