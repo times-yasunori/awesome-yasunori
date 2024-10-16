@@ -1,4 +1,108 @@
 [[yasunori]]
+id = 60
+title = "yasunoriは現代病の一つ"
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+yasunori に依存しすぎないのは大事。yasunori 依存症は若者を悩ませる現代病のひとつ。
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 59
+title = "Anyone can be yasunori about anything."
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+Anyone can be yasunori about anything.
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 58
+title = "ちょうどyasunoriをyasunoriしたい気分"
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "satler-git"
+content = """
+助かった。ちょうどyasunoriをyasunoriしたい気分だったけど、いいyasunori相手がなくて困っていたところにyasunoriyasunoriが供給されるなんて！
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 57
+title = "Yasunoriを貫く心"
+date = "2024-10-15"
+at = "vim-jp #times-yasunori"
+senpan = "haruki7049"
+content = """
+自分で自分のYasunoriを貫くか
+どんな人でもyasunoriすることは出来るからね
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 56
+title = "共通言語としてのyasunori"
+date = "2024-10-16"
+at = "vim-jp #times-kuuote"
+senpan = "yasunori0418"
+content = """
+まー人の名前を動詞やら形容詞に使うのが一般的になってしまったコミュニティで、共通言語の範囲を定義する方が難易度高い
+"""
+meta = """
+"""
+
+[[yasunori]]
+id = 55
+title = "さようなら、yasunori(2)"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+yasunori「Arch Install Challengeなら、archinstall抜きでやろう」
+ジャイアン「ほほう…偉いな、お前。そうこなくっちゃ」
+"""
+meta = """
+- memo
+  - [さようなら、ドラえもん](https://dic.pixiv.net/a/%E3%81%95%E3%82%88%E3%81%86%E3%81%AA%E3%82%89%E3%80%81%E3%83%89%E3%83%A9%E3%81%88%E3%82%82%E3%82%93)
+"""
+
+[[yasunori]]
+id = 54
+title = "yasunoriの原木理論"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "kuuote"
+content = """
+yasunoriになればtypoに気付けるし、戦闘力が求められる現代においてyasunoriになるのは有効
+"""
+meta = """
+- memo
+  - [生ハムの原木](https://dic.nicovideo.jp/a/%E7%94%9F%E3%83%8F%E3%83%A0%E3%81%AE%E5%8E%9F%E6%9C%A8)
+"""
+
+[[yasunori]]
+id = 53
+title = "さようなら、yasunori(1)"
+date = "2024-10-16"
+at = "vim-jp #times-yasunori"
+senpan = "kyoh86"
+content = """
+見たろ、yasunori。ddしたんだよ。ぼくひとりで。もう安心してarchできるだろ、yasunori。
+"""
+meta = """
+- memo
+  - [さようなら、ドラえもん](https://dic.pixiv.net/a/%E3%81%95%E3%82%88%E3%81%86%E3%81%AA%E3%82%89%E3%80%81%E3%83%89%E3%83%A9%E3%81%88%E3%82%82%E3%82%93)
+"""
+
+[[yasunori]]
 id = 52
 title = "特技はyasunori"
 date = "2024-10-13"
@@ -23,7 +127,7 @@ content = """
 学生　「あれあれ？怒らせていいんですか？使いますよ。yasunori。」
 面接官「いいですよ。使って下さい。yasunoriとやらを。それで満足したら帰って下さい。」
 学生　「運がよかったな。今日はUSBメモリを家に置いてきたようだ。」
-面接官「帰れよ。」 
+面接官「帰れよ。」
 """
 meta = """
 Inspired by [イオナズンコピペ](https://dic.pixiv.net/a/%E3%82%A4%E3%82%AA%E3%83%8A%E3%82%BA%E3%83%B3#h2_1)
