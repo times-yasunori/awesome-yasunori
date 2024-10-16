@@ -45,3 +45,34 @@ export function monthlyPostsAggregate(
 
   return aggregated;
 }
+
+interface SenpanAggregateData {
+  senpan: string;
+  amount: number;
+}
+
+export function senpanAggregate(
+  source: SerializeFrom<IndexLoader>,
+): SenpanAggregateData[] {
+  // 戦犯ごとの投稿数をカウントする
+  const counts = new Map<string, number>();
+  for (const data of source) {
+    const senpan = data.senpan;
+    if (!counts.has(senpan)) {
+      counts.set(senpan, 1);
+    } else {
+      counts.set(senpan, (counts.get(senpan) ?? 0) + 1);
+    }
+  }
+  const aggregated = Array.from(counts, ([senpan, amount]) => ({
+    senpan,
+    amount,
+  }));
+
+  // amountの降順でソートする
+  aggregated.sort((a, b) => {
+    return b.amount - a.amount;
+  });
+
+  return aggregated;
+}
