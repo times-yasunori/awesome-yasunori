@@ -26,6 +26,7 @@ import {
 } from "@remix-run/react";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
+import { motion } from "framer-motion";
 import IconGitHubLogo from "~icons/tabler/brand-github";
 import IconGraph from "~icons/tabler/graph";
 import { YasunoriSpotlight } from "./components/yasunori-spotlight";
@@ -107,7 +108,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
                           fontWeight: 400,
                         }}
                       >
-                        Awesome Yasunori
+                        Awesome
+                        <motion.span
+                          style={{ marginLeft: em(2) }}
+                          initial={{ opacity: 1 }}
+                          animate={{ opacity: [1, 0, 1] }}
+                          transition={{
+                            duration: 10,
+                            ease: "easeInOut",
+                            repeat: Number.POSITIVE_INFINITY,
+                          }}
+                        >
+                          Yasunori
+                        </motion.span>
                       </Button>
                     </Group>
                     <Group gap="sm">
