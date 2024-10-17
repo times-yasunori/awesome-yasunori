@@ -58,8 +58,8 @@ jobs:
         run: nix develop -L
       - name: build packages
         run: |
-          nix build -L \
-            .#yasunori-net
+          nix build -L .#yasunori-cli
+          nix build -L .#yasunori-net
   lint-awesome-yasunori:
     name: Lint Awesome Yasunori
     runs-on: ubuntu-latest
