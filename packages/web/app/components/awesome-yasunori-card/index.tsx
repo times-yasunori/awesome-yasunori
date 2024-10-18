@@ -128,19 +128,21 @@ export function AwesomeYasunoriCard({
 function FooterActionIcons({ id }: Pick<Pick<Props, "entry">["entry"], "id">) {
   return (
     <Group gap="sm" align="center" justify="flex-end">
-      <CopyButton value={`https://awesome.yasunori.dev/entries/${id}`}>
-        {({ copied, copy }) => (
-          <Tooltip
-            label={copied ? "Copied" : "Copy share link"}
-            withArrow
-            position="left"
-          >
-            <ActionIcon variant="subtle" onClick={copy}>
-              <IconShare />
-            </ActionIcon>
-          </Tooltip>
-        )}
-      </CopyButton>
+      <Tooltip label="Share link" withArrow position="left">
+        <ActionIcon
+          variant="subtle"
+          onClick={async () => {
+            const url = `https://awesome.yasunori.dev/entries/${id}`;
+            if (navigator.share) {
+              await navigator.share({ url });
+              return;
+            }
+            await navigator.clipboard.writeText(url);
+          }}
+        >
+          <IconShare />
+        </ActionIcon>
+      </Tooltip>
     </Group>
   );
 }
