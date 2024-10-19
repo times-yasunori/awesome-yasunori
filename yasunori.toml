@@ -1,4 +1,21 @@
 [[yasunori]]
+id = 64
+title = "yasunori職人の朝は早い"
+date = "2024-10-19"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+yasunori職人の朝は早い
+「まぁ好きではじめた仕事ですから」
+最近は良いコピペが出来ないと愚痴をこぼした
+まず、awesome-yasunoriの入念なチェックから始まる
+「やっぱり一番うれしいのはvim-jp住人のリアクションね、この仕事やっててよかったなと」
+「毎日毎日yasunoriという単語の意味が違う 機械では出来ない」
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 63
 title = "最新技術がこんなことに使われているなんて"
 date = "2024-10-19"
