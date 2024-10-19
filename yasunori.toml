@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 63
+title = "最新技術がこんなことに使われているなんて"
+date = "2024-10-19"
+at = "vim-jp #times-yasunori"
+senpan = "yasunori0418"
+content = """
+済まない、俺がたけてぃ達の前でarchを消してarchをインストールしたばっかりに、最新技術がこんなことに使われているなんて
+"""
+meta = """
+- memo
+  - [伝説のOS削除オフ](https://awesome.yasunori.dev/entries/24)がきっかけでawesome-yasunoriが生まれたことに対する氏の発言
+  - たけてぃは@takeokunn
+"""
+
+[[yasunori]]
 id = 62
 title = "yasunoriはいつだってcool"
 date = "2024-10-17"
