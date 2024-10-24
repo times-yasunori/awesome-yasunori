@@ -164,6 +164,7 @@ content = """
 Anyone can be yasunori about anything.
 """
 meta = """
+元ネタはWebの生みの親Tim Berners-Leeの[Anyone can say anything about anything](https://www.w3.org/2002/Talks/04-sweb-sloan/slide11-0.html)
 """
 
 [[yasunori]]
