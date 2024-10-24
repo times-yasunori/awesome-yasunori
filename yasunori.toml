@@ -1,4 +1,23 @@
 [[yasunori]]
+id = 69
+title = "そんなの yasunoriの かって"
+date = "2024-10-24"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+つよい yasunori
+よわい yasunori
+そんなの ひとの かって
+ほんとうに つよい yasunoriなら
+すきな yasunoriで
+かてるように がんばるべき
+"""
+meta = """
+- memo
+  - https://dic.nicovideo.jp/a/%E3%82%AB%E3%83%AA%E3%83%B3%28%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%29
+"""
+
+[[yasunori]]
 id = 68
 title = "VimConfチケット購入1番乗りに浮かれてるyasunori"
 date = "2024-10-23"
