@@ -1,4 +1,16 @@
 [[yasunori]]
+id = 65
+title = "頂点に立つyasunori"
+date = "2024-10-24"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+頂点に立つyasunori「人は2種類に分かれる。yasunori か yasunori 以外かだ！」
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 64
 title = "yasunori職人の朝は早い"
 date = "2024-10-19"
