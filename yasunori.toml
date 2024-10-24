@@ -1,4 +1,13 @@
 [[yasunori]]
+id = 70
+title = "大きくなったな"
+date = "2024-10-24"
+at = "vim-jp #times-yasunori"
+senpan = "comamoca"
+content = "大きくなったな、yasunori…"
+meta = "yasunori.tomlの1000行超えを知ったときの反応"
+
+[[yasunori]]
 id = 69
 title = "そんなの yasunoriの かって"
 date = "2024-10-23"
@@ -155,6 +164,7 @@ content = """
 Anyone can be yasunori about anything.
 """
 meta = """
+元ネタはWebの生みの親Tim Berners-Leeの[Anyone can say anything about anything](https://www.w3.org/2002/Talks/04-sweb-sloan/slide11-0.html)
 """
 
 [[yasunori]]
