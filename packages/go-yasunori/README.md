@@ -1,4 +1,4 @@
-# clojure-yasunori
+# go-yasunori
 
 ## Syntax
 
