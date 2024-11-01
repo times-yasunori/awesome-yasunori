@@ -1,4 +1,21 @@
 [[yasunori]]
+id = 76
+title = "yasunoriしようか"
+date = "2024-11-01"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+いーまから、そいつを
+これから、そいつを、
+yasunori しようかー！
+YA YA YA YA YASUNORI
+"""
+meta = """
+- memo
+  - 元ネタ: [CHAGE and ASKA YAH YAH YAH 歌詞](https://www.uta-net.com/song/4558/)
+"""
+
+[[yasunori]]
 id = 75
 title = "脳がyasunoriに最適化"
 date = "2024-11-01"
