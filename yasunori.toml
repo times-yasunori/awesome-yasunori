@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 75
+title = "脳がyasunoriに最適化"
+date = "2024-11-01"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+脳がyasunoriに最適化されすぎてて、yosasou という単語がなんでハイライトされないんだろうって一瞬とまどった
+"""
+meta = """
+- memo
+  - yasunori という単語を通知に入れるというブームがvim-jpに流行ってる
+  - vim-jpのyasunori中毒者は思考回路がyasunorizationされていて、なんでもかんでもyasunoriに見えてきている
+"""
+
+[[yasunori]]
 id = 74
 title = "羽川yasunori"
 date = "2024-11-01"
