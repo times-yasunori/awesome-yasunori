@@ -1,4 +1,20 @@
 [[yasunori]]
+id = 74
+title = "羽川yasunori"
+date = "2024-11-01"
+at = "vim-jp #times-yasunori"
+senpan = "takeokunn"
+content = """
+なんでもあるわ、無いものは収録するだけ
+"""
+meta = """
+- memo
+  - 元ネタ: [何でもは知らないわよ。知ってることだけ](https://dic.pixiv.net/a/%E4%BD%95%E3%81%A7%E3%82%82%E3%81%AF%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E3%82%8F%E3%82%88%E3%80%82%E7%9F%A5%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A0%E3%81%91)
+  - vim-jpでは「なんでもあるわ、ないものは作るだけ」などの脳筋羽川が流行っている
+  - 「awesome-yasunoriだけで会話ができそう」に対しての発言
+"""
+
+[[yasunori]]
 id = 73
 title = "己の面白さに気がついたyasunori"
 date = "2024-10-31"
