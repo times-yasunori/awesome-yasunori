@@ -119,7 +119,7 @@ describe("Test GET /awesome/random", () => {
   });
 });
 
-describe("Test GET /awesome/from-slack-text", () => {
+describe("Test POST /awesome/from-slack-text", () => {
   test("Should return 200 response", async () => {
     const res = await app.request("/awesome/from-slack-text", {
       method: "POST",
@@ -137,9 +137,10 @@ describe("Test GET /awesome/from-slack-text", () => {
 yasuhara`,
     });
     const parsed = await res.text();
-    expect(parsed).toStrictEqual(`[[yasunori]]
-id = 62
-title = "えっ、yasunori 知らないの？"
+    const [header, id, ...rest] = parsed.split("\n");
+    expect(header).toStrictEqual("[[yasunori]]");
+    expect(id).toMatch("id = "); // いまのテスト環境だとidが変化するため値のテストはできない
+    expect(rest.join("\n")).toStrictEqual(`title = "えっ、yasunori 知らないの？"
 date = "2024-11-02"
 at = "vim-jp #times-yasunori"
 senpan = "tomoya"
