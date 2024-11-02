@@ -138,7 +138,7 @@ yasuhara`,
     });
     const parsed = await res.text();
     expect(parsed).toStrictEqual(`[[yasunori]]
-id = 2
+id = 62
 title = "えっ、yasunori 知らないの？"
 date = "2024-11-02"
 at = "vim-jp #times-yasunori"

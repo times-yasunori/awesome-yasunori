@@ -61,7 +61,9 @@ const route = app
       return c.text("yasunori.toml catnot parsed", 400);
     }
     const slackText = await c.req.text();
-    const latestEntry = parsedAwesomeYasunori.output.yasunori.at(-1);
+    const latestEntry = parsedAwesomeYasunori.output.yasunori
+      .sort((a, b) => b.id - a.id)
+      .at(1);
     if (!latestEntry) {
       return c.text("Cannot find next id", 400);
     }
