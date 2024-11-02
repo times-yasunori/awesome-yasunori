@@ -6,9 +6,11 @@ import { type IndexLoader, indexLoader } from "./loader";
 
 export const loader = indexLoader;
 
-export const meta: MetaFunction = () => {
-  const title = "Awesome Yasunori";
-  const description = "Welcome to awesome yasunori!";
+export const meta: MetaFunction = ({ location }) => {
+  const searchParams = new URLSearchParams(location.search);
+  const yasunori = searchParams.get("yasunori") ?? "Yasunori";
+  const title = `Awesome ${yasunori}`;
+  const description = `Welcome to awesome ${yasunori}!`;
   const url = "https://awesome.yasunori.dev";
   return [
     { title },
