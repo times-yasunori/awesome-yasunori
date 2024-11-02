@@ -56,6 +56,23 @@ const route = app
     }
     return c.json(randomItem(parsedAwesomeYasunori.output.yasunori));
   })
+  .post("/awesome/from-slack-text", async (c) => {
+    if (!parsedAwesomeYasunori.success) {
+      return c.text("yasunori.toml catnot parsed", 400);
+    }
+    const slackText = await c.req.text();
+    const latestEntry = parsedAwesomeYasunori.output.yasunori.at(-1);
+    if (!latestEntry) {
+      return c.text("Cannot find next id", 400);
+    }
+    const id = latestEntry.id + 1;
+    const lines = slackText.split("\n");
+    const [senpan, , title, ...restContents] = lines;
+    const date = new Date().toISOString().split("T").at(0);
+    const content = `${title}\n${restContents.join("\n")}`;
+    const tomlString = `[[yasunori]]\nid = ${id}\ntitle = "${title}"\ndate = "${date}"\nat = "vim-jp #times-yasunori"\nsenpan = "${senpan}"\ncontent = """\n${content}\n"""\nmeta = """\n"""\n`;
+    return c.text(tomlString);
+  })
   .get("/awesome/:id", async (c) => {
     const parsedParams = getParsedRequestParams(c.req.param());
     if (!parsedParams.success) {

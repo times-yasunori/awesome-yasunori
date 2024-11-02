@@ -118,3 +118,52 @@ describe("Test GET /awesome/random", () => {
     });
   });
 });
+
+describe("Test GET /awesome/from-slack-text", () => {
+  test("Should return 200 response", async () => {
+    const res = await app.request("/awesome/from-slack-text", {
+      method: "POST",
+    });
+    expect(res.status).toBe(200);
+  });
+
+  test("Should return YA toml response", async () => {
+    const res = await app.request("/awesome/from-slack-text", {
+      method: "POST",
+      body: `tomoya
+  21:06
+えっ、yasunori 知らないの？
+↑
+yasuhara`,
+    });
+    const parsed = await res.text();
+    expect(parsed).toStrictEqual(`[[yasunori]]
+id = 2
+title = "えっ、yasunori 知らないの？"
+date = "2024-11-02"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+えっ、yasunori 知らないの？
+↑
+yasuhara
+"""
+meta = """
+"""
+`);
+  });
+
+  test("Should return 404 error response if entry not found", async () => {
+    const res = await app.request("/awesome/0");
+    expect(res.status).toBe(404);
+    expect(await res.json()).toStrictEqual({ errors: ["not found"] });
+  });
+
+  test("Should return 404 error response if params is not number", async () => {
+    const res = await app.request("/awesome/id");
+    expect(res.status).toBe(404);
+    expect(await res.json()).toMatchObject({
+      errors: [{ type: "safe_integer" }],
+    });
+  });
+});
