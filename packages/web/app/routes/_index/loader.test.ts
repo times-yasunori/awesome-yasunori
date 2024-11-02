@@ -1,10 +1,18 @@
+import type { AppLoadContext, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { http, HttpResponse } from "msw";
 import { mockServer } from "../../../mocks/server";
 import { indexLoader } from "./loader";
 
 describe("indexLoader", () => {
   test("returns data", async () => {
-    const result = await indexLoader();
+    const loaderFunctionArgs: LoaderFunctionArgs = {
+      request: new Request("https://example.com", {
+        method: "GET",
+      }),
+      params: {},
+      context: {} as AppLoadContext,
+    };
+    const result = await indexLoader(loaderFunctionArgs);
     expect(result.length).toBe(12);
     expect(result.at(-1)).toStrictEqual({
       at: "vim-jp radioお便り",
@@ -26,6 +34,15 @@ describe("indexLoader", () => {
         });
       }),
     );
-    expect(indexLoader()).rejects.toEqual(new Response(null, { status: 404 }));
+    const loaderFunctionArgs: LoaderFunctionArgs = {
+      request: new Request("https://example.com", {
+        method: "GET",
+      }),
+      params: {},
+      context: {} as AppLoadContext,
+    };
+    expect(indexLoader(loaderFunctionArgs)).rejects.toEqual(
+      new Response(null, { status: 404 }),
+    );
   });
 });

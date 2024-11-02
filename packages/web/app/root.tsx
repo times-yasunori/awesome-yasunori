@@ -23,10 +23,12 @@ import {
   useMatches,
   useNavigate,
   useRouteLoaderData,
+  useSearchParams,
 } from "@remix-run/react";
 import "@mantine/core/styles.css";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import IconGitHubLogo from "~icons/tabler/brand-github";
 import IconGraph from "~icons/tabler/graph";
 import { YasunoriSpotlight } from "./components/yasunori-spotlight";
@@ -47,6 +49,21 @@ export const links: LinksFunction = () => [
   },
 ];
 
+/** yasunorized された yasunori を取得する
+ * URLクリエにyasunori=<not yasunori>をつけると、
+ * 先頭4文字を利用して Xxxxnori という文字列にします。
+ */
+function useYasunorizedYasunori() {
+  const [searchParams] = useSearchParams();
+  const yasunori = searchParams.get("yasunori");
+  return useMemo(() => {
+    if (!yasunori) return "Yasunori";
+    const firstChar = yasunori.slice(0, 1);
+    const secondChar = yasunori.slice(1, 4);
+    return `${firstChar.toUpperCase()}${secondChar}nori`;
+  }, [yasunori]);
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const data = useRouteLoaderData<IndexLoader>("routes/_index");
   const matches = useMatches();
@@ -56,6 +73,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const pinned = useHeadroom({ fixedAt: 120 });
   const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
+  const yasunorizedYasunori = useYasunorizedYasunori();
   return (
     <html lang="ja">
       <head>
@@ -119,7 +137,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                             repeat: Number.POSITIVE_INFINITY,
                           }}
                         >
-                          Yasunori
+                          {yasunorizedYasunori}
                         </motion.span>
                       </Button>
                     </Group>
