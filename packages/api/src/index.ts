@@ -29,7 +29,21 @@ const route = app
         400,
       );
     }
-    return c.json(parsedAwesomeYasunori.output.yasunori);
+    const yasunori = c.req.query("yasunori");
+    if (!yasunori) {
+      return c.json(parsedAwesomeYasunori.output.yasunori);
+    }
+    // 他のyasunoriが指定されたら、yasunoriを置換する
+    // 置換するのは title, content, meta の中身だけ
+    const replacedYasunori = parsedAwesomeYasunori.output.yasunori.map((ay) => {
+      return {
+        ...ay,
+        title: ay.title.replaceAll("yasunori", yasunori),
+        content: ay.content.replaceAll("yasunori", yasunori),
+        meta: ay.meta?.replaceAll("yasunori", yasunori),
+      };
+    });
+    return c.json(replacedYasunori);
   })
   .get("/awesome/random", async (c) => {
     if (!parsedAwesomeYasunori.success) {

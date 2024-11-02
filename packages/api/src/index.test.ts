@@ -36,6 +36,21 @@ describe("Test GET /awesome", () => {
       title: "yasunoriの母",
     });
   });
+
+  test("Should return entries replaced yasunori response", async () => {
+    const res = await app.request("/awesome?yasunori=takeokunn");
+    const parsed = await res.json<Array<unknown>>();
+    expect(parsed.at(-1)).toStrictEqual({
+      id: 1,
+      at: "vim-jp radioお便り",
+      content:
+        "tomoyaさん、ありすえさんこんにちは。\nはじめまして、takeokunnの母です。\n\ntakeokunnがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。\n家ですれ違う時「Vim....Vim....」という独り言をずっと唱えていたり、部屋からは「設定させていただきありがとうございます!!」という大声が聞こえてきたり、\n「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。\n\ntomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。\n",
+      date: "2024-06-25",
+      meta: "",
+      senpan: "takeokunn",
+      title: "takeokunnの母",
+    });
+  });
 });
 
 describe("Test GET /awesome/random", () => {
