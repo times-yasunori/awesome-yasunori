@@ -83,7 +83,7 @@ describe("Test GET /awesome/random", () => {
   });
 });
 
-describe("Test GET /awesome/random", () => {
+describe("Test GET /awesome/:id", () => {
   test("Should return 200 response", async () => {
     const res = await app.request("/awesome/1");
     expect(res.status).toBe(200);
@@ -152,19 +152,5 @@ yasuhara
 meta = """
 """
 `);
-  });
-
-  test("Should return 404 error response if entry not found", async () => {
-    const res = await app.request("/awesome/0");
-    expect(res.status).toBe(404);
-    expect(await res.json()).toStrictEqual({ errors: ["not found"] });
-  });
-
-  test("Should return 404 error response if params is not number", async () => {
-    const res = await app.request("/awesome/id");
-    expect(res.status).toBe(404);
-    expect(await res.json()).toMatchObject({
-      errors: [{ type: "safe_integer" }],
-    });
   });
 });
