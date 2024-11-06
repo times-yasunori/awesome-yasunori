@@ -154,4 +154,25 @@ meta = """
 """
 `);
   });
+
+  test("Should return blank YA toml response", async () => {
+    const res = await app.request("/awesome/from-slack-text", {
+      method: "POST",
+    });
+    const parsed = await res.text();
+    const today = new Date().toISOString().split("T").at(0);
+    const [header, id, ...rest] = parsed.split("\n");
+    expect(header).toStrictEqual("[[yasunori]]");
+    expect(id).toMatch("id = "); // いまのテスト環境だとidが変化するため値のテストはできない
+    expect(rest.join("\n")).toStrictEqual(`title = ""
+date = "${today}"
+at = "vim-jp #times-yasunori"
+senpan = ""
+content = """
+
+"""
+meta = """
+"""
+`);
+  });
 });

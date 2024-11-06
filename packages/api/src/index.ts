@@ -69,9 +69,9 @@ const route = app
     }
     const id = latestEntry.id + 1;
     const lines = slackText.split("\n");
-    const [senpan, , title, ...restContents] = lines;
+    const [senpan, , title = "", ...restContents] = lines;
     const date = new Date().toISOString().split("T").at(0);
-    const content = `${title}\n${restContents.join("\n")}`;
+    const content = title ? `${title}\n${restContents.join("\n")}` : "";
     const tomlString = `[[yasunori]]\nid = ${id}\ntitle = "${title}"\ndate = "${date}"\nat = "vim-jp #times-yasunori"\nsenpan = "${senpan}"\ncontent = """\n${content}\n"""\nmeta = """\n"""\n`;
     return c.text(tomlString);
   })
