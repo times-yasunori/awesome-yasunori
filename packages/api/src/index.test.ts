@@ -83,7 +83,7 @@ describe("Test GET /awesome/random", () => {
   });
 });
 
-describe("Test GET /awesome/random", () => {
+describe("Test GET /awesome/:id", () => {
   test("Should return 200 response", async () => {
     const res = await app.request("/awesome/1");
     expect(res.status).toBe(200);
@@ -137,11 +137,12 @@ describe("Test POST /awesome/from-slack-text", () => {
 yasuhara`,
     });
     const parsed = await res.text();
+    const today = new Date().toISOString().split("T").at(0);
     const [header, id, ...rest] = parsed.split("\n");
     expect(header).toStrictEqual("[[yasunori]]");
     expect(id).toMatch("id = "); // いまのテスト環境だとidが変化するため値のテストはできない
     expect(rest.join("\n")).toStrictEqual(`title = "えっ、yasunori 知らないの？"
-date = "2024-11-02"
+date = "${today}"
 at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
@@ -154,17 +155,24 @@ meta = """
 `);
   });
 
-  test("Should return 404 error response if entry not found", async () => {
-    const res = await app.request("/awesome/0");
-    expect(res.status).toBe(404);
-    expect(await res.json()).toStrictEqual({ errors: ["not found"] });
-  });
-
-  test("Should return 404 error response if params is not number", async () => {
-    const res = await app.request("/awesome/id");
-    expect(res.status).toBe(404);
-    expect(await res.json()).toMatchObject({
-      errors: [{ type: "safe_integer" }],
+  test("Should return blank YA toml response", async () => {
+    const res = await app.request("/awesome/from-slack-text", {
+      method: "POST",
     });
+    const parsed = await res.text();
+    const today = new Date().toISOString().split("T").at(0);
+    const [header, id, ...rest] = parsed.split("\n");
+    expect(header).toStrictEqual("[[yasunori]]");
+    expect(id).toMatch("id = "); // いまのテスト環境だとidが変化するため値のテストはできない
+    expect(rest.join("\n")).toStrictEqual(`title = ""
+date = "${today}"
+at = "vim-jp #times-yasunori"
+senpan = ""
+content = """
+
+"""
+meta = """
+"""
+`);
   });
 });
