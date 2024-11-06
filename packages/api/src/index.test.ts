@@ -137,11 +137,12 @@ describe("Test POST /awesome/from-slack-text", () => {
 yasuhara`,
     });
     const parsed = await res.text();
+    const today = new Date().toISOString().split("T").at(0);
     const [header, id, ...rest] = parsed.split("\n");
     expect(header).toStrictEqual("[[yasunori]]");
     expect(id).toMatch("id = "); // いまのテスト環境だとidが変化するため値のテストはできない
     expect(rest.join("\n")).toStrictEqual(`title = "えっ、yasunori 知らないの？"
-date = "2024-11-02"
+date = "${today}"
 at = "vim-jp #times-yasunori"
 senpan = "tomoya"
 content = """
