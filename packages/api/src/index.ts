@@ -63,7 +63,7 @@ const route = app
     const slackText = await c.req.text();
     const latestEntry = parsedAwesomeYasunori.output.yasunori
       .sort((a, b) => b.id - a.id)
-      .at(1);
+      .at(0);
     if (!latestEntry) {
       return c.text("Cannot find next id", 400);
     }
