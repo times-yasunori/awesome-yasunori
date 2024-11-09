@@ -85,6 +85,13 @@ https://cljs-breakout.yasunori.dev
 
 It's being developed in [packages/cljs-yasunori-block](./packages/cljs-yasunori-block).
 
+### [be-yasu](./packages/be-yasu)
+![](./images/be-yasu.png)
+
+be-yasu is a CLI command that replace the noun in given text with "yasunori".
+
+It's being developed in [packages/be-yasu](./packages/be-yasu).
+
 ## License
 
 MIT

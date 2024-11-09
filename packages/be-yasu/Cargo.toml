@@ -1,0 +1,11 @@
+[package]
+name = "be-yasu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+colored = "2.1.0"
+inquire = "0.7.5"
+vibrato = "0.5.1"
+zstd = "0.13.2"
