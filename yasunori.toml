@@ -1,4 +1,17 @@
 [[yasunori]]
+id = 80
+title = "yasunoriになったこと後悔してる"
+date = "2024-11-22"
+at = "ヤスノリプラザ"
+senpan = "takeokunn"
+content = """
+yasunori 「yasunoriになったこと後悔してる」
+"""
+meta = """
+yasunori 「後悔させない」
+"""
+
+[[yasunori]]
 id = 79
 title = "俺はyasunoriにならない"
 date = "2024-11-22"
@@ -8,7 +21,6 @@ content = """
 yasunori 「お前もyasunoriにならないか」
 takeokunn 「俺はyasunoriにならない」
 """
-
 meta = """
 """
 
