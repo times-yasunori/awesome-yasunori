@@ -1,5 +1,5 @@
 [[yasunori]]
-id = 79
+id = 80
 title = "yasunoriになったこと後悔してる"
 date = "2024-11-22"
 at = "ヤスノリプラザ"
@@ -7,13 +7,12 @@ senpan = "takeokunn"
 content = """
 yasunori 「yasunoriになったこと後悔してる」
 """
-
 meta = """
 yasunori 「後悔させない」
 """
 
 [[yasunori]]
-id = 78
+id = 79
 title = "俺はyasunoriにならない"
 date = "2024-11-22"
 at = "ヤスノリプラザ"
@@ -22,10 +21,34 @@ content = """
 yasunori 「お前もyasunoriにならないか」
 takeokunn 「俺はyasunoriにならない」
 """
-
 meta = """
 """
 
+[[yasunori]]
+id = 78
+title = "AIに生成された次回予告"
+date = "2024-11-20"
+at = "vim-jp #times-0delta"
+senpan = "0Delta"
+content = """
+決意の瞬間
+「無茶苦茶だ！こんなOSで機体を動かすなんて！」
+キラ・yasunoriの叫びが響く。だがその背後には、揺るぎない信念があった。
+「まだ、終わってないのよ。」
+マリューの言葉に奮い立ち、彼はポケットからUSBメモリーを取り出す。
+「NixOSのインストーラがここにある。」
+その瞬間、周囲は静まり返る。全てが彼を見守っている。
+数々の困難を乗り越えた「yasunori」の力で、彼は再起動を決意する。
+「よし！NixOSで再起動だ！」
+青い光が包み込む中、キラ・yasunoriの瞳には決意が宿っていた。
+次回、起動エディタVim-jp『無敵のコード』
+自らの力を信じて、初期化せよ！ yasunori！
+"""
+meta = """
+- memo
+  - 次回予告はChatGPTさんに生成した
+  - 元ネタ: [#40 AIに生成されたyasunori(https://awesome.yasunori.dev/entries/40)
+"""
 
 [[yasunori]]
 id = 77
