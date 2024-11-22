@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 78
+title = "俺はyasunoriにならない"
+date = "2024-11-22"
+at = "ヤスノリプラザ"
+senpan = "takeokunn"
+content = """
+yasunori 「お前もyasunoriにならないか」
+takeokunn 「俺はyasunoriにならない」
+"""
+
+meta = """
+"""
+
+
+[[yasunori]]
 id = 77
 title = "yasunori meetup #3 アジェンダ"
 date = "2024-11-20"
