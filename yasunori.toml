@@ -1,4 +1,28 @@
 [[yasunori]]
+id = 77
+title = "yasunori meetup #3 アジェンダ"
+date = "2024-11-20"
+at = "vim-jp #times-yasunori"
+senpan = "tomoya"
+content = """
+乾杯の挨拶（yasunori @takeokunn）
+
+キーノート1: yasunori 活動報告（yasunori (原義)）
+
+LT1: Nixとyasunori（yasunori @natsukium）
+LT2: Clojureとyasunori（@conao3）
+LT3: Nostrとyasunori（@hakkadaikon）
+
+キーノート2: yasunori たちの今後 (@tomoya)
+
+クロージングセッション: @kuu（思念体）
+
+解散、そして2次会へ
+"""
+meta = """
+"""
+
+[[yasunori]]
 id = 76
 title = "yasunoriしようか"
 date = "2024-11-01"
