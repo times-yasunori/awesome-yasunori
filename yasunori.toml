@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 79
+title = "俺はyasunoriにならない"
+date = "2024-11-22"
+at = "ヤスノリプラザ"
+senpan = "takeokunn"
+content = """
+yasunori 「お前もyasunoriにならないか」
+takeokunn 「俺はyasunoriにならない」
+"""
+
+meta = """
+"""
+
+[[yasunori]]
 id = 78
 title = "AIに生成された次回予告"
 date = "2024-11-20"
