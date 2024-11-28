@@ -1,4 +1,19 @@
 [[yasunori]]
+id = 100
+title = "6yasunoriくらいか… "
+date = "2024-11-28"
+at = "vim-jp #times-yasunori"
+senpan = "yasunori0418"
+content = """
+あの…って言おうと思ったけど6yasunoriくらいか…
+と思った
+"""
+meta = """
+- memo
+  - vim-jp Slackではなぜか日々yasunoriという単語が飛び交っているので感覚が麻痺している
+"""
+
+[[yasunori]]
 id = 99
 title = "ヤスノリパラダイス　~ 花盛りのyasunori たちへ ~"
 date = "2024-11-28"
