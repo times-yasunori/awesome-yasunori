@@ -5,6 +5,9 @@
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@9.11.0",
+  "exports": {
+    "./client": "./src/client.ts"
+  },
   "scripts": {
     "generate:json": "touch ./src/awesome-yasunori.json && node ./script/generate-awesome-yasunori-json.js",
     "dev": "vite --port 5183",
