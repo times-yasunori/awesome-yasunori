@@ -1,1 +1,1 @@
-export * from "@awesome-yasunori/api/src/client";
+export * from "@awesome-yasunori/api/client";
