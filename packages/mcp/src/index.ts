@@ -10,6 +10,22 @@ export const server = new McpServer({
   version: "0.1.0",
 });
 
+server.tool("getAllAwesomeYasunori", "get all awesome yasunori", async () => {
+  const res = await client.awesome.$get();
+  if (!res.ok) {
+    throw new Error("Failed to get all awesome yasunori");
+  }
+  const allYasunori = await res.json();
+  return {
+    content: [
+      {
+        type: "text",
+        text: `Here are all awesome yasunori: ${JSON.stringify(allYasunori)}`,
+      },
+    ],
+  };
+});
+
 server.tool(
   "getRandomAwesomeYasunori",
   "get random awesome yasunori",
