@@ -25,7 +25,6 @@ describe("getAllAwesomeYasunori", async () => {
     name: "getAllAwesomeYasunori",
     arguments: {},
   });
-  console.log(result);
 
   // expect the result to be a string
   expect(result).toEqual({
@@ -60,7 +59,6 @@ describe("getRandomAwesomeYasunori", async () => {
     name: "getRandomAwesomeYasunori",
     arguments: {},
   });
-  console.log(result);
 
   // expect the result to be a string
   expect(result).toEqual({
