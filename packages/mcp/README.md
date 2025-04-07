@@ -32,8 +32,7 @@ The below example is for Claude Desktop.
 pnpm build
 ```
 
-You can find the builded server in `packages/mcp/dist/index.mjs`.
-
+You can find the built server in `packages/mcp/dist/index.mjs`.
 2.2.2 Register the server to your MCP client
 
 Edit the configuration file of your MCP client.
