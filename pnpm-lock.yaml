@@ -91,6 +91,9 @@ importers:
 
   packages/mcp:
     dependencies:
+      '@awesome-yasunori/api':
+        specifier: workspace:*
+        version: link:../api
       '@modelcontextprotocol/sdk':
         specifier: ^1.9.0
         version: 1.9.0
