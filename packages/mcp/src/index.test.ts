@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { server } from "./index.js";
 
 describe("getRandomAwesomeYasunori", () => {
-  it("get random awesome yasunori", async () => {
+  it("get a random awesome yasunori", async () => {
     // create client for testing
     const client = new Client({
       name: "test client",
