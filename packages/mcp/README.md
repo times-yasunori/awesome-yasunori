@@ -4,7 +4,7 @@ https://github.com/user-attachments/assets/670ee49e-9426-46a3-a373-1539190454d0
 
 ## How to use
 
-1. Build the cli tool
+1. Clone the repository
 ```bash
 git clone https://github.com/times-yasunori/awesome-yasunori.git
 cd awesome-yasunori
