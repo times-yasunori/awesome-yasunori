@@ -46,6 +46,29 @@ server.tool(
   },
 );
 
+server.tool(
+  "getAwesomeYasunoriById",
+  "get awesome yasunori by id",
+  { id: z.number().int().min(0).describe("Awesome Yasunori ID") },
+  async ({ id }) => {
+    const res = await client.awesome[":id"].$get({
+      param: { id: id.toString() },
+    });
+    if (!res.ok) {
+      throw new Error("Failed to get awesome yasunori by id");
+    }
+    const awesomeYasunori = await res.json();
+    return {
+      content: [
+        {
+          type: "text",
+          text: `Here is the ${id}th awesome yasunori: ${JSON.stringify(awesomeYasunori)}`,
+        },
+      ],
+    };
+  },
+);
+
 // mainなら、サーバーを起動する
 if (esMain(import.meta)) {
   const transport = new StdioServerTransport();
