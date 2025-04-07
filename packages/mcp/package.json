@@ -4,9 +4,12 @@
   "description": "awesome yasunori mcp",
   "type": "module",
   "main": "src/index.ts",
+  "bin": "./dist/index.mjs",
   "scripts": {
-    "test": "vitest",
-    "start": "tsx src/index.ts"
+    "build": "unbuild",
+    "dev": "tsx src/index.ts",
+    "start": "node ./dist/index.mjs",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
     "@types/node": "^22.14.0",
     "tsx": "^4.19.3",
     "typescript": "^5.6.3",
+    "unbuild": "^3.5.0",
     "vitest": "^2.1.1"
   }
 }
