@@ -6,6 +6,7 @@ export default defineBuildConfig({
     output: {
       banner: "#!/usr/bin/env node\n",
     },
+    inlineDependencies: ["@awesome-yasunori/api", "hono/client"],
   },
   hooks: {
     "build:done": (ctx) => {
