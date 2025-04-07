@@ -6,6 +6,7 @@ export default defineBuildConfig({
     output: {
       banner: "#!/usr/bin/env node\n",
     },
+    // バンドルするdependencyを明示的に指定
     inlineDependencies: ["@awesome-yasunori/api", "hono/client"],
   },
   hooks: {
