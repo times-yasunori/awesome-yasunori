@@ -100,7 +100,6 @@ describe("getAwesomeYasunoriById", () => {
       name: "getAwesomeYasunoriById",
       arguments: { id: 1 },
     });
-    console.log(result);
 
     // expect the result to be a string
     expect(result).toEqual({
