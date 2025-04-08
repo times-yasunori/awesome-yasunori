@@ -1,5 +1,6 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
+import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { server } from "./index.js";
 
 test("getAllAwesomeYasunori", async () => {
@@ -25,15 +26,28 @@ test("getAllAwesomeYasunori", async () => {
     arguments: {},
   });
 
-  // expect the result to be a string
-  expect(result).toEqual({
-    content: [
-      {
-        type: "text",
-        text: expect.stringContaining("all awesome yasunori"),
-      },
-    ],
-  });
+  // check the result is a CallToolResult
+  expect(result).toHaveProperty("content");
+
+  const content = result.content as CallToolResult["content"];
+
+  // check the content length is 1
+  expect(result.content).toHaveLength(1);
+
+  // check the content is a string
+  expect(content[0]).toHaveProperty("type", "text");
+
+  // check the content is a string type
+  expect(content[0].type).toStrictEqual("text");
+
+  // check the content includes "awesome yasunori"
+  expect(content[0].text).toContain("id: ");
+  expect(content[0].text).toContain("title: ");
+  expect(content[0].text).toContain("date: ");
+  expect(content[0].text).toContain("at: ");
+  expect(content[0].text).toContain("senpan: ");
+  expect(content[0].text).toContain("content: ");
+  expect(content[0].text).toContain("yasunoriはおもちゃ");
 });
 
 test("getRandomAwesomeYasunori", async () => {
@@ -59,15 +73,26 @@ test("getRandomAwesomeYasunori", async () => {
     arguments: {},
   });
 
-  // expect the result to be a string
-  expect(result).toEqual({
-    content: [
-      {
-        type: "text",
-        text: expect.stringContaining("random awesome yasunori"),
-      },
-    ],
-  });
+  // check the result is a CallToolResult
+  expect(result).toHaveProperty("content");
+  const content = result.content as CallToolResult["content"];
+
+  // check the content length is 1
+  expect(result.content).toHaveLength(1);
+
+  // check the content is a string
+  expect(content[0]).toHaveProperty("type", "text");
+
+  // check the content is a string type
+  expect(content[0].type).toStrictEqual("text");
+
+  // check the content includes "awesome yasunori"
+  expect(content[0].text).toContain("id: ");
+  expect(content[0].text).toContain("title: ");
+  expect(content[0].text).toContain("date: ");
+  expect(content[0].text).toContain("at: ");
+  expect(content[0].text).toContain("senpan: ");
+  expect(content[0].text).toContain("content: ");
 });
 
 test("getAwesomeYasunoriById", async () => {
@@ -93,17 +118,24 @@ test("getAwesomeYasunoriById", async () => {
     arguments: { id: 1 },
   });
 
-  // expect the result to be a string
-  expect(result).toEqual({
-    content: [
-      {
-        type: "text",
-        text: expect.stringContaining(
-          JSON.stringify(
-            "tomoyaさん、ありすえさんこんにちは。\nはじめまして、yasunoriの母です。\n\nyasunoriがソフトウェアエンジニアを志してから様子がおかしくなってしまいました。\n家ですれ違う時「Vim....Vim....」という独り言をずっと唱えていたり、部屋からは「設定させていただきありがとうございます!!」という大声が聞こえてきたり、\n「会合があるから東京に行ってくる、帰りは遅くなる」と言い残して出て行き、帰ってくると満面の笑みで「Vimはいいぞ」と一言言って自室に篭るようになりました。\n\ntomoyaさんありすえさんもVimコミュニティの人達だと伺いましたが、息子の身に一体何が起きてしまったのか教えていただけると幸いです。\n",
-          ),
-        ),
-      },
-    ],
-  });
+  // check the result is a CallToolResult
+  expect(result).toHaveProperty("content");
+  const content = result.content as CallToolResult["content"];
+
+  // check the content length is 1
+  expect(result.content).toHaveLength(1);
+  // check the content is a string
+  expect(content[0]).toHaveProperty("type", "text");
+
+  // check the content is a string type
+  expect(content[0].type).toStrictEqual("text");
+
+  // check the content includes 1st awesome yasunori
+  expect(content[0].text).toContain("id: 1");
+  expect(content[0].text).toContain("title: yasunoriの母");
+  expect(content[0].text).toContain("date: '2024-06-25'");
+  expect(content[0].text).toContain("at: vim-jp radioお便り");
+  expect(content[0].text).toContain("senpan: takeokunn");
+  expect(content[0].text).toContain("content: ");
+  expect(content[0].text).toContain("tomoyaさん、ありすえさんこんにちは");
 });

@@ -1,6 +1,7 @@
-import { client as AYClient, client } from "@awesome-yasunori/api/client";
+import { client } from "@awesome-yasunori/api/client";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { stringify } from "@std/yaml";
 import esMain from "es-main";
 import { z } from "zod";
 
@@ -20,7 +21,7 @@ server.tool("getAllAwesomeYasunori", "get all awesome yasunori", async () => {
     content: [
       {
         type: "text",
-        text: `Here are all awesome yasunori: ${JSON.stringify(allYasunori)}`,
+        text: stringify(allYasunori),
       },
     ],
   };
@@ -39,7 +40,7 @@ server.tool(
       content: [
         {
           type: "text",
-          text: `Here is a random awesome yasunori: ${JSON.stringify(randomYasunori)}`,
+          text: stringify(randomYasunori),
         },
       ],
     };
@@ -62,7 +63,7 @@ server.tool(
       content: [
         {
           type: "text",
-          text: `Here is the ${id}th awesome yasunori: ${JSON.stringify(awesomeYasunori)}`,
+          text: stringify(awesomeYasunori),
         },
       ],
     };
