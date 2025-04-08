@@ -9,7 +9,8 @@
     "build": "tsdown",
     "dev": "tsx src/index.ts",
     "start": "node ./dist/index.mjs",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
