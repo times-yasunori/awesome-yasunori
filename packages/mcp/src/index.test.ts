@@ -1,9 +1,9 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
-import { describe, expect, it } from "vitest";
+import { expect, test } from "vitest";
 import { server } from "./index.js";
 
-describe("getAllAwesomeYasunori", async () => {
+test("getAllAwesomeYasunori", async () => {
   // create client for testing
   const client = new Client({
     name: "test client",
@@ -37,7 +37,7 @@ describe("getAllAwesomeYasunori", async () => {
   });
 });
 
-describe("getRandomAwesomeYasunori", async () => {
+test("getRandomAwesomeYasunori", async () => {
   // create client for testing
   const client = new Client({
     name: "test client",
@@ -71,7 +71,7 @@ describe("getRandomAwesomeYasunori", async () => {
   });
 });
 
-describe("getAwesomeYasunoriById", async () => {
+test("getAwesomeYasunoriById", async () => {
   // create client for testing
   const client = new Client({
     name: "test client",
