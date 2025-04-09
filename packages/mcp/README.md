@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/670ee49e-9426-46a3-a373-1539190454d0
 
 You have two ways to use MCP servers.
 
-0. Get the latest version from pkg.pr.new
+### Get the latest version from pkg.pr.new
 
 ```json
 {
@@ -22,7 +22,8 @@ You have two ways to use MCP servers.
 }
 ```
 
-1. Build the server from source
+### Build the server from source
+
 1.1 Clone the repository
 ```bash
 git clone https://github.com/times-yasunori/awesome-yasunori.git
