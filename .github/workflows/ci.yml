@@ -134,7 +134,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: publish
-        run: pnpm dlx pkg-pr-new publish --pnpm './packages/*'
+        run: pnpm dlx pkg-pr-new publish --pnpm './packages/mcp'
 
   test-YasunoriDotNET:
     name: Build & Test Yasunori.NET
