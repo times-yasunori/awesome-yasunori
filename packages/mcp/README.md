@@ -39,7 +39,6 @@ Edit the configuration file of your MCP client.
 
 ```json
 {
-  "globalShortcut": "Alt+Ctrl+Space",
   "mcpServers": {
     "awesome-yasunori": {
       "command": "node",
@@ -55,7 +54,6 @@ or you can use published version on pkg.pr.new.
 
 ```json
 {
-  "globalShortcut": "Alt+Ctrl+Space",
   "mcpServers": {
     "awesome-yasunori": {
       "command": "npx",
