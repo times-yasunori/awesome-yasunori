@@ -49,7 +49,23 @@ Edit the configuration file of your MCP client.
     }
   }
 }
+```
 
+or you can use published version on pkg.pr.new.
+
+```json
+{
+  "globalShortcut": "Alt+Ctrl+Space",
+  "mcpServers": {
+    "awesome-yasunori": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "https://pkg.pr.new/times-yasunori/awesome-yasunori/mcp@172" // you can check the latest version on pkg.pr.new
+      ]
+    }
+  }
+}
 ```
 
 2.2.3 Run the MCP client
