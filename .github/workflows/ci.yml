@@ -125,6 +125,16 @@ jobs:
         run: pnpm run typecheck
       - name: Lint
         run: pnpm run lint
+  pkg-pr-new-for-mcp:
+    name: draft publish packages with pkg.pr.new 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: publish
+        run: pnpm dlx pkg-pr-new publish --pnpm './packages/*'
+
   test-YasunoriDotNET:
     name: Build & Test Yasunori.NET
     runs-on: ubuntu-latest
