@@ -22,7 +22,7 @@
     "deploy:api": "pnpm --filter \"@awesome-yasunori/api\" deploy",
     "deploy:web": "pnpm --filter \"@awesome-yasunori/web\" deploy"
   },
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.15.9",
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "husky": "^9.1.6",
