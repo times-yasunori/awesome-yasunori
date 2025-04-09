@@ -113,8 +113,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Test
         run: pnpm test
-  lint-api-and-web:
-    name: Lint API & Web
+  lint-api-mcp-and-web:
+    name: Lint API, MCP and Web
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -125,6 +125,17 @@ jobs:
         run: pnpm run typecheck
       - name: Lint
         run: pnpm run lint
+  pkg-pr-new-for-mcp:
+    name: draft publish packages with pkg.pr.new 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: publish
+        run: pnpm dlx pkg-pr-new publish --pnpm './packages/mcp'
+
   test-YasunoriDotNET:
     name: Build & Test Yasunori.NET
     runs-on: ubuntu-latest
