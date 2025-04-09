@@ -103,6 +103,9 @@ importers:
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
+      clean-pkg-json:
+        specifier: ^1.2.1
+        version: 1.2.1
       es-main:
         specifier: ^1.3.0
         version: 1.3.0
@@ -2240,6 +2243,10 @@ packages:
   chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+
+  clean-pkg-json@1.2.1:
+    resolution: {integrity: sha512-zvQBW4bCn/49SrPI3jj446QugNC3iub/9ZeFKBsCtFxxMRAlyuXTw1I5EqoOLfG1i5261Z4hKLayquHIo+/2HA==}
+    hasBin: true
 
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
@@ -7046,6 +7053,8 @@ snapshots:
   chownr@1.1.4: {}
 
   chownr@2.0.0: {}
+
+  clean-pkg-json@1.2.1: {}
 
   clean-stack@2.2.0: {}
 
