@@ -85,6 +85,16 @@ https://cljs-breakout.yasunori.dev
 
 It's being developed in [packages/cljs-yasunori-block](./packages/cljs-yasunori-block).
 
+### [Awesome Yasunori MCP](./packages/mcp/)
+
+![](./images/mcp.png)
+
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) for Yasunori API.
+
+You can ask any questions about Awesome Yasunori with LLM!
+
+It's being developed in [packages/mcp](./packages/mcp).
+
 ## License
 
 MIT
