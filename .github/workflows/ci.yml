@@ -113,8 +113,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Test
         run: pnpm test
-  lint-api-and-web:
-    name: Lint API & Web
+  lint-api-mcp-and-web:
+    name: Lint API, MCP and Web
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
