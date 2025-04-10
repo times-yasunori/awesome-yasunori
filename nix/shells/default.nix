@@ -1,6 +1,6 @@
 {
   perSystem =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       devShells = {
         default = pkgs.mkShellNoCC {
@@ -14,6 +14,10 @@
           shellHook = ''
             ${pkgs.figlet}/bin/figlet AWESOME YASUNORI
           '';
+          inputsFrom = [
+            config.pre-commit.devShell
+            config.treefmt.build.devShell
+          ];
         };
       };
     };

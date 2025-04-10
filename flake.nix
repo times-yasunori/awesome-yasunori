@@ -5,6 +5,7 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
     systems.url = "github:nix-systems/default";
+    git-hooks-nix.url = "github:cachix/git-hooks.nix";
   };
 
   nixConfig = {
@@ -21,17 +22,36 @@
       nixpkgs,
       treefmt-nix,
       flake-parts,
+      git-hooks-nix,
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         treefmt-nix.flakeModule
+        git-hooks-nix.flakeModule
         ./nix
       ];
       systems = import systems;
 
       perSystem =
-        { pkgs, ... }:
+        { pkgs, config, ... }:
         {
+          checks = config.packages // {
+            devShell = config.devShells.default;
+          };
+          pre-commit = {
+            check = {
+              enable = true;
+            };
+            settings = {
+              src = ./.;
+              hooks = {
+                treefmt = {
+                  enable = true;
+                  packageOverrides.treefmt = config.treefmt.build.wrapper;
+                };
+              };
+            };
+          };
           treefmt = {
             projectRootFile = "flake.nix";
             programs = {
