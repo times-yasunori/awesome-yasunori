@@ -12,7 +12,7 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "yasunori-${packageJson.name}";
   version = packageJson.version;
-  src = nix-gitignore.gitignoreSource [ "node_modules/" "*.nix" "flake.lock" ] (
+  src = nix-gitignore.gitignoreSource [ "node_modules/" "*.nix" "flake.lock" ".github" ] (
     lib.cleanSource baseDir
   );
   nativeBuildInputs = [
