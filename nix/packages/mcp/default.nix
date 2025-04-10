@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
       pnpmWorkspaces
       prePnpmInstall
       ;
-    hash = "sha256-AvssztEfiM6Q08cEBzrwHvii+DmexgwtOPhV9Yp12uY=";
+    hash = "sha256-KJX8ie6pNKy2HBPsZahBGF96otHdZJWBSUcPc803bXo=";
   };
   patchPhase = ''
     sed -i "/use-node-version/d" .npmrc
