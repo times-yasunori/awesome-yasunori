@@ -3,6 +3,7 @@
   lib,
   pnpm,
   nodejs,
+  nix-gitignore,
 }:
 let
   baseDir = ../../../.;
@@ -11,7 +12,9 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "yasunori-${packageJson.name}";
   version = packageJson.version;
-  src = lib.cleanSource baseDir;
+  src = nix-gitignore.gitignoreSource [ "node_modules/" "*.nix" "flake.lock" ] (
+    lib.cleanSource baseDir
+  );
   nativeBuildInputs = [
     pnpm.configHook
     nodejs
