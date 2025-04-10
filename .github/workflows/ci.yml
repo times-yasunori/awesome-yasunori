@@ -30,7 +30,10 @@ jobs:
           ./actionlint -color
   nix-flake:
     name: Nix Flake Check
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
