@@ -12,9 +12,22 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "yasunori-${packageJson.name}";
   version = packageJson.version;
-  src = nix-gitignore.gitignoreSource [ "node_modules/" "*.nix" "flake.lock" ".github" ] (
-    lib.cleanSource baseDir
-  );
+  src = nix-gitignore.gitignoreSource [
+    "*"
+    "!yasunori.toml"
+    "!pnpm-lock.yaml"
+    "!pnpm-workspace.yaml"
+    "!packages"
+    "!packages/api"
+    "!packages/api/**"
+    "!packages/api/script/**"
+    "!packages/api/src/**"
+    "packages/api/src/awesome-yasunori.json"
+    "!packages/mcp"
+    "!packages/mcp/**"
+    "!packages/mcp/src/**"
+    "!.npmrc"
+  ] (lib.cleanSource baseDir);
   nativeBuildInputs = [
     pnpm.configHook
     nodejs
