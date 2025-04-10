@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
-import * as path from "node:path";
 import { defineConfig } from "tsdown";
+import { bin } from "./package.json";
 
 export default defineConfig({
   entry: ["src/index.ts"],
@@ -12,8 +12,8 @@ export default defineConfig({
   },
   dts: false,
   clean: true,
-  onSuccess: ({ outDir }) => {
+  onSuccess: () => {
     // Make the output file executable
-    fs.chmodSync(path.join(outDir, "index.mjs"), 0o755);
+    fs.chmodSync(bin, 0o755);
   },
 });

@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsx src/index.ts",
-    "start": "node ./dist/index.mjs",
+    "start": "./dist/index.mjs",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepack": "npm run build && clean-pkg-json"
