@@ -8,6 +8,7 @@
           awesome-yasunori = ../..;
         };
         yasunori-net = pkgs.callPackage ./yasunori-net { };
+        yasunori-mcp = pkgs.callPackage ./mcp { };
       };
     };
 }
