@@ -1,9 +1,9 @@
 import * as fs from "node:fs";
 import { defineConfig } from "tsdown";
-import { bin } from "./package.json";
+import { bin, main } from "./package.json";
 
 export default defineConfig({
-  entry: ["src/index.ts"],
+  entry: [main],
   outDir: "dist",
   format: ["esm"],
   fixedExtension: true,
