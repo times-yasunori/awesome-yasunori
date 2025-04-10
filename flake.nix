@@ -54,6 +54,7 @@
           };
           treefmt = {
             projectRootFile = "flake.nix";
+            flakeCheck = false;
             programs = {
               nixfmt.enable = true;
               taplo.enable = true;
