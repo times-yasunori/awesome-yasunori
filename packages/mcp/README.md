@@ -15,7 +15,7 @@ You have two ways to use MCP servers.
       "command": "npx",
       "args": [
         "-y",
-        "https://pkg.pr.new/times-yasunori/awesome-yasunori/mcp@172" // you can check the latest version on pkg.pr.new
+        "https://pkg.pr.new/times-yasunori/awesome-yasunori/mcp@180" // you can check the latest version on pkg.pr.new
       ]
     }
   }
