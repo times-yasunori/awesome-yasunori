@@ -37,7 +37,7 @@ cd packages/mcp
 pnpm build
 ```
 
-You can find the built server in `packages/mcp/dist/index.mjs`.
+You can find the built server in `packages/mcp/dist/cli.mjs`.
 
 1.3  Register the server to your MCP client
 

@@ -1,8 +1,6 @@
 import { client } from "@awesome-yasunori/api/client";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { stringify } from "@std/yaml";
-import esMain from "es-main";
 import { z } from "zod";
 
 // サーバーインスタンスの作成
@@ -69,11 +67,3 @@ server.tool(
     };
   },
 );
-
-// mainなら、サーバーを起動する
-if (esMain(import.meta)) {
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-  // 標準出力をするとサーバーのレスポンスとして解釈されてしまうので、標準エラー出力に出力する
-  console.error("MCP Server running on stdio");
-}

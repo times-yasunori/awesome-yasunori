@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "awesome yasunori mcp",
   "type": "module",
-  "main": "src/index.ts",
-  "bin": "./dist/index.mjs",
+  "main": "src/cli.ts",
+  "bin": "./dist/cli.mjs",
   "scripts": {
     "build": "tsdown",
     "dev": "tsx src/index.ts",
