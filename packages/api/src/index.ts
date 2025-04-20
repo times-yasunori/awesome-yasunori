@@ -75,6 +75,21 @@ const route = app
     const tomlString = `[[yasunori]]\nid = ${id}\ntitle = "${title}"\ndate = "${date}"\nat = "vim-jp #times-yasunori"\nsenpan = "${senpan}"\ncontent = """\n${content}\n"""\nmeta = """\n"""\n`;
     return c.text(tomlString);
   })
+  .get("/awesome/list", async (c) => {
+    if (!parsedAwesomeYasunori.success) {
+      return c.json(
+        {
+          errors: parsedAwesomeYasunori.issues,
+        },
+        400,
+      );
+    }
+
+    const entry = parsedAwesomeYasunori.output.yasunori.map(
+      ({ id, title }) => ({ id, title }),
+    );
+    return c.json(entry);
+  })
   .get("/awesome/:id", async (c) => {
     const parsedParams = getParsedRequestParams(c.req.param());
     if (!parsedParams.success) {
