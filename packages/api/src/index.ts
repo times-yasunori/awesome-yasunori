@@ -4,7 +4,7 @@ import { poweredBy } from "hono/powered-by";
 import { prettyJSON } from "hono/pretty-json";
 import randomItem from "random-item";
 import { getParsedAwesomeYasunori } from "./get-parsed-awesome-yasunori";
-import { getParsedRequestParams } from "./get-parsed-request-params";
+import { paramValidator } from "./request-param-validator";
 
 const parsedAwesomeYasunori = getParsedAwesomeYasunori();
 
@@ -75,16 +75,8 @@ const route = app
     const tomlString = `[[yasunori]]\nid = ${id}\ntitle = "${title}"\ndate = "${date}"\nat = "vim-jp #times-yasunori"\nsenpan = "${senpan}"\ncontent = """\n${content}\n"""\nmeta = """\n"""\n`;
     return c.text(tomlString);
   })
-  .get("/awesome/:id", async (c) => {
-    const parsedParams = getParsedRequestParams(c.req.param());
-    if (!parsedParams.success) {
-      return c.json(
-        {
-          errors: parsedParams.issues,
-        },
-        404,
-      );
-    }
+  .get("/awesome/:id", paramValidator, async (c) => {
+    const { id } = c.req.valid("param");
     if (!parsedAwesomeYasunori.success) {
       return c.json(
         {
@@ -94,7 +86,7 @@ const route = app
       );
     }
     const entry = parsedAwesomeYasunori.output.yasunori.find(
-      (y) => y.id === parsedParams.output.id,
+      (y) => y.id === id,
     );
     if (!entry) {
       return c.json({ errors: ["not found"] }, 404);

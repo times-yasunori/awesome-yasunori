@@ -20,6 +20,9 @@ importers:
 
   packages/api:
     dependencies:
+      '@hono/valibot-validator':
+        specifier: ^0.5.2
+        version: 0.5.2(hono@4.6.4)(valibot@1.0.0-beta.0(typescript@5.6.3))
       hono:
         specifier: ^4.6.4
         version: 4.6.4
@@ -1118,6 +1121,12 @@ packages:
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
+
+  '@hono/valibot-validator@0.5.2':
+    resolution: {integrity: sha512-WbTr8PCFNAME0ale62rmmq+E8bGp5a7VPiVNmNT+Ue12GJE3Ax+CWBGtHhR0TzAEiloPvJND3IbjHIgtNtsqhw==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      valibot: ^1.0.0 || ^1.0.0-beta.4 || ^1.0.0-rc
 
   '@hono/vite-build@1.1.0':
     resolution: {integrity: sha512-I5FZGZq1aYw+4KA4Ff4MD6xGmZAaldJNB0Gg89RTEYBz1EJdA0WMZtr9IftB93/oyWizOXX8Q9tHVXAUFxeRaQ==}
@@ -5879,6 +5888,11 @@ snapshots:
   '@hono/node-server@1.13.1(hono@4.6.4)':
     dependencies:
       hono: 4.6.4
+
+  '@hono/valibot-validator@0.5.2(hono@4.6.4)(valibot@1.0.0-beta.0(typescript@5.6.3))':
+    dependencies:
+      hono: 4.6.4
+      valibot: 1.0.0-beta.0(typescript@5.6.3)
 
   '@hono/vite-build@1.1.0(hono@4.6.4)':
     dependencies:
