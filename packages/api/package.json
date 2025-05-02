@@ -19,6 +19,7 @@
     "prepare": "pnpm run generate:json"
   },
   "dependencies": {
+    "@hono/valibot-validator": "^0.5.2",
     "hono": "^4.6.4",
     "random-item": "^4.0.1",
     "toml": "^3.0.0",
