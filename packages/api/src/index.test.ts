@@ -176,3 +176,20 @@ meta = """
 `);
   });
 });
+
+describe("Test GET /awesome/list", () => {
+  test("Should return 200 response", async () => {
+    const res = await app.request("/awesome/list");
+    expect(res.status).toBe(200);
+  });
+
+  test("Should return entries list response", async () => {
+    const res = await app.request("/awesome/list");
+    const parsed = await res.json<Array<unknown>>();
+
+    expect(parsed.at(-1)).toStrictEqual({
+      id: 1,
+      title: "yasunoriの母",
+    });
+  });
+});
