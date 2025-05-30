@@ -50,7 +50,7 @@ export const links: LinksFunction = () => [
 ];
 
 /** yasunorized された yasunori を取得する
- * URLクリエにyasunori=<not yasunori>をつけると、
+ * URLクエリにyasunori=<not yasunori>をつけると、
  * 先頭4文字を利用して Xxxxnori という文字列にします。
  */
 function useYasunorizedYasunori() {
