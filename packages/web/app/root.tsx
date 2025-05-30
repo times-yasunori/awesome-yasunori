@@ -126,7 +126,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                           fontWeight: 400,
                         }}
                       >
-                        Awesome
+                        Aizawa
                         <motion.span
                           style={{ marginLeft: em(2) }}
                           initial={{ opacity: 1 }}
