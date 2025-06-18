@@ -22,6 +22,7 @@
     "@hono/mcp": "^0.1.0",
     "@hono/valibot-validator": "^0.5.2",
     "hono": "^4.8.0",
+    "mcp": "workspace:*",
     "random-item": "^4.0.1",
     "toml": "^3.0.0",
     "valibot": "1.0.0-beta.0"
