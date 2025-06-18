@@ -4,7 +4,41 @@ https://github.com/user-attachments/assets/670ee49e-9426-46a3-a373-1539190454d0
 
 ## How to use
 
-You have two ways to use MCP servers.
+You have three ways to use Awesome Yasunori MCP servers.
+
+### Use HTTP Streaming Transport (Remote)
+
+The easiest way to use Awesome Yasunori MCP is via HTTP streaming transport. You can connect to the hosted MCP server without any local setup.
+
+Add this to your MCP client configuration:
+
+```json
+{
+  "mcpServers": {
+    "awesome-yasunori": {
+      "transport": {
+        "type": "http",
+        "uri": "https://api.yasunori.dev/awesome/mcp"
+      }
+    }
+  }
+}
+```
+
+#### Testing with MCP Inspector
+
+You can test the HTTP streaming transport using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
+
+1. Start the MCP Inspector:
+   ```bash
+   DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector
+   ```
+2. Open the MCP Inspector in your browser (usually `http://localhost:5173`)
+3. Enter the endpoint URL: `https://api.yasunori.dev/awesome/mcp`
+4. Test the available tools:
+   - `getAllAwesomeYasunori`: Get all yasunori entries
+   - `getRandomAwesomeYasunori`: Get a random yasunori entry
+   - `getAwesomeYasunoriById`: Get a specific yasunori entry by ID
 
 ### Get the latest version from pkg.pr.new
 
