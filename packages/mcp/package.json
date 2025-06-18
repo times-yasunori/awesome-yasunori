@@ -5,6 +5,11 @@
   "type": "module",
   "main": "src/index.ts",
   "bin": "./dist/index.mjs",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server.ts",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsx src/index.ts",
@@ -18,7 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "@awesome-yasunori/api": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@modelcontextprotocol/sdk": "^1.12.3",
     "@std/yaml": "npm:@jsr/std__yaml@^1.0.5",
     "@types/node": "^22.14.0",
     "clean-pkg-json": "^1.2.1",

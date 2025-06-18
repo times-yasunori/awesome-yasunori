@@ -193,3 +193,58 @@ describe("Test GET /awesome/list", () => {
     });
   });
 });
+
+describe("Test MCP HTTP Streaming Transport", () => {
+  test("Should handle MCP endpoint and return SSE response", async () => {
+    const res = await app.request("/awesome/mcp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json, text/event-stream",
+      },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "tools/list",
+        params: {},
+      }),
+    });
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("text/event-stream");
+
+    const text = await res.text();
+    expect(text).toContain("event: message");
+    expect(text).toContain("jsonrpc");
+    expect(text).toContain("getAllAwesomeYasunori");
+    expect(text).toContain("getRandomAwesomeYasunori");
+    expect(text).toContain("getAwesomeYasunoriById");
+  });
+
+  test("Should handle tool call and return yasunori data", async () => {
+    const res = await app.request("/awesome/mcp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json, text/event-stream",
+      },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 2,
+        method: "tools/call",
+        params: {
+          name: "getAwesomeYasunoriById",
+          arguments: {
+            id: 1,
+          },
+        },
+      }),
+    });
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("text/event-stream");
+
+    const text = await res.text();
+    expect(text).toContain("event: message");
+    expect(text).toContain("jsonrpc");
+    expect(text).toContain("yasunoriの母");
+  });
+});
