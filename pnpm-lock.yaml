@@ -22,10 +22,10 @@ importers:
     dependencies:
       '@hono/valibot-validator':
         specifier: ^0.5.2
-        version: 0.5.2(hono@4.6.4)(valibot@1.0.0-beta.0(typescript@5.6.3))
+        version: 0.5.2(hono@4.8.0)(valibot@1.0.0-beta.0(typescript@5.6.3))
       hono:
-        specifier: ^4.6.4
-        version: 4.6.4
+        specifier: ^4.8.0
+        version: 4.8.0
       random-item:
         specifier: ^4.0.1
         version: 4.0.1
@@ -41,10 +41,10 @@ importers:
         version: 4.20241011.0
       '@hono/vite-build':
         specifier: ^1.0.0
-        version: 1.1.0(hono@4.6.4)
+        version: 1.1.0(hono@4.8.0)
       '@hono/vite-dev-server':
         specifier: ^0.16.0
-        version: 0.16.0(hono@4.6.4)(miniflare@3.20241004.0)(wrangler@3.80.4(@cloudflare/workers-types@4.20241011.0))
+        version: 0.16.0(hono@4.8.0)(miniflare@3.20241004.0)(wrangler@3.80.4(@cloudflare/workers-types@4.20241011.0))
       jsonfile:
         specifier: ^6.1.0
         version: 6.1.0
@@ -2995,6 +2995,10 @@ packages:
     resolution: {integrity: sha512-T5WqBkTOcIQblqBKB5mpzaH/A+dSpvVe938xZJCHOmOuYfF7DSwE/9/10+BMvwSPq9N/f6LiQ38HxrZSQOsXKw==}
     engines: {node: '>=16.9.0'}
 
+  hono@4.8.0:
+    resolution: {integrity: sha512-NoiHrqJxoe1MYXqW+/0/Q4NCizKj2Ivm4KmX8mOSBtw9UJ7KYaOGKkO7csIwO5UlZpfvVRdcgiMb0GGyjEjtcw==}
+    engines: {node: '>=16.9.0'}
+
   hosted-git-info@6.1.1:
     resolution: {integrity: sha512-r0EI+HBMcXadMrugk0GCQ+6BQV39PiWAZVfq7oIckeGiN7sjRGyQxPdft3nQekFTCQbYxLBH+/axZMeH8UX6+w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -5885,23 +5889,23 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@hono/node-server@1.13.1(hono@4.6.4)':
+  '@hono/node-server@1.13.1(hono@4.8.0)':
     dependencies:
-      hono: 4.6.4
+      hono: 4.8.0
 
-  '@hono/valibot-validator@0.5.2(hono@4.6.4)(valibot@1.0.0-beta.0(typescript@5.6.3))':
+  '@hono/valibot-validator@0.5.2(hono@4.8.0)(valibot@1.0.0-beta.0(typescript@5.6.3))':
     dependencies:
-      hono: 4.6.4
+      hono: 4.8.0
       valibot: 1.0.0-beta.0(typescript@5.6.3)
 
-  '@hono/vite-build@1.1.0(hono@4.6.4)':
+  '@hono/vite-build@1.1.0(hono@4.8.0)':
     dependencies:
-      hono: 4.6.4
+      hono: 4.8.0
 
-  '@hono/vite-dev-server@0.16.0(hono@4.6.4)(miniflare@3.20241004.0)(wrangler@3.80.4(@cloudflare/workers-types@4.20241011.0))':
+  '@hono/vite-dev-server@0.16.0(hono@4.8.0)(miniflare@3.20241004.0)(wrangler@3.80.4(@cloudflare/workers-types@4.20241011.0))':
     dependencies:
-      '@hono/node-server': 1.13.1(hono@4.6.4)
-      hono: 4.6.4
+      '@hono/node-server': 1.13.1(hono@4.8.0)
+      hono: 4.8.0
       minimatch: 9.0.5
     optionalDependencies:
       miniflare: 3.20241004.0
@@ -7891,6 +7895,8 @@ snapshots:
   headers-polyfill@4.0.3: {}
 
   hono@4.6.4: {}
+
+  hono@4.8.0: {}
 
   hosted-git-info@6.1.1:
     dependencies:
