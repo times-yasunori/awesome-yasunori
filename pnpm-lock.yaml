@@ -20,6 +20,9 @@ importers:
 
   packages/api:
     dependencies:
+      '@hono/mcp':
+        specifier: ^0.1.0
+        version: 0.1.0(@modelcontextprotocol/sdk@1.9.0)(hono@4.8.0)
       '@hono/valibot-validator':
         specifier: ^0.5.2
         version: 0.5.2(hono@4.8.0)(valibot@1.0.0-beta.0(typescript@5.6.3))
@@ -45,6 +48,9 @@ importers:
       '@hono/vite-dev-server':
         specifier: ^0.16.0
         version: 0.16.0(hono@4.8.0)(miniflare@3.20241004.0)(wrangler@3.80.4(@cloudflare/workers-types@4.20241011.0))
+      '@modelcontextprotocol/sdk':
+        specifier: ^1.9.0
+        version: 1.9.0
       jsonfile:
         specifier: ^6.1.0
         version: 6.1.0
@@ -1115,6 +1121,12 @@ packages:
 
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
+
+  '@hono/mcp@0.1.0':
+    resolution: {integrity: sha512-IELNnKF5tjbUm+wthfToZrNxZIjs1RWLiwCx8N+m8xfJcL6hfcpj/21Gsw8HL88lbnCh191mbFwYvXnx856QZg==}
+    peerDependencies:
+      '@modelcontextprotocol/sdk': ^1.12.0
+      hono: '*'
 
   '@hono/node-server@1.13.1':
     resolution: {integrity: sha512-TSxE6cT5RHnawbjnveexVN7H2Dpn1YaLxQrCOLCUwD+hFbqbFsnJBgdWcYtASqtWVjA+Qgi8uqFug39GsHjo5A==}
@@ -5888,6 +5900,11 @@ snapshots:
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.2.8': {}
+
+  '@hono/mcp@0.1.0(@modelcontextprotocol/sdk@1.9.0)(hono@4.8.0)':
+    dependencies:
+      '@modelcontextprotocol/sdk': 1.9.0
+      hono: 4.8.0
 
   '@hono/node-server@1.13.1(hono@4.8.0)':
     dependencies:

@@ -19,6 +19,7 @@
     "prepare": "pnpm run generate:json"
   },
   "dependencies": {
+    "@hono/mcp": "^0.1.0",
     "@hono/valibot-validator": "^0.5.2",
     "hono": "^4.8.0",
     "random-item": "^4.0.1",
@@ -29,6 +30,7 @@
     "@cloudflare/workers-types": "^4.20241011.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.16.0",
+    "@modelcontextprotocol/sdk": "^1.9.0",
     "jsonfile": "^6.1.0",
     "typescript": "^5.6.3",
     "vite": "^5.2.12",
