@@ -21,9 +21,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
-    "@modelcontextprotocol/sdk": "^1.9.0"
-  },
   "devDependencies": {
     "@awesome-yasunori/api": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.3",
