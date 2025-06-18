@@ -1,7 +1,9 @@
+import { StreamableHTTPTransport } from "@hono/mcp";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { poweredBy } from "hono/powered-by";
 import { prettyJSON } from "hono/pretty-json";
+import { server as AyMcpServer } from "mcp/server";
 import randomItem from "random-item";
 import { getParsedAwesomeYasunori } from "./get-parsed-awesome-yasunori";
 import { paramValidator } from "./request-param-validator";
@@ -107,6 +109,11 @@ const route = app
       return c.json({ errors: ["not found"] }, 404);
     }
     return c.json(entry);
+  })
+  .all("/mcp", async (c) => {
+    const transport = new StreamableHTTPTransport();
+    await AyMcpServer.connect(transport);
+    return transport.handleRequest(c);
   });
 
 export default app;
