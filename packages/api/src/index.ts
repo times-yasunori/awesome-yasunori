@@ -110,7 +110,7 @@ const route = app
     }
     return c.json(entry);
   })
-  .all("/mcp", async (c) => {
+  .all("/awesome/mcp", async (c) => {
     const transport = new StreamableHTTPTransport();
     await AyMcpServer.connect(transport);
     return transport.handleRequest(c);

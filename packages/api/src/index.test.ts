@@ -196,7 +196,7 @@ describe("Test GET /awesome/list", () => {
 
 describe("Test MCP HTTP Streaming Transport", () => {
   test("Should handle MCP endpoint and return SSE response", async () => {
-    const res = await app.request("/mcp", {
+    const res = await app.request("/awesome/mcp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -221,7 +221,7 @@ describe("Test MCP HTTP Streaming Transport", () => {
   });
 
   test("Should handle tool call and return yasunori data", async () => {
-    const res = await app.request("/mcp", {
+    const res = await app.request("/awesome/mcp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
