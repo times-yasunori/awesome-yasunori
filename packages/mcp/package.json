@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@awesome-yasunori/api": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@modelcontextprotocol/sdk": "^1.12.3",
     "@std/yaml": "npm:@jsr/std__yaml@^1.0.5",
     "@types/node": "^22.14.0",
     "clean-pkg-json": "^1.2.1",
