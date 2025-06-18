@@ -1,7 +1,7 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { server } from "./index.js";
+import { server } from "./server";
 
 test("getAllAwesomeYasunori", async () => {
   // create client for testing
