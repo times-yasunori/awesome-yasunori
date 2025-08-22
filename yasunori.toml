@@ -1,4 +1,17 @@
 [[yasunori]]
+id = 105
+title = "yasunoriになったこと後悔してる"
+date = "2024-11-22"
+at = "ヤスノリプラザ"
+senpan = "takeokunn"
+content = """
+takeokunn 「yasunoriになったこと後悔してる」
+"""
+meta = """
+yasunori 「後悔させない」
+"""
+
+[[yasunori]]
 id = 104
 title = "みんなよく「yasunoriする」って言い回しをしててオシャレだな〜"
 date = "2024-11-28"
@@ -432,19 +445,6 @@ natsukium 「最悪全部yasunoriしても許される」
 """
 
 meta = """
-"""
-
-[[yasunori]]
-id = 79
-title = "yasunoriになったこと後悔してる"
-date = "2024-11-22"
-at = "ヤスノリプラザ"
-senpan = "takeokunn"
-content = """
-takeokunn 「yasunoriになったこと後悔してる」
-"""
-meta = """
-yasunori 「後悔させない」
 """
 
 [[yasunori]]
