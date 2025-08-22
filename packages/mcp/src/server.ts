@@ -2,6 +2,7 @@ import { client } from "@awesome-yasunori/api/client";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { stringify } from "@std/yaml";
 import { z } from "zod";
+import { searchYasunori } from "./search.js";
 
 // サーバーインスタンスの作成
 export const server = new McpServer({
@@ -65,5 +66,50 @@ server.tool(
         },
       ],
     };
+  },
+);
+
+server.tool(
+  "searchAwesomeYasunori",
+  "search awesome yasunori entries using full-text search with BM25 algorithm",
+  {
+    query: z
+      .string()
+      .describe("Search query to find relevant yasunori entries"),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(50)
+      .optional()
+      .describe("Maximum number of results to return (default: 10)"),
+    threshold: z
+      .number()
+      .min(0)
+      .max(1)
+      .optional()
+      .describe("Minimum relevance score threshold (default: 0)"),
+  },
+  async ({ query, limit = 10, threshold = 0 }) => {
+    try {
+      const searchResult = await searchYasunori(query, { limit, threshold });
+      return {
+        content: [
+          {
+            type: "text",
+            text: stringify({
+              query,
+              count: searchResult.count,
+              elapsed: searchResult.elapsed,
+              results: searchResult.entries,
+            }),
+          },
+        ],
+      };
+    } catch (error) {
+      throw new Error(
+        `Failed to search awesome yasunori: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
   },
 );

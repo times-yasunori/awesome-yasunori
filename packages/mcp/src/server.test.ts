@@ -139,3 +139,46 @@ test("getAwesomeYasunoriById", async () => {
   expect(content[0].text).toContain("content: ");
   expect(content[0].text).toContain("tomoyaさん、ありすえさんこんにちは");
 });
+
+test("searchAwesomeYasunori", async () => {
+  // create client for testing
+  const client = new Client({
+    name: "test client",
+    version: "0.1.0",
+  });
+
+  // create in-memory transport for testing
+  const [clientTransport, serverTransport] =
+    InMemoryTransport.createLinkedPair();
+
+  // connect client and server
+  await Promise.all([
+    client.connect(clientTransport),
+    server.connect(serverTransport),
+  ]);
+
+  // call the search tool
+  const result = await client.callTool({
+    name: "searchAwesomeYasunori",
+    arguments: { query: "yasunori", limit: 5 },
+  });
+
+  // check the result is a CallToolResult
+  expect(result).toHaveProperty("content");
+  const content = result.content as CallToolResult["content"];
+
+  // check the content length is 1
+  expect(result.content).toHaveLength(1);
+
+  // check the content is a string
+  expect(content[0]).toHaveProperty("type", "text");
+
+  // check the content is a string type
+  expect(content[0].type).toStrictEqual("text");
+
+  // check the search result structure
+  expect(content[0].text).toContain("query: yasunori");
+  expect(content[0].text).toContain("count:");
+  expect(content[0].text).toContain("elapsed:");
+  expect(content[0].text).toContain("results:");
+});
