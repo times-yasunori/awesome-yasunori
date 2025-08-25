@@ -113,16 +113,8 @@ importers:
         specifier: ^3.1.11
         version: 3.1.11
       '@std/yaml':
-<<<<<<< HEAD
         specifier: jsr:^1.0.5
-        version: '@jsr/std__yaml@1.0.5'
-||||||| 34f664b
-        specifier: npm:@jsr/std__yaml@^1.0.5
-        version: '@jsr/std__yaml@1.0.5'
-=======
-        specifier: npm:@jsr/std__yaml@^1.0.5
         version: '@jsr/std__yaml@1.0.9'
->>>>>>> origin/main
       '@types/node':
         specifier: ^22.14.1
         version: 22.18.0
@@ -6875,7 +6867,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.3)
       '@vanilla-extract/babel-plugin-debug-ids': 1.2.2
       '@vanilla-extract/css': 1.17.4
-      esbuild: 0.17.6
+      esbuild: 0.17.19
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
