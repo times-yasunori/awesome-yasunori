@@ -99,6 +99,10 @@ importers:
         version: 3.80.4(@cloudflare/workers-types@4.20241011.0)
 
   packages/mcp:
+    dependencies:
+      '@orama/orama':
+        specifier: ^3.1.11
+        version: 3.1.11
     devDependencies:
       '@awesome-yasunori/api':
         specifier: workspace:*
@@ -118,6 +122,9 @@ importers:
       es-main:
         specifier: ^1.3.0
         version: 1.3.0
+      msw:
+        specifier: ^2.4.10
+        version: 2.4.10(typescript@5.6.3)
       tsdown:
         specifier: ^0.6.10
         version: 0.6.10(typescript@5.6.3)
@@ -1291,6 +1298,10 @@ packages:
 
   '@open-draft/until@2.1.0':
     resolution: {integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==}
+
+  '@orama/orama@3.1.11':
+    resolution: {integrity: sha512-Szki0cgFiXE5F9RLx2lUyEtJllnuCSQ4B8RLDwIjXkVit6qZjoDAxH+xhJs29MjKLDz0tbPLdKFa6QrQ/qoGGA==}
+    engines: {node: '>= 20.0.0'}
 
   '@oxc-parser/binding-darwin-arm64@0.62.0':
     resolution: {integrity: sha512-p9haXzG2mE0PvfITKY3bTQpwDc+T4H9bG5SC4vp8PbwikmIWGrahASpuO5c2keiahspGTCzqUnl+8PXU/saT/A==}
@@ -6163,6 +6174,8 @@ snapshots:
       outvariant: 1.4.3
 
   '@open-draft/until@2.1.0': {}
+
+  '@orama/orama@3.1.11': {}
 
   '@oxc-parser/binding-darwin-arm64@0.62.0':
     optional: true
