@@ -182,3 +182,48 @@ test("searchAwesomeYasunori", async () => {
   expect(content[0].text).toContain("elapsed:");
   expect(content[0].text).toContain("results:");
 });
+
+test("awesomeyasunori resources", async () => {
+  // create client for testing
+  const client = new Client({
+    name: "test client",
+    version: "0.1.0",
+  });
+
+  // create in-memory transport for testing
+  const [clientTransport, serverTransport] =
+    InMemoryTransport.createLinkedPair();
+
+  // connect client and server
+  await Promise.all([
+    client.connect(clientTransport),
+    server.connect(serverTransport),
+  ]);
+
+  // list resources
+  const resources = await client.listResources();
+  expect(resources).toHaveProperty("resources");
+  expect(resources.resources.at(0)).toStrictEqual({
+    uri: "awesomeyasunori://1",
+    name: "yasunoriの母",
+    id: 1,
+  });
+
+  // get resource
+  const resource = await client.readResource({ uri: "awesomeyasunori://1" });
+  expect(resource).toHaveProperty("contents");
+  const { contents } = resource;
+
+  // check the content length is 1
+  expect(contents).toHaveLength(1);
+  const content = contents[0];
+
+  // check the content includes 1st awesome yasunori
+  expect(content.text).toContain("id: 1");
+  expect(content.text).toContain("title: yasunoriの母");
+  expect(content.text).toContain("date: '2024-06-25'");
+  expect(content.text).toContain("at: vim-jp radioお便り");
+  expect(content.text).toContain("senpan: takeokunn");
+  expect(content.text).toContain("content: ");
+  expect(content.text).toContain("tomoyaさん、ありすえさんこんにちは");
+});
