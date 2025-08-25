@@ -1,8 +1,9 @@
 import { client } from "@awesome-yasunori/api/client";
 import { create, insert, search } from "@orama/orama";
+import { tokenize } from "wakachigaki";
 
 export interface YasunoriEntry {
-  id: number;
+  id: string;
   title: string;
   date: string;
   at: string;
@@ -30,7 +31,7 @@ export async function searchYasunori(
   // リクエストごとに新しい検索インデックスを作成（ステートレス）
   const db = create({
     schema: {
-      id: "number",
+      id: "string",
       title: "string",
       date: "string",
       at: "string",
@@ -42,6 +43,10 @@ export async function searchYasunori(
       tokenizer: {
         stemming: false,
         stopWords: false,
+        // 日本語トークナイザーを設定
+        tokenize: (raw: string) => {
+          return tokenize(raw);
+        },
       },
     },
   });
@@ -56,7 +61,7 @@ export async function searchYasunori(
 
   for (const entry of allYasunori) {
     await insert(db, {
-      id: entry.id,
+      id: entry.id.toString(),
       title: entry.title,
       date: entry.date,
       at: entry.at,

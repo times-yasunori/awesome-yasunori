@@ -10,6 +10,8 @@ export default defineConfig({
   outputOptions: {
     banner: "#!/usr/bin/env node\n",
   },
+  noExternal: [/^.*/],
+  nodeProtocol: true,
   dts: false,
   clean: true,
   onSuccess: () => {

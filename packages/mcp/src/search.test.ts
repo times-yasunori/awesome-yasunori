@@ -49,6 +49,49 @@ test("should handle non-matching query", async () => {
   expect(result.count).toBe(0);
 });
 
+test("should search Japanese text - テスト", async () => {
+  const result = await searchYasunori("テスト", { limit: 10 });
+
+  expect(result.entries.length).toBeGreaterThan(0);
+  expect(result.count).toBeGreaterThan(0);
+
+  // テストを含むエントリが見つかることを確認
+  const hasMatchingEntry = result.entries.some(
+    (entry) =>
+      entry.title.includes("テスト") ||
+      entry.content.includes("テスト") ||
+      entry.meta.includes("テスト"),
+  );
+
+  expect(hasMatchingEntry).toBe(true);
+
+  // 具体的に ID 1 のエントリが見つかることを確認
+  const testEntry = result.entries.find((entry) => entry.id === "1");
+  expect(testEntry).toBeDefined();
+  expect(testEntry?.title).toContain("テスト");
+});
+
+test("should search Japanese text - プログラミング", async () => {
+  const result = await searchYasunori("プログラミング", { limit: 10 });
+
+  expect(result.entries.length).toBeGreaterThan(0);
+  expect(result.count).toBeGreaterThan(0);
+
+  // プログラミングを含むエントリが見つかることを確認
+  const hasMatchingEntry = result.entries.some(
+    (entry) =>
+      entry.title.includes("プログラミング") ||
+      entry.content.includes("プログラミング") ||
+      entry.meta.includes("プログラミング"),
+  );
+
+  expect(hasMatchingEntry).toBe(true);
+
+  // 具体的に ID 3 のエントリが見つかることを確認
+  const programmingEntry = result.entries.find((entry) => entry.id === "3");
+  expect(programmingEntry).toBeDefined();
+});
+
 test("should handle API error", async () => {
   // APIエラーをモック
   mockServer.use(
