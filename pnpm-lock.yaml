@@ -99,10 +99,6 @@ importers:
         version: 3.80.4(@cloudflare/workers-types@4.20241011.0)
 
   packages/mcp:
-    dependencies:
-      '@orama/orama':
-        specifier: ^3.1.11
-        version: 3.1.11
     devDependencies:
       '@awesome-yasunori/api':
         specifier: workspace:*
@@ -110,6 +106,9 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.12.3
         version: 1.12.3
+      '@orama/orama':
+        specifier: ^3.1.11
+        version: 3.1.11
       '@std/yaml':
         specifier: npm:@jsr/std__yaml@^1.0.5
         version: '@jsr/std__yaml@1.0.5'

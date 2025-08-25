@@ -24,6 +24,7 @@
   "devDependencies": {
     "@awesome-yasunori/api": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.12.3",
+    "@orama/orama": "^3.1.11",
     "@std/yaml": "npm:@jsr/std__yaml@^1.0.5",
     "@types/node": "^22.14.0",
     "clean-pkg-json": "^1.2.1",
@@ -34,8 +35,5 @@
     "typescript": "^5.6.3",
     "vitest": "^2.1.1",
     "zod": "^3.24.2"
-  },
-  "dependencies": {
-    "@orama/orama": "^3.1.11"
   }
 }
