@@ -1,5 +1,6 @@
 import { client } from "@awesome-yasunori/api/client";
 import { create, insert, search } from "@orama/orama";
+import { tokenize } from "wakachigaki";
 
 export interface YasunoriEntry {
   id: string;
@@ -42,6 +43,10 @@ export async function searchYasunori(
       tokenizer: {
         stemming: false,
         stopWords: false,
+        // 日本語トークナイザーを設定
+        tokenize: (raw: string) => {
+          return tokenize(raw);
+        },
       },
     },
   });
