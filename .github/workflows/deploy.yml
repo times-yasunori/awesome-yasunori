@@ -12,6 +12,7 @@ on:
       - 'yasunori.toml'
       - 'packages/api/**'
       - 'packages/web/**'
+      - 'packages/mcp/**'
       - 'packages/image-generator/**'
   pull_request:
     paths:
@@ -19,6 +20,7 @@ on:
       - 'yasunori.toml'
       - 'packages/api/**'
       - 'packages/web/**'
+      - 'packages/mcp/**'
       - 'packages/image-generator/**'
     types: [opened, synchronize, reopened, ready_for_review]
 
