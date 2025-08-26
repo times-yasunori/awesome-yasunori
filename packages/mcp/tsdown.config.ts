@@ -1,9 +1,9 @@
 import * as fs from "node:fs";
+import { join } from "node:path";
 import { defineConfig } from "tsdown";
-import { bin, main } from "./package.json";
 
 export default defineConfig({
-  entry: [main],
+  entry: ["src/index.ts"],
   outDir: "dist",
   format: ["esm"],
   fixedExtension: true,
@@ -14,8 +14,8 @@ export default defineConfig({
   nodeProtocol: true,
   dts: false,
   clean: true,
-  onSuccess: () => {
+  onSuccess: (ctx) => {
     // Make the output file executable
-    fs.chmodSync(bin, 0o755);
+    fs.chmodSync(join(ctx.outDir, "index.mjs"), 0o755);
   },
 });

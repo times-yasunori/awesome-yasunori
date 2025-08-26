@@ -1,2 +1,11 @@
 packages:
   - packages/*
+
+engineStrict: true
+
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - esbuild
+  - msw
+  - sharp
+  - workerd
