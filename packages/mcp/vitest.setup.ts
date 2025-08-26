@@ -5,10 +5,10 @@ const mockYasunoriEntries = [
   {
     id: 1,
     title: "テスト yasunori エントリ",
-    date: "2024-01-01",
-    at: "vim-jp #times-yasunori",
-    senpan: "testuser",
-    content: "これはテスト用のコンテンツです",
+    date: "2024-06-25",
+    at: "vim-jp radioお便り",
+    senpan: "takeokunn",
+    content: "tomoyaさん、ありすえさんこんにちは。yasunoriはおもちゃです。",
     meta: "テストメタ情報",
   },
   {
@@ -34,6 +34,21 @@ const mockYasunoriEntries = [
 const mockServer = setupServer(
   http.get("*/awesome", () => {
     return HttpResponse.json(mockYasunoriEntries);
+  }),
+  http.get("*/awesome/random", () => {
+    const randomEntry =
+      mockYasunoriEntries[
+        Math.floor(Math.random() * mockYasunoriEntries.length)
+      ];
+    return HttpResponse.json(randomEntry);
+  }),
+  http.get("*/awesome/:id", ({ params }) => {
+    const id = Number(params.id);
+    const entry = mockYasunoriEntries.find((e) => e.id === id);
+    if (!entry) {
+      return new HttpResponse(null, { status: 404 });
+    }
+    return HttpResponse.json(entry);
   }),
 );
 
