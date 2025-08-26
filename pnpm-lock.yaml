@@ -103,9 +103,6 @@ importers:
 
   packages/mcp:
     dependencies:
-      '@awesome-yasunori/api':
-        specifier: workspace:*
-        version: link:../api
       '@modelcontextprotocol/sdk':
         specifier: ^1.12.3
         version: 1.17.4
@@ -125,6 +122,9 @@ importers:
         specifier: ^3.24.3
         version: 3.25.76
     devDependencies:
+      '@awesome-yasunori/api':
+        specifier: workspace:*
+        version: link:../api
       '@types/node':
         specifier: ^22.14.1
         version: 22.18.0
@@ -3737,8 +3737,7 @@ packages:
           targets:
             - cpu: x86
               os: win32
-    version: 22.18.0
-    hasBin: true
+    version: 0.0.0
 
   normalize-package-data@5.0.0:
     resolution: {integrity: sha512-h9iPVIfrVZ9wVYQnxFgtw1ugSvGEMOlyPWWtm8BMJhnwyEL/FLbYbTY3V3PpjI/BUK67n9PEWDu6eHzu1fB15Q==}
