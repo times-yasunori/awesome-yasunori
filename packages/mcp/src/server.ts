@@ -1,5 +1,8 @@
 import { client } from "@awesome-yasunori/api/client";
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import {
+  McpServer,
+  ResourceTemplate,
+} from "@modelcontextprotocol/sdk/server/mcp.js";
 import { stringify } from "@std/yaml";
 import { z } from "zod";
 import { searchYasunori } from "./search.js";
@@ -111,5 +114,57 @@ server.tool(
         `Failed to search awesome yasunori: ${error instanceof Error ? error.message : String(error)}`,
       );
     }
+  },
+);
+
+// resources implementation
+server.registerResource(
+  "yasunori-entries",
+  "awesomeyasunori://list",
+  {
+    title: "Awesome Yasunori Entries",
+    description: "All awesome yasunori entries",
+  },
+  async (uri) => {
+    const res = await client.awesome.$get();
+    if (!res.ok) {
+      throw new Error("Failed to get all awesome yasunori");
+    }
+    const allYasunori = await res.json();
+    return {
+      contents: [
+        {
+          uri: uri.href,
+          text: stringify(allYasunori),
+        },
+      ],
+    };
+  },
+);
+
+server.registerResource(
+  "yasunori-entry",
+  new ResourceTemplate("awesomeyasunori://{id}", { list: undefined }),
+  {
+    title: "Awesome Yasunori Entry",
+    description: "Individual awesome yasunori entry",
+  },
+  async (uri, { id }) => {
+    const res = await client.awesome[":id"].$get({
+      param: { id: id.toString() },
+    });
+    if (!res.ok) {
+      throw new Error("Failed to get awesome yasunori by id");
+    }
+    const awesomeYasunori = await res.json();
+
+    return {
+      contents: [
+        {
+          uri: uri.href,
+          text: stringify(awesomeYasunori),
+        },
+      ],
+    };
   },
 );

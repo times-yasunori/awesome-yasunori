@@ -132,7 +132,7 @@ test("getAwesomeYasunoriById", async () => {
 
   // check the content includes 1st awesome yasunori
   expect(content[0].text).toContain("id: 1");
-  expect(content[0].text).toContain("title: yasunoriの母");
+  expect(content[0].text).toContain("title: テスト yasunori エントリ");
   expect(content[0].text).toContain("date: '2024-06-25'");
   expect(content[0].text).toContain("at: vim-jp radioお便り");
   expect(content[0].text).toContain("senpan: takeokunn");
@@ -203,11 +203,10 @@ test("awesomeyasunori resources", async () => {
   // list resources
   const resources = await client.listResources();
   expect(resources).toHaveProperty("resources");
-  expect(resources.resources.at(0)).toStrictEqual({
-    uri: "awesomeyasunori://1",
-    name: "yasunoriの母",
-    id: 1,
-  });
+  expect(resources.resources.length).toBeGreaterThan(0);
+  expect(resources.resources.some((r) => r.name === "yasunori-entries")).toBe(
+    true,
+  );
 
   // get resource
   const resource = await client.readResource({ uri: "awesomeyasunori://1" });
@@ -220,7 +219,7 @@ test("awesomeyasunori resources", async () => {
 
   // check the content includes 1st awesome yasunori
   expect(content.text).toContain("id: 1");
-  expect(content.text).toContain("title: yasunoriの母");
+  expect(content.text).toContain("title: テスト yasunori エントリ");
   expect(content.text).toContain("date: '2024-06-25'");
   expect(content.text).toContain("at: vim-jp radioお便り");
   expect(content.text).toContain("senpan: takeokunn");
