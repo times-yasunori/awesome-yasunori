@@ -3737,7 +3737,8 @@ packages:
           targets:
             - cpu: x86
               os: win32
-    version: 0.0.0
+    version: 22.18.0
+    hasBin: true
 
   normalize-package-data@5.0.0:
     resolution: {integrity: sha512-h9iPVIfrVZ9wVYQnxFgtw1ugSvGEMOlyPWWtm8BMJhnwyEL/FLbYbTY3V3PpjI/BUK67n9PEWDu6eHzu1fB15Q==}
