@@ -6,7 +6,7 @@ import {
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { stringify } from "@std/yaml";
 import esMain from "es-main";
-import { server } from "./server";
+import { server } from "./server.ts";
 
 server.resource(
   "all awesome yasunori",
