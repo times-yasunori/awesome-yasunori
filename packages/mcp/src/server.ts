@@ -5,7 +5,7 @@ import {
 } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { stringify } from "@std/yaml";
 import { z } from "zod";
-import { searchYasunori } from "./search.js";
+import { searchYasunori } from "./search.ts";
 
 // サーバーインスタンスの作成
 export const server = new McpServer({
