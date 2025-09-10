@@ -48,11 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
       pnpmWorkspaces
       prePnpmInstall
       ;
-    hash = "sha256-UW/9RKamXhdKnzlwUsdKfSu2+2U01uI18tgqAAxBbXk=";
+    fetcherVersion = 2;
+    hash = "sha256-Zcmf7Px8AoadMowPauatl0x7Ema1w7uH7HECfgRYpR4=";
   };
-  patchPhase = ''
-    sed -i "/use-node-version/d" .npmrc
-  '';
   buildPhase = ''
     runHook preBuild
     pushd packages/api/
