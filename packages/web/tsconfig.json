@@ -24,6 +24,7 @@
     "resolveJsonModule": true,
     "target": "ES2022",
     "strict": true,
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
