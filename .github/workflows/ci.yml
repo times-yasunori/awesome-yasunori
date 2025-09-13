@@ -71,6 +71,11 @@ jobs:
            npm install -g ajv-cli
       - run: yj -tj < yasunori.toml > yasunori.json
       - run: npx ajv validate -s schema.json -d yasunori.json
+      - run: |
+          if test -n "$(jq -r '.yasunori | map(.id) | sort[]' yasunori.json | uniq -d)"; then
+            echo 'Duplicate yasunori entries were found.'
+            exit 1
+          fi
   test-api:
     name: Test API
     runs-on: ubuntu-latest
