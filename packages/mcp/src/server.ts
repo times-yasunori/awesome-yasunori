@@ -3,7 +3,6 @@ import {
   McpServer,
   ResourceTemplate,
 } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { stringify } from "@std/yaml";
 import { z } from "zod";
 import { searchYasunori } from "./search.ts";
 
@@ -61,43 +60,76 @@ server.registerTool(
         .describe("Maximum number of items to return"),
     },
     outputSchema: {
-      total: z.number().int().min(0),
-      offset: z.number().int().min(0).nullable(),
-      limit: z.number().int().min(1).max(100).nullable(),
-      items: z.array(YasunoriEntrySchema),
+      isError: z.boolean(),
+      total: z.number().int().min(0).optional(),
+      offset: z.number().int().min(0).nullable().optional(),
+      limit: z.number().int().min(1).max(100).nullable().optional(),
+      items: z.array(YasunoriEntrySchema).optional(),
+      error: z.string().optional(),
     },
   },
   async ({ offset, limit }) => {
-    const res = await client.awesome.$get();
-    if (!res.ok) {
-      throw new Error("Failed to get all awesome yasunori");
+    try {
+      const res = await client.awesome.$get();
+      if (!res.ok) {
+        const structuredContent = {
+          isError: true,
+          error: "Failed to get all awesome yasunori",
+        };
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          isError: true,
+          structuredContent,
+        };
+      }
+      const allYasunori = await res.json();
+
+      // if offset or limit is not provided, return all items
+      let paginatedYasunori = allYasunori;
+      if (offset != null || limit != null) {
+        const start = offset ?? 0;
+        const end = limit != null ? start + limit : undefined;
+        paginatedYasunori = allYasunori.slice(start, end);
+      }
+
+      const structuredContent = {
+        isError: false,
+        total: allYasunori.length,
+        offset,
+        limit,
+        items: paginatedYasunori,
+      };
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        structuredContent,
+      };
+    } catch (error) {
+      const structuredContent = {
+        isError: true,
+        error: error instanceof Error ? error.message : String(error),
+      };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        isError: true,
+        structuredContent,
+      };
     }
-    const allYasunori = await res.json();
-
-    // if offset or limit is not provided, return all items
-    let paginatedYasunori = allYasunori;
-    if (offset != null || limit != null) {
-      const start = offset ?? 0;
-      const end = limit != null ? start + limit : undefined;
-      paginatedYasunori = allYasunori.slice(start, end);
-    }
-
-    const structuredContent = {
-      total: allYasunori.length,
-      offset,
-      limit,
-      items: paginatedYasunori,
-    };
-
-    return {
-      content: [
-        {
-          type: "text",
-          text: stringify(structuredContent),
-        },
-      ],
-      structuredContent,
-    };
   },
 );
 
@@ -106,25 +138,57 @@ server.registerTool(
   {
     description: "get total count of awesome yasunori items",
     outputSchema: {
-      count: z.number().int().min(0),
+      isError: z.boolean(),
+      count: z.number().int().min(0).optional(),
+      error: z.string().optional(),
     },
   },
   async () => {
-    const res = await client.awesome.$get();
-    if (!res.ok) {
-      throw new Error("Failed to get awesome yasunori count");
+    try {
+      const res = await client.awesome.$get();
+      if (!res.ok) {
+        const structuredContent = {
+          isError: true,
+          error: "Failed to get awesome yasunori count",
+        };
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          isError: true,
+          structuredContent,
+        };
+      }
+      const allYasunori = YasunoriEntrySchema.array().parse(await res.json());
+      const structuredContent = { isError: false, count: allYasunori.length };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        structuredContent,
+      };
+    } catch (error) {
+      const structuredContent = {
+        isError: true,
+        error: error instanceof Error ? error.message : String(error),
+      };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        isError: true,
+        structuredContent,
+      };
     }
-    const allYasunori = YasunoriEntrySchema.array().parse(await res.json());
-    const structuredContent = { count: allYasunori.length };
-    return {
-      content: [
-        {
-          type: "text",
-          text: stringify(structuredContent),
-        },
-      ],
-      structuredContent,
-    };
   },
 );
 
@@ -132,23 +196,58 @@ server.registerTool(
   "getRandomAwesomeYasunori",
   {
     description: "get random awesome yasunori",
-    outputSchema: yasunoriEntryFields,
+    outputSchema: {
+      isError: z.boolean(),
+      ...yasunoriEntryFields,
+      error: z.string().optional(),
+    },
   },
   async () => {
-    const res = await client.awesome.random.$get();
-    if (!res.ok) {
-      throw new Error("Failed to get random awesome yasunori");
+    try {
+      const res = await client.awesome.random.$get();
+      if (!res.ok) {
+        const structuredContent = {
+          isError: true,
+          error: "Failed to get random awesome yasunori",
+        };
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          isError: true,
+          structuredContent,
+        };
+      }
+      const randomYasunori = YasunoriEntrySchema.parse(await res.json());
+      const structuredContent = { isError: false, ...randomYasunori };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        structuredContent,
+      };
+    } catch (error) {
+      const structuredContent = {
+        isError: true,
+        error: error instanceof Error ? error.message : String(error),
+      };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        isError: true,
+        structuredContent,
+      };
     }
-    const randomYasunori = YasunoriEntrySchema.parse(await res.json());
-    return {
-      content: [
-        {
-          type: "text",
-          text: stringify(randomYasunori),
-        },
-      ],
-      structuredContent: randomYasunori,
-    };
   },
 );
 
@@ -159,25 +258,60 @@ server.registerTool(
     inputSchema: {
       id: z.number().int().min(0).describe("Awesome Yasunori ID"),
     },
-    outputSchema: yasunoriEntryFields,
+    outputSchema: {
+      isError: z.boolean(),
+      ...yasunoriEntryFields,
+      error: z.string().optional(),
+    },
   },
   async ({ id }) => {
-    const res = await client.awesome[":id"].$get({
-      param: { id: id.toString() },
-    });
-    if (!res.ok) {
-      throw new Error("Failed to get awesome yasunori by id");
+    try {
+      const res = await client.awesome[":id"].$get({
+        param: { id: id.toString() },
+      });
+      if (!res.ok) {
+        const structuredContent = {
+          isError: true,
+          error: `Failed to get awesome yasunori by id: ${id}`,
+        };
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(structuredContent),
+            },
+          ],
+          isError: true,
+          structuredContent,
+        };
+      }
+      const awesomeYasunori = YasunoriEntrySchema.parse(await res.json());
+      const structuredContent = { isError: false, ...awesomeYasunori };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        structuredContent,
+      };
+    } catch (error) {
+      const structuredContent = {
+        isError: true,
+        error: error instanceof Error ? error.message : String(error),
+      };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        isError: true,
+        structuredContent,
+      };
     }
-    const awesomeYasunori = YasunoriEntrySchema.parse(await res.json());
-    return {
-      content: [
-        {
-          type: "text",
-          text: stringify(awesomeYasunori),
-        },
-      ],
-      structuredContent: awesomeYasunori,
-    };
   },
 );
 
@@ -205,18 +339,21 @@ server.registerTool(
         .describe("Minimum relevance score threshold (default: 0)"),
     },
     outputSchema: {
-      query: z.string(),
-      limit: z.number().int().min(1).max(50),
-      threshold: z.number().min(0).max(1),
-      count: z.number().int().min(0),
-      elapsed: z.string(),
-      results: z.array(SearchResultEntrySchema),
+      isError: z.boolean(),
+      query: z.string().optional(),
+      limit: z.number().int().min(1).max(50).optional(),
+      threshold: z.number().min(0).max(1).optional(),
+      count: z.number().int().min(0).optional(),
+      elapsed: z.string().optional(),
+      results: z.array(SearchResultEntrySchema).optional(),
+      error: z.string().optional(),
     },
   },
   async ({ query, limit = 10, threshold = 0 }) => {
     try {
       const searchResult = await searchYasunori(query, { limit, threshold });
       const structuredContent = {
+        isError: false,
         query,
         limit,
         threshold,
@@ -229,15 +366,26 @@ server.registerTool(
         content: [
           {
             type: "text",
-            text: stringify(structuredContent),
+            text: JSON.stringify(structuredContent),
           },
         ],
         structuredContent,
       };
     } catch (error) {
-      throw new Error(
-        `Failed to search awesome yasunori: ${error instanceof Error ? error.message : String(error)}`,
-      );
+      const structuredContent = {
+        isError: true,
+        error: `Failed to search awesome yasunori: ${error instanceof Error ? error.message : String(error)}`,
+      };
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(structuredContent),
+          },
+        ],
+        isError: true,
+        structuredContent,
+      };
     }
   },
 );
@@ -260,7 +408,7 @@ server.registerResource(
       contents: [
         {
           uri: uri.href,
-          text: stringify(allYasunori),
+          text: JSON.stringify(allYasunori),
         },
       ],
     };
@@ -287,7 +435,7 @@ server.registerResource(
       contents: [
         {
           uri: uri.href,
-          text: stringify(awesomeYasunori),
+          text: JSON.stringify(awesomeYasunori),
         },
       ],
     };
