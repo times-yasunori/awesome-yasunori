@@ -13,21 +13,69 @@ export const server = new McpServer({
   version: "0.1.0",
 });
 
-server.tool("getAllAwesomeYasunori", "get all awesome yasunori", async () => {
-  const res = await client.awesome.$get();
-  if (!res.ok) {
-    throw new Error("Failed to get all awesome yasunori");
-  }
-  const allYasunori = await res.json();
-  return {
-    content: [
-      {
-        type: "text",
-        text: stringify(allYasunori),
-      },
-    ],
-  };
-});
+server.tool(
+  "getAllAwesomeYasunori",
+  "get all awesome yasunori with pagination support",
+  {
+    offset: z
+      .number()
+      .int()
+      .min(0)
+      .optional()
+      .describe("Starting index for pagination (default: 0)"),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(100)
+      .optional()
+      .describe("Maximum number of items to return (default: 50, max: 100)"),
+  },
+  async ({ offset = 0, limit = 50 }) => {
+    const res = await client.awesome.$get();
+    if (!res.ok) {
+      throw new Error("Failed to get all awesome yasunori");
+    }
+    const allYasunori = await res.json();
+
+    // Apply pagination
+    const paginatedYasunori = allYasunori.slice(offset, offset + limit);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: stringify({
+            total: allYasunori.length,
+            offset,
+            limit,
+            items: paginatedYasunori,
+          }),
+        },
+      ],
+    };
+  },
+);
+
+server.tool(
+  "getAwesomeYasunoriCount",
+  "get total count of awesome yasunori items",
+  async () => {
+    const res = await client.awesome.$get();
+    if (!res.ok) {
+      throw new Error("Failed to get awesome yasunori count");
+    }
+    const allYasunori = await res.json();
+    return {
+      content: [
+        {
+          type: "text",
+          text: stringify({ count: allYasunori.length }),
+        },
+      ],
+    };
+  },
+);
 
 server.tool(
   "getRandomAwesomeYasunori",
