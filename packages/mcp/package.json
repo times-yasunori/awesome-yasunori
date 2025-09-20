@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
-    "@orama/orama": "^3.1.11",
+    "@orama/orama": "^3.1.14",
     "@std/yaml": "jsr:^1.0.5",
     "es-main": "^1.3.0",
     "wakachigaki": "^1.3.2",
@@ -31,9 +31,9 @@
   },
   "devDependencies": {
     "@awesome-yasunori/api": "workspace:*",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.18.6",
     "clean-pkg-json": "^1.3.0",
-    "msw": "^2.4.10",
+    "msw": "^2.11.3",
     "tsdown": "^0.15.3",
     "typescript": "^5.8.3",
     "vitest": "^2.1.9"
