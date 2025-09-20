@@ -7,31 +7,65 @@ import { stringify } from "@std/yaml";
 import { z } from "zod";
 import { searchYasunori } from "./search.ts";
 
+const yasunoriEntryFields = {
+  id: z.number().int().nonnegative().describe("Awesome Yasunori ID"),
+  title: z.string().describe("Title of the entry"),
+  date: z.string().describe("ISO formatted date of the entry"),
+  at: z.string().describe("Where the entry was recorded"),
+  senpan: z.string().describe("Who reported the entry"),
+  content: z.string().describe("Main content of the entry"),
+  meta: z
+    .string()
+    .nullable()
+    .optional()
+    .describe("Optional metadata for the entry"),
+} satisfies Record<string, z.ZodTypeAny>;
+
+const YasunoriEntrySchema = z.object(yasunoriEntryFields);
+const SearchResultEntrySchema = z.object({
+  id: z.string().describe("Entry ID as string"),
+  title: z.string(),
+  date: z.string(),
+  at: z.string(),
+  senpan: z.string(),
+  content: z.string(),
+  meta: z.string().nullable().optional(),
+});
+
 // サーバーインスタンスの作成
 export const server = new McpServer({
   name: "awesome-yasunori",
   version: "0.1.0",
 });
 
-server.tool(
+server.registerTool(
   "getAllAwesomeYasunori",
-  "get all awesome yasunori with pagination support. if offset/limit are not provided, returns all items",
   {
-    offset: z
-      .number()
-      .int()
-      .min(0)
-      .nullable()
-      .default(null)
-      .describe("Starting index for pagination"),
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(100)
-      .nullable()
-      .default(null)
-      .describe("Maximum number of items to return"),
+    description:
+      "get all awesome yasunori with pagination support. if offset/limit are not provided, returns all items",
+    inputSchema: {
+      offset: z
+        .number()
+        .int()
+        .min(0)
+        .nullable()
+        .default(null)
+        .describe("Starting index for pagination"),
+      limit: z
+        .number()
+        .int()
+        .min(1)
+        .max(100)
+        .nullable()
+        .default(null)
+        .describe("Maximum number of items to return"),
+    },
+    outputSchema: {
+      total: z.number().int().min(0),
+      offset: z.number().int().min(0).nullable(),
+      limit: z.number().int().min(1).max(100).nullable(),
+      items: z.array(YasunoriEntrySchema),
+    },
   },
   async ({ offset, limit }) => {
     const res = await client.awesome.$get();
@@ -48,51 +82,64 @@ server.tool(
       paginatedYasunori = allYasunori.slice(start, end);
     }
 
+    const structuredContent = {
+      total: allYasunori.length,
+      offset,
+      limit,
+      items: paginatedYasunori,
+    };
+
     return {
       content: [
         {
           type: "text",
-          text: stringify({
-            total: allYasunori.length,
-            offset,
-            limit,
-            items: paginatedYasunori,
-          }),
+          text: stringify(structuredContent),
         },
       ],
+      structuredContent,
     };
   },
 );
 
-server.tool(
+server.registerTool(
   "getAwesomeYasunoriCount",
-  "get total count of awesome yasunori items",
+  {
+    description: "get total count of awesome yasunori items",
+    outputSchema: {
+      count: z.number().int().min(0),
+    },
+  },
   async () => {
     const res = await client.awesome.$get();
     if (!res.ok) {
       throw new Error("Failed to get awesome yasunori count");
     }
-    const allYasunori = await res.json();
+    const allYasunori = YasunoriEntrySchema.array().parse(await res.json());
+    const structuredContent = { count: allYasunori.length };
     return {
       content: [
         {
           type: "text",
-          text: stringify({ count: allYasunori.length }),
+          text: stringify(structuredContent),
         },
       ],
+      structuredContent,
     };
   },
 );
 
-server.tool(
+server.registerTool(
   "getRandomAwesomeYasunori",
-  "get random awesome yasunori",
+  {
+    description: "get random awesome yasunori",
+    outputSchema: yasunoriEntryFields,
+  },
   async () => {
     const res = await client.awesome.random.$get();
     if (!res.ok) {
       throw new Error("Failed to get random awesome yasunori");
     }
-    const randomYasunori = await res.json();
+    const randomYasunori = YasunoriEntrySchema.parse(await res.json());
     return {
       content: [
         {
@@ -100,14 +147,20 @@ server.tool(
           text: stringify(randomYasunori),
         },
       ],
+      structuredContent: randomYasunori,
     };
   },
 );
 
-server.tool(
+server.registerTool(
   "getAwesomeYasunoriById",
-  "get awesome yasunori by id",
-  { id: z.number().int().min(0).describe("Awesome Yasunori ID") },
+  {
+    description: "get awesome yasunori by id",
+    inputSchema: {
+      id: z.number().int().min(0).describe("Awesome Yasunori ID"),
+    },
+    outputSchema: yasunoriEntryFields,
+  },
   async ({ id }) => {
     const res = await client.awesome[":id"].$get({
       param: { id: id.toString() },
@@ -115,7 +168,7 @@ server.tool(
     if (!res.ok) {
       throw new Error("Failed to get awesome yasunori by id");
     }
-    const awesomeYasunori = await res.json();
+    const awesomeYasunori = YasunoriEntrySchema.parse(await res.json());
     return {
       content: [
         {
@@ -123,46 +176,63 @@ server.tool(
           text: stringify(awesomeYasunori),
         },
       ],
+      structuredContent: awesomeYasunori,
     };
   },
 );
 
-server.tool(
+server.registerTool(
   "searchAwesomeYasunori",
-  "search awesome yasunori entries using full-text search with BM25 algorithm",
   {
-    query: z
-      .string()
-      .describe("Search query to find relevant yasunori entries"),
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(50)
-      .optional()
-      .describe("Maximum number of results to return (default: 10)"),
-    threshold: z
-      .number()
-      .min(0)
-      .max(1)
-      .optional()
-      .describe("Minimum relevance score threshold (default: 0)"),
+    description:
+      "search awesome yasunori entries using full-text search with BM25 algorithm",
+    inputSchema: {
+      query: z
+        .string()
+        .describe("Search query to find relevant yasunori entries"),
+      limit: z
+        .number()
+        .int()
+        .min(1)
+        .max(50)
+        .optional()
+        .describe("Maximum number of results to return (default: 10)"),
+      threshold: z
+        .number()
+        .min(0)
+        .max(1)
+        .optional()
+        .describe("Minimum relevance score threshold (default: 0)"),
+    },
+    outputSchema: {
+      query: z.string(),
+      limit: z.number().int().min(1).max(50),
+      threshold: z.number().min(0).max(1),
+      count: z.number().int().min(0),
+      elapsed: z.string(),
+      results: z.array(SearchResultEntrySchema),
+    },
   },
   async ({ query, limit = 10, threshold = 0 }) => {
     try {
       const searchResult = await searchYasunori(query, { limit, threshold });
+      const structuredContent = {
+        query,
+        limit,
+        threshold,
+        count: searchResult.count,
+        elapsed: searchResult.elapsed,
+        results: searchResult.entries,
+      };
+
       return {
         content: [
           {
             type: "text",
-            text: stringify({
-              query,
-              count: searchResult.count,
-              elapsed: searchResult.elapsed,
-              results: searchResult.entries,
-            }),
+            text: stringify(structuredContent),
           },
         ],
+        structuredContent,
       };
     } catch (error) {
       throw new Error(
