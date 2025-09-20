@@ -7,12 +7,13 @@ export default defineConfig({
   outDir: "dist",
   format: ["esm"],
   fixedExtension: true,
-  outputOptions: {
-    banner: "#!/usr/bin/env node\n",
+  banner: "#!/usr/bin/env node\n",
+  exports: {
+    devExports: true,
   },
   noExternal: [/^.*/],
   nodeProtocol: true,
-  dts: false,
+  dts: true,
   clean: true,
   onSuccess: (ctx) => {
     // Make the output file executable
