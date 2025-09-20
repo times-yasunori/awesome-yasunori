@@ -15,31 +15,38 @@ export const server = new McpServer({
 
 server.tool(
   "getAllAwesomeYasunori",
-  "get all awesome yasunori with pagination support",
+  "get all awesome yasunori with pagination support. if offset/limit are not provided, returns all items",
   {
     offset: z
       .number()
       .int()
       .min(0)
-      .optional()
-      .describe("Starting index for pagination (default: 0)"),
+      .nullable()
+      .default(null)
+      .describe("Starting index for pagination"),
     limit: z
       .number()
       .int()
       .min(1)
       .max(100)
-      .optional()
-      .describe("Maximum number of items to return (default: 50, max: 100)"),
+      .nullable()
+      .default(null)
+      .describe("Maximum number of items to return"),
   },
-  async ({ offset = 0, limit = 50 }) => {
+  async ({ offset, limit }) => {
     const res = await client.awesome.$get();
     if (!res.ok) {
       throw new Error("Failed to get all awesome yasunori");
     }
     const allYasunori = await res.json();
 
-    // Apply pagination
-    const paginatedYasunori = allYasunori.slice(offset, offset + limit);
+    // if offset or limit is not provided, return all items
+    let paginatedYasunori = allYasunori;
+    if (offset != null || limit != null) {
+      const start = offset ?? 0;
+      const end = limit != null ? start + limit : undefined;
+      paginatedYasunori = allYasunori.slice(start, end);
+    }
 
     return {
       content: [

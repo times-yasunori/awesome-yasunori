@@ -30,8 +30,9 @@ test("getAllAwesomeYasunori with default pagination", async () => {
   expect(content[0]).toHaveProperty("type", "text");
   expect(content[0].type).toStrictEqual("text");
   expect(content[0].text).toContain("total: ");
-  expect(content[0].text).toContain("offset: 0");
-  expect(content[0].text).toContain("limit: 50");
+  // When no parameters provided, offset and limit are null (returns all items)
+  expect(content[0].text).toContain("offset: null");
+  expect(content[0].text).toContain("limit: null");
   expect(content[0].text).toContain("items:");
   expect(content[0].text).toContain("yasunoriはおもちゃ");
 });
