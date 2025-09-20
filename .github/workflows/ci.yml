@@ -32,7 +32,7 @@ jobs:
     name: Nix Flake Check
     strategy:
       matrix:
-        os: [ ubuntu-latest, macos-latest ]
+        os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout
@@ -104,6 +104,19 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Test
         run: pnpm test
+  test-mcp:
+    name: Test MCP
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Test
+        run: pnpm test
   lint-api-mcp-and-web:
     name: Lint API, MCP and Web
     runs-on: ubuntu-latest
@@ -117,7 +130,7 @@ jobs:
       - name: Lint
         run: pnpm run lint
   pkg-pr-new-for-mcp:
-    name: draft publish packages with pkg.pr.new 
+    name: draft publish packages with pkg.pr.new
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -157,8 +170,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
-          distribution: 'graalvm'
-          java-version: '22'
+          distribution: "graalvm"
+          java-version: "22"
       - uses: DeLaGuardo/setup-clojure@12.5
         with:
           cli: 1.11.4.1474
