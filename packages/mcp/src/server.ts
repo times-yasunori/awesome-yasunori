@@ -13,21 +13,76 @@ export const server = new McpServer({
   version: "0.1.0",
 });
 
-server.tool("getAllAwesomeYasunori", "get all awesome yasunori", async () => {
-  const res = await client.awesome.$get();
-  if (!res.ok) {
-    throw new Error("Failed to get all awesome yasunori");
-  }
-  const allYasunori = await res.json();
-  return {
-    content: [
-      {
-        type: "text",
-        text: stringify(allYasunori),
-      },
-    ],
-  };
-});
+server.tool(
+  "getAllAwesomeYasunori",
+  "get all awesome yasunori with pagination support. if offset/limit are not provided, returns all items",
+  {
+    offset: z
+      .number()
+      .int()
+      .min(0)
+      .nullable()
+      .default(null)
+      .describe("Starting index for pagination"),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(100)
+      .nullable()
+      .default(null)
+      .describe("Maximum number of items to return"),
+  },
+  async ({ offset, limit }) => {
+    const res = await client.awesome.$get();
+    if (!res.ok) {
+      throw new Error("Failed to get all awesome yasunori");
+    }
+    const allYasunori = await res.json();
+
+    // if offset or limit is not provided, return all items
+    let paginatedYasunori = allYasunori;
+    if (offset != null || limit != null) {
+      const start = offset ?? 0;
+      const end = limit != null ? start + limit : undefined;
+      paginatedYasunori = allYasunori.slice(start, end);
+    }
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: stringify({
+            total: allYasunori.length,
+            offset,
+            limit,
+            items: paginatedYasunori,
+          }),
+        },
+      ],
+    };
+  },
+);
+
+server.tool(
+  "getAwesomeYasunoriCount",
+  "get total count of awesome yasunori items",
+  async () => {
+    const res = await client.awesome.$get();
+    if (!res.ok) {
+      throw new Error("Failed to get awesome yasunori count");
+    }
+    const allYasunori = await res.json();
+    return {
+      content: [
+        {
+          type: "text",
+          text: stringify({ count: allYasunori.length }),
+        },
+      ],
+    };
+  },
+);
 
 server.tool(
   "getRandomAwesomeYasunori",
