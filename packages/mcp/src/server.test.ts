@@ -3,6 +3,11 @@ import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { server } from "./server";
 
+type TextContent = {
+  type: "text";
+  text: string;
+};
+
 test("getAllAwesomeYasunori with default pagination", async () => {
   const client = new Client({
     name: "test client",
@@ -22,19 +27,45 @@ test("getAllAwesomeYasunori with default pagination", async () => {
     arguments: {},
   });
 
-  expect(result).toHaveProperty("content");
+  expect(result.structuredContent).toBeDefined();
+  const structured = result.structuredContent as {
+    total: number;
+    offset: number | null;
+    limit: number | null;
+    items: Array<{
+      id: number;
+      title: string;
+      date: string;
+      at: string;
+      senpan: string;
+      content: string;
+      meta?: string | null;
+    }>;
+  };
 
-  const content = result.content as CallToolResult["content"];
+  expect(structured.total).toBeGreaterThan(0);
+  expect(structured.offset).toBeNull();
+  expect(structured.limit).toBeNull();
+  expect(structured.items.length).toBeGreaterThan(0);
+  const [firstItem] = structured.items;
+  expect(firstItem).toMatchObject({
+    id: expect.any(Number),
+    title: expect.any(String),
+    date: expect.any(String),
+    at: expect.any(String),
+    senpan: expect.any(String),
+    content: expect.any(String),
+  });
 
-  expect(result.content).toHaveLength(1);
-  expect(content[0]).toHaveProperty("type", "text");
-  expect(content[0].type).toStrictEqual("text");
-  expect(content[0].text).toContain("total: ");
+  const content = result.content as TextContent[];
+  expect(content).toHaveLength(1);
+  expect(content[0]?.type).toBe("text");
+  expect(content[0]?.text).toContain("total: ");
   // When no parameters provided, offset and limit are null (returns all items)
-  expect(content[0].text).toContain("offset: null");
-  expect(content[0].text).toContain("limit: null");
-  expect(content[0].text).toContain("items:");
-  expect(content[0].text).toContain("yasunoriはおもちゃ");
+  expect(content[0]?.text).toContain("offset: null");
+  expect(content[0]?.text).toContain("limit: null");
+  expect(content[0]?.text).toContain("items:");
+  expect(content[0]?.text).toContain("yasunoriはおもちゃ");
 });
 
 test("getAllAwesomeYasunori with custom pagination", async () => {
@@ -56,14 +87,21 @@ test("getAllAwesomeYasunori with custom pagination", async () => {
     arguments: { offset: 10, limit: 5 },
   });
 
-  expect(result).toHaveProperty("content");
+  const structured = result.structuredContent as {
+    total: number;
+    offset: number;
+    limit: number;
+    items: Array<Record<string, unknown>>;
+  };
+  expect(structured.offset).toBe(10);
+  expect(structured.limit).toBe(5);
+  expect(structured.items.length).toBeLessThanOrEqual(5);
 
-  const content = result.content as CallToolResult["content"];
-
-  expect(content[0]).toHaveProperty("type", "text");
-  expect(content[0].text).toContain("offset: 10");
-  expect(content[0].text).toContain("limit: 5");
-  expect(content[0].text).toContain("items:");
+  const content = result.content as TextContent[];
+  expect(content[0]?.type).toBe("text");
+  expect(content[0]?.text).toContain("offset: 10");
+  expect(content[0]?.text).toContain("limit: 5");
+  expect(content[0]?.text).toContain("items:");
 });
 
 test("getAwesomeYasunoriCount", async () => {
@@ -85,13 +123,13 @@ test("getAwesomeYasunoriCount", async () => {
     arguments: {},
   });
 
-  expect(result).toHaveProperty("content");
-  const content = result.content as CallToolResult["content"];
+  const structured = result.structuredContent as { count: number };
+  expect(structured.count).toBeGreaterThan(0);
 
-  expect(result.content).toHaveLength(1);
-  expect(content[0]).toHaveProperty("type", "text");
-  expect(content[0].type).toStrictEqual("text");
-  expect(content[0].text).toContain("count: ");
+  const content = result.content as TextContent[];
+  expect(content).toHaveLength(1);
+  expect(content[0]?.type).toBe("text");
+  expect(content[0]?.text).toContain("count: ");
 });
 
 test("getRandomAwesomeYasunori", async () => {
@@ -113,18 +151,26 @@ test("getRandomAwesomeYasunori", async () => {
     arguments: {},
   });
 
-  expect(result).toHaveProperty("content");
-  const content = result.content as CallToolResult["content"];
+  const structured = result.structuredContent as {
+    id: number;
+    title: string;
+    date: string;
+    at: string;
+    senpan: string;
+    content: string;
+    meta?: string | null;
+  };
+  expect(structured.id).toBeGreaterThan(0);
 
-  expect(result.content).toHaveLength(1);
-  expect(content[0]).toHaveProperty("type", "text");
-  expect(content[0].type).toStrictEqual("text");
-  expect(content[0].text).toContain("id: ");
-  expect(content[0].text).toContain("title: ");
-  expect(content[0].text).toContain("date: ");
-  expect(content[0].text).toContain("at: ");
-  expect(content[0].text).toContain("senpan: ");
-  expect(content[0].text).toContain("content: ");
+  const content = result.content as TextContent[];
+  expect(content).toHaveLength(1);
+  expect(content[0]?.type).toBe("text");
+  expect(content[0]?.text).toContain("id: ");
+  expect(content[0]?.text).toContain("title: ");
+  expect(content[0]?.text).toContain("date: ");
+  expect(content[0]?.text).toContain("at: ");
+  expect(content[0]?.text).toContain("senpan: ");
+  expect(content[0]?.text).toContain("content: ");
 });
 
 test("getAwesomeYasunoriById", async () => {
@@ -150,9 +196,23 @@ test("getAwesomeYasunoriById", async () => {
     arguments: { id: 1 },
   });
 
+  const structured = result.structuredContent as {
+    id: number;
+    title: string;
+    date: string;
+    at: string;
+    senpan: string;
+    content: string;
+    meta?: string | null;
+  };
+  expect(structured.id).toBe(1);
+  expect(structured.title).toContain("yasunori");
+  expect(structured.date).toBe("2024-06-25");
+  expect(structured.at).toContain("vim-jp");
+
   // check the result is a CallToolResult
   expect(result).toHaveProperty("content");
-  const content = result.content as CallToolResult["content"];
+  const content = result.content as TextContent[];
 
   // check the content length is 1
   expect(result.content).toHaveLength(1);
@@ -195,9 +255,23 @@ test("searchAwesomeYasunori", async () => {
     arguments: { query: "yasunori", limit: 5 },
   });
 
+  const structured = result.structuredContent as {
+    query: string;
+    limit: number;
+    threshold: number;
+    count: number;
+    elapsed: string;
+    results: Array<Record<string, unknown>>;
+  };
+
+  expect(structured.query).toBe("yasunori");
+  expect(structured.limit).toBe(5);
+  expect(structured.count).toBeGreaterThan(0);
+  expect(structured.results.length).toBeGreaterThan(0);
+
   // check the result is a CallToolResult
   expect(result).toHaveProperty("content");
-  const content = result.content as CallToolResult["content"];
+  const content = result.content as TextContent[];
 
   // check the content length is 1
   expect(result.content).toHaveLength(1);
