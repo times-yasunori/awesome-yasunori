@@ -4,7 +4,6 @@ import {
   ResourceTemplate,
 } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { stringify } from "@std/yaml";
 import esMain from "es-main";
 import { server } from "./server.ts";
 
@@ -41,7 +40,7 @@ server.resource(
       contents: [
         {
           uri: uri.href,
-          text: stringify(awesomeYasunori),
+          text: JSON.stringify(awesomeYasunori),
         },
       ],
     };

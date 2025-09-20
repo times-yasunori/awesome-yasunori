@@ -24,25 +24,30 @@ test("getAllAwesomeYasunori with default pagination", async () => {
 
   expect(result.structuredContent).toBeDefined();
   const structured = result.structuredContent as {
-    total: number;
-    offset: number | null;
-    limit: number | null;
-    items: Array<{
-      id: number;
-      title: string;
-      date: string;
-      at: string;
-      senpan: string;
-      content: string;
-      meta?: string | null;
-    }>;
+    isError: boolean;
+    result?: {
+      total: number;
+      offset: number | null;
+      limit: number | null;
+      items: Array<{
+        id: number;
+        title: string;
+        date: string;
+        at: string;
+        senpan: string;
+        content: string;
+        meta?: string | null;
+      }>;
+    };
   };
 
-  expect(structured.total).toBeGreaterThan(0);
-  expect(structured.offset).toBeNull();
-  expect(structured.limit).toBeNull();
-  expect(structured.items.length).toBeGreaterThan(0);
-  const [firstItem] = structured.items;
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.total).toBeGreaterThan(0);
+  expect(structured.result?.offset).toBeNull();
+  expect(structured.result?.limit).toBeNull();
+  expect(structured.result?.items.length).toBeGreaterThan(0);
+  const [firstItem] = structured.result?.items ?? [];
   expect(firstItem).toMatchObject({
     id: expect.any(Number),
     title: expect.any(String),
@@ -58,12 +63,14 @@ test("getAllAwesomeYasunori with default pagination", async () => {
   >[];
   expect(content).toHaveLength(1);
   expect(content[0]?.type).toBe("text");
-  expect(content[0]?.text).toContain("total: ");
-  // When no parameters provided, offset and limit are null (returns all items)
-  expect(content[0]?.text).toContain("offset: null");
-  expect(content[0]?.text).toContain("limit: null");
-  expect(content[0]?.text).toContain("items:");
-  expect(content[0]?.text).toContain("yasunoriはおもちゃ");
+  const parsedContent = JSON.parse(content[0]?.text ?? "{}");
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.total).toBeGreaterThan(0);
+  expect(parsedContent.result.offset).toBeNull();
+  expect(parsedContent.result.limit).toBeNull();
+  expect(parsedContent.result.items).toBeDefined();
+  expect(JSON.stringify(parsedContent)).toContain("yasunoriはおもちゃ");
 });
 
 test("getAllAwesomeYasunori with custom pagination", async () => {
@@ -86,23 +93,31 @@ test("getAllAwesomeYasunori with custom pagination", async () => {
   });
 
   const structured = result.structuredContent as {
-    total: number;
-    offset: number;
-    limit: number;
-    items: Array<Record<string, unknown>>;
+    isError: boolean;
+    result?: {
+      total: number;
+      offset: number;
+      limit: number;
+      items: Array<Record<string, unknown>>;
+    };
   };
-  expect(structured.offset).toBe(10);
-  expect(structured.limit).toBe(5);
-  expect(structured.items.length).toBeLessThanOrEqual(5);
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.offset).toBe(10);
+  expect(structured.result?.limit).toBe(5);
+  expect(structured.result?.items.length).toBeLessThanOrEqual(5);
 
   const content = result.content as Extract<
     CallToolResult["content"][0],
     { type: "text" }
   >[];
   expect(content[0]?.type).toBe("text");
-  expect(content[0]?.text).toContain("offset: 10");
-  expect(content[0]?.text).toContain("limit: 5");
-  expect(content[0]?.text).toContain("items:");
+  const parsedContent = JSON.parse(content[0]?.text ?? "{}");
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.offset).toBe(10);
+  expect(parsedContent.result.limit).toBe(5);
+  expect(parsedContent.result.items).toBeDefined();
 });
 
 test("getAwesomeYasunoriCount", async () => {
@@ -124,8 +139,13 @@ test("getAwesomeYasunoriCount", async () => {
     arguments: {},
   });
 
-  const structured = result.structuredContent as { count: number };
-  expect(structured.count).toBeGreaterThan(0);
+  const structured = result.structuredContent as {
+    isError: boolean;
+    result?: { count: number };
+  };
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.count).toBeGreaterThan(0);
 
   const content = result.content as Extract<
     CallToolResult["content"][0],
@@ -133,7 +153,10 @@ test("getAwesomeYasunoriCount", async () => {
   >[];
   expect(content).toHaveLength(1);
   expect(content[0]?.type).toBe("text");
-  expect(content[0]?.text).toContain("count: ");
+  const parsedContent = JSON.parse(content[0]?.text ?? "{}");
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.count).toBeGreaterThan(0);
 });
 
 test("getRandomAwesomeYasunori", async () => {
@@ -156,15 +179,20 @@ test("getRandomAwesomeYasunori", async () => {
   });
 
   const structured = result.structuredContent as {
-    id: number;
-    title: string;
-    date: string;
-    at: string;
-    senpan: string;
-    content: string;
-    meta?: string | null;
+    isError: boolean;
+    result?: {
+      id: number;
+      title: string;
+      date: string;
+      at: string;
+      senpan: string;
+      content: string;
+      meta?: string | null;
+    };
   };
-  expect(structured.id).toBeGreaterThan(0);
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.id).toBeGreaterThan(0);
 
   const content = result.content as Extract<
     CallToolResult["content"][0],
@@ -172,12 +200,15 @@ test("getRandomAwesomeYasunori", async () => {
   >[];
   expect(content).toHaveLength(1);
   expect(content[0]?.type).toBe("text");
-  expect(content[0]?.text).toContain("id: ");
-  expect(content[0]?.text).toContain("title: ");
-  expect(content[0]?.text).toContain("date: ");
-  expect(content[0]?.text).toContain("at: ");
-  expect(content[0]?.text).toContain("senpan: ");
-  expect(content[0]?.text).toContain("content: ");
+  const parsedContent = JSON.parse(content[0]?.text ?? "{}");
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.id).toBeDefined();
+  expect(parsedContent.result.title).toBeDefined();
+  expect(parsedContent.result.date).toBeDefined();
+  expect(parsedContent.result.at).toBeDefined();
+  expect(parsedContent.result.senpan).toBeDefined();
+  expect(parsedContent.result.content).toBeDefined();
 });
 
 test("getAwesomeYasunoriById", async () => {
@@ -204,18 +235,23 @@ test("getAwesomeYasunoriById", async () => {
   });
 
   const structured = result.structuredContent as {
-    id: number;
-    title: string;
-    date: string;
-    at: string;
-    senpan: string;
-    content: string;
-    meta?: string | null;
+    isError: boolean;
+    result?: {
+      id: number;
+      title: string;
+      date: string;
+      at: string;
+      senpan: string;
+      content: string;
+      meta?: string | null;
+    };
   };
-  expect(structured.id).toBe(1);
-  expect(structured.title).toContain("yasunori");
-  expect(structured.date).toBe("2024-06-25");
-  expect(structured.at).toContain("vim-jp");
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.id).toBe(1);
+  expect(structured.result?.title).toContain("yasunori");
+  expect(structured.result?.date).toBe("2024-06-25");
+  expect(structured.result?.at).toContain("vim-jp");
 
   // check the result is a CallToolResult
   expect(result).toHaveProperty("content");
@@ -233,13 +269,17 @@ test("getAwesomeYasunoriById", async () => {
   expect(content[0].type).toStrictEqual("text");
 
   // check the content includes 1st awesome yasunori
-  expect(content[0].text).toContain("id: 1");
-  expect(content[0].text).toContain("title: テスト yasunori エントリ");
-  expect(content[0].text).toContain("date: '2024-06-25'");
-  expect(content[0].text).toContain("at: vim-jp radioお便り");
-  expect(content[0].text).toContain("senpan: takeokunn");
-  expect(content[0].text).toContain("content: ");
-  expect(content[0].text).toContain("tomoyaさん、ありすえさんこんにちは");
+  const parsedContent = JSON.parse(content[0].text);
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.id).toBe(1);
+  expect(parsedContent.result.title).toBe("テスト yasunori エントリ");
+  expect(parsedContent.result.date).toBe("2024-06-25");
+  expect(parsedContent.result.at).toBe("vim-jp radioお便り");
+  expect(parsedContent.result.senpan).toBe("takeokunn");
+  expect(parsedContent.result.content).toContain(
+    "tomoyaさん、ありすえさんこんにちは",
+  );
 });
 
 test("searchAwesomeYasunori", async () => {
@@ -266,18 +306,23 @@ test("searchAwesomeYasunori", async () => {
   });
 
   const structured = result.structuredContent as {
-    query: string;
-    limit: number;
-    threshold: number;
-    count: number;
-    elapsed: string;
-    results: Array<Record<string, unknown>>;
+    isError: boolean;
+    result?: {
+      query: string;
+      limit: number;
+      threshold: number;
+      count: number;
+      elapsed: string;
+      results: Array<Record<string, unknown>>;
+    };
   };
 
-  expect(structured.query).toBe("yasunori");
-  expect(structured.limit).toBe(5);
-  expect(structured.count).toBeGreaterThan(0);
-  expect(structured.results.length).toBeGreaterThan(0);
+  expect(structured.isError).toBe(false);
+  expect(structured.result).toBeDefined();
+  expect(structured.result?.query).toBe("yasunori");
+  expect(structured.result?.limit).toBe(5);
+  expect(structured.result?.count).toBeGreaterThan(0);
+  expect(structured.result?.results.length).toBeGreaterThan(0);
 
   // check the result is a CallToolResult
   expect(result).toHaveProperty("content");
@@ -296,10 +341,13 @@ test("searchAwesomeYasunori", async () => {
   expect(content[0].type).toStrictEqual("text");
 
   // check the search result structure
-  expect(content[0].text).toContain("query: yasunori");
-  expect(content[0].text).toContain("count:");
-  expect(content[0].text).toContain("elapsed:");
-  expect(content[0].text).toContain("results:");
+  const parsedContent = JSON.parse(content[0].text);
+  expect(parsedContent.isError).toBe(false);
+  expect(parsedContent.result).toBeDefined();
+  expect(parsedContent.result.query).toBe("yasunori");
+  expect(parsedContent.result.count).toBeDefined();
+  expect(parsedContent.result.elapsed).toBeDefined();
+  expect(parsedContent.result.results).toBeDefined();
 });
 
 test("awesomeyasunori resources", async () => {
@@ -337,11 +385,11 @@ test("awesomeyasunori resources", async () => {
   const content = contents[0];
 
   // check the content includes 1st awesome yasunori
-  expect(content.text).toContain("id: 1");
-  expect(content.text).toContain("title: テスト yasunori エントリ");
-  expect(content.text).toContain("date: '2024-06-25'");
-  expect(content.text).toContain("at: vim-jp radioお便り");
-  expect(content.text).toContain("senpan: takeokunn");
-  expect(content.text).toContain("content: ");
-  expect(content.text).toContain("tomoyaさん、ありすえさんこんにちは");
+  const parsedContent = JSON.parse(content.text as string);
+  expect(parsedContent.id).toBe(1);
+  expect(parsedContent.title).toBe("テスト yasunori エントリ");
+  expect(parsedContent.date).toBe("2024-06-25");
+  expect(parsedContent.at).toBe("vim-jp radioお便り");
+  expect(parsedContent.senpan).toBe("takeokunn");
+  expect(parsedContent.content).toContain("tomoyaさん、ありすえさんこんにちは");
 });
