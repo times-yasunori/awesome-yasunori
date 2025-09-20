@@ -8,6 +8,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./search": "./src/search.ts",
+    "./server": "./src/server.ts",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.mjs",
@@ -41,6 +43,8 @@
   "publishConfig": {
     "exports": {
       ".": "./dist/index.mjs",
+      "./search": "./dist/search.mjs",
+      "./server": "./dist/server.mjs",
       "./package.json": "./package.json"
     }
   }
