@@ -10,6 +10,16 @@ You have three ways to use Awesome Yasunori MCP servers.
 
 The easiest way to use Awesome Yasunori MCP is via HTTP streaming transport. You can connect to the hosted MCP server without any local setup.
 
+#### Quick Setup with Claude Code
+
+If you're using Claude Code, you can quickly add the MCP server with:
+
+```bash
+claude mcp add -t http yasunori https://api.yasunori.dev/awesome/mcp
+```
+
+#### Manual Configuration
+
 Add this to your MCP client configuration:
 
 ```json
@@ -24,21 +34,6 @@ Add this to your MCP client configuration:
   }
 }
 ```
-
-#### Testing with MCP Inspector
-
-You can test the HTTP streaming transport using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
-
-1. Start the MCP Inspector:
-   ```bash
-   DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector
-   ```
-2. Open the MCP Inspector in your browser (usually `http://localhost:5173`)
-3. Enter the endpoint URL: `https://api.yasunori.dev/awesome/mcp`
-4. Test the available tools:
-   - `getAllAwesomeYasunori`: Get all yasunori entries
-   - `getRandomAwesomeYasunori`: Get a random yasunori entry
-   - `getAwesomeYasunoriById`: Get a specific yasunori entry by ID
 
 ### Get the latest version from pkg.pr.new
 
@@ -89,4 +84,22 @@ Edit the configuration file of your MCP client.
   }
 }
 ```
+
+## Testing
+
+### Testing with MCP Inspector
+
+You can test the HTTP streaming transport using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
+
+1. Start the MCP Inspector:
+   ```bash
+   DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector
+   ```
+
+2. Open the MCP Inspector in your browser (usually `http://localhost:5173`)
+3. Enter the endpoint URL: `https://api.yasunori.dev/awesome/mcp`
+4. Test the available tools:
+   - `getAllAwesomeYasunori`: Get all yasunori entries
+   - `getRandomAwesomeYasunori`: Get a random yasunori entry
+   - `getAwesomeYasunoriById`: Get a specific yasunori entry by ID
 

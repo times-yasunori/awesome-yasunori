@@ -93,23 +93,18 @@ It's being developed in [packages/cljs-yasunori-block](./packages/cljs-yasunori-
 
 You can ask any questions about Awesome Yasunori with LLM!
 
+#### Quick Setup
+
+If you're using Claude Code, you can quickly add the MCP server with:
+
+```bash
+claude mcp add -t http yasunori https://api.yasunori.dev/awesome/mcp
+```
+
 #### Available Transports
 
 - **stdio**: For local MCP connections (recommended for development)
 - **HTTP Streaming**: For remote MCP connections via HTTP endpoint at `https://api.yasunori.dev/awesome/mcp`
-
-#### Testing with MCP Inspector
-
-You can test the HTTP streaming transport using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
-
-1. Start the MCP Inspector:
-   ```bash
-   DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector
-   ```
-
-2. Open the MCP Inspector in your browser (usually `http://localhost:5173`)
-3. Enter the endpoint URL: `https://api.yasunori.dev/awesome/mcp`
-4. Test the available tools: `getAllAwesomeYasunori`, `getRandomAwesomeYasunori`, `getAwesomeYasunoriById`
 
 It's being developed in [packages/mcp](./packages/mcp).
 
