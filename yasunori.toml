@@ -1,5 +1,18 @@
 [[yasunori]]
 id = 109
+title = ""
+date = "2025-11-01"
+at = "龍の屋"
+senpan = "yasunori"
+content = """
+yasunori「俺が俺の人生を特別にしたんだよ！」
+"""
+meta = """
+「特別にする」の流れて話を振られたyasunoriの発言。
+"""
+
+[[yasunori]]
+id = 109
 title = "お前がyasunoriを特別にしろ！"
 date = "2025-11-01"
 at = "龍の屋"
