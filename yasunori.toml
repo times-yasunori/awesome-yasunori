@@ -1,4 +1,18 @@
 [[yasunori]]
+id = 106
+title = ""
+date = "2025-11-01"
+at = "龍の屋"
+senpan = "hayao0819"
+content = """
+yasunori 「NixOSのインストールメディアあるけどやる？」
+hayao「やります」
+"""
+meta = """
+ヤスプラのメンバーでハヤオさんにNixOSをインストールするよう説得して、その後移動した秋葉原の居酒屋でNixOSのインストールバトル始めた。
+"""
+
+[[yasunori]]
 id = 105
 title = "yasunoriになったこと後悔してる"
 date = "2024-11-22"
