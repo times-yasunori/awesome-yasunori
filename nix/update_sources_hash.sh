@@ -3,8 +3,8 @@ set -euo pipefail
 
 cd $(dirname ${BASH_SOURCE})
 
-NODEJS_URL=$(nix --extra-experimental-features 'flakes nix-command' eval --raw --impure --expr '(import ./sources.nix).nodejs.url')
-PNPM_URL=$(nix --extra-experimental-features 'flakes nix-command' eval --raw --impure --expr '(import ./sources.nix).pnpm.url')
+NODEJS_URL=$(nix --extra-experimental-features 'flakes nix-command' eval --raw --impure --expr '(import ./sources.nix).nodejs.src.url')
+PNPM_URL=$(nix --extra-experimental-features 'flakes nix-command' eval --raw --impure --expr '(import ./sources.nix).pnpm.src.url')
 
 NODEJS_HASH=$(nix --extra-experimental-features 'flakes nix-command' hash convert --hash-algo sha256 --to sri --from nix32 $(nix-prefetch-url $NODEJS_URL))
 PNPM_HASH=$(nix --extra-experimental-features 'flakes nix-command' hash convert --hash-algo sha256 --to sri --from nix32 $(nix-prefetch-url $PNPM_URL))

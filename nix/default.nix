@@ -17,7 +17,7 @@
     {
       _module.args.pkgs = import self.inputs.nixpkgs {
         inherit system;
-        overlays = [ self.overlays.toolchain ];
+        # overlays = [ self.overlays.toolchain ];
       };
     };
 }
