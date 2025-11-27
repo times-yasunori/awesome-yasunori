@@ -13,8 +13,8 @@ buildDotnetModule {
   projectFile = "Yasunori.sln";
   nugetDeps = ./deps.nix;
 
-  dotnet-sdk = dotnetCorePackages.sdk_8_0;
-  dotnet-runtime = dotnetCorePackages.runtime_8_0;
+  dotnet-sdk = dotnetCorePackages.sdk_10_0;
+  dotnet-runtime = dotnetCorePackages.runtime_10_0;
 
   # raise data race
   # System.IO.IOException: The process cannot access the file '/build/source/lib/bin/Release/net8.0/Yasunori.Net.deps.json' because it is being used by another process. [/build/source/lib/Yasunori.Net.csproj]
