@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
       prePnpmInstall
       ;
     fetcherVersion = 2;
-    hash = "sha256-Zcmf7Px8AoadMowPauatl0x7Ema1w7uH7HECfgRYpR4=";
+    hash = "sha256-KYTK7dH8fJu44XykIwLW5LpYw7J6goK3odOz7AwUC6Q=";
   };
   buildPhase = ''
     runHook preBuild
