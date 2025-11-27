@@ -1,6 +1,12 @@
+{ inputs, ... }:
 {
   perSystem =
-    { pkgs, config, ... }:
+    {
+      system,
+      pkgs,
+      config,
+      ...
+    }:
     {
       devShells = {
         default = pkgs.mkShellNoCC {
@@ -8,8 +14,6 @@
             pkgs.nil
             pkgs.nodejs
             pkgs.pnpm
-
-            pkgs.dotnetCorePackages.sdk_8_0
           ];
           shellHook = ''
             ${pkgs.figlet}/bin/figlet AWESOME YASUNORI
@@ -17,6 +21,7 @@
           inputsFrom = [
             config.pre-commit.devShell
             config.treefmt.build.devShell
+            inputs.self.packages.${system}.yasunori-net
           ];
         };
       };
